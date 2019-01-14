@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Payment Gateway UAT Quest Regression Test Suite" duration-ms="75909" started-at="2019-01-13T23:47:19Z" finished-at="2019-01-13T23:48:35Z">
+    <groups>
+    </groups>
+    <test name="Regression Test Cases" duration-ms="75909" started-at="2019-01-13T23:47:19Z" finished-at="2019-01-13T23:48:35Z">
+      <class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB">
+        <test-method status="PASS" signature="testCreateDomainAndMajorProductOrderInSalesDB(java.lang.String, java.lang.String)[pri:1, instance:com.paymentgateway.uat.domainz.testcases.RegressionSalesDB@53b32d7]" name="testCreateDomainAndMajorProductOrderInSalesDB" duration-ms="75878" started-at="2019-01-13T23:47:19Z" finished-at="2019-01-13T23:48:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[quest]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateDomainAndMajorProductOrderInSalesDB -->
+      </class> <!-- com.paymentgateway.uat.domainz.testcases.RegressionSalesDB -->
+    </test> <!-- Regression Test Cases -->
+  </suite> <!-- Payment Gateway UAT Quest Regression Test Suite -->
+</testng-results>

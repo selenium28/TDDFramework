@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Payment Gateway UAT Quest Regression Test Suite" thread-count="2" verbose="10" parallel="tests"
+>
+	<parameter name="environment"     value="uat1"/>
+	<parameter name="paymentgateway"  value="quest"/>
+	
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	
+	<test verbose="2" name="Regression Test Cases" group-by-instances="true">
+    
+		<classes>
+		
+		
+			
+<!-- 		Domainz Virtualization -->
+			<class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB"></class>
+<!-- 			<class name="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin"></class> -->
+<!-- 			<class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI"></class> -->
+
+
+<!-- 		Netregistry Virtualization -->
+<!-- 			<class name="com.paymentgateway.uat.netregistry.testcases.RegressionSalesDB"></class> -->
+			
+<!-- 		MelbourneIT Virtualization -->
+<!-- 			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB"></class> -->
+			
+<!-- 		TPP Virtualization -->
+<!-- 			<class name="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB"></class>	 -->
+
+<!-- 		WebCentral Virtualization -->
+<!-- 			<class name="com.paymentgateway.uat.webcentral.testcases.RegressionSalesDB"></class>	 -->
+			
+<!-- 		DPS Virtualization -->
+<!-- 			<class name="com.paymentgateway.uat.dps.testcases.RegressionSalesDB"></class>		 -->
+
+
+		</classes>
+	</test>  
+</suite> 
