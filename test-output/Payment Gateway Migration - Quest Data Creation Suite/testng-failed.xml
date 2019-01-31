@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Migration - Quest Data Creation Suite]" parallel="tests">
+  <parameter name="environment" value="stagingdev-5"/>
+  <listeners>
+    <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="10" name="Payment Gateway Migration - Braintree Post Validation Test Cases(failed)">
+    <classes>
+      <class name="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest">
+        <methods>
+          <include name="generateCustomerDataWithYearlyBillingProduct" invocation-numbers="0"/>
+          <include name="generateCustomerDataWithMonthlyBillingProduct" invocation-numbers="0"/>
+          <include name="generateCustomerDataWithOutstandingInvoice" invocation-numbers="0"/>
+          <include name="generateCustomerDataWithDefaultCreditCard" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest -->
+    </classes>
+  </test> <!-- Payment Gateway Migration - Braintree Post Validation Test Cases(failed) -->
+</suite> <!-- Failed suite [Payment Gateway Migration - Quest Data Creation Suite] -->

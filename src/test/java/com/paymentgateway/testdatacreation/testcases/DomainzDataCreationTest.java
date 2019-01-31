@@ -1,5 +1,6 @@
 package com.paymentgateway.testdatacreation.testcases;
 
+import java.awt.AWTException;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -114,8 +115,8 @@ public class DomainzDataCreationTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=1, enabled = false)
-	public void generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(String environment) throws InterruptedException{
+	@Test
+	public void generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(String environment) throws InterruptedException, AWTException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName_01 = null;
@@ -224,7 +225,6 @@ public class DomainzDataCreationTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
 		caworkflowadminpage.processFraudCheck();
-		caworkflowadminpage.processDelegateDomain();
 		
 		//Test Step 5: Set the new password for the account reference
 		caheaderpage = new CAHeaderPage();
@@ -309,7 +309,6 @@ public class DomainzDataCreationTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
 		caworkflowadminpage.processFraudCheck();
-		caworkflowadminpage.processDelegateDomain();
 		driver.close();
 		
 		System.out.println("End Test: generateCustomerDataWithDomainRegistrationAndEnableAutoRenew");
@@ -318,8 +317,8 @@ public class DomainzDataCreationTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=2, enabled = false)
-	public void generateCustomerDataWithMonthlyBillingProduct(String environment) throws InterruptedException{
+	@Test
+	public void generateCustomerDataWithMonthlyBillingProduct(String environment) throws InterruptedException, AWTException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName_01 = null;
@@ -342,7 +341,7 @@ public class DomainzDataCreationTest extends TestBase{
 		
 		Integer intMaxCount = 4;
 		Integer intMinCount = null;
-		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
+		for(intMinCount = 4; intMinCount<=intMaxCount; intMinCount++) {
 
 		// Generate name for first and second domain
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -430,12 +429,10 @@ public class DomainzDataCreationTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
 		caworkflowadminpage.processFraudCheck();
-		caworkflowadminpage.processDelegateDomain();
 				
 		strWorkflowId_02 = caworkflowadminpage.getProductSetup2WorkflowID();
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_02);
 		caworkflowadminpage.processProductSetup2ByWFID(strWorkflowId_02);
-		caworkflowadminpage.processSkipDelegation();
 
 		//Test Step 5: Set the new password for the account reference
 		caheaderpage = new CAHeaderPage();
@@ -519,12 +516,10 @@ public class DomainzDataCreationTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_03);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_03);
 		caworkflowadminpage.processFraudCheck();
-		caworkflowadminpage.processDelegateDomain();
 		
 		strWorkflowId_04 = caworkflowadminpage.getProductSetup2WorkflowID();
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_04);
 		caworkflowadminpage.processProductSetup2ByWFID(strWorkflowId_04);
-		caworkflowadminpage.processSkipDelegation();
 		driver.close();
 		
 		System.out.println("End Test: generateCustomerDataWithMonthlyBillingProduct");
@@ -532,8 +527,8 @@ public class DomainzDataCreationTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=3, enabled = false)
-	public void generateCustomerDataWithYearlyBillingProduct(String environment) throws InterruptedException{
+	@Test
+	public void generateCustomerDataWithYearlyBillingProduct(String environment) throws InterruptedException, AWTException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName_01 = null;
@@ -556,7 +551,7 @@ public class DomainzDataCreationTest extends TestBase{
 		
 		Integer intMaxCount = 4;
 		Integer intMinCount = null;
-		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
+		for(intMinCount = 3; intMinCount<=intMaxCount; intMinCount++) {
 
 		// Generate name for first and second domain
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -644,14 +639,16 @@ public class DomainzDataCreationTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
 		caworkflowadminpage.processFraudCheck();
-		caworkflowadminpage.processDelegateDomain();
 		
 		strWorkflowId_02 = caworkflowadminpage.getProductSetup2WorkflowID();
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_02);
 		caworkflowadminpage.processProductSetup2ByWFID(strWorkflowId_02);
+		driver.close();
 
 		//Test Step 5: Set the new password for the account reference
-		caheaderpage = new CAHeaderPage();
+		initialization(environment, "consoleadmin");
+		caloginpage = new CALoginPage();
+		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
 		caaccountreferencepage = caheaderpage.searchAccountReference(strAccountReference);
 		caaccountreferencepage.updatePassword(strAccountReferenceNewPassword);
 		driver.close();
@@ -731,7 +728,6 @@ public class DomainzDataCreationTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_03);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_03);
 		caworkflowadminpage.processFraudCheck();
-		caworkflowadminpage.processDelegateDomain();
 		
 		strWorkflowId_04 = caworkflowadminpage.getProductSetup2WorkflowID();
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_04);
@@ -743,8 +739,8 @@ public class DomainzDataCreationTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=4, enabled = false)
-	public void generateCustomerDataWithOutstandingInvoice(String environment) throws InterruptedException{
+	@Test
+	public void generateCustomerDataWithOutstandingInvoice(String environment) throws InterruptedException, AWTException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName_01 = null;
@@ -874,7 +870,7 @@ public class DomainzDataCreationTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
 		caworkflowadminpage.processFraudCheck();
-		caworkflowadminpage.processDelegateDomain();
+		//caworkflowadminpage.processDelegateDomain();
 
 		//Test Step 5: Set the new password for the account reference
 		caheaderpage = new CAHeaderPage();
@@ -920,8 +916,8 @@ public class DomainzDataCreationTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=5, enabled = true)
-	public void generateCustomerDataWithDefaultCreditCard(String environment) throws InterruptedException{
+	@Test
+	public void generateCustomerDataWithDefaultCreditCard(String environment) throws InterruptedException, AWTException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName_01 = null;
@@ -1026,7 +1022,6 @@ public class DomainzDataCreationTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
 		caworkflowadminpage.processFraudCheck();
-		caworkflowadminpage.processDelegateDomain();
 		
 		//Test Step 5: Set the new password for the account reference
 		caheaderpage = new CAHeaderPage();
