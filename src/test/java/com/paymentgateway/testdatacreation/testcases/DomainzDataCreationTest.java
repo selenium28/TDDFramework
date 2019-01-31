@@ -375,35 +375,35 @@ public class DomainzDataCreationTest extends TestBase{
 			strCardOwnerName = "Domainz New Customer - Monthly Product 40091881";
 			strCardType = "Visa";
 			strCardNumber = "4009348888881881";
-		    strCardExpiryMonth = "03";
-		    strCardExpiryYear = "2021";
+		    strCardExpiryMonth = "01";
+		    strCardExpiryYear = "2022";
 		    strCardSecurityCode = "776";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
-			strCardOwnerName = "Domainz Test New Customer - Monthly Product";
+			strCardOwnerName = "Domainz New Customer - Monthly Product 40050004";
 			strCardType = "Visa";
 			strCardNumber = "4005519200000004";
-		    strCardExpiryMonth = "10";
-		    strCardExpiryYear = "2024";
+		    strCardExpiryMonth = "02";
+		    strCardExpiryYear = "2022";
 		    strCardSecurityCode = "443";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
-			strCardOwnerName = "Domainz Test New Customer - Monthly Product";
+			strCardOwnerName = "Domainz New Customer - Monthly Product 45000061";
 			strCardType = "Visa";
 			strCardNumber = "4500600000000061";
-		    strCardExpiryMonth = "12";
-		    strCardExpiryYear = "2021";
+		    strCardExpiryMonth = "03";
+		    strCardExpiryYear = "2022";
 		    strCardSecurityCode = "992";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
-			strCardOwnerName = "Domainz Test New Customer - Monthly Product";
+			strCardOwnerName = "Domainz New Customer - Monthly Product 40120026";
 			strCardType = "Visa";
 			strCardNumber = "4012000033330026";
 		    strCardExpiryMonth = "04";
-		    strCardExpiryYear = "2027";
+		    strCardExpiryYear = "2022";
 		    strCardSecurityCode = "238";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
@@ -460,38 +460,38 @@ public class DomainzDataCreationTest extends TestBase{
 		dmzbillingpage.selectNewCreditCardOption();
 		
 		if (intMinCount == 4) {
-			strCardOwnerName = "Domainz Test Returning Customer - Monthly Product";
+			strCardOwnerName = "Domainz Returning Customer - Monthly Product 55554444";
 			strCardType = "MasterCard";
 			strCardNumber = "5555555555554444";
-		    strCardExpiryMonth = "09";
-		    strCardExpiryYear = "2020";
+		    strCardExpiryMonth = "05";
+		    strCardExpiryYear = "2022";
 		    strCardSecurityCode = "545";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
-			strCardOwnerName = "Domainz Test Returning Customer - Monthly Product";
+			strCardOwnerName = "Domainz Returning Customer - Monthly Product 22230014";
 			strCardType = "MasterCard";
 			strCardNumber = "2223520043560014";
-		    strCardExpiryMonth = "08";
-		    strCardExpiryYear = "2021";
+		    strCardExpiryMonth = "06";
+		    strCardExpiryYear = "2022";
 		    strCardSecurityCode = "108";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
-			strCardOwnerName = "Domainz Test Returning Customer - Monthly Product";
+			strCardOwnerName = "Domainz Returning Customer - Monthly Product 54545454";
 			strCardType = "MasterCard";
 			strCardNumber = "5454545454545454";
-		    strCardExpiryMonth = "01";
+		    strCardExpiryMonth = "07";
 		    strCardExpiryYear = "2022";
 		    strCardSecurityCode = "731";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
-			strCardOwnerName = "Domainz Test Returning Customer - Monthly Product";
+			strCardOwnerName = "Domainz Returning Customer - Monthly Product 22230011";
 			strCardType = "MasterCard";
 			strCardNumber = "2223000048400011";
-		    strCardExpiryMonth = "10";
-		    strCardExpiryYear = "2019";
+		    strCardExpiryMonth = "08";
+		    strCardExpiryYear = "2022";
 		    strCardSecurityCode = "106";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
@@ -582,38 +582,38 @@ public class DomainzDataCreationTest extends TestBase{
 		
 		//Test Step 2: Input credit card details and submit the order 
 		if (intMinCount == 4) {
-			strCardOwnerName = "Domainz Test New Customer - Yearly Product";
+			strCardOwnerName = "Domainz New Customer - Yearly Product 40127777";
 			strCardType = "Visa";
 			strCardNumber = "4012000077777777";
-		    strCardExpiryMonth = "05";
-		    strCardExpiryYear = "2021";
+		    strCardExpiryMonth = "01";
+		    strCardExpiryYear = "2023";
 		    strCardSecurityCode = "943";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
-			strCardOwnerName = "Domainz Test New Customer - Yearly Product";
+			strCardOwnerName = "Domainz New Customer - Yearly Product 42171119";
 			strCardType = "Visa";
 			strCardNumber = "4217651111111119";
-		    strCardExpiryMonth = "11";
-		    strCardExpiryYear = "2021";
+		    strCardExpiryMonth = "02";
+		    strCardExpiryYear = "2023";
 		    strCardSecurityCode = "668";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
-			strCardOwnerName = "Domainz Test New Customer - Yearly Product";
+			strCardOwnerName = "Domainz New Customer - Yearly Product 41111111";
 			strCardType = "Visa";
 			strCardNumber = "4111111111111111";
-		    strCardExpiryMonth = "02";
-		    strCardExpiryYear = "2024";
+		    strCardExpiryMonth = "03";
+		    strCardExpiryYear = "2023";
 		    strCardSecurityCode = "705";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
-			strCardOwnerName = "Domainz Test New Customer - Yearly Product";
+			strCardOwnerName = "Domainz New Customer - Yearly Product 40121881";
 			strCardType = "Visa";
 			strCardNumber = "4012888888881881";
-		    strCardExpiryMonth = "06";
-		    strCardExpiryYear = "2022";
+		    strCardExpiryMonth = "04";
+		    strCardExpiryYear = "2023";
 		    strCardSecurityCode = "185";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
@@ -672,16 +672,16 @@ public class DomainzDataCreationTest extends TestBase{
 		dmzbillingpage.selectNewCreditCardOption();
 		
 		if (intMinCount == 4) {
-			strCardOwnerName = "Domainz Test Returning Customer - Yearly Product";
+			strCardOwnerName = "Domainz Returning Customer - Yearly Product 22230011";
 			strCardType = "MasterCard";
 			strCardNumber = "2223000048400011";
-		    strCardExpiryMonth = "07";
+		    strCardExpiryMonth = "05";
 		    strCardExpiryYear = "2023";
 		    strCardSecurityCode = "433";
 		    dmzbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
-			strCardOwnerName = "Domainz Test Returning Customer - Yearly Product";
+			strCardOwnerName = "Domainz Returning Customer - Yearly Product 55554444";
 			strCardType = "MasterCard";
 			strCardNumber = "5555555555554444";
 		    strCardExpiryMonth = "09";
