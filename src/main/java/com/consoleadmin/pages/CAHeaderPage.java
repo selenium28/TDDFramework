@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -56,10 +57,10 @@ public class CAHeaderPage extends TestBase{
     	
     	Thread.sleep(3000);
     	accountReferenceInput.sendKeys(straccountreference);
-    	Thread.sleep(3000);
+    	Thread.sleep(1000);
     	System.out.println ("Searching for submit button");
-    	Thread.sleep(3000);
-    	submitButton.click();
+    	Thread.sleep(4000);
+    	driver.findElement(By.xpath("//table[@class='headerbar']/tbody/tr[1]/td[3]/form/input[@name='submit']")).click();
     	System.out.println ("Submit button clicked");
 		
     	Thread.sleep(8000);

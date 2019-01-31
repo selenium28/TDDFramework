@@ -49,14 +49,11 @@ public class CAAccountReferencePage extends TestBase{
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", reenterToVerifyTextField);
     	reenterToVerifyTextField.sendKeys(strnewpassword);
     	Thread.sleep(5000);
-    		
-//    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", updatePasswordButton);
-    	System.out.println ("Searching for password button");
-    	
-    	updatePasswordButton.click();
-    	System.out.println ("Update Password button clicked");
     	
     	//Click update password 
+    	System.out.println ("Searching for password button");
+    	driver.findElement(By.xpath("//tbody/tr[16]/td[@class='cp'][2]/form/input[@value='Update Password']")).click();
+    	System.out.println ("Update Password button clicked");
         Thread.sleep(8000);
     }
     
