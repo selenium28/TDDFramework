@@ -19,6 +19,10 @@
 <!--                     <include name="generateCustomerDataWithYearlyBillingProduct" /> -->
 <!--                     <include name="generateCustomerDataWithOutstandingInvoice" /> -->
 <!--                     <include name="generateCustomerDataWithDefaultCreditCard" /> -->
+						 <include name="createTextFileForGreencodeAndCreditCardDetails" />
+						 <include name="createPropertyFileForDecryptedDataVerification" />
+
+
                 </methods>
 			</class>
 			

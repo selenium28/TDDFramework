@@ -72,8 +72,7 @@ public class TestUtil extends TestBase{
 		Date d1 = new Date();
 
 		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + screenshotname + "_" +df.format(d1) +".png"));
-		//FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + screenshotname + System.currentTimeMillis() + ".png"));
-
+		
 	}
 
 	
