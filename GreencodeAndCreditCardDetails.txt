@@ -1,1 +1,6 @@
 green_code,card_digits,card_owner,card_expire_month,card_expire_year
+PAY-930,4012000033330026,"Domainz New Customer - Monthly Product 40120026",04,2022
+PAY-930,2223000048400011,"Domainz Returning Customer - Monthly Product 22230011",08,2022
+PAY-931,4500600000000061,"Domainz New Customer - Monthly Product 45000061",03,2022
+PAY-931,5454545454545454,"Domainz Returning Customer - Monthly Product 54545454",07,2022
+PAY-932,4005519200000004,"Domainz New Customer - Monthly Product 40050004",02,2022

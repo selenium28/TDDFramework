@@ -342,7 +342,7 @@ public class DomainzDataCreationTest extends TestBase{
 		
 		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
-		for(intMinCount = 4; intMinCount<=intMaxCount; intMinCount++) {
+		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
 		// Generate name for first and second domain
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -552,7 +552,7 @@ public class DomainzDataCreationTest extends TestBase{
 		
 		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
-		for(intMinCount = 3; intMinCount<=intMaxCount; intMinCount++) {
+		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
 		// Generate name for first and second domain
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");

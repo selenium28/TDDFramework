@@ -57,9 +57,9 @@ public class CAHeaderPage extends TestBase{
     	
     	Thread.sleep(3000);
     	accountReferenceInput.sendKeys(straccountreference);
-    	Thread.sleep(1000);
+    	Thread.sleep(2000);
     	System.out.println ("Searching for submit button");
-    	Thread.sleep(4000);
+    	Thread.sleep(8000);
     	driver.findElement(By.xpath("//table[@class='headerbar']/tbody/tr[1]/td[3]/form/input[@name='submit']")).click();
     	System.out.println ("Submit button clicked");
 		

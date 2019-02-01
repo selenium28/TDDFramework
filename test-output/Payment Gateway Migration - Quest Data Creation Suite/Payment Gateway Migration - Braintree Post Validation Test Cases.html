@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 01 09:41:26 AEDT 2019</td>
+<td>Started on:</td><td>Fri Feb 01 15:51:33 AEDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>8 seconds (8906 ms)</td>
+<tr><td>Total time:</td><td>1062 seconds (1062045 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,20 +75,67 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.createPropertyFileForDecryptedDataVerification()'><b>createPropertyFileForDecryptedDataVerification</b><br>Test class: com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest<br>Parameters: stagingdev-5</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.createPropertyFileForDecryptedDataVerification(DomainzDataCreationTest.java:1120)
+<td title='com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.generateCustomerDataWithMonthlyBillingProduct()'><b>generateCustomerDataWithMonthlyBillingProduct</b><br>Test class: com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest<br>Parameters: stagingdev-5, 3</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: timeout
+  (Session info: chrome=72.0.3626.81)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.0.240&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61907}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.81, webStorageEnabled: true}
+Session ID: e9b6f50d64ff60d2d3ca3528929f92c3
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:368)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:380)
+	at com.consoleadmin.pages.CAAccountReferencePage.updatePassword(CAAccountReferencePage.java:55)
+	at com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.generateCustomerDataWithMonthlyBillingProduct(DomainzDataCreationTest.java:441)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace659363579", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace659363579'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.createPropertyFileForDecryptedDataVerification(DomainzDataCreationTest.java:1120)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace471534072", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace471534072'><pre>org.openqa.selenium.TimeoutException: timeout
+  (Session info: chrome=72.0.3626.81)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.0.240&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61907}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.81, webStorageEnabled: true}
+Session ID: e9b6f50d64ff60d2d3ca3528929f92c3
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:368)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:380)
+	at com.consoleadmin.pages.CAAccountReferencePage.updatePassword(CAAccountReferencePage.java:55)
+	at com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.generateCustomerDataWithMonthlyBillingProduct(DomainzDataCreationTest.java:441)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -110,7 +157,7 @@ function toggleAllBoxes() {
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>0</td>
+<td>1061</td>
 <td>com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -121,14 +168,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.createTextFileForGreencodeAndCreditCardDetails()'><b>createTextFileForGreencodeAndCreditCardDetails</b><br>Test class: com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest<br>Parameters: stagingdev-5</td>
+<td title='com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.createPropertyFileForDecryptedDataVerification()'><b>createPropertyFileForDecryptedDataVerification</b><br>Test class: com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest<br>Parameters: stagingdev-5</td>
 <td></td>
 <td>0</td>
 <td>com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311</td></tr>
 <tr>
-<td title='com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.generateCustomerDataWithDomainRegistrationAndEnableAutoRenew()'><b>generateCustomerDataWithDomainRegistrationAndEnableAutoRenew</b><br>Test class: com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest<br>Parameters: stagingdev-5</td>
+<td title='com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.createTextFileForGreencodeAndCreditCardDetails()'><b>createTextFileForGreencodeAndCreditCardDetails</b><br>Test class: com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest<br>Parameters: stagingdev-5</td>
 <td></td>
-<td>8</td>
+<td>0</td>
 <td>com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311</td></tr>
 </table><p>
 </body>

@@ -2,50 +2,68 @@
 <testng-results skipped="0" failed="1" ignored="4" total="7" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Payment Gateway Migration - Quest Data Creation Suite" duration-ms="8906" started-at="2019-01-31T22:41:26Z" finished-at="2019-01-31T22:41:35Z">
+  <suite name="Payment Gateway Migration - Quest Data Creation Suite" duration-ms="1062045" started-at="2019-02-01T04:51:33Z" finished-at="2019-02-01T05:09:15Z">
     <groups>
     </groups>
-    <test name="Payment Gateway Migration - Braintree Post Validation Test Cases" duration-ms="8906" started-at="2019-01-31T22:41:26Z" finished-at="2019-01-31T22:41:35Z">
+    <test name="Payment Gateway Migration - Braintree Post Validation Test Cases" duration-ms="1062045" started-at="2019-02-01T04:51:33Z" finished-at="2019-02-01T05:09:15Z">
       <class name="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest">
-        <test-method status="PASS" signature="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew" duration-ms="8871" started-at="2019-01-31T22:41:26Z" finished-at="2019-01-31T22:41:35Z">
+        <test-method status="FAIL" signature="generateCustomerDataWithMonthlyBillingProduct(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="generateCustomerDataWithMonthlyBillingProduct" duration-ms="1061994" started-at="2019-02-01T04:51:33Z" finished-at="2019-02-01T05:09:15Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[stagingdev-5]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateCustomerDataWithDomainRegistrationAndEnableAutoRenew -->
-        <test-method status="PASS" signature="createTextFileForGreencodeAndCreditCardDetails(java.lang.String)[pri:6, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="createTextFileForGreencodeAndCreditCardDetails" duration-ms="2" started-at="2019-01-31T22:41:35Z" finished-at="2019-01-31T22:41:35Z">
-          <params>
-            <param index="0">
+            <param index="1">
               <value>
-                <![CDATA[stagingdev-5]]>
+                <![CDATA[3]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createTextFileForGreencodeAndCreditCardDetails -->
-        <test-method status="FAIL" signature="createPropertyFileForDecryptedDataVerification(java.lang.String)[pri:7, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="createPropertyFileForDecryptedDataVerification" duration-ms="2" started-at="2019-01-31T22:41:35Z" finished-at="2019-01-31T22:41:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.IndexOutOfBoundsException">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Index: 0, Size: 0]]>
+              <![CDATA[timeout
+  (Session info: chrome=72.0.3626.81)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.0.240', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61907}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.81, webStorageEnabled: true}
+Session ID: e9b6f50d64ff60d2d3ca3528929f92c3]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-at java.util.ArrayList.rangeCheck(Unknown Source)
-at java.util.ArrayList.get(Unknown Source)
-at com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.createPropertyFileForDecryptedDataVerification(DomainzDataCreationTest.java:1120)
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout
+  (Session info: chrome=72.0.3626.81)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.0.240', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61907}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.81, webStorageEnabled: true}
+Session ID: e9b6f50d64ff60d2d3ca3528929f92c3
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at sun.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:368)
+at com.sun.proxy.$Proxy15.click(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:380)
+at com.consoleadmin.pages.CAAccountReferencePage.updatePassword(CAAccountReferencePage.java:55)
+at com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.generateCustomerDataWithMonthlyBillingProduct(DomainzDataCreationTest.java:441)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -68,7 +86,29 @@ at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateCustomerDataWithMonthlyBillingProduct -->
+        <test-method status="PASS" signature="createTextFileForGreencodeAndCreditCardDetails(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="createTextFileForGreencodeAndCreditCardDetails" duration-ms="4" started-at="2019-02-01T05:09:15Z" finished-at="2019-02-01T05:09:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stagingdev-5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTextFileForGreencodeAndCreditCardDetails -->
+        <test-method status="PASS" signature="createPropertyFileForDecryptedDataVerification(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="createPropertyFileForDecryptedDataVerification" duration-ms="9" started-at="2019-02-01T05:09:15Z" finished-at="2019-02-01T05:09:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stagingdev-5]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPropertyFileForDecryptedDataVerification -->

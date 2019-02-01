@@ -48,10 +48,11 @@ public class CAAccountReferencePage extends TestBase{
     	//Reenter to Verify
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", reenterToVerifyTextField);
     	reenterToVerifyTextField.sendKeys(strnewpassword);
-    	Thread.sleep(5000);
+    	Thread.sleep(2000);
     	
     	//Click update password 
     	System.out.println ("Searching for password button");
+    	Thread.sleep(8000);
     	driver.findElement(By.xpath("//tbody/tr[16]/td[@class='cp'][2]/form/input[@value='Update Password']")).click();
     	System.out.println ("Update Password button clicked");
         Thread.sleep(8000);

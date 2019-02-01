@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" title="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest" hash-for-method="createPropertyFileForDecryptedDataVerification(stagingdev-5)">createPropertyFileForDecryptedDataVerification(stagingdev-5)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" title="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest" hash-for-method="generateCustomerDataWithMonthlyBillingProduct(stagingdev-5, 3)">generateCustomerDataWithMonthlyBillingProduct(stagingdev-5, 3)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite -->
@@ -116,12 +116,12 @@
                     <div class="method-list-content passed suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" title="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest" hash-for-method="createTextFileForGreencodeAndCreditCardDetails(stagingdev-5)">createTextFileForGreencodeAndCreditCardDetails(stagingdev-5)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" title="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest" hash-for-method="createPropertyFileForDecryptedDataVerification(stagingdev-5)">createPropertyFileForDecryptedDataVerification(stagingdev-5)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" title="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest" hash-for-method="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(stagingdev-5)">generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(stagingdev-5)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" title="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest" hash-for-method="createTextFileForGreencodeAndCreditCardDetails(stagingdev-5)">createTextFileForGreencodeAndCreditCardDetails(stagingdev-5)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite -->
@@ -144,19 +144,39 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createPropertyFileForDecryptedDataVerification(stagingdev-5)">
-                  </a> <!-- createPropertyFileForDecryptedDataVerification(stagingdev-5) -->
-                  <span class="method-name">createPropertyFileForDecryptedDataVerification</span>
-                  <span class="parameters">(stagingdev-5)</span>
-                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.createPropertyFileForDecryptedDataVerification(DomainzDataCreationTest.java:1120)
+                  <a name="generateCustomerDataWithMonthlyBillingProduct(stagingdev-5, 3)">
+                  </a> <!-- generateCustomerDataWithMonthlyBillingProduct(stagingdev-5, 3) -->
+                  <span class="method-name">generateCustomerDataWithMonthlyBillingProduct</span>
+                  <span class="parameters">(stagingdev-5, 3)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: timeout
+  (Session info: chrome=72.0.3626.81)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.0.240&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61907}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.81, webStorageEnabled: true}
+Session ID: e9b6f50d64ff60d2d3ca3528929f92c3
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:368)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:380)
+	at com.consoleadmin.pages.CAAccountReferencePage.updatePassword(CAAccountReferencePage.java:55)
+	at com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.generateCustomerDataWithMonthlyBillingProduct(DomainzDataCreationTest.java:441)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 16 stack frames
+... Removed 23 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -170,17 +190,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createTextFileForGreencodeAndCreditCardDetails(stagingdev-5)">
-                  </a> <!-- createTextFileForGreencodeAndCreditCardDetails(stagingdev-5) -->
-                  <span class="method-name">createTextFileForGreencodeAndCreditCardDetails</span>
+                  <a name="createPropertyFileForDecryptedDataVerification(stagingdev-5)">
+                  </a> <!-- createPropertyFileForDecryptedDataVerification(stagingdev-5) -->
+                  <span class="method-name">createPropertyFileForDecryptedDataVerification</span>
                   <span class="parameters">(stagingdev-5)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(stagingdev-5)">
-                  </a> <!-- generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(stagingdev-5) -->
-                  <span class="method-name">generateCustomerDataWithDomainRegistrationAndEnableAutoRenew</span>
+                  <a name="createTextFileForGreencodeAndCreditCardDetails(stagingdev-5)">
+                  </a> <!-- createTextFileForGreencodeAndCreditCardDetails(stagingdev-5) -->
+                  <span class="method-name">createTextFileForGreencodeAndCreditCardDetails</span>
                   <span class="parameters">(stagingdev-5)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -197,6 +217,7 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;10&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Payment Gateway Migration - Quest Data Creation Suite&quot; parallel=&quot;tests&quot;&gt;
   &lt;parameter name=&quot;environment&quot; value=&quot;stagingdev-5&quot;/&gt;
+  &lt;parameter name=&quot;iteration&quot; value=&quot;3&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.reports.extentreportslistener.ExtentReportListener&quot;/&gt;
   &lt;/listeners&gt;
@@ -204,7 +225,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;generateCustomerDataWithDomainRegistrationAndEnableAutoRenew&quot;/&gt;
+          &lt;include name=&quot;generateCustomerDataWithMonthlyBillingProduct&quot;/&gt;
           &lt;include name=&quot;createTextFileForGreencodeAndCreditCardDetails&quot;/&gt;
           &lt;include name=&quot;createPropertyFileForDecryptedDataVerification&quot;/&gt;
         &lt;/methods&gt;
@@ -250,22 +271,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'generateCustomerDataWithDomainRegistrationAndEnableAutoRenew')
+data.setCell(0, 1, 'generateCustomerDataWithMonthlyBillingProduct')
 data.setCell(0, 2, 'com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest')
-data.setCell(0, 3, 8871);
+data.setCell(0, 3, 1061994);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createTextFileForGreencodeAndCreditCardDetails')
+data.setCell(1, 1, 'createPropertyFileForDecryptedDataVerification')
 data.setCell(1, 2, 'com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest')
-data.setCell(1, 3, 2);
+data.setCell(1, 3, 9);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createPropertyFileForDecryptedDataVerification')
+data.setCell(2, 1, 'createTextFileForGreencodeAndCreditCardDetails')
 data.setCell(2, 2, 'com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest')
-data.setCell(2, 3, 2);
+data.setCell(2, 3, 4);
 window.suiteTableData['Payment_Gateway_Migration_-_Quest_Data_Creation_Suite']= { tableData: data, tableDiv: 'times-div-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 17 minutes</span>
               <div id="times-div-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite">
               </div> <!-- times-div-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite -->
             </div> <!-- times-div -->
@@ -288,7 +309,7 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">generateCustomerDataWithYearlyBillingProduct</span>
                 <br/>
-                <span class="ignored-method-name">generateCustomerDataWithMonthlyBillingProduct</span>
+                <span class="ignored-method-name">generateCustomerDataWithDomainRegistrationAndEnableAutoRenew</span>
                 <br/>
                 <span class="ignored-method-name">generateCustomerDataWithOutstandingInvoice</span>
                 <br/>
@@ -306,18 +327,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(stagingdev-5)</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">generateCustomerDataWithMonthlyBillingProduct(stagingdev-5, 3)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createTextFileForGreencodeAndCreditCardDetails(stagingdev-5)</span>
-                <span class="method-start">8875 ms</span>
+                <span class="method-start">1061997 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">createPropertyFileForDecryptedDataVerification(stagingdev-5)</span>
-                <span class="method-start">8879 ms</span>
+                <span class="method-start">1062005 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
