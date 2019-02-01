@@ -115,9 +115,9 @@ public class DomainzDataCreationTest extends TestBase{
 		System.out.println("done saving greencode and card details");
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "iteration"})
 	@Test
-	public void generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(String environment) throws InterruptedException, AWTException{
+	public void generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(String environment, Integer iteration) throws InterruptedException, AWTException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName_01 = null;
@@ -134,7 +134,7 @@ public class DomainzDataCreationTest extends TestBase{
 	    String strCardExpiryYear = null;
 	    String strCardSecurityCode = null;
 		
-		Integer intMaxCount = 1;
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -317,9 +317,9 @@ public class DomainzDataCreationTest extends TestBase{
 		}
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "iteration"})
 	@Test
-	public void generateCustomerDataWithMonthlyBillingProduct(String environment) throws InterruptedException, AWTException{
+	public void generateCustomerDataWithMonthlyBillingProduct(String environment, Integer iteration) throws InterruptedException, AWTException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName_01 = null;
@@ -340,7 +340,7 @@ public class DomainzDataCreationTest extends TestBase{
 	    String strCardExpiryYear = null;
 	    String strCardSecurityCode = null;
 		
-		Integer intMaxCount = 4;
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 4; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -527,9 +527,9 @@ public class DomainzDataCreationTest extends TestBase{
 		}
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "iteration"})
 	@Test
-	public void generateCustomerDataWithYearlyBillingProduct(String environment) throws InterruptedException, AWTException{
+	public void generateCustomerDataWithYearlyBillingProduct(String environment, Integer iteration) throws InterruptedException, AWTException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName_01 = null;
@@ -550,7 +550,7 @@ public class DomainzDataCreationTest extends TestBase{
 	    String strCardExpiryYear = null;
 	    String strCardSecurityCode = null;
 		
-		Integer intMaxCount = 4;
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 3; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -739,9 +739,9 @@ public class DomainzDataCreationTest extends TestBase{
 		}
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "iteration"})
 	@Test
-	public void generateCustomerDataWithOutstandingInvoice(String environment) throws InterruptedException, AWTException{
+	public void generateCustomerDataWithOutstandingInvoice(String environment, Integer iteration) throws InterruptedException, AWTException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName_01 = null;
@@ -767,7 +767,7 @@ public class DomainzDataCreationTest extends TestBase{
 	    String strCardExpiryYear = null;
 	    String strCardSecurityCode = null;
 		
-		Integer intMaxCount = 4;
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -916,9 +916,9 @@ public class DomainzDataCreationTest extends TestBase{
 		}
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "iteration"})
 	@Test
-	public void generateCustomerDataWithDefaultCreditCard(String environment) throws InterruptedException, AWTException{
+	public void generateCustomerDataWithDefaultCreditCard(String environment, Integer iteration) throws InterruptedException, AWTException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName_01 = null;
@@ -935,7 +935,7 @@ public class DomainzDataCreationTest extends TestBase{
 	    String strCardSecurityCode = null;
 		
 		
-		Integer intMaxCount = 4;
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -1093,7 +1093,7 @@ public class DomainzDataCreationTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=6, enabled = true)
+	@Test
 	public void createTextFileForGreencodeAndCreditCardDetails (String environment) throws InterruptedException, IOException{
 		
 		Integer intMaxCount = arrDataMigrationGCAndCCDetails.size();
@@ -1111,7 +1111,7 @@ public class DomainzDataCreationTest extends TestBase{
 		}
 	
 	@Parameters({"environment"})
-	@Test(priority=7, enabled = true)
+	@Test
 	public void createPropertyFileForDecryptedDataVerification (String environment) throws InterruptedException, IOException{
 		
 		Integer intMaxCount = arrDataMigrationGC.size();

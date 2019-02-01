@@ -86,7 +86,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	Thread.sleep(3000);
     	
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'ok')]/parent::tr/td[3]/a[text()='Execute']")).click();
-    	Thread.sleep(5000);
+    	Thread.sleep(7000);
     	
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();

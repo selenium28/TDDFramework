@@ -111,9 +111,9 @@ public class DomainzBTPostValidationTest extends TestBase{
 		System.out.println("done saving greencode and card details");
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "iteration"})
 	@Test
-	public void testMigratedCustomerInDomainRegistrationAndEnableAutoRenew(String environment) throws InterruptedException, AWTException{
+	public void testMigratedCustomerInDomainRegistrationAndEnableAutoRenew(String environment, Integer iteration) throws InterruptedException, AWTException{
 	
 		// Initialization 
 		String strDomainName= null;
@@ -134,7 +134,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 	    String strBraintreeTransactionID = null;
 	    String strBraintreeTransactionIDStatus = null;
 	    
-		Integer intMaxCount = 1;
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -286,9 +286,9 @@ public class DomainzBTPostValidationTest extends TestBase{
 		}
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "iteration"})
 	@Test
-	public void testMigratedCustomerWithMonthlyBillingProduct(String environment) throws InterruptedException, AWTException{
+	public void testMigratedCustomerWithMonthlyBillingProduct(String environment, Integer iteration) throws InterruptedException, AWTException{
 	
 		// Initialization 
 		String strDomainName = null;
@@ -311,7 +311,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 	    String strBraintreeTransactionID = null;
 	    String strBraintreeTransactionIDStatus = null;
 		
-		Integer intMaxCount = 1;
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -469,9 +469,9 @@ public class DomainzBTPostValidationTest extends TestBase{
 		}
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "iteration"})
 	@Test
-	public void testMigratedCustomerWithYearlyBillingProduct(String environment) throws InterruptedException, AWTException{
+	public void testMigratedCustomerWithYearlyBillingProduct(String environment, Integer iteration) throws InterruptedException, AWTException{
 	
 		// Initialization 
 		String strDomainName = null;
@@ -494,7 +494,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 	    String strBraintreeTransactionID = null;
 	    String strBraintreeTransactionIDStatus = null;
 		
-		Integer intMaxCount = 1;
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -653,9 +653,9 @@ public class DomainzBTPostValidationTest extends TestBase{
 		}
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "iteration"})
 	@Test
-	public void testMigratedCustomerWithOutstandingInvoice(String environment) throws InterruptedException{
+	public void testMigratedCustomerWithOutstandingInvoice(String environment, Integer iteration) throws InterruptedException{
 	
 		// Initialization 
 		String strDomainName = null;
@@ -669,7 +669,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		String strMajorProduct = null;
 		String strProductPeriod = null;
 		
-		Integer intMaxCount = 1;
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -733,9 +733,9 @@ public class DomainzBTPostValidationTest extends TestBase{
 		}
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "iteration"})
 	@Test
-	public void testMigratedCustomerWithDefaultCreditCard(String environment) throws InterruptedException, AWTException{
+	public void testMigratedCustomerWithDefaultCreditCard(String environment, Integer iteration) throws InterruptedException, AWTException{
 	
 		// Initialization
 		String strDomainName = null;
@@ -757,7 +757,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 	    String strBraintreeTransactionIDAmount = null;
 		
 		
-		Integer intMaxCount = 1;
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -890,30 +890,6 @@ public class DomainzBTPostValidationTest extends TestBase{
 		}
 	}
 	
-//	@Parameters({"environment"})
-//	@Test(priority=6, enabled = true)
-//	public void createTextFileForGreencodeAndCreditCardDetails (String environment) throws InterruptedException, IOException{
-//		
-//		Integer intMaxCount = arrDataMigrationGCAndCCDetails.size();
-//		Integer intMinCount = null;
-//		PrintWriter writer = new PrintWriter("GreencodeAndCreditCardDetails.txt", "UTF-8");
-//		writer.println("green_code,card_digits,card_owner,card_expire_month,card_expire_year");
-//		
-//		
-//		for(intMinCount = 0; intMinCount<intMaxCount; intMinCount++) {
-//			writer.println(arrDataMigrationGCAndCCDetails.get(intMinCount));
-//		}	
-//		writer.close();
-//		System.out.println("Done with Text File Creation");
-//		
-//		}
-//	
-
-	
-	
-
-	
-
 }
 
 
