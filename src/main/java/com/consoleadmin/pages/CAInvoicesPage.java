@@ -21,8 +21,9 @@ public class CAInvoicesPage extends TestBase {
 	// Methods
 	public CATaxInvoicePage selectInvoiceNumber(String strinvoicenumber) throws InterruptedException {
 		
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[@class='cp'][text()='"+strinvoicenumber+"']/parent::td/parent::tr/td[9]/a[2]")).click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		return new CATaxInvoicePage();
 		
@@ -32,8 +33,9 @@ public class CAInvoicesPage extends TestBase {
 		
 		String invoicenumber;
 		
+		Thread.sleep(5000);
 		invoicenumber = driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table[4]/tbody/tr[2]/td[1]/a")).getText();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		return invoicenumber;
 		

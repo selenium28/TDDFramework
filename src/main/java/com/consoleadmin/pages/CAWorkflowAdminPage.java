@@ -38,7 +38,6 @@ public class CAWorkflowAdminPage extends TestBase{
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
     	Thread.sleep(8000);
-
     }
     
     
@@ -61,7 +60,6 @@ public class CAWorkflowAdminPage extends TestBase{
     		this.processCheckASIC();
     		this.processDelegateDomain();
     	}
-
     }
     
     
@@ -69,64 +67,60 @@ public class CAWorkflowAdminPage extends TestBase{
     public void processCheckASIC() throws InterruptedException {
     	
     	//Click Execute for Check ASIC
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'check asic')]/parent::tr/td[3]/a[text()='Execute']")).click();
     	Thread.sleep(10000);
     	
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(5000);
-    			
+    	Thread.sleep(5000);			
     }
     
     
     public void processFraudCheck() throws InterruptedException {
     	
     	//Click Ok for Fraud Check
-    	Thread.sleep(3000);
-    	
+    	Thread.sleep(10000);
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'ok')]/parent::tr/td[3]/a[text()='Execute']")).click();
     	Thread.sleep(10000);
     	
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(5000);
-    		
+    	Thread.sleep(5000);		
     }
     
     
     public void processDelegateDomain() throws InterruptedException {
 
     	//Click Execute for Delegate Domain
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     	driver.findElement(By.xpath("//tbody/tr[4]/td[contains(text(),'I have manually delegated this domain')]/parent::tr/td[3]/a[text()='Execute']")).click();
-    	Thread.sleep(5000);
+    	Thread.sleep(10000);
     		
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
     	Thread.sleep(5000);
-
     }
     
     public void processSkipDelegation() throws InterruptedException {
 
     	//Click Execute for Delegate Domain
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     	driver.findElement(By.xpath("//tbody/tr[4]/td[contains(text(),'skip delegation')]/parent::tr/td[3]/a[text()='Execute']")).click();
-    	Thread.sleep(5000);
+    	Thread.sleep(10000);
     		
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
     	Thread.sleep(5000);
-
     }
 
 
     public void processMarkAsRegistered(String strworkflowid) throws InterruptedException {
     	
     	//Click Execute for Mark as Registered
+    	Thread.sleep(10000);
     	driver.findElement(By.xpath("//a[@href='/admin/execute/workflow/getActionForm?action_id=7014&workflow_id="+strworkflowid+"']")).click();
-    	Thread.sleep(5000);
+    	Thread.sleep(10000);
     	
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
@@ -137,85 +131,85 @@ public class CAWorkflowAdminPage extends TestBase{
     public void processProductSetup2DIFM() throws InterruptedException {
     		
     	//Click DIFM workflowid
-    	Thread.sleep(3000);
+    	Thread.sleep(5000);
     	driver.findElement(By.xpath("//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a")).click();
-    	Thread.sleep(3000);
+    	Thread.sleep(5000);
     		
     	//Click Execute for Run Setup
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'run setup')]/parent::tr/td[3]/a[text()='Execute']")).click();
-    	Thread.sleep(3000);
+    	Thread.sleep(5000);
     		
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(3000);
+    	Thread.sleep(5000);
     			
     }
     	
     public void processProductSetup2() throws InterruptedException {
     		
     	//Click workflowid
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     	driver.findElement(By.xpath("//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a")).click();
-    	Thread.sleep(8000);
+    	Thread.sleep(10000);
     		
     	//Click Execute for Run Setup
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'run setup')]/parent::tr/td[3]/a[text()='Execute']")).click();
-    	Thread.sleep(8000);
+    	Thread.sleep(10000);
     		
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(8000);
+    	Thread.sleep(10000);
     			
     }
     	
     public void processProductSetup2ByWFID(String strworkflowid) throws InterruptedException {
     		
     	//Click ProductSetup2 by Workflow ID
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     	driver.findElement(By.linkText(strworkflowid)).click();			
-    	Thread.sleep(8000);
+    	Thread.sleep(10000);
     		
     	//Click Execute for Run Setup
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'run setup')]/parent::tr/td[3]/a[text()='Execute']")).click();
-    	Thread.sleep(8000);
+    	Thread.sleep(10000);
     		
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(8000);
+    	Thread.sleep(10000);
     			
     }
     	
     public void processProductSetup2O365() throws InterruptedException {
     		
     	//Click Office365 workflowid
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     	driver.findElement(By.xpath("//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a")).click();
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     		
     	//Click Execute for Run Setup
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'run setup')]/parent::tr/td[3]/a[text()='Execute']")).click();
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     		
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     			
     }
     	
     public void processProductSetup2DIFMUpgrade(String strworkflowid) throws InterruptedException {
     		
     	//Click DIFM Upgrade workflowid
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     	driver.findElement(By.linkText(strworkflowid)).click();	
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     		
     	//Click Execute for Run Setup
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'run setup')]/parent::tr/td[3]/a[text()='Execute']")).click();
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     		
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(3000);
+    	Thread.sleep(10000);
     			
     }
     	

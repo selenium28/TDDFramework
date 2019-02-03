@@ -42,15 +42,15 @@ public class CSCreateDomainWindowPage extends TestBase{
     
     //Methods
     public void setDomainDetails(String strdomainame, String strtld, String strperiod, String strpaymentMethod) throws InterruptedException {
+    	
+    	Thread.sleep(2000);
     	domainName.sendKeys(strdomainame);
+    	Thread.sleep(2000);
     	tldDropdownButton.click();
     	Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strtld+"']")).click();
         regPeriodDropdownButton.click();
         Thread.sleep(2000);
-//      driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strperiod+" x Y NZ$')]")).click(); 
-//        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strperiod+" x Y ')]")).click();
-//        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strperiod+"')]")).click();
         driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strperiod+"')]")).click();
         
         paymentMethodButton.click();
@@ -61,7 +61,10 @@ public class CSCreateDomainWindowPage extends TestBase{
     }
  
     public void setDomainDetailswithoutRegister(String strdomainame, String strtld, String strpaymentMethod) throws InterruptedException {
+    	
+    	Thread.sleep(2000);
     	domainName.sendKeys(strdomainame);
+    	Thread.sleep(2000);
     	tldDropdownButton.click();
     	Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strtld+"']")).click();
@@ -73,7 +76,10 @@ public class CSCreateDomainWindowPage extends TestBase{
     }
     
     public void setDomainandMajorProductDetails(String strdomainame, String strtld, String strperiod, String strmajorproduct, String strproductperiod, String strpaymentMethod) throws InterruptedException {
+    	
+    	Thread.sleep(2000);
     	domainName.sendKeys(strdomainame);
+    	Thread.sleep(2000);
     	tldDropdownButton.click();
     	Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strtld+"']")).click();
@@ -95,7 +101,10 @@ public class CSCreateDomainWindowPage extends TestBase{
     }
     
     public void setDomainandMajorProductwithoutRegistration(String strdomainame, String strtld, String strmajorproduct, String strproductperiod, String strpaymentMethod) throws InterruptedException {
+    	
+    	Thread.sleep(2000);
     	domainName.sendKeys(strdomainame);
+    	Thread.sleep(2000);
     	tldDropdownButton.click();
     	Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strtld+"']")).click();
@@ -114,6 +123,7 @@ public class CSCreateDomainWindowPage extends TestBase{
     }
 
     public CSNrCRMPage clickCreateDomainButton() throws InterruptedException {
+    	
     	Thread.sleep(2000);
     	System.out.println("clicking new domain (new price system)");
     	if(createDomainButton.isDisplayed()||createDomainButton.isEnabled()) {
