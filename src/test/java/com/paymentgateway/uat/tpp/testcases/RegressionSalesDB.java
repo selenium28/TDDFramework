@@ -231,8 +231,19 @@ public class RegressionSalesDB extends TestBase{
 				cainvoicespage = caaccountreferencepage.clickPayOutstandingInvoices();
 				strInvoiceNumber = cainvoicespage.getInvoiceNumber();
 				cataxinvoicepage = cainvoicespage.selectInvoiceNumber(strInvoiceNumber);
-				cataxinvoicepage.setCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
-				cataxinvoicepage.payInvoice();
+				
+				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
+					
+					cataxinvoicepage.setQuestCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
+					cataxinvoicepage.payInvoice();
+	
+				}
+				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
+
+					cataxinvoicepage.setBTCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
+					cataxinvoicepage.payInvoice();
+				}
+				
 				
 				// Test Step 2: Verify if the payment for invoice is successful.
 				Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$27.70 for invoice "+strInvoiceNumber+" has been accepted");

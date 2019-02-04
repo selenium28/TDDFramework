@@ -104,15 +104,15 @@ public class RegressionSalesDB extends TestBase{
 					strRegistrantNumber = "13080859721";
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-//					strAccountReference = "DOM-1305";
-//					strTld_01 = "nz";
-//					strRegistrationPeriod = "1 x Y";
-//					strMajorProduct = "Basic cPanel Hosting";
-//					strProductPeriod = "1 x M";
-//					strPaymentMethod = "Invoice";
-//					strRegistrantDetails = "Payment Gateway Test";	
-//					strRegistrantType = "ABN";
-//					strRegistrantNumber = "13080859721";
+					strAccountReference = "NET-1218";
+					strTld_01 = "com";
+					strRegistrationPeriod = "1 x Y";
+					strMajorProduct = "Basic cPanel Hosting";
+					strProductPeriod = "1 x M";
+					strPaymentMethod = "Invoice";
+					strRegistrantDetails = "Payment Gateway Test";	
+					strRegistrantType = "ABN";
+					strRegistrantNumber = "13080859721";
 				}
 					
 				//Test Step 1: Login to Sales DB page, then create an order for domain and product 
@@ -216,11 +216,11 @@ public class RegressionSalesDB extends TestBase{
 	
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-//					strAccountReference = "DOM-1305";
-//					strCardOwner = "Test Master";
-//					strCardNumber = "5454545454545454";
-//					strCardExpiryMonth = "02";
-//					strCardExpiryYear = "20";
+					strAccountReference = "NET-1218";
+					strCardOwner = "Test Master";
+					strCardNumber = "5454545454545454";
+					strCardExpiryMonth = "02";
+					strCardExpiryYear = "20";
 	
 				}
 				
@@ -231,13 +231,23 @@ public class RegressionSalesDB extends TestBase{
 				cainvoicespage = caaccountreferencepage.clickPayOutstandingInvoices();
 				strInvoiceNumber = cainvoicespage.getInvoiceNumber();
 				cataxinvoicepage = cainvoicespage.selectInvoiceNumber(strInvoiceNumber);
-				cataxinvoicepage.setCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
-				cataxinvoicepage.payInvoice();
 				
 				// Test Step 2: Verify if the payment for invoice is successful.
-				Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$29.90 for invoice "+strInvoiceNumber+" has been accepted");
+				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
+					
+					cataxinvoicepage.setQuestCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
+					cataxinvoicepage.payInvoice();
+					Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$29.90 for invoice "+strInvoiceNumber+" has been accepted");					
+				}
+				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
+	
+					cataxinvoicepage.setBTCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
+					cataxinvoicepage.payInvoice();
+					Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$29.90 for invoice "+strInvoiceNumber+" has been accepted");
+				}
 				
 				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
+				
 				// Test Step 3: Verify if there is no outstanding amount for the invoice
 //				cainvoicespage = cataxinvoicepage.clickInvoicesLink();
 //				driver.findElement(By.linkText("Invoices")).click();
@@ -267,9 +277,9 @@ public class RegressionSalesDB extends TestBase{
 		
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-//					strAccountReference = "DOM-1305";
-//					strAmount = "65.84";
-//					strTransactionType= "REFUND";
+					strAccountReference = "NET-1218";
+					strAmount = "29.90";
+					strTransactionType= "REFUND";
 				}
 	
 				//Test Step 1: Login to Sales DB page, then refund an invoice
@@ -306,10 +316,10 @@ public class RegressionSalesDB extends TestBase{
 					strPaymentMethod = "Visa: 4111xxxxxxxx1111";
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-//					strAccountReference = "DOM-1305";
-//					strAmount = "65.84";
-//					strTransactionType= "PAYMENT";
-//					strPaymentMethod = "MasterCard: 545454******5454";
+					strAccountReference = "NET-1218";
+					strAmount = "29.90";
+					strTransactionType= "PAYMENT";
+					strPaymentMethod = "MasterCard: 545454******5454";
 					
 				}
 			

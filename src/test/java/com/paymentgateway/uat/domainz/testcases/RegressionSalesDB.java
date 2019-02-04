@@ -11,6 +11,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
+import com.braintree.pages.BTFoundTransactionPage;
+import com.braintree.pages.BTLoginPage;
+import com.braintree.pages.BTMainTabPage;
+import com.braintree.pages.BTTransactionDetailForIDPage;
+import com.braintree.pages.BTTransactionsSearchPage;
 import com.consoleadmin.pages.CAAccountReferencePage;
 import com.consoleadmin.pages.CADomainLevelPage;
 import com.consoleadmin.pages.CAHeaderPage;
@@ -53,7 +58,7 @@ public class RegressionSalesDB extends TestBase{
 		CAViewCreditCardsPage caviewcreditcardspage;
 		CAInvoicesPage cainvoicespage;
 		CATaxInvoicePage cataxinvoicepage;
-		
+				
 		TestUtil testUtil;
 		public static ExtentTest logger;
 		
@@ -74,9 +79,7 @@ public class RegressionSalesDB extends TestBase{
 		public String strTransactionType= null;
 		public String strExpiryMonth = null;
 		public String strExpiryYear =  null;
-
-		
-	
+			
 		public RegressionSalesDB() {
 			super();
 		}
@@ -104,7 +107,7 @@ public class RegressionSalesDB extends TestBase{
 					strRegistrantNumber = "13080859721";
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-					strAccountReference = "DOM-1305";
+					strAccountReference = "DOM-1309";
 					strTld_01 = "nz";
 					strRegistrationPeriod = "1 x Y";
 					strMajorProduct = "Basic cPanel Hosting";
@@ -166,7 +169,7 @@ public class RegressionSalesDB extends TestBase{
 				caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 				caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId_01, strTld_01);
-				
+
 				//Test Step 2: Verify if domain registration workflow status is completed
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
@@ -180,7 +183,7 @@ public class RegressionSalesDB extends TestBase{
 		@Test
 		public void testProductSetup2WorkflowInConsoleAdmin(String environment, String paymentgateway) 
 				throws InterruptedException, IOException{
-		
+					
 				//Test Step 1: Process the productsetup2 workflow in console admin
 				caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName_01 + "." + strTld_01);
 				caworkflowadminpage.processProductSetup2();
@@ -193,6 +196,7 @@ public class RegressionSalesDB extends TestBase{
 				
 				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest03");
 				driver.close();
+						
 		}
 		
 		
@@ -216,7 +220,7 @@ public class RegressionSalesDB extends TestBase{
 	
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-					strAccountReference = "DOM-1305";
+					strAccountReference = "DOM-1309";
 					strCardOwner = "Test Master";
 					strCardNumber = "5454545454545454";
 					strCardExpiryMonth = "02";
@@ -231,13 +235,25 @@ public class RegressionSalesDB extends TestBase{
 				cainvoicespage = caaccountreferencepage.clickPayOutstandingInvoices();
 				strInvoiceNumber = cainvoicespage.getInvoiceNumber();
 				cataxinvoicepage = cainvoicespage.selectInvoiceNumber(strInvoiceNumber);
-				cataxinvoicepage.setCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
-				cataxinvoicepage.payInvoice();
 				
 				// Test Step 2: Verify if the payment for invoice is successful.
-				Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of NZ$65.84 for invoice "+strInvoiceNumber+" has been accepted");
+				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
+					
+					cataxinvoicepage.setQuestCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
+					cataxinvoicepage.payInvoice();
+					Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of NZ$65.84 for invoice "+strInvoiceNumber+" has been accepted");
+					
+				}
+				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
+					
+					cataxinvoicepage.setBTCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
+					cataxinvoicepage.payInvoice();
+					Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of NZ$87.90 for invoice "+strInvoiceNumber+" has been accepted");
+					
+				}
 				
 				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
+				
 				// Test Step 3: Verify if there is no outstanding amount for the invoice
 //				cainvoicespage = cataxinvoicepage.clickInvoicesLink();
 //				driver.findElement(By.linkText("Invoices")).click();
@@ -267,8 +283,8 @@ public class RegressionSalesDB extends TestBase{
 		
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-					strAccountReference = "DOM-1305";
-					strAmount = "65.84";
+					strAccountReference = "DOM-1309";
+					strAmount = "87.90";
 					strTransactionType= "REFUND";
 				}
 	
@@ -306,8 +322,8 @@ public class RegressionSalesDB extends TestBase{
 					strPaymentMethod = "Visa: 4111xxxxxxxx1111";
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-					strAccountReference = "DOM-1305";
-					strAmount = "65.84";
+					strAccountReference = "DOM-1309";
+					strAmount = "87.90";
 					strTransactionType= "PAYMENT";
 					strPaymentMethod = "MasterCard: 545454******5454";
 					

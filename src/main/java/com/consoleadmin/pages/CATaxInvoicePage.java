@@ -43,23 +43,47 @@ public class CATaxInvoicePage extends TestBase{
 	}
 
 	// Methods
-	public void setCreditCardDetails(String strcardowner, String strcardnumber, String strcardexpirymonth, String strcardexpiryyear) throws InterruptedException {
+	public void setQuestCreditCardDetails(String strcardowner, String strcardnumber, String strcardexpirymonth, String strcardexpiryyear) throws InterruptedException {
 		
 		cardOwner.sendKeys(strcardowner);
 		Thread.sleep(2000);
-
 		cardType.click();
 		Thread.sleep(1000);
-
 		selectCardType.click();
 		Thread.sleep(1000);
 		cardnumber.sendKeys(strcardnumber);
 		Thread.sleep(1000);
-
 		cardExpiryMonth.sendKeys(strcardexpirymonth);
 		Thread.sleep(1000);
 		cardExpiryYear.sendKeys(strcardexpiryyear);
 		Thread.sleep(1000);
+	}
+	
+	public void setBTCreditCardDetails(String strcardowner, String strcardnumber, String strcardexpirymonth, String strcardexpiryyear) throws InterruptedException {
+		
+		Thread.sleep(2000);
+		cardOwner.sendKeys(strcardowner);
+		
+		Thread.sleep(2000);
+		driver.switchTo().frame(driver.findElement(By.xpath("//td[@class='cp']/div[@id='cardNumber']/iframe")));
+		driver.findElement(By.xpath("//form/input")).sendKeys(strcardnumber);  
+    	driver.switchTo().defaultContent();
+		
+		Thread.sleep(1000);
+	   	driver.switchTo().frame(driver.findElement(By.xpath("//td[@class='cp']/div[@id='cardExpirationMonth']/iframe")));
+    	driver.findElement(By.xpath("//form/select")).sendKeys(strcardexpirymonth);
+    	driver.switchTo().defaultContent();
+		
+    	Thread.sleep(1000);
+    	driver.switchTo().frame(driver.findElement(By.xpath("//td[@class='cp']/div[@id='cardExpirationYear']/iframe")));
+    	driver.findElement(By.xpath("//form/select")).sendKeys(strcardexpiryyear);
+    	driver.switchTo().defaultContent();
+		
+    	Thread.sleep(1000);
+    	driver.switchTo().frame(driver.findElement(By.xpath("//td[@class='cp']/div[@id='cardCvv']/iframe")));
+    	driver.findElement(By.xpath("//form/input")).sendKeys("888"); 
+    	driver.switchTo().defaultContent();
+    	Thread.sleep(1000);		
 	}
 
 	public void payInvoice() throws InterruptedException {

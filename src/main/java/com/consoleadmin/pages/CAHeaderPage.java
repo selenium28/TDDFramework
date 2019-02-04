@@ -62,7 +62,6 @@ public class CAHeaderPage extends TestBase{
     	Thread.sleep(8000);
     	driver.findElement(By.xpath("//table[@class='headerbar']/tbody/tr[1]/td[3]/form/input[@name='submit']")).click();
     	System.out.println ("Submit button clicked");
-		
     	Thread.sleep(8000);
     	
     	return new CAAccountReferencePage();
@@ -72,9 +71,12 @@ public class CAHeaderPage extends TestBase{
     	
     	Thread.sleep(3000);
     	workflowInput.sendKeys(strworkflow);
-    	Thread.sleep(3000);
-    	getButton.click();
+    	Thread.sleep(2000);
+    	System.out.println ("Searching for get button");
     	Thread.sleep(5000);
+    	getButton.click();
+    	System.out.println ("Get button clicked");
+    	Thread.sleep(8000);
     	
     	return new CAWorkflowAdminPage();
     }	

@@ -33,8 +33,10 @@ public class CAInvoicesPage extends TestBase {
 		
 		String invoicenumber;
 		
-		Thread.sleep(5000);
-		invoicenumber = driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table[4]/tbody/tr[2]/td[1]/a")).getText();
+		Thread.sleep(10000);
+		//invoicenumber = driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table[4]/tbody/tr[2]/td[1]/a")).getText();
+		invoicenumber = driver.findElement(By.xpath("//table[@class='results']/tbody/tr[2]/td[1]/a")).getText();
+		
 		Thread.sleep(5000);
 		
 		return invoicenumber;

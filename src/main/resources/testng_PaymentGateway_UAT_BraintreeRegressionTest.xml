@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Payment Gateway UAT Braintree Regression Test Suite">
+<suite name="Payment Gateway UAT Braintree Regression Test Suite" thread-count="10" parallel="tests">
 	<parameter name="environment"     value="uat1"/>
 	<parameter name="paymentgateway"  value="braintree"/>
 	
@@ -8,16 +8,44 @@
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
 	</listeners>
 	
-	<test name="Regression Test Cases">
+	<test name="Regression Test Cases" parallel = "none" preserve-order="true">
+    
 		<classes>
 		
-		
-<!-- 		Domainz Virtualization -->
-			<class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB"></class>
-			<class name="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin"></class>
-<!-- 			<class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI"></class> -->
-		
 
+<!-- Domainz Virtualization -->
+			<class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB">
+                <methods>
+                    <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
+                    <include name="testDomainRegistration2WorkflowInConsoleAdmin" />
+                    <include name="testProductSetup2WorkflowInConsoleAdmin" />
+                    <include name="testPaySingleInvoiceInConsoleAdmin" />
+                    <include name="testRefundPaymentFromSalesDB" />
+                    <include name="testPayInvoiceUsingExistingCardFromSalesDB" />
+                </methods>
+            </class>
+	
+
+<!-- Netregistry Virtualization -->
+			<class name="com.paymentgateway.uat.netregistry.testcases.RegressionSalesDB">
+                <methods>
+                    <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
+                    <include name="testDomainRegistration2WorkflowInConsoleAdmin" />
+                    <include name="testProductSetup2WorkflowInConsoleAdmin" />
+                    <include name="testPaySingleInvoiceInConsoleAdmin" />
+                    <include name="testRefundPaymentFromSalesDB" />
+                    <include name="testPayInvoiceUsingExistingCardFromSalesDB" />
+                </methods>
+            </class>
+
+<!-- MelbourneIT Virtualization -->
+<!-- 			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB"> -->
+<!--                 <methods> -->
+<!--                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" /> -->
+<!--                     <include name="testDomainRegistration2WorkflowInConsoleAdmin" /> -->
+<!--                     <include name="testProductSetup2WorkflowInConsoleAdmin" /> -->
+<!--                 </methods> -->
+<!--             </class> -->
 		</classes>
 	</test>  
 </suite> 

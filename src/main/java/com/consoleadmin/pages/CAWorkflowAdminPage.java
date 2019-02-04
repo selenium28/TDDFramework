@@ -51,7 +51,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	else if (strtld.equals("nz")) {
     		this.processCheckASIC();
-    		this.processMarkAsRegistered(strworkflowid);
+    		//this.processMarkAsRegistered(strworkflowid);
     	}
     	else if (strtld.equals("com.au")) {
     		this.processCheckASIC();
@@ -67,7 +67,7 @@ public class CAWorkflowAdminPage extends TestBase{
     public void processCheckASIC() throws InterruptedException {
     	
     	//Click Execute for Check ASIC
-    	Thread.sleep(10000);
+    	Thread.sleep(5000);
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'check asic')]/parent::tr/td[3]/a[text()='Execute']")).click();
     	Thread.sleep(10000);
     	
@@ -80,7 +80,7 @@ public class CAWorkflowAdminPage extends TestBase{
     public void processFraudCheck() throws InterruptedException {
     	
     	//Click Ok for Fraud Check
-    	Thread.sleep(10000);
+    	Thread.sleep(5000);
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'ok')]/parent::tr/td[3]/a[text()='Execute']")).click();
     	Thread.sleep(10000);
     	
@@ -93,7 +93,7 @@ public class CAWorkflowAdminPage extends TestBase{
     public void processDelegateDomain() throws InterruptedException {
 
     	//Click Execute for Delegate Domain
-    	Thread.sleep(10000);
+    	Thread.sleep(5000);
     	driver.findElement(By.xpath("//tbody/tr[4]/td[contains(text(),'I have manually delegated this domain')]/parent::tr/td[3]/a[text()='Execute']")).click();
     	Thread.sleep(10000);
     		
@@ -105,7 +105,7 @@ public class CAWorkflowAdminPage extends TestBase{
     public void processSkipDelegation() throws InterruptedException {
 
     	//Click Execute for Delegate Domain
-    	Thread.sleep(10000);
+    	Thread.sleep(5000);
     	driver.findElement(By.xpath("//tbody/tr[4]/td[contains(text(),'skip delegation')]/parent::tr/td[3]/a[text()='Execute']")).click();
     	Thread.sleep(10000);
     		
@@ -118,7 +118,7 @@ public class CAWorkflowAdminPage extends TestBase{
     public void processMarkAsRegistered(String strworkflowid) throws InterruptedException {
     	
     	//Click Execute for Mark as Registered
-    	Thread.sleep(10000);
+    	Thread.sleep(5000);
     	driver.findElement(By.xpath("//a[@href='/admin/execute/workflow/getActionForm?action_id=7014&workflow_id="+strworkflowid+"']")).click();
     	Thread.sleep(10000);
     	
