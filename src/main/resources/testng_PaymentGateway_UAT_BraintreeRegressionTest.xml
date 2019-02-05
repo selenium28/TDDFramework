@@ -39,13 +39,13 @@
             </class>
 
 <!-- MelbourneIT Virtualization -->
-<!-- 			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB"> -->
-<!--                 <methods> -->
-<!--                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" /> -->
-<!--                     <include name="testDomainRegistration2WorkflowInConsoleAdmin" /> -->
-<!--                     <include name="testProductSetup2WorkflowInConsoleAdmin" /> -->
-<!--                 </methods> -->
-<!--             </class> -->
+			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB">
+                <methods>
+                    <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
+                    <include name="testDomainRegistration2WorkflowInConsoleAdmin" />
+                    <include name="testProductSetup2WorkflowInConsoleAdmin" />
+                </methods>
+            </class>
 		</classes>
 	</test>  
 </suite> 

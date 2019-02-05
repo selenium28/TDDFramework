@@ -3,6 +3,7 @@
 <suite name="Payment Gateway UAT Quest Regression Test Suite" thread-count="10" parallel="tests">
 	<parameter name="environment"     value="uat1"/>
 	<parameter name="paymentgateway"  value="quest"/>
+	<parameter name="obsidian"  	  value="enabled"/>
 	
 	<listeners>
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
@@ -67,12 +68,12 @@
                     <include name="testProductSetup2WorkflowInConsoleAdmin" />
                     <include name="testPaySingleInvoiceInConsoleAdmin" />
                     <include name="testRefundPaymentFromSalesDB" />
-<!--                     <include name="testPayInvoiceUsingExistingCardFromSalesDB" /> -->
+                    <include name="testPayInvoiceUsingExistingCardFromSalesDB" />
                 </methods>
             </class>
 			
 <!-- 		DPS Virtualization -->
-<!-- 			<class name="com.paymentgateway.uat.dps.testcases.RegressionSalesDB"></class>		 -->
+			<class name="com.paymentgateway.uat.dps.testcases.RegressionSalesDB"></class>		
 
 
 		</classes>

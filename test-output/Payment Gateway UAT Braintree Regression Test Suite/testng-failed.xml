@@ -8,11 +8,11 @@
   </listeners>
   <test thread-count="10" name="Regression Test Cases(failed)">
     <classes>
-      <class name="com.paymentgateway.uat.netregistry.testcases.RegressionSalesDB">
+      <class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB">
         <methods>
-          <include name="testProductSetup2WorkflowInConsoleAdmin" invocation-numbers="0"/>
+          <include name="testDomainRegistration2WorkflowInConsoleAdmin" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.paymentgateway.uat.netregistry.testcases.RegressionSalesDB -->
+      </class> <!-- com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB -->
     </classes>
   </test> <!-- Regression Test Cases(failed) -->
 </suite> <!-- Failed suite [Payment Gateway UAT Braintree Regression Test Suite] -->

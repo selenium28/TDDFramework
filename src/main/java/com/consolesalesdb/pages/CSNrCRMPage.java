@@ -85,10 +85,11 @@ public class CSNrCRMPage extends TestBase{
     }
       
     public CSCreateDomainWindowPage clickNewDomainNPSButton() throws InterruptedException {
-    	Thread.sleep(3000);
-    	System.out.println("clicking new domain (new price system)");
+    	Thread.sleep(6000);
+    	System.out.println("searching for new domain (new price system) button");
     	if(newDomainNPS.isDisplayed()||newDomainNPS.isEnabled()) {
     		newDomainNPS.click();
+    		System.out.println("clicked new domain (new price system) button");
     	}
 		else {
 			System.out.println("element not found");

@@ -158,18 +158,28 @@ public class RegressionSalesDB extends TestBase{
 		}
 		
 		
-		@Parameters({"environment", "paymentgateway"})
+		@Parameters({"environment", "paymentgateway", "obsidian"})
 		@Test
-		public void testDomainRegistration2WorkflowInConsoleAdmin(String environment, String paymentgateway)
+		public void testDomainRegistration2WorkflowInConsoleAdmin(String environment, String paymentgateway, String obsidian)
 				throws InterruptedException, IOException{
 
 				//Test Step 1: Login to console admin, then process domainregistration2 workflow		
 				initialization(environment, "consoleadmin");
 				caloginpage = new CALoginPage();
 				caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
-				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
-				caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId_01, strTld_01);
-
+				
+				
+				if (obsidian.equals("enabled")) {
+					
+					//Wait for workflow to be processed
+					Thread.sleep(10000);
+				}
+				else {
+					caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
+					caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId_01, strTld_01);
+				}
+				
+				
 				//Test Step 2: Verify if domain registration workflow status is completed
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
