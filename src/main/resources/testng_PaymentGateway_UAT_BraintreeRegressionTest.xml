@@ -25,6 +25,12 @@
                     <include name="testPayInvoiceUsingExistingCardFromSalesDB" />
                 </methods>
             </class>
+            <class name="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin">
+                <methods>
+                    <include name="testViewBillingInConsoleAdmin" />
+                    <include name="testUpdateExpiryInConsoleAdmin" />
+                </methods>
+            </class>
 	
 
 <!-- Netregistry Virtualization -->

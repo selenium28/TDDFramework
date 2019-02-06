@@ -317,7 +317,7 @@ public class RegressionSalesDB extends TestBase{
 			
 				// Initialization (Test Data Creation and Assignment)
 				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
-					strAccountReference = "MEL-6022";
+					strAccountReference = "MEL-6040";
 					strAmount = "73.60";
 					strTransactionType= "PAYMENT";
 					strPaymentMethod = "Visa: 4111xxxxxxxx1111";

@@ -45,32 +45,32 @@ public class RegressionConsoleAdmin extends TestBase {
 		
 		
 		@Parameters({"environment", "paymentgateway"})
-		@Test(priority=7, enabled = true)
+		@Test
 		public void testViewBillingInConsoleAdmin(String environment, String paymentgateway) throws InterruptedException, IOException, AWTException{
 		
 			if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
 				strAccountReference = "MEL-6021"; 
 			}
 			else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-				strAccountReference = "DOM-1305"; 
+				strAccountReference = "DOM-1309"; 
 			}
 		
 			//Test Step 1: Login to console admin, navigate to account reference page then click view billing accounts
 			initialization(environment, "consoleadmin");
 			caloginpage = new CALoginPage();
-			caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+			caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 			caaccountreferencepage = caheaderpage.searchAccountReference(strAccountReference);
 			caviewcreditcardspage = caaccountreferencepage.clickViewBillingAccounts();
 			
 			//Test Step 2: Verify if user can view billing in console admin
-			TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest06");
+			TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest07");
 			Assert.assertTrue(caviewcreditcardspage.isViewCreditcardsPageDisplayed(), "View Creditcards Page is not displayed");
 		}
 		
 		
 		
 		@Parameters({"environment", "paymentgateway"})
-		@Test(priority=8, enabled = true)
+		@Test
 		public void testUpdateExpiryInConsoleAdmin(String environment, String paymentgateway) throws InterruptedException, IOException{
 		
 			if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
@@ -85,7 +85,6 @@ public class RegressionConsoleAdmin extends TestBase {
 			//Test Step 1: Update expiry date and verify if a successful confirmation message will be shown.
 			caviewcreditcardspage.updateExpiryDate(strExpiryMonth, strExpiryYear);
 		
-			TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest07");
 			if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
 				Assert.assertEquals(caviewcreditcardspage.getUpdateExpiryConfirmation(), "Credit card: Visa: 4111xxxxxxxx1111 "+strExpiryMonth+"/"+strExpiryYear+" expiry date updated.", "Updated Expiry Sucessfully");
 			}
@@ -93,45 +92,46 @@ public class RegressionConsoleAdmin extends TestBase {
 				Assert.assertEquals(caviewcreditcardspage.getUpdateExpiryConfirmation(), "Credit card: MasterCard: 545454******5454 "+strExpiryMonth+"/20"+strExpiryYear+" expiry date updated.", "Updated Expiry Sucessfully");	
 			}
 			
+			TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest08");
 			driver.close();	
 		}
 	
-		@Parameters({ "environment", "paymentgateway" })
-		@Test(priority = 9, enabled = true)
-		public void RechargePrepaidInConsoleAdminUsingExistingCard(String environment, String paymentgateway) throws InterruptedException, AWTException {
-			
-			String straccountreference = "DOM-1218";
-			initialization(environment, "consoleadmin");
-			caloginpage = new CALoginPage();
-			caviewcreditcardspage = new CAViewCreditCardsPage();
-			caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
-			caheaderpage = new CAHeaderPage();
-			caheaderpage.searchAccountReference(straccountreference);
-			cainvoicespage = new CAInvoicesPage();
-	
-			Thread.sleep(2000);
-			driver.findElement(By.linkText("View Invoice & Prepaid detail")).click();
-			Thread.sleep(2000);
-			driver.findElement(By.linkText("Prepaid Account Details")).click();
-			Thread.sleep(2000);
-	
-			// cainvoicespage.setCreditCardDetails();
-	
-			driver.findElement(By.xpath("//*[@id=\"useExistingBilling\"]")).click();
-			driver.findElement(By.xpath("//*[@id=\"creditCardAmount\"]")).clear();
-			driver.findElement(By.xpath("//*[@id=\"creditCardAmount\"]")).sendKeys("20");
-			Thread.sleep(2000);
-			driver.findElement(By.xpath("//*[@id=\"purchaseCredit\"]")).click();
-			Thread.sleep(2000);
-			driver.switchTo().alert().accept();
-			Thread.sleep(2000);
-	
-			String strConfirmationMessage = driver.findElement(By.xpath("//*[@id=\"msg\"]")).getText();
-			System.out.println(strConfirmationMessage);
-			Assert.assertEquals(strConfirmationMessage, "Credit purchased successfully");
-	
-			driver.close();
-		}
+//		@Parameters({ "environment", "paymentgateway" })
+//		@Test(priority = 9, enabled = true)
+//		public void RechargePrepaidInConsoleAdminUsingExistingCard(String environment, String paymentgateway) throws InterruptedException, AWTException {
+//			
+//			String straccountreference = "DOM-1218";
+//			initialization(environment, "consoleadmin");
+//			caloginpage = new CALoginPage();
+//			caviewcreditcardspage = new CAViewCreditCardsPage();
+//			caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+//			caheaderpage = new CAHeaderPage();
+//			caheaderpage.searchAccountReference(straccountreference);
+//			cainvoicespage = new CAInvoicesPage();
+//	
+//			Thread.sleep(2000);
+//			driver.findElement(By.linkText("View Invoice & Prepaid detail")).click();
+//			Thread.sleep(2000);
+//			driver.findElement(By.linkText("Prepaid Account Details")).click();
+//			Thread.sleep(2000);
+//	
+//			// cainvoicespage.setCreditCardDetails();
+//	
+//			driver.findElement(By.xpath("//*[@id=\"useExistingBilling\"]")).click();
+//			driver.findElement(By.xpath("//*[@id=\"creditCardAmount\"]")).clear();
+//			driver.findElement(By.xpath("//*[@id=\"creditCardAmount\"]")).sendKeys("20");
+//			Thread.sleep(2000);
+//			driver.findElement(By.xpath("//*[@id=\"purchaseCredit\"]")).click();
+//			Thread.sleep(2000);
+//			driver.switchTo().alert().accept();
+//			Thread.sleep(2000);
+//	
+//			String strConfirmationMessage = driver.findElement(By.xpath("//*[@id=\"msg\"]")).getText();
+//			System.out.println(strConfirmationMessage);
+//			Assert.assertEquals(strConfirmationMessage, "Credit purchased successfully");
+//	
+//			driver.close();
+//		}
 
 	
 }
