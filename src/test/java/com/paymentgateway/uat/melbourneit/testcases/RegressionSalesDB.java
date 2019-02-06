@@ -76,7 +76,6 @@ public class RegressionSalesDB extends TestBase{
 		public String strExpiryYear =  null;
 
 		
-	
 		public RegressionSalesDB() {
 			super();
 		}
@@ -118,7 +117,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 1: Login to Sales DB page, then create an order for domain and product 
 				initialization(environment, "salesdburl");
 				csloginpage = new CSLoginPage();
-				csloginpage.setDefaultLoginDetails("uat");
+				csloginpage.setDefaultLoginDetails(environment);
 				csnrcrmpage = csloginpage.clickLoginButton();
 				csnrcrmpage.setGreenCode(strAccountReference);
 				cscreatedomainwindowpage = csnrcrmpage.clickNewDomainNPSButton();
@@ -163,12 +162,12 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 1: Login to console admin, then process domainregistration2 workflow		
 				initialization(environment, "consoleadmin");
 				caloginpage = new CALoginPage();
-				caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+				caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 				
 				if (obsidian.equals("enabled")) {
 					
 					//Wait for workflow to be processed
-					Thread.sleep(10000);
+					Thread.sleep(15000);
 				}
 				else {
 					caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
@@ -184,16 +183,22 @@ public class RegressionSalesDB extends TestBase{
 				}
 		
 		
-		@Parameters({"environment", "paymentgateway"})
+		@Parameters({"environment", "paymentgateway", "obsidian"})
 		@Test
-		public void testProductSetup2WorkflowInConsoleAdmin(String environment, String paymentgateway) 
+		public void testProductSetup2WorkflowInConsoleAdmin(String environment, String paymentgateway, String obsidian) 
 				throws InterruptedException, IOException{
 		
 				//Test Step 1: Process the productsetup2 workflow in console admin
-				caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName_01 + "." + strTld_01);
-				caworkflowadminpage.processProductSetup2();
-				//caworkflowadminpage.processSkipDelegation();
-						
+				if (obsidian.equals("enabled")) {
+				
+					//Wait for workflow to be processed
+					Thread.sleep(15000);
+				}
+				else {
+					caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName_01 + "." + strTld_01);
+					caworkflowadminpage.processProductSetup2();
+				}
+			
 				//Test Step 2: Verify if productsetup2 workflow is approved
 				caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName_01 + "." + strTld_01);
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 

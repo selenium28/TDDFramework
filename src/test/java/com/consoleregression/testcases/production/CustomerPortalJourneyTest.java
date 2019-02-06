@@ -45,7 +45,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 	}
 
 	@Parameters({"environment"})
-	@Test(priority=4, enabled = true)
+	@Test
 	public void verifyDomainRegistrationOrderForNewCustomerInCustomerPortal(String environment) throws InterruptedException{
 	
 		// Initialization (Test Data Creation and Assignment)
@@ -78,13 +78,13 @@ public class CustomerPortalJourneyTest extends TestBase{
 		
 		//Test Step 2: Input credit card details and submit the order 
 		nrgbillingpage.setBTFormCreditCardDetails("Test Console Regression", "4715276659101053", "08", "2020", "390");
-		nrgbillingpage.tickTermsAndConditions();
-        nrgordercompletepage = nrgbillingpage.clickContinueButton();
+	   //nrgbillingpage.tickTermsAndConditions();
+       // nrgordercompletepage = nrgbillingpage.clickContinueButton();
        // driver.close();
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=5, enabled = true)
+	@Test
 	public void verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal(String environment) throws InterruptedException{
 	
 		// Initialization (Test Data Creation and Assignment)
@@ -117,8 +117,8 @@ public class CustomerPortalJourneyTest extends TestBase{
 		
 		//Test Step 2: Select existing credit card details and submit the order 
 		nrgbillingpage.selectExistingCreditCard("Prepaid credit: Current Balance: AU$19222.10 Available Balance: AU$19222.10");
-		nrgbillingpage.tickTermsAndConditions();
-		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+		//nrgbillingpage.tickTermsAndConditions();
+		//nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		//driver.close();
 	}
 	

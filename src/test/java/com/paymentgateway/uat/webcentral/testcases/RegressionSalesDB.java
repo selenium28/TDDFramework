@@ -168,7 +168,7 @@ public class RegressionSalesDB extends TestBase{
 				if (obsidian.equals("enabled")) {
 					
 					//Wait for workflow to be processed
-					Thread.sleep(10000);
+					Thread.sleep(15000);
 				}
 				else {
 					caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
@@ -192,7 +192,6 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 1: Process the productsetup2 workflow in console admin
 				caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName_01 + "." + strTld_01);
 				caworkflowadminpage.processProductSetup2();
-				//caworkflowadminpage.processSkipDelegation();
 						
 				//Test Step 2: Verify if productsetup2 workflow is approved
 				caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName_01 + "." + strTld_01);
@@ -234,7 +233,7 @@ public class RegressionSalesDB extends TestBase{
 				
 				initialization(environment, "consoleadmin");
 				caloginpage = new CALoginPage();
-				caheaderpage = caloginpage.login("erwin.sukarna", "comein22");			
+				caheaderpage = caloginpage.setDefaultLoginDetails(environment);			
 				caaccountreferencepage = caheaderpage.searchAccountReference(strAccountReference);
 				cainvoicespage = caaccountreferencepage.clickPayOutstandingInvoices();
 				strInvoiceNumber = cainvoicespage.getInvoiceNumber();
@@ -292,7 +291,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 1: Login to Sales DB page, then refund an invoice
 				initialization(environment, "salesdburl");
 				csloginpage = new CSLoginPage();
-				csloginpage.setDefaultLoginDetails("uat");
+				csloginpage.setDefaultLoginDetails(environment);
 				csnrcrmpage = csloginpage.clickLoginButton();
 				
 				csaccountpage = new CSAccountPage();
@@ -333,7 +332,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 1: Login to Sales DB page, then pay for an existing invoice for domain and product via existing credit card
 				initialization(environment, "salesdburl");
 				csloginpage = new CSLoginPage();
-				csloginpage.setDefaultLoginDetails("uat");
+				csloginpage.setDefaultLoginDetails(environment);
 				csnrcrmpage = csloginpage.clickLoginButton();
 				
 				csaccountpage = new CSAccountPage();

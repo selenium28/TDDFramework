@@ -290,6 +290,19 @@ public class CAWorkflowAdminPage extends TestBase{
         return workflowsteptext;
 
     }
+    
+    
+    public String getWorkflowEntity(String strworkflowid) throws InterruptedException {
+    	        
+        String workflowentity;
+        
+        Thread.sleep(3000);
+        workflowentity = driver.findElement(By.xpath("//table/tbody/tr/td/table[3]/tbody/tr[2]/td[3]/a")).getText();
+        System.out.println("Workflow Entity Found");
+        
+        return workflowentity;
+        
+    }
     	
     	
     public boolean verifyWorflowStatusViaID(String strworkflowid, String strworkflowstep) throws InterruptedException {

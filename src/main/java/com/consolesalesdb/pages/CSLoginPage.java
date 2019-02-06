@@ -12,7 +12,7 @@ public class CSLoginPage extends TestBase{
 	static String stageUserName = "erwin.sukarna";
 	static String stagePassword = "comein22";
 	static String oteUserName = "roy.alcantara";
-	static String otePassword = "";
+	static String otePassword = "Stocks007";
 	static String uatUserName = "erwin.sukarna";
 	static String uatPassword = "comein22";
 	static String prodUserName = "roy.alcantara";
@@ -43,7 +43,7 @@ public class CSLoginPage extends TestBase{
 	    	userName.sendKeys(oteUserName);
 	    	password.sendKeys(otePassword);
 		}
-		else if (environment.equalsIgnoreCase("uat")) {
+		else if (environment.equalsIgnoreCase("uat1")||environment.equalsIgnoreCase("uat2")) {
 	    	userName.sendKeys(uatUserName);
 	    	password.sendKeys(uatPassword);
 		}

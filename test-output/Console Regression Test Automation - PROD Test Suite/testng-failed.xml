@@ -2,16 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Console Regression Test Automation - PROD Test Suite]">
   <parameter name="environment" value="prod"/>
+  <parameter name="pretest" value="enabled"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
   <test thread-count="5" name="Regression Test Cases(failed)">
     <classes>
-      <class name="com.consoleregression.testcases.production.SalesDBJourneyTest">
+      <class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest">
         <methods>
-          <include name="verify_ComDomain_and_Office365_Order_InSalesDB" invocation-numbers="0"/>
+          <include name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.consoleregression.testcases.production.SalesDBJourneyTest -->
+      </class> <!-- com.consoleregression.testcases.production.CustomerPortalJourneyTest -->
     </classes>
   </test> <!-- Regression Test Cases(failed) -->
 </suite> <!-- Failed suite [Console Regression Test Automation - PROD Test Suite] -->

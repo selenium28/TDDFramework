@@ -13,7 +13,7 @@ public class CALoginPage extends TestBase{
 	static String stageUserName = "erwin.sukarna";
 	static String stagePassword = "comein22";
 	static String oteUserName = "roy.alcantara";
-	static String otePassword = "";
+	static String otePassword = "Stocks007";
 	static String cdev2UserName = "erwin.sukarna";
 	static String cdev2Password = "comein22";
 	static String uatUserName = "erwin.sukarna";
@@ -41,7 +41,7 @@ public class CALoginPage extends TestBase{
     	return submitButton.isDisplayed();
     }
     
-    public void setDefaultLoginDetails(String environment) throws InterruptedException {
+    public CAHeaderPage setDefaultLoginDetails(String environment) throws InterruptedException {
 		if(environment.equalsIgnoreCase("stage")) {
 	    	userName.sendKeys(stageUserName);
 	    	password.sendKeys(stagePassword);
@@ -54,7 +54,7 @@ public class CALoginPage extends TestBase{
 	    	userName.sendKeys(cdev2UserName);
 	    	password.sendKeys(cdev2Password);
 		}
-		else if (environment.equalsIgnoreCase("uat")) {
+		else if (environment.equalsIgnoreCase("uat1")||environment.equalsIgnoreCase("uat2")) {
 	    	userName.sendKeys(uatUserName);
 	    	password.sendKeys(uatPassword);
 		}
@@ -62,6 +62,9 @@ public class CALoginPage extends TestBase{
 	    	userName.sendKeys(prodUserName);
 	    	password.sendKeys(prodPassword);
 		}
+		
+		submitButton.click();
+		return new CAHeaderPage();
     }
     
     public CAHeaderPage login(String strusername, String strpassword){
