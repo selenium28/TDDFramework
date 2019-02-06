@@ -339,7 +339,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 1: Login to Sales DB page, then pay for an existing invoice for domain and product via existing credit card
 				initialization(environment, "salesdburl");
 				csloginpage = new CSLoginPage();
-				csloginpage.setDefaultLoginDetails("uat");
+				csloginpage.setDefaultLoginDetails(environment);
 				csnrcrmpage = csloginpage.clickLoginButton();
 				
 				csaccountpage = new CSAccountPage();
