@@ -222,7 +222,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 4: Login to console admin and process domain registration workflow
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
 		caworkflowadminpage.processFraudCheck();
@@ -306,7 +306,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 9: Login to console admin and process domain registration workflow
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
 		caworkflowadminpage.processFraudCheck();
@@ -426,7 +426,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 4: Login to console admin, then process domainregistration2 and productsetup2 workflows
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
 		caworkflowadminpage.processFraudCheck();
@@ -513,7 +513,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 9: Login to console admin, then process domainregistration2 and productsetup2 workflows
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_03);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_03);
 		caworkflowadminpage.processFraudCheck();
@@ -636,7 +636,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 4: Login to console admin, then process domainregistration2 and productsetup2 workflows
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
 		caworkflowadminpage.processFraudCheck();
@@ -649,7 +649,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 5: Set the new password for the account reference
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caaccountreferencepage = caheaderpage.searchAccountReference(strAccountReference);
 		caaccountreferencepage.updatePassword(strAccountReferenceNewPassword);
 		driver.close();
@@ -725,7 +725,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 9: Login to console admin, then process domainregistration2 and productsetup2 workflows
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_03);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_03);
 		caworkflowadminpage.processFraudCheck();
@@ -867,7 +867,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 4: Login to console admin and process domain registration workflow
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
 		caworkflowadminpage.processFraudCheck();
@@ -902,7 +902,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 7: Login to console admin, then process domainregistration2 and productsetup2 workflows
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_02);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_02);
 		
@@ -1019,7 +1019,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 4: Login to console admin and process domain registration workflow
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
 		caworkflowadminpage.processFraudCheck();

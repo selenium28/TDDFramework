@@ -8,15 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.base.TestBase;
 
 public class CSLoginPage extends TestBase{
-
-	static String stageUserName = "erwin.sukarna";
-	static String stagePassword = "comein22";
-	static String oteUserName = "roy.alcantara";
-	static String otePassword = "Stocks007";
-	static String uatUserName = "erwin.sukarna";
-	static String uatPassword = "comein22";
-	static String prodUserName = "roy.alcantara";
-	static String prodPassword = "Stocks007";
 	
 	//Objects
     @FindBy(how=How.ID, using = "logon-username-field")
@@ -34,26 +25,31 @@ public class CSLoginPage extends TestBase{
     }
 
     //Methods
-    public void setDefaultLoginDetails(String environment){
-		if(environment.equalsIgnoreCase("stage")) {
-	    	userName.sendKeys(stageUserName);
-	    	password.sendKeys(stagePassword);
+    public void setDefaultLoginDetails(String environment) {
+		
+		if(environment.equalsIgnoreCase("stagingdev-5")) {
+			
+	    	userName.sendKeys("erwin.sukarna");
+	    	password.sendKeys("comein22");
+		}
+		else if(environment.equalsIgnoreCase("uat1")||environment.equalsIgnoreCase("uat2")) {
+					
+			userName.sendKeys("erwin.sukarna");
+	    	password.sendKeys("comein22");
 		}
 		else if (environment.equalsIgnoreCase("ote")) {
-	    	userName.sendKeys(oteUserName);
-	    	password.sendKeys(otePassword);
-		}
-		else if (environment.equalsIgnoreCase("uat1")||environment.equalsIgnoreCase("uat2")) {
-	    	userName.sendKeys(uatUserName);
-	    	password.sendKeys(uatPassword);
+			
+			userName.sendKeys("roy.alcantara");
+	    	password.sendKeys("");
 		}
 		else if (environment.equalsIgnoreCase("production")) {
-	    	userName.sendKeys(prodUserName);
-	    	password.sendKeys(prodPassword);
+			
+			userName.sendKeys("roy.alcantara");
+	    	password.sendKeys("");
 		}
     }
     
-    public CSNrCRMPage clickLoginButton(){
+    public CSNrCRMPage clickLoginButton() {
     	System.out.println("clicking submit button");
     	if(loginButton.isDisplayed()||loginButton.isEnabled()) {
     		loginButton.click();

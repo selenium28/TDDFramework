@@ -5,22 +5,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import com.base.Environment;
 import com.base.TestBase;
 
 
 public class CALoginPage extends TestBase{
-
-	static String stageUserName = "erwin.sukarna";
-	static String stagePassword = "comein22";
-	static String oteUserName = "roy.alcantara";
-	static String otePassword = "Stocks007";
-	static String cdev2UserName = "erwin.sukarna";
-	static String cdev2Password = "comein22";
-	static String uatUserName = "erwin.sukarna";
-	static String uatPassword = "comein22";
-	static String prodUserName = "roy.alcantara";
-	static String prodPassword = "Stocks007";
-	
+		
 	//Objects
     @FindBy(how=How.NAME, using = "login")
     WebElement userName;
@@ -42,25 +32,26 @@ public class CALoginPage extends TestBase{
     }
     
     public CAHeaderPage setDefaultLoginDetails(String environment) throws InterruptedException {
-		if(environment.equalsIgnoreCase("stage")) {
-	    	userName.sendKeys(stageUserName);
-	    	password.sendKeys(stagePassword);
+    	
+		if(environment.equalsIgnoreCase("stagingdev-5")) {
+			
+	    	userName.sendKeys("erwin.sukarna");
+	    	password.sendKeys("comein22");
+		}
+		else if(environment.equalsIgnoreCase("uat1")||environment.equalsIgnoreCase("uat2")) {
+					
+			userName.sendKeys("erwin.sukarna");
+	    	password.sendKeys("comein22");
 		}
 		else if (environment.equalsIgnoreCase("ote")) {
-	    	userName.sendKeys(oteUserName);
-	    	password.sendKeys(otePassword);
-		}
-		else if (environment.equalsIgnoreCase("theconsole-dev-2")) {
-	    	userName.sendKeys(cdev2UserName);
-	    	password.sendKeys(cdev2Password);
-		}
-		else if (environment.equalsIgnoreCase("uat1")||environment.equalsIgnoreCase("uat2")) {
-	    	userName.sendKeys(uatUserName);
-	    	password.sendKeys(uatPassword);
+			
+			userName.sendKeys("roy.alcantara");
+	    	password.sendKeys("");
 		}
 		else if (environment.equalsIgnoreCase("production")) {
-	    	userName.sendKeys(prodUserName);
-	    	password.sendKeys(prodPassword);
+			
+			userName.sendKeys("roy.alcantara");
+	    	password.sendKeys("");
 		}
 		
 		submitButton.click();
@@ -68,6 +59,7 @@ public class CALoginPage extends TestBase{
     }
     
     public CAHeaderPage login(String strusername, String strpassword){
+    	
     	userName.sendKeys(strusername);
     	password.sendKeys(strpassword);
     	submitButton.click();

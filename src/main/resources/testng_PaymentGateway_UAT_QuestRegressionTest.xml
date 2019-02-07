@@ -14,7 +14,7 @@
 		<classes>
 		
 
-<!-- Domainz Virtualization -->
+<!-- 		Domainz Virtualization -->
 			<class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB">
                 <methods>
                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
@@ -33,7 +33,7 @@
             </class>
 	
 
-<!-- Netregistry Virtualization -->
+<!-- 		Netregistry Virtualization -->
 			<class name="com.paymentgateway.uat.netregistry.testcases.RegressionSalesDB">
                 <methods>
                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
@@ -45,7 +45,7 @@
                 </methods>
             </class>
 
-<!-- MelbourneIT Virtualization -->
+<!-- 		MelbourneIT Virtualization -->
 			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB">
                 <methods>
                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" />

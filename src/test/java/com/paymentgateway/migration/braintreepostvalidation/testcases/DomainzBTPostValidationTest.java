@@ -151,7 +151,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 1: Modify the login password of the account
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caaccountreferencepage = caheaderpage.searchAccountReference(strAccountReference);
 		caaccountreferencepage.updatePassword(strAccountReferenceNewPassword);
 		driver.close();
@@ -247,7 +247,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 5: Login to console admin and process domain registration workflow
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 //		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
 //		strBraintreeTransactionID = caworkflowadminpage.getPreAuthNumber(strWorkflowId);
@@ -327,7 +327,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 1: Modify the login password of the account
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caaccountreferencepage = caheaderpage.searchAccountReference(strAccountReference);
 		caaccountreferencepage.updatePassword(strAccountReferenceNewPassword);
 		driver.close();
@@ -427,7 +427,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 5: Login to console admin, then process domainregistration2 and productsetup2 workflows
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
 		strBraintreeTransactionID = caworkflowadminpage.getPreAuthNumber(strWorkflowId_01);
@@ -511,7 +511,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 1: Modify the login password of the account
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caaccountreferencepage = caheaderpage.searchAccountReference(strAccountReference);
 		caaccountreferencepage.updatePassword(strAccountReferenceNewPassword);
 		driver.close();
@@ -611,7 +611,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 5: Login to console admin, then process domainregistration2 and productsetup2 workflows
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
 		strBraintreeTransactionID = caworkflowadminpage.getPreAuthNumber(strWorkflowId_01);
@@ -719,7 +719,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 2: Login to console admin, then process domainregistration2 and productsetup2 workflows
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
 		
@@ -773,7 +773,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 1: Modify the login password of the account
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caaccountreferencepage = caheaderpage.searchAccountReference(strAccountReference);
 		caaccountreferencepage.updatePassword(strAccountReferenceNewPassword);
 		driver.close();

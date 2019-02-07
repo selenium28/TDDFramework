@@ -35,33 +35,21 @@ public class TestBase{
 		String browserName = testEnvironment.browser();
 		
 		if(browserName.equals("chrome")){
-//			ChromeOptions options = new ChromeOptions(); 
-//			options.setBinary("C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"); 
-			
-//			System.setProperty("webdriver.chrome.driver", "seleniumwebdriver/chromedriver/chromedriver.exe");
-//			ChromeOptions options = new ChromeOptions();
-//			options.setPageLoadStrategy(PageLoadStrategy.NONE);
-//			// Instantiate the chrome driver
-//			driver = new ChromeDriver(options);
-				
-//			System.setProperty("webdriver.chrome.driver", "seleniumwebdriver/chromedriver/chromedriver.exe");	
-//			driver = new ChromeDriver(); 
 			
 			System.setProperty("webdriver.chrome.driver", "seleniumwebdriver/chromedriver/chromedriver.exe");
 
-	           ChromeOptions options = new ChromeOptions();
-	            options.addArguments("--disable-gpu");
-	            options.addArguments("--disable-browser-side-navigation");
-	            driver = new ChromeDriver(options);
-			
-			
-			
+	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments("--disable-gpu");
+	        options.addArguments("--disable-browser-side-navigation");
+	        driver = new ChromeDriver(options);
 		}
 		else if(browserName.equals("firefox")){
+			
 			System.setProperty("webdriver.gecko.driver", "seleniumwebdriver/firefoxdriver/geckodriver.exe");	
 			driver = new FirefoxDriver(); 
 		}
 		else if(browserName.equals("edge")){
+			
 			System.setProperty("webdriver.edge.driver", "seleniumwebdriver/edgedriver/MicrosoftWebDriver.exe");	
 			driver = new EdgeDriver();
 		}
@@ -106,6 +94,4 @@ public class TestBase{
 			/* for any url */
 		}
 	}
-	
-	
 }
