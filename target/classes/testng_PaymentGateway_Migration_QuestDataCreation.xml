@@ -10,7 +10,7 @@
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
 	</listeners>
 	
-	<test name="Payment Gateway Migration - Braintree Post Validation Test Cases" parallel = "none" preserve-order="true">
+	<test name="Payment Gateway Migration - Quest Data Creation Test Cases" parallel = "none" preserve-order="true">
 	
 		<classes>
 		<!-- Domainz Virtualization -->

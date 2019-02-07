@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite">
-              <span class="suite-name border-failed">Payment Gateway Migration - Quest Data Creation Suite</span>
+              <span class="suite-name border-passed">Payment Gateway Migration - Quest Data Creation Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" class="hide-methods failed suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite"> (hide)</a> <!-- hide-methods failed suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite -->
-                      <a href="#" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" class="show-methods failed suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite"> (show)</a> <!-- show-methods failed suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" title="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest" hash-for-method="generateCustomerDataWithOutstandingInvoice(stagingdev-5, 4)">generateCustomerDataWithOutstandingInvoice(stagingdev-5, 4)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite -->
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -141,6 +127,11 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" title="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest" hash-for-method="generateCustomerDataWithOutstandingInvoice(stagingdev-5, 4)">generateCustomerDataWithOutstandingInvoice(stagingdev-5, 4)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" title="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest" hash-for-method="generateCustomerDataWithYearlyBillingProduct(stagingdev-5, 4)">generateCustomerDataWithYearlyBillingProduct(stagingdev-5, 4)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -156,59 +147,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite" class="panel Payment_Gateway_Migration_-_Quest_Data_Creation_Suite">
-          <div class="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="generateCustomerDataWithOutstandingInvoice(stagingdev-5, 4)">
-                  </a> <!-- generateCustomerDataWithOutstandingInvoice(stagingdev-5, 4) -->
-                  <span class="method-name">generateCustomerDataWithOutstandingInvoice</span>
-                  <span class="parameters">(stagingdev-5, 4)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;Greencode-searchbox&quot;}
-  (Session info: chrome=72.0.3626.96)
-  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.0.240&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:53897}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.96, webStorageEnabled: true}
-Session ID: 37488eb09afec5ecff7d6fc02976d238
-*** Element info: {Using=id, value=Greencode-searchbox}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.sendKeys(Unknown Source)
-	at com.consolesalesdb.pages.CSNrCRMPage.setGreenCode(CSNrCRMPage.java:33)
-	at com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest.generateCustomerDataWithOutstandingInvoice(DomainzDataCreationTest.java:887)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 23 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite-class-failed -->
           <div class="suite-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -252,6 +190,14 @@ Session ID: 37488eb09afec5ecff7d6fc02976d238
                   <a name="generateCustomerDataWithMonthlyBillingProduct(stagingdev-5, 4)">
                   </a> <!-- generateCustomerDataWithMonthlyBillingProduct(stagingdev-5, 4) -->
                   <span class="method-name">generateCustomerDataWithMonthlyBillingProduct</span>
+                  <span class="parameters">(stagingdev-5, 4)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="generateCustomerDataWithOutstandingInvoice(stagingdev-5, 4)">
+                  </a> <!-- generateCustomerDataWithOutstandingInvoice(stagingdev-5, 4) -->
+                  <span class="method-name">generateCustomerDataWithOutstandingInvoice</span>
                   <span class="parameters">(stagingdev-5, 4)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -336,36 +282,36 @@ data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'generateCustomerDataWithYearlyBillingProduct')
 data.setCell(0, 2, 'com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest')
-data.setCell(0, 3, 1948596);
+data.setCell(0, 3, 1961213);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'generateCustomerDataWithMonthlyBillingProduct')
 data.setCell(1, 2, 'com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest')
-data.setCell(1, 3, 1902319);
+data.setCell(1, 3, 1923962);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'generateCustomerDataWithDomainRegistrationAndEnableAutoRenew')
+data.setCell(2, 1, 'generateCustomerDataWithOutstandingInvoice')
 data.setCell(2, 2, 'com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest')
-data.setCell(2, 3, 1360980);
+data.setCell(2, 3, 1887798);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'generateCustomerDataWithDefaultCreditCard')
+data.setCell(3, 1, 'generateCustomerDataWithDomainRegistrationAndEnableAutoRenew')
 data.setCell(3, 2, 'com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest')
-data.setCell(3, 3, 892240);
+data.setCell(3, 3, 1352676);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'generateCustomerDataWithOutstandingInvoice')
+data.setCell(4, 1, 'generateCustomerDataWithDefaultCreditCard')
 data.setCell(4, 2, 'com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest')
-data.setCell(4, 3, 228066);
+data.setCell(4, 3, 960897);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'createPropertyFileForDecryptedDataVerification')
+data.setCell(5, 1, 'createTextFileForGreencodeAndCreditCardDetails')
 data.setCell(5, 2, 'com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest')
-data.setCell(5, 3, 7);
+data.setCell(5, 3, 16);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'createTextFileForGreencodeAndCreditCardDetails')
+data.setCell(6, 1, 'createPropertyFileForDecryptedDataVerification')
 data.setCell(6, 2, 'com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest')
-data.setCell(6, 3, 4);
+data.setCell(6, 3, 8);
 window.suiteTableData['Payment_Gateway_Migration_-_Quest_Data_Creation_Suite']= { tableData: data, tableDiv: 'times-div-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 hours</span>
+              <span class="suite-total-time">Total running time: 2 hours</span>
               <div id="times-div-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite">
               </div> <!-- times-div-Payment_Gateway_Migration_-_Quest_Data_Creation_Suite -->
             </div> <!-- times-div -->
@@ -398,29 +344,27 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">generateCustomerDataWithMonthlyBillingProduct(stagingdev-5, 4)</span>
-                <span class="method-start">1360983 ms</span>
+                <span class="method-start">1352679 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">generateCustomerDataWithYearlyBillingProduct(stagingdev-5, 4)</span>
-                <span class="method-start">3263303 ms</span>
+                <span class="method-start">3276643 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">generateCustomerDataWithOutstandingInvoice(stagingdev-5, 4)</span>
-                <span class="method-start">5211901 ms</span>
+                <span class="method-start">5237859 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">generateCustomerDataWithDefaultCreditCard(stagingdev-5, 4)</span>
-                <span class="method-start">5439970 ms</span>
+                <span class="method-start">7125658 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createTextFileForGreencodeAndCreditCardDetails(stagingdev-5)</span>
-                <span class="method-start">6332211 ms</span>
+                <span class="method-start">8086557 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createPropertyFileForDecryptedDataVerification(stagingdev-5)</span>
-                <span class="method-start">6332216 ms</span>
+                <span class="method-start">8086575 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
