@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" ignored="4" total="7" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Payment Gateway Migration - Quest Data Creation Suite" duration-ms="8086613" started-at="2019-02-07T02:45:27Z" finished-at="2019-02-07T05:00:14Z">
+  <suite name="Payment Gateway Migration - Quest Data Creation Suite" duration-ms="342050" started-at="2019-02-07T06:08:21Z" finished-at="2019-02-07T06:14:03Z">
     <groups>
     </groups>
-    <test name="Payment Gateway Migration - Braintree Post Validation Test Cases" duration-ms="8086613" started-at="2019-02-07T02:45:27Z" finished-at="2019-02-07T05:00:14Z">
+    <test name="Payment Gateway Migration - Quest Data Creation Test Cases" duration-ms="342050" started-at="2019-02-07T06:08:21Z" finished-at="2019-02-07T06:14:03Z">
       <class name="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest">
-        <test-method status="PASS" signature="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew" duration-ms="1352676" started-at="2019-02-07T02:45:27Z" finished-at="2019-02-07T03:08:00Z">
+        <test-method status="PASS" signature="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew" duration-ms="341991" started-at="2019-02-07T06:08:21Z" finished-at="2019-02-07T06:14:03Z">
           <params>
             <param index="0">
               <value>
@@ -16,78 +16,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[4]]>
+                <![CDATA[1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateCustomerDataWithDomainRegistrationAndEnableAutoRenew -->
-        <test-method status="PASS" signature="generateCustomerDataWithMonthlyBillingProduct(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="generateCustomerDataWithMonthlyBillingProduct" duration-ms="1923962" started-at="2019-02-07T03:08:00Z" finished-at="2019-02-07T03:40:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateCustomerDataWithMonthlyBillingProduct -->
-        <test-method status="PASS" signature="generateCustomerDataWithYearlyBillingProduct(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="generateCustomerDataWithYearlyBillingProduct" duration-ms="1961213" started-at="2019-02-07T03:40:04Z" finished-at="2019-02-07T04:12:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateCustomerDataWithYearlyBillingProduct -->
-        <test-method status="PASS" signature="generateCustomerDataWithOutstandingInvoice(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="generateCustomerDataWithOutstandingInvoice" duration-ms="1887798" started-at="2019-02-07T04:12:45Z" finished-at="2019-02-07T04:44:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateCustomerDataWithOutstandingInvoice -->
-        <test-method status="PASS" signature="generateCustomerDataWithDefaultCreditCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="generateCustomerDataWithDefaultCreditCard" duration-ms="960897" started-at="2019-02-07T04:44:13Z" finished-at="2019-02-07T05:00:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateCustomerDataWithDefaultCreditCard -->
-        <test-method status="PASS" signature="createTextFileForGreencodeAndCreditCardDetails(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="createTextFileForGreencodeAndCreditCardDetails" duration-ms="16" started-at="2019-02-07T05:00:14Z" finished-at="2019-02-07T05:00:14Z">
+        <test-method status="PASS" signature="createTextFileForGreencodeAndCreditCardDetails(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="createTextFileForGreencodeAndCreditCardDetails" duration-ms="10" started-at="2019-02-07T06:14:03Z" finished-at="2019-02-07T06:14:03Z">
           <params>
             <param index="0">
               <value>
@@ -98,7 +34,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTextFileForGreencodeAndCreditCardDetails -->
-        <test-method status="PASS" signature="createPropertyFileForDecryptedDataVerification(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="createPropertyFileForDecryptedDataVerification" duration-ms="8" started-at="2019-02-07T05:00:14Z" finished-at="2019-02-07T05:00:14Z">
+        <test-method status="PASS" signature="createPropertyFileForDecryptedDataVerification(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="createPropertyFileForDecryptedDataVerification" duration-ms="12" started-at="2019-02-07T06:14:03Z" finished-at="2019-02-07T06:14:03Z">
           <params>
             <param index="0">
               <value>
@@ -110,6 +46,6 @@
           </reporter-output>
         </test-method> <!-- createPropertyFileForDecryptedDataVerification -->
       </class> <!-- com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest -->
-    </test> <!-- Payment Gateway Migration - Braintree Post Validation Test Cases -->
+    </test> <!-- Payment Gateway Migration - Quest Data Creation Test Cases -->
   </suite> <!-- Payment Gateway Migration - Quest Data Creation Suite -->
 </testng-results>

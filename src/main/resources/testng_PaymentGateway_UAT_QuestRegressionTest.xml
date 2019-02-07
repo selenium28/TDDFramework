@@ -9,7 +9,7 @@
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
 	</listeners>
 	
-	<test name="Regression Test Cases" parallel = "none" preserve-order="true">
+	<test name="Payment Gateway UAT Quest Regression Test Cases" parallel = "none" preserve-order="true">
     
 		<classes>
 		

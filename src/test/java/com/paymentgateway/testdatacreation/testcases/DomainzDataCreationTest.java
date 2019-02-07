@@ -1098,7 +1098,12 @@ public class DomainzDataCreationTest extends TestBase{
 		
 		Integer intMaxCount = arrDataMigrationGCAndCCDetails.size();
 		Integer intMinCount = null;
-		PrintWriter writer = new PrintWriter("GreencodeAndCreditCardDetails.txt", "UTF-8");
+		
+		// Generate unique file name for migration test data
+		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
+		Date d1 = new Date();
+		
+		PrintWriter writer = new PrintWriter("GreencodeAndCreditCardDetails_" + df.format(d1) + ".txt", "UTF-8");
 		writer.println("green_code,card_digits,card_owner,card_expire_month,card_expire_year");
 		
 		
@@ -1116,7 +1121,11 @@ public class DomainzDataCreationTest extends TestBase{
 		
 		Integer intMaxCount = arrDataMigrationGC.size();
 		Integer intMinCount = null;
-
+		
+		// Generate unique file name for migration test data
+		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
+		Date d1 = new Date();
+		
 		StringBuffer strDataMigrationGC = new StringBuffer("'"+arrDataMigrationGC.get(0)+"'");
 		
 		for(intMinCount = 1; intMinCount<intMaxCount; intMinCount++) {
@@ -1137,7 +1146,7 @@ public class DomainzDataCreationTest extends TestBase{
 		properties.setProperty("sql", "SELECT * FROM public.v_companybilling_bt WHERE cm_greencode IN ("+ strDataMigrationGC +") AND card_digits IS NOT NULL AND braintree_migrated = false;");
 		properties.setProperty("output.file", "output.csv");	
 	
-		File file = new File("migration.properties");
+		File file = new File("migration_" + df.format(d1) + ".properties");
 		FileOutputStream fileOut = new FileOutputStream(file);
 		properties.store(fileOut, "DB");
 		fileOut.close();
