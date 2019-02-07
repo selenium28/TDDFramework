@@ -882,7 +882,7 @@ public class DomainzDataCreationTest extends TestBase{
 		//Test Step 6: Login to Sales DB page, then purchase a domain with monthly or yearly product and pay through invoice
 		initialization(environment, "salesdburl");
 		csloginpage = new CSLoginPage();
-		csloginpage.setDefaultLoginDetails("stage");
+		csloginpage.setDefaultLoginDetails(environment);
 		csnrcrmpage = csloginpage.clickLoginButton();
 		csnrcrmpage.setGreenCode(strAccountReference);
 		cscreatedomainwindowpage = csnrcrmpage.clickNewDomainNPSButton();

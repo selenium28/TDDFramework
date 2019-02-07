@@ -1,5 +1,34 @@
 green_code,card_digits,card_owner,card_expire_month,card_expire_year
-PAY-948,4012888888881881,"Domainz New Customer - Yearly Product 40121881",04,2023
-PAY-948,5454545454545454,"Domainz Returning Customer - Yearly Product 54545454",08,2023
-PAY-949,4111111111111111,"Domainz New Customer - Yearly Product 41111111",03,2023
-PAY-949,2223520043560014,"Domainz Returning Customer - Yearly Product 22230014",07,2023
+PAY-961,4005519200000004,"Domainz New Customer - Domain Reg 40050004",04,2021
+PAY-961,5555555555554444,"Domainz Returning Customer - Domain Reg 55554444",08,2021
+PAY-964,4012000033330026,"Domainz New Customer - Domain Reg 40120026",03,2021
+PAY-964,2223520043560014,"Domainz Returning Customer - Domain Reg 22230014",07,2021
+PAY-966,4009348888881881,"Domainz New Customer - Domain Reg 40091881",02,2021
+PAY-966,5454545454545454,"Domainz Returning Customer - Domain Reg 54545454",06,2021
+PAY-967,4111111111111111,"Domainz New Customer - Domain Reg 41111111",01,2021
+PAY-967,2223000048400011,"Domainz Returning Customer - Domain Reg 22230011",05,2021
+PAY-968,4012000033330026,"Domainz New Customer - Monthly Product 40120026",04,2022
+PAY-968,2223000048400011,"Domainz Returning Customer - Monthly Product 22230011",08,2022
+PAY-969,4500600000000061,"Domainz New Customer - Monthly Product 45000061",03,2022
+PAY-969,5454545454545454,"Domainz Returning Customer - Monthly Product 54545454",07,2022
+PAY-970,4005519200000004,"Domainz New Customer - Monthly Product 40050004",02,2022
+PAY-970,2223520043560014,"Domainz Returning Customer - Monthly Product 22230014",06,2022
+PAY-971,4009348888881881,"Domainz New Customer - Monthly Product 40091881",01,2022
+PAY-971,5555555555554444,"Domainz Returning Customer - Monthly Product 55554444",05,2022
+PAY-972,4012888888881881,"Domainz New Customer - Yearly Product 40121881",04,2023
+PAY-972,5454545454545454,"Domainz Returning Customer - Yearly Product 54545454",08,2023
+PAY-973,4111111111111111,"Domainz New Customer - Yearly Product 41111111",03,2023
+PAY-973,2223520043560014,"Domainz Returning Customer - Yearly Product 22230014",07,2023
+PAY-974,4217651111111119,"Domainz New Customer - Yearly Product 42171119",02,2023
+PAY-974,5555555555554444,"Domainz Returning Customer - Yearly Product 55554444",06,2023
+PAY-975,4012000077777777,"Domainz New Customer - Yearly Product 40127777",01,2023
+PAY-975,2223000048400011,"Domainz Returning Customer - Yearly Product 22230011",05,2023
+PAY-976,4500600000000061,"Domainz New Customer - With Outstanding Invoice 45000061",12,2024
+PAY-977,2223000048400011,"Domainz New Customer 22230011",04,2025
+PAY-977,4005519200000004,"Domainz Returning Customer - Default Credit Card 40050004",08,2025
+PAY-978,5454545454545454,"Domainz New Customer 54545454",03,2025
+PAY-978,4012000077777777,"Domainz Returning Customer - Default Credit Card 40127777",07,2025
+PAY-979,4009348888881881,"Domainz New Customer 40091881",02,2025
+PAY-979,2223520043560014,"Domainz Returning Customer - Default Credit Card 22230014",06,2025
+PAY-980,4111111111111111,"Domainz New Customer 41111111",01,2025
+PAY-980,5555555555554444,"Domainz Returning Customer - Default Credit Card 55554444",05,2025

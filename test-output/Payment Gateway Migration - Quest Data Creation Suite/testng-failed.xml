@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Migration - Quest Data Creation Suite]" parallel="tests">
   <parameter name="environment" value="stagingdev-5"/>
-  <parameter name="iteration" value="3"/>
+  <parameter name="iteration" value="4"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
@@ -10,7 +10,7 @@
     <classes>
       <class name="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest">
         <methods>
-          <include name="generateCustomerDataWithMonthlyBillingProduct" invocation-numbers="0"/>
+          <include name="generateCustomerDataWithOutstandingInvoice" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest -->
     </classes>

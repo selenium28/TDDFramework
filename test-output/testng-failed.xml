@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Migration - Braintree Post Validation Suite]" parallel="tests">
+<suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Migration - Quest Data Creation Suite]" parallel="tests">
   <parameter name="environment" value="stagingdev-5"/>
-  <parameter name="iteration" value="1"/>
+  <parameter name="iteration" value="4"/>
+  <listeners>
+    <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
+  </listeners>
   <test thread-count="10" name="Payment Gateway Migration - Braintree Post Validation Test Cases(failed)">
     <classes>
-      <class name="com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest">
+      <class name="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest">
         <methods>
-          <include name="testMigratedCustomerInDomainRegistrationAndEnableAutoRenew" invocation-numbers="0"/>
+          <include name="generateCustomerDataWithOutstandingInvoice" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest -->
+      </class> <!-- com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest -->
     </classes>
   </test> <!-- Payment Gateway Migration - Braintree Post Validation Test Cases(failed) -->
-</suite> <!-- Failed suite [Payment Gateway Migration - Braintree Post Validation Suite] -->
+</suite> <!-- Failed suite [Payment Gateway Migration - Quest Data Creation Suite] -->
