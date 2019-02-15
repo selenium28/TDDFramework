@@ -213,8 +213,8 @@ public class DMZBillingPage extends TestBase{
     	String mastercarddetails;
     	String[] arrcarddetails = new String [6];
     	
-       	WebElement visacard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'Visa credit card')]"));
-       	WebElement mastercard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'MasterCard credit card')]"));
+       	WebElement visacard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'Visa credit card. Owner: Domainz')]"));
+       	WebElement mastercard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'MasterCard credit card. Owner: Domainz')]"));
        
        	
      	if ((cardtype =="Visa") & (visacard.isDisplayed())){

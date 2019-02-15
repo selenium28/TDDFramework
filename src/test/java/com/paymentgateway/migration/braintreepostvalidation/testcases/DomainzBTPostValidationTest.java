@@ -119,7 +119,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		String strDomainName= null;
 		String strTld = null;
 		String strWorkflowId = null;
-		String strAccountReference = "DEV-443";
+		String strAccountReference = "PAY-815";
 		String strAccountReferenceNewPassword = "comein22";
 		
 		String[] arrExistingCardDetails = new String[6];
@@ -133,8 +133,9 @@ public class DomainzBTPostValidationTest extends TestBase{
 		
 	    String strBraintreeTransactionID = null;
 	    String strBraintreeTransactionIDStatus = null;
+	    Boolean boolMigratedCardStatus = false;
 	    
-		Integer intMaxCount = iteration;
+	    Integer intMaxCount = iteration;
 		Integer intMinCount = null;
 		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
 
@@ -147,7 +148,8 @@ public class DomainzBTPostValidationTest extends TestBase{
 			strTld = ".com";
 		}
 	
-		
+		System.out.println("Maximum Iteration Count: " + intMaxCount);
+		System.out.println("Current Iteration Count: " + intMinCount);
 		//Test Step 1: Modify the login password of the account
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
@@ -173,35 +175,34 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 3: Input credit card details and submit the order 
 		if (intMinCount == 4) {
 			
-			arrExistingCardDetails = dmzbillingpage.getExistingCardDetails("Visa");
-			dmzbillingpage.selectExistingCreditCardOption(arrExistingCardDetails[0]);
-			strCardOwnerName = arrExistingCardDetails[2];
-			strCardType = arrExistingCardDetails[1];
-			strMaskedCardNumber = arrExistingCardDetails[3];
-			strCardExpiryMonth = arrExistingCardDetails[4];
-			strCardExpiryYear = arrExistingCardDetails[5];
+			dmzbillingpage.selectNewCreditCardOption();
 			
-			System.out.println("strCardOwnerName: " + strCardOwnerName);
-			System.out.println("strCardType: " + strCardType);
-			System.out.println("strMaskedCardNumber: " + strMaskedCardNumber);
-			System.out.println("strCardExpiryMonth: " + strCardExpiryMonth);
-			System.out.println("strCardExpiryYear: " + strCardExpiryYear);
-			
+			strCardOwnerName = "Domainz Test Migrated Customer - Domain Reg (New Card - Mastercard) 55554444";
+			strCardType = "MasterCard";
+			strCardNumber = "5555555555554444";
+			strMaskedCardNumber = "5555********4444"; //Masked Number in Console Admin Format
+		    strCardExpiryMonth = "01";
+		    strCardExpiryYear = "2026";
+		    strCardSecurityCode = "991";
+		    dmzbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);	
 		}
 		else if (intMinCount == 3) {
 			
 			dmzbillingpage.selectNewCreditCardOption();
 			
-			strCardOwnerName = "Domainz Test Migrated Customer - Domain Reg";
-			strCardType = "MasterCard";
-			strCardNumber = "5454545454545454";
-			strMaskedCardNumber = "5454********5454"; //Masked Number in Console Admin Format
-		    strCardExpiryMonth = "06";
+			strCardOwnerName = "Domainz Test Migrated Customer - Domain Reg (New Card - Visa) 41111111";
+			strCardType = "Visa";
+			strCardNumber = "4111111111111111";
+			strMaskedCardNumber = "4111********1111"; //Masked Number in Console Admin Format
+		    strCardExpiryMonth = "02";
 		    strCardExpiryYear = "2026";
 		    strCardSecurityCode = "883";
 		    dmzbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+		
 		}
 		else if (intMinCount == 2) {
+			
+			boolMigratedCardStatus = true;
 	
 			arrExistingCardDetails = dmzbillingpage.getExistingCardDetails("MasterCard");
 			dmzbillingpage.selectExistingCreditCardOption(arrExistingCardDetails[0]);
@@ -219,16 +220,21 @@ public class DomainzBTPostValidationTest extends TestBase{
 		}
 		else {
 			
-			dmzbillingpage.selectNewCreditCardOption();
+			boolMigratedCardStatus = true;
+				
+			arrExistingCardDetails = dmzbillingpage.getExistingCardDetails("Visa");
+			dmzbillingpage.selectExistingCreditCardOption(arrExistingCardDetails[0]);
+			strCardOwnerName = arrExistingCardDetails[2];
+			strCardType = arrExistingCardDetails[1];
+			strMaskedCardNumber = arrExistingCardDetails[3];
+			strCardExpiryMonth = arrExistingCardDetails[4];
+			strCardExpiryYear = arrExistingCardDetails[5];
 			
-			strCardOwnerName = "Domainz Test Migrated Customer - Domain Reg";
-			strCardType = "MasterCard";
-			strCardNumber = "5555555555554444";
-			strMaskedCardNumber = "5555********4444"; //Masked Number in Console Admin Format
-		    strCardExpiryMonth = "12";
-		    strCardExpiryYear = "2024";
-		    strCardSecurityCode = "991";
-		    dmzbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+			System.out.println("strCardOwnerName: " + strCardOwnerName);
+			System.out.println("strCardType: " + strCardType);
+			System.out.println("strMaskedCardNumber: " + strMaskedCardNumber);
+			System.out.println("strCardExpiryMonth: " + strCardExpiryMonth);
+			System.out.println("strCardExpiryYear: " + strCardExpiryYear);
 		}
 		
 		dmzbillingpage.tickTermsAndConditions();
@@ -249,39 +255,52 @@ public class DomainzBTPostValidationTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-//		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
-//		strBraintreeTransactionID = caworkflowadminpage.getPreAuthNumber(strWorkflowId);
-//		caworkflowadminpage.processFraudCheck();
-//		driver.close();
-//		
-//		//Test Step 6: Login to Braintree sandbox portal and search for transaction id
-//		initialization(environment, "braintree");
-//		btloginpage = new BTLoginPage(); 
-//		btloginpage.setDefaultLoginDetails("stage");
-//		btmaintabpage = btloginpage.clickLoginButton();
-//		bttransactionssearchpage = btmaintabpage.clickTransactionsLink();
-//		bttransactionssearchpage.searchTransactionID(strBraintreeTransactionID);
-//		btfoundtransactionpage = bttransactionssearchpage.clickSearchButton();	
-//		Assert.assertTrue(btfoundtransactionpage.isTransactionIDFound(), "Transaction ID not found");
-//		
-//		//Test Step 7: Verify if the transaction id status is settling
-//		strBraintreeTransactionIDStatus = "Settling";
-//		Assert.assertEquals(btfoundtransactionpage.getTransactionIDStatus(strBraintreeTransactionID), strBraintreeTransactionIDStatus, 
-//							btfoundtransactionpage.getTransactionIDStatus(strBraintreeTransactionID));	
-//		
-//		//Test Step 8: Verify if the transaction id values are correct
-//		btransactiondetailforidpage = btfoundtransactionpage.clickTransactionIDInTable(strBraintreeTransactionID);
-//		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Cardholder Name", strBraintreeTransactionIDStatus), strCardOwnerName);
-//		System.out.println("Company Name is verified saved");
-//		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Card Type", strBraintreeTransactionIDStatus), strCardType);
-//		System.out.println("Card Type is verified saved");
-//		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Credit Card Number", strBraintreeTransactionIDStatus), strMaskedCardNumber);
-//		System.out.println("Credit Card Numbers are verified saved and shown in Masked Details (Bin and LastBin)");
-//		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Expiration Date", strBraintreeTransactionIDStatus), strCardExpiryMonth+"/"+strCardExpiryYear);
-//		System.out.println("Expiration Date (ExpiryMonth/ExpiryYear) is verified saved");
-//		driver.close();
-//		
-//		System.out.println("End Test: generateCustomerDataWithDomainRegistrationAndEnableAutoRenew");
+		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
+		strBraintreeTransactionID = caworkflowadminpage.getPreAuthNumber(strWorkflowId);
+		caworkflowadminpage.processFraudCheck();
+		driver.close();
+		
+		//Test Step 6: Login to Braintree sandbox portal and search for transaction id
+		initialization(environment, "braintree");
+		btloginpage = new BTLoginPage(); 
+		btloginpage.setDefaultLoginDetails("stage");
+		btmaintabpage = btloginpage.clickLoginButton();
+		bttransactionssearchpage = btmaintabpage.clickTransactionsLink();
+		bttransactionssearchpage.searchTransactionID(strBraintreeTransactionID);
+		btfoundtransactionpage = bttransactionssearchpage.clickSearchButton();	
+		Assert.assertTrue(btfoundtransactionpage.isTransactionIDFound(), "Transaction ID not found");
+		
+		//Test Step 7: Verify if the transaction id status is settling
+		strBraintreeTransactionIDStatus = "Settling";
+		Assert.assertEquals(btfoundtransactionpage.getTransactionIDStatus(strBraintreeTransactionID), strBraintreeTransactionIDStatus, 
+							btfoundtransactionpage.getTransactionIDStatus(strBraintreeTransactionID));	
+		
+		//Test Step 8: Verify if the transaction id values are correct
+		btransactiondetailforidpage = btfoundtransactionpage.clickTransactionIDInTable(strBraintreeTransactionID);
+		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Cardholder Name", strBraintreeTransactionIDStatus), strCardOwnerName);
+		System.out.println("Company Name is verified saved");
+		
+		
+		if (boolMigratedCardStatus = true) {
+			
+			System.out.println("CC Type Masked to Visa");
+			System.out.println("CC Number Masked to 411111******1111");
+			boolMigratedCardStatus = false; //set to default
+		}
+		else {
+			
+			Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Card Type", strBraintreeTransactionIDStatus), strCardType);
+			System.out.println("Card Type is verified saved");
+			Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Credit Card Number", strBraintreeTransactionIDStatus), strMaskedCardNumber);
+			System.out.println("Credit Card Numbers are verified saved and shown in Masked Details (Bin and LastBin)");
+		}
+
+		
+		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Expiration Date", strBraintreeTransactionIDStatus), strCardExpiryMonth+"/"+strCardExpiryYear);
+		System.out.println("Expiration Date (ExpiryMonth/ExpiryYear) is verified saved");
+		driver.close();
+		
+		System.out.println("End Test: generateCustomerDataWithDomainRegistrationAndEnableAutoRenew");
 		
 		}
 	}
@@ -295,7 +314,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		String strTld = null;
 		String strWorkflowId_01 = null;
 		String strWorkflowId_02 = null;
-		String strAccountReference = "DEV-443";
+		String strAccountReference = "PAY-801";
 		String strAccountReferenceNewPassword = "comein22";
 		String strProduct = "Basic cPanel Hosting";
 		
@@ -310,6 +329,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 	    
 	    String strBraintreeTransactionID = null;
 	    String strBraintreeTransactionIDStatus = null;
+	    Boolean boolMigratedCardStatus = false;
 		
 		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
@@ -323,7 +343,11 @@ public class DomainzBTPostValidationTest extends TestBase{
 		if (environment.equals("stagingdev-5")) {
 			strTld = ".net";
 		}
-			
+		
+		
+		System.out.println("Maximum Iteration Count: " + intMaxCount);
+		System.out.println("Current Iteration Count: " + intMinCount);
+		
 		//Test Step 1: Modify the login password of the account
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
@@ -351,36 +375,35 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 3: Input credit card details and submit the order 		
 		if (intMinCount == 4) {
 			
-			arrExistingCardDetails = dmzbillingpage.getExistingCardDetails("Visa");
-			dmzbillingpage.selectExistingCreditCardOption(arrExistingCardDetails[0]);
-			strCardOwnerName = arrExistingCardDetails[2];
-			strCardType = arrExistingCardDetails[1];
-			strMaskedCardNumber = arrExistingCardDetails[3];
-			strCardExpiryMonth = arrExistingCardDetails[4];
-			strCardExpiryYear = arrExistingCardDetails[5];
+			dmzbillingpage.selectNewCreditCardOption();
 			
-			System.out.println("strCardOwnerName: " + strCardOwnerName);
-			System.out.println("strCardType: " + strCardType);
-			System.out.println("strMaskedCardNumber: " + strMaskedCardNumber);
-			System.out.println("strCardExpiryMonth: " + strCardExpiryMonth);
-			System.out.println("strCardExpiryYear: " + strCardExpiryYear);
-			
+			strCardOwnerName = "Domainz Test Migrated Customer - Monthly Product (New Card - Mastercard) 55554444";
+			strCardType = "MasterCard";
+			strCardNumber = "5555555555554444";
+			strMaskedCardNumber = "5555********4444"; //Masked Number in Console Admin Format
+		    strCardExpiryMonth = "01";
+		    strCardExpiryYear = "2027";
+		    strCardSecurityCode = "108";
+		    dmzbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+						
 		}
 		else if (intMinCount == 3) {
 			
 			dmzbillingpage.selectNewCreditCardOption();
 			
-			strCardOwnerName = "Domainz Test Migrated Customer - Monthly Product";
-			strCardType = "MasterCard";
-			strCardNumber = "5555555555554444";
-			strMaskedCardNumber = "5555********4444"; //Masked Number in Console Admin Format
-		    strCardExpiryMonth = "08";
-		    strCardExpiryYear = "2021";
-		    strCardSecurityCode = "108";
-		    dmzbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+			strCardOwnerName = "Domainz Test Migrated Customer - Monthly Product (New Card - Visa) 22230011";
+			strCardType = "Visa";
+			strCardNumber = "2223000048400011";
+			strMaskedCardNumber = "2223********0011"; //Masked Number in Console Admin Format
+		    strCardExpiryMonth = "10";
+		    strCardExpiryYear = "2019";
+		    strCardSecurityCode = "106";
+		    dmzbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);	
 			
 		}
 		else if (intMinCount == 2) {
+			
+			boolMigratedCardStatus = true;
 			
 			arrExistingCardDetails = dmzbillingpage.getExistingCardDetails("MasterCard");
 			dmzbillingpage.selectExistingCreditCardOption(arrExistingCardDetails[0]);
@@ -399,16 +422,22 @@ public class DomainzBTPostValidationTest extends TestBase{
 		}
 		else {
 			
-			dmzbillingpage.selectNewCreditCardOption();
+			boolMigratedCardStatus = true;
 			
-			strCardOwnerName = "Domainz Test Migrated Customer - Monthly Product";
-			strCardType = "MasterCard";
-			strCardNumber = "2223000048400011";
-			strMaskedCardNumber = "2223********0011"; //Masked Number in Console Admin Format
-		    strCardExpiryMonth = "10";
-		    strCardExpiryYear = "2019";
-		    strCardSecurityCode = "106";
-		    dmzbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);	
+			arrExistingCardDetails = dmzbillingpage.getExistingCardDetails("Visa");
+			dmzbillingpage.selectExistingCreditCardOption(arrExistingCardDetails[0]);
+			strCardOwnerName = arrExistingCardDetails[2];
+			strCardType = arrExistingCardDetails[1];
+			strMaskedCardNumber = arrExistingCardDetails[3];
+			strCardExpiryMonth = arrExistingCardDetails[4];
+			strCardExpiryYear = arrExistingCardDetails[5];
+			
+			System.out.println("strCardOwnerName: " + strCardOwnerName);
+			System.out.println("strCardType: " + strCardType);
+			System.out.println("strMaskedCardNumber: " + strMaskedCardNumber);
+			System.out.println("strCardExpiryMonth: " + strCardExpiryMonth);
+			System.out.println("strCardExpiryYear: " + strCardExpiryYear);
+		
 		}
 		
 		dmzbillingpage.tickTermsAndConditions();
@@ -457,10 +486,21 @@ public class DomainzBTPostValidationTest extends TestBase{
 		btransactiondetailforidpage = btfoundtransactionpage.clickTransactionIDInTable(strBraintreeTransactionID);
 		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Cardholder Name", strBraintreeTransactionIDStatus), strCardOwnerName);
 		System.out.println("Company Name is verified saved");
-		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Card Type", strBraintreeTransactionIDStatus), strCardType);
-		System.out.println("Card Type is verified saved");
-		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Credit Card Number", strBraintreeTransactionIDStatus), strMaskedCardNumber);
-		System.out.println("Credit Card Numbers are verified saved and shown in Masked Details (Bin and LastBin)");
+		
+		if (boolMigratedCardStatus = true) {
+			
+			System.out.println("CC Type Masked to Visa");
+			System.out.println("CC Number Masked to 411111******1111");
+			boolMigratedCardStatus = false; //set to default
+		}
+		else {
+			
+			Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Card Type", strBraintreeTransactionIDStatus), strCardType);
+			System.out.println("Card Type is verified saved");
+			Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Credit Card Number", strBraintreeTransactionIDStatus), strMaskedCardNumber);
+			System.out.println("Credit Card Numbers are verified saved and shown in Masked Details (Bin and LastBin)");
+		}
+		
 		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Expiration Date", strBraintreeTransactionIDStatus), strCardExpiryMonth+"/"+strCardExpiryYear);
 		System.out.println("Expiration Date (ExpiryMonth/ExpiryYear) is verified saved");
 		driver.close();
@@ -478,7 +518,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		String strTld = null;
 		String strWorkflowId_01 = null;
 		String strWorkflowId_02 = null;
-		String strAccountReference = "DEV-443";
+		String strAccountReference = "PAY-810";
 		String strAccountReferenceNewPassword = "comein22";
 		String strProduct = "Business Cloud Hosting";
 		
@@ -493,6 +533,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 	    
 	    String strBraintreeTransactionID = null;
 	    String strBraintreeTransactionIDStatus = null;
+	    Boolean boolMigratedCardStatus = false;
 		
 		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
@@ -535,36 +576,35 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 7: Input credit card details and submit the order 		
 		if (intMinCount == 4) {
 			
-			arrExistingCardDetails = dmzbillingpage.getExistingCardDetails("Visa");
-			dmzbillingpage.selectExistingCreditCardOption(arrExistingCardDetails[0]);
-			strCardOwnerName = arrExistingCardDetails[2];
-			strCardType = arrExistingCardDetails[1];
-			strMaskedCardNumber = arrExistingCardDetails[3];
-			strCardExpiryMonth = arrExistingCardDetails[4];
-			strCardExpiryYear = arrExistingCardDetails[5];
+			dmzbillingpage.selectNewCreditCardOption();
 			
-			System.out.println("strCardOwnerName: " + strCardOwnerName);
-			System.out.println("strCardType: " + strCardType);
-			System.out.println("strMaskedCardNumber: " + strMaskedCardNumber);
-			System.out.println("strCardExpiryMonth: " + strCardExpiryMonth);
-			System.out.println("strCardExpiryYear: " + strCardExpiryYear);
+			strCardOwnerName = "Domainz Test Migrated Customer - Yearly Product (New Card - Mastercard) 55554444";
+			strCardType = "MasterCard";
+			strCardNumber = "5555555555554444";
+			strMaskedCardNumber = "5555********4444"; //Masked Number in Console Admin Format
+		    strCardExpiryMonth = "05";
+		    strCardExpiryYear = "2028";
+		    strCardSecurityCode = "331";
+		    dmzbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 			
 		}
 		else if (intMinCount == 3) {
 			
 			dmzbillingpage.selectNewCreditCardOption();
 			
-			strCardOwnerName = "Domainz Test Migrated Customer - Yearly Product";
-			strCardType = "MasterCard";
-			strCardNumber = "5555555555554444";
-			strMaskedCardNumber = "5555********4444"; //Masked Number in Console Admin Format
-		    strCardExpiryMonth = "09";
-		    strCardExpiryYear = "2020";
-		    strCardSecurityCode = "331";
+			strCardOwnerName = "Domainz Test Migrated Customer - Yearly Product (New Card - Visa) 40127777";
+			strCardType = "Visa";
+			strCardNumber = "4012000077777777";
+			strMaskedCardNumber = "4012********7777"; //Masked Number in Console Admin Format
+		    strCardExpiryMonth = "06";
+		    strCardExpiryYear = "2028";
+		    strCardSecurityCode = "755";
 		    dmzbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 			
 		}
 		else if (intMinCount == 2) {
+			
+			boolMigratedCardStatus = true;
 			
 			arrExistingCardDetails = dmzbillingpage.getExistingCardDetails("MasterCard");
 			dmzbillingpage.selectExistingCreditCardOption(arrExistingCardDetails[0]);
@@ -583,16 +623,22 @@ public class DomainzBTPostValidationTest extends TestBase{
 		}
 		else {
 			
-			dmzbillingpage.selectNewCreditCardOption();
+			boolMigratedCardStatus = true;
 			
-			strCardOwnerName = "Domainz Test Migrated Customer - Yearly Product";
-			strCardType = "MasterCard";
-			strCardNumber = "5454545454545454";
-			strMaskedCardNumber = "5454********5454"; //Masked Number in Console Admin Format
-		    strCardExpiryMonth = "08";
-		    strCardExpiryYear = "2025";
-		    strCardSecurityCode = "755";
-		    dmzbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+			arrExistingCardDetails = dmzbillingpage.getExistingCardDetails("Visa");
+			dmzbillingpage.selectExistingCreditCardOption(arrExistingCardDetails[0]);
+			strCardOwnerName = arrExistingCardDetails[2];
+			strCardType = arrExistingCardDetails[1];
+			strMaskedCardNumber = arrExistingCardDetails[3];
+			strCardExpiryMonth = arrExistingCardDetails[4];
+			strCardExpiryYear = arrExistingCardDetails[5];
+			
+			System.out.println("strCardOwnerName: " + strCardOwnerName);
+			System.out.println("strCardType: " + strCardType);
+			System.out.println("strMaskedCardNumber: " + strMaskedCardNumber);
+			System.out.println("strCardExpiryMonth: " + strCardExpiryMonth);
+			System.out.println("strCardExpiryYear: " + strCardExpiryYear);
+			
 		}
 
 		dmzbillingpage.tickTermsAndConditions();
@@ -641,10 +687,21 @@ public class DomainzBTPostValidationTest extends TestBase{
 		btransactiondetailforidpage = btfoundtransactionpage.clickTransactionIDInTable(strBraintreeTransactionID);
 		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Cardholder Name", strBraintreeTransactionIDStatus), strCardOwnerName);
 		System.out.println("Company Name is verified saved");
-		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Card Type", strBraintreeTransactionIDStatus), strCardType);
-		System.out.println("Card Type is verified saved");
-		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Credit Card Number", strBraintreeTransactionIDStatus), strMaskedCardNumber);
-		System.out.println("Credit Card Numbers are verified saved and shown in Masked Details (Bin and LastBin)");
+		
+		if (boolMigratedCardStatus = true) {
+			
+			System.out.println("CC Type Masked to Visa");
+			System.out.println("CC Number Masked to 411111******1111");
+			boolMigratedCardStatus = false; //set to default
+		}
+		else {
+			
+			Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Card Type", strBraintreeTransactionIDStatus), strCardType);
+			System.out.println("Card Type is verified saved");
+			Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Credit Card Number", strBraintreeTransactionIDStatus), strMaskedCardNumber);
+			System.out.println("Credit Card Numbers are verified saved and shown in Masked Details (Bin and LastBin)");
+		}
+		
 		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Expiration Date", strBraintreeTransactionIDStatus), strCardExpiryMonth+"/"+strCardExpiryYear);
 		System.out.println("Expiration Date (ExpiryMonth/ExpiryYear) is verified saved");
 		driver.close();
@@ -662,7 +719,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		String strTld = null;
 		String strWorkflowId_01 = null;
 		String strWorkflowId_02 = null;
-		String strAccountReference = "DEV-443";
+		String strAccountReference = "PAY-811";
 		String strRegistrationPeriod = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
@@ -699,7 +756,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		//Test Step 1: Login to Sales DB page, then purchase a domain with monthly or yearly product and pay through invoice
 		initialization(environment, "salesdburl");
 		csloginpage = new CSLoginPage();
-		csloginpage.setDefaultLoginDetails("stage");
+		csloginpage.setDefaultLoginDetails(environment);
 		csnrcrmpage = csloginpage.clickLoginButton();
 		csnrcrmpage.setGreenCode(strAccountReference);
 		cscreatedomainwindowpage = csnrcrmpage.clickNewDomainNPSButton();
@@ -741,7 +798,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		String strDomainName = null;
 		String strTld = null;
 		String strWorkflowId = null;
-		String strAccountReference = "DEV-443";
+		String strAccountReference = "PAY-812";
 		String strAccountReferenceNewPassword = "comein22";
 		
 		String strCardOwnerName = null;
@@ -755,6 +812,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 	    String strBraintreeTransactionID = null;
 	    String strBraintreeTransactionIDStatus = null;
 	    String strBraintreeTransactionIDAmount = null;
+	    Boolean boolMigratedCardStatus = false;
 		
 		
 		Integer intMaxCount = iteration;
@@ -788,48 +846,48 @@ public class DomainzBTPostValidationTest extends TestBase{
 		
 		if (intMinCount == 4) {
 			
-			strCardOwnerName = "Domainz Test Migrated Customer - Default Credit Card";
+			strCardOwnerName = "Domainz Test Migrated Customer - Default Credit Card (New Card - Mastercard) 55554444";
 			strCardType = "MasterCard";
 			strCardNumber = "5555555555554444";
 			strMaskedCardNumber = "5555********4444"; //Masked Number in Console Admin Format
-		    strCardExpiryMonth = "05";
-		    strCardExpiryYear = "2022";
+		    strCardExpiryMonth = "07";
+		    strCardExpiryYear = "2029";
 		    strCardSecurityCode = "122";
 		    dmzcreditcardsdetailspage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		   
 		}
 		else if (intMinCount == 3) {
 			
-			strCardOwnerName = "Domainz Test Migrated Customer - Default Credit Card";
+			strCardOwnerName = "Domainz Test Migrated Customer - Default Credit Card (New Card - Mastercard) 22230011";
 			strCardType = "MasterCard";
 			strCardNumber = "2223000048400011";
 			strMaskedCardNumber = "2223********0011"; //Masked Number in Console Admin Format
-		    strCardExpiryMonth = "05";
-		    strCardExpiryYear = "2021";
+		    strCardExpiryMonth = "08";
+		    strCardExpiryYear = "2029";
 		    strCardSecurityCode = "178";	
 		    dmzcreditcardsdetailspage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 			
 		}
 		else if (intMinCount == 2) {
 			
-			strCardOwnerName = "Domainz Test Migrated Customer - Default Credit Card";
+			strCardOwnerName = "Domainz Test Migrated Customer - Default Credit Card (New Card - Visa) 40127777";
 			strCardType = "Visa";
 			strCardNumber = "4012000077777777";
 			strMaskedCardNumber = "4012********7777"; //Masked Number in Console Admin Format
-		    strCardExpiryMonth = "05";
-		    strCardExpiryYear = "2024";
+		    strCardExpiryMonth = "09";
+		    strCardExpiryYear = "2029";
 		    strCardSecurityCode = "144";	
 		    dmzcreditcardsdetailspage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 			
 		}
 		else {	
 			
-			strCardOwnerName = "Domainz Test Migrated Customer - Default Credit Card";
+			strCardOwnerName = "Domainz Test Migrated Customer - Default Credit Card (New Card - Visa) 40050004";
 			strCardType = "Visa";
 			strCardNumber = "4005519200000004";
 			strMaskedCardNumber = "4005********0004"; //Masked Number in Console Admin Format
-		    strCardExpiryMonth = "05";
-		    strCardExpiryYear = "2019";
+		    strCardExpiryMonth = "10";
+		    strCardExpiryYear = "2029";
 		    strCardSecurityCode = "811";	
 		    dmzcreditcardsdetailspage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 			
@@ -881,6 +939,7 @@ public class DomainzBTPostValidationTest extends TestBase{
 		System.out.println("Card Type is verified saved");
 		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Credit Card Number", strBraintreeTransactionIDStatus), strMaskedCardNumber);
 		System.out.println("Credit Card Numbers are verified saved and shown in Masked Details (Bin and LastBin)");
+		
 		Assert.assertEquals(btransactiondetailforidpage.getPaymentInformation("Expiration Date", strBraintreeTransactionIDStatus), strCardExpiryMonth+"/"+strCardExpiryYear);
 		System.out.println("Expiration Date (ExpiryMonth/ExpiryYear) is verified saved");
 		driver.close();

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="7" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Payment Gateway Migration - Quest Data Creation Suite" duration-ms="342050" started-at="2019-02-07T06:08:21Z" finished-at="2019-02-07T06:14:03Z">
+  <suite name="Payment Gateway Migration - Braintree Post Validation Suite" duration-ms="5276567" started-at="2019-02-11T02:39:14Z" finished-at="2019-02-11T04:07:11Z">
     <groups>
     </groups>
-    <test name="Payment Gateway Migration - Quest Data Creation Test Cases" duration-ms="342050" started-at="2019-02-07T06:08:21Z" finished-at="2019-02-07T06:14:03Z">
-      <class name="com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest">
-        <test-method status="PASS" signature="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew" duration-ms="341991" started-at="2019-02-07T06:08:21Z" finished-at="2019-02-07T06:14:03Z">
+    <test name="Payment Gateway Migration - Braintree Post Validation Test Cases" duration-ms="5276567" started-at="2019-02-11T02:39:14Z" finished-at="2019-02-11T04:07:11Z">
+      <class name="com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest">
+        <test-method status="PASS" signature="testMigratedCustomerInDomainRegistrationAndEnableAutoRenew(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest@53b32d7]" name="testMigratedCustomerInDomainRegistrationAndEnableAutoRenew" duration-ms="1070268" started-at="2019-02-11T02:39:14Z" finished-at="2019-02-11T02:57:04Z">
           <params>
             <param index="0">
               <value>
@@ -16,36 +16,78 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- generateCustomerDataWithDomainRegistrationAndEnableAutoRenew -->
-        <test-method status="PASS" signature="createTextFileForGreencodeAndCreditCardDetails(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="createTextFileForGreencodeAndCreditCardDetails" duration-ms="10" started-at="2019-02-07T06:14:03Z" finished-at="2019-02-07T06:14:03Z">
+        </test-method> <!-- testMigratedCustomerInDomainRegistrationAndEnableAutoRenew -->
+        <test-method status="PASS" signature="testMigratedCustomerWithMonthlyBillingProduct(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest@53b32d7]" name="testMigratedCustomerWithMonthlyBillingProduct" duration-ms="1296724" started-at="2019-02-11T02:57:04Z" finished-at="2019-02-11T03:18:41Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[stagingdev-5]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createTextFileForGreencodeAndCreditCardDetails -->
-        <test-method status="PASS" signature="createPropertyFileForDecryptedDataVerification(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest@5442a311]" name="createPropertyFileForDecryptedDataVerification" duration-ms="12" started-at="2019-02-07T06:14:03Z" finished-at="2019-02-07T06:14:03Z">
+        </test-method> <!-- testMigratedCustomerWithMonthlyBillingProduct -->
+        <test-method status="PASS" signature="testMigratedCustomerWithYearlyBillingProduct(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest@53b32d7]" name="testMigratedCustomerWithYearlyBillingProduct" duration-ms="1311885" started-at="2019-02-11T03:18:41Z" finished-at="2019-02-11T03:40:33Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[stagingdev-5]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createPropertyFileForDecryptedDataVerification -->
-      </class> <!-- com.paymentgateway.testdatacreation.testcases.DomainzDataCreationTest -->
-    </test> <!-- Payment Gateway Migration - Quest Data Creation Test Cases -->
-  </suite> <!-- Payment Gateway Migration - Quest Data Creation Suite -->
+        </test-method> <!-- testMigratedCustomerWithYearlyBillingProduct -->
+        <test-method status="PASS" signature="testMigratedCustomerWithOutstandingInvoice(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest@53b32d7]" name="testMigratedCustomerWithOutstandingInvoice" duration-ms="802598" started-at="2019-02-11T03:40:33Z" finished-at="2019-02-11T03:53:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stagingdev-5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMigratedCustomerWithOutstandingInvoice -->
+        <test-method status="PASS" signature="testMigratedCustomerWithDefaultCreditCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest@53b32d7]" name="testMigratedCustomerWithDefaultCreditCard" duration-ms="795057" started-at="2019-02-11T03:53:56Z" finished-at="2019-02-11T04:07:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[stagingdev-5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMigratedCustomerWithDefaultCreditCard -->
+      </class> <!-- com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest -->
+    </test> <!-- Payment Gateway Migration - Braintree Post Validation Test Cases -->
+  </suite> <!-- Payment Gateway Migration - Braintree Post Validation Suite -->
 </testng-results>
