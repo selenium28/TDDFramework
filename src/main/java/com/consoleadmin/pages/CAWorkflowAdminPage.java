@@ -37,7 +37,7 @@ public class CAWorkflowAdminPage extends TestBase{
     		
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(8000);
+    	Thread.sleep(10000);
     }
     
     
@@ -75,7 +75,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	//Click Execute Action
     	System.out.println("Searching for Execute Action button");
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(5000);			
+    	Thread.sleep(10000);			
     }
     
     
@@ -90,7 +90,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	//Click Execute Action
     	System.out.println("Searching for Execute Action button");
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(5000);		
+    	Thread.sleep(10000);		
     }
     
     

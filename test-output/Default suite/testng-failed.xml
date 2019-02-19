@@ -3,15 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest">
+      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
         <methods>
-          <include name="testMigratedCustomerWithOutstandingInvoice"/>
-          <include name="testMigratedCustomerWithYearlyBillingProduct"/>
-          <include name="testMigratedCustomerWithDefaultCreditCard"/>
-          <include name="testMigratedCustomerInDomainRegistrationAndEnableAutoRenew"/>
-          <include name="testMigratedCustomerWithMonthlyBillingProduct"/>
+          <include name="verify_NetDomain_and_DIFM_Order_InSalesDB"/>
         </methods>
-      </class> <!-- com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest -->
+      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
