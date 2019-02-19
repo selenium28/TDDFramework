@@ -99,9 +99,12 @@ public class SalesDBJourneyTest extends TestBase{
 		
 		//Test Step 1: Login to sales db and place an order for domain registration
 		System.out.println("Start Test: verify_ComAuDomain_Order_InSalesDB");
+
+		
+		
 		initialization(environment, "salesdburl");
 		csloginpage = new CSLoginPage();
-		csloginpage.setDefaultLoginDetails("uat");
+		csloginpage.setDefaultLoginDetails(environment);
 		csnrcrmpage = csloginpage.clickLoginButton();
 		csnrcrmpage.setGreenCode(strGreenCode);
 		cscreatedomainwindowpage = csnrcrmpage.clickNewDomainNPSButton();
@@ -119,7 +122,7 @@ public class SalesDBJourneyTest extends TestBase{
 		//Test Step 2: Process the domain registration order in console admin
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
 		
@@ -165,7 +168,7 @@ public class SalesDBJourneyTest extends TestBase{
 		System.out.println("Start Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
 		initialization(environment, "salesdburl");
 		csloginpage = new CSLoginPage();
-		csloginpage.setDefaultLoginDetails("uat");
+		csloginpage.setDefaultLoginDetails(environment);
 		csnrcrmpage = csloginpage.clickLoginButton();
 		csnrcrmpage.setGreenCode(strGreenCode);
 		cscreatedomainwindowpage = csnrcrmpage.clickNewDomainNPSButton();
@@ -183,7 +186,7 @@ public class SalesDBJourneyTest extends TestBase{
 		//Test Step 2: Process the domain registration workflow in console admin
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
 		
@@ -327,7 +330,7 @@ public class SalesDBJourneyTest extends TestBase{
 		System.out.println("Start Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
 		initialization(environment, "salesdburl");
 		csloginpage = new CSLoginPage();
-		csloginpage.setDefaultLoginDetails("uat");
+		csloginpage.setDefaultLoginDetails(environment);
 		csnrcrmpage = csloginpage.clickLoginButton();
 		csnrcrmpage.setGreenCode(strGreenCode);
 		cscreatedomainwindowpage = csnrcrmpage.clickNewDomainNPSButton();
@@ -345,7 +348,7 @@ public class SalesDBJourneyTest extends TestBase{
 		//Test Step 2: Process the domain registration workflow in console admin
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
 		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
 		

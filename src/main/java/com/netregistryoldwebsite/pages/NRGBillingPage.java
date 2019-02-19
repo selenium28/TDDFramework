@@ -188,4 +188,41 @@ public class NRGBillingPage extends TestBase{
     	}
     }
     
+    public void selectNewCreditCardOption(){
+       	System.out.println("select new credit card option");
+       	driver.findElement(By.xpath("//div[@class='orderBox']/div[2]/input")).click();
+    }
+    
+    public void selectExistingCreditCardOption(String cardtype){
+       	
+    	String visacarddetails;
+    	String mastercarddetails;
+    	
+    	
+    	System.out.println("select existing credit card option");
+       	    	
+     	if (cardtype =="Visa") {
+     		
+     		WebElement visacard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'Visa credit card')]"));
+     		visacarddetails = visacard.getText();
+     		System.out.println("Card Details: " + visacarddetails);
+     		
+     		visacard.click();
+       		System.out.println("Existing Visa credit card was clicked");
+     	    		
+       	}
+       	else if (cardtype =="MasterCard") {
+       	
+       		
+       		WebElement mastercard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'MasterCard credit card')]"));
+       		mastercarddetails = mastercard.getText();
+       		System.out.println("Card Details: " + mastercarddetails);
+       		
+       		mastercard.click();
+       		System.out.println("Existing MasterCard credit card was clicked");
+       	
+       	}
+
+    }
+    
 }

@@ -9,6 +9,10 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
+import com.braintree.pages.BTLoginPage;
+import com.consoleadmin.pages.CAHeaderPage;
+import com.consoleadmin.pages.CALoginPage;
+import com.consoleadmin.pages.CAWorkflowAdminPage;
 import com.netregistryoldwebsite.pages.NRGAccountContactPage;
 import com.netregistryoldwebsite.pages.NRGAddDomainPrivacyPage;
 import com.netregistryoldwebsite.pages.NRGAddExtrasPage;
@@ -37,6 +41,11 @@ public class CustomerPortalJourneyTest extends TestBase{
 	NRGBillingPage nrgbillingpage;
 	NRGOrderCompletePage nrgordercompletepage;
 	
+	//Console Admin Pages
+	CALoginPage caloginpage;
+	CAHeaderPage caheaderpage;
+	CAWorkflowAdminPage caworkflowadminpage;
+	
 	TestUtil testUtil;
 	String clienttoken;
 	public static ExtentTest logger;
@@ -47,13 +56,12 @@ public class CustomerPortalJourneyTest extends TestBase{
 
 	@Parameters({"environment"})
 	@Test(priority=4, enabled = true)
-	public void verifyDomainRegistrationOrderForNewCustomerInCustomerPortal(String environment) throws InterruptedException{
+	public void verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(String environment) throws InterruptedException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
 		String strTld = null;
-		String strWorkflowId = null;
-		
+
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
 		strDomainName = "TestConsoleRegression" + df.format(d);
@@ -87,7 +95,55 @@ public class CustomerPortalJourneyTest extends TestBase{
 	
 	@Parameters({"environment"})
 	@Test(priority=5, enabled = true)
-	public void verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal(String environment) throws InterruptedException{
+	public void verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingExistingCardInCustomerPortal(String environment) throws InterruptedException{
+	
+		// Initialization (Test Data Creation and Assignment)
+		String strDomainName = null;
+		String strAccountReference = null;
+		String strTld = null;
+		String strWorkflowId = null;
+				
+		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
+		Date d = new Date();
+		strDomainName = "TestConsoleRegression" + df.format(d);
+		
+		
+		if (environment.equals("uat1")) {
+			strTld = ".com";
+		}
+			
+		//Test Step 1: Login to customer portal and place an order for domain registration and domain privacy
+		System.out.println("Start Test: verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal");
+		initialization(environment, "customerportalurl_netregistry");
+		nrgonlineorderpage = new NRGOnlineOrderPage();
+		nrgonlineorderpage.clearDefaultTldSelections();
+		nrgonlineorderpage.setDomainNameAndTld(strDomainName, strTld);
+		nrgdomainsearchpage = nrgonlineorderpage.clickNewDomainSearchButton();
+		nrgadddomainprivacypage = nrgdomainsearchpage.clickContinueToCheckout();
+		nrghostingandextraspage= nrgadddomainprivacypage.clickAddToCart();
+		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
+		nrgaccountcontactpage.setReturningCustomerContacts("MEL-6007", "comein22");
+		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
+		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
+		
+		//Test Step 2: Select existing credit card details and submit the order 
+		nrgbillingpage.selectExistingCreditCardOption("Visa");	
+		nrgbillingpage.tickTermsAndConditions();
+		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+		
+		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
+		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
+		strAccountReference = nrgordercompletepage.getAccountReferenceID();
+		System.out.println("Account Reference:" + strAccountReference);	
+		System.out.println("Reference ID[0]:" + strWorkflowId);	
+		
+		driver.close();
+	}
+	
+	
+	@Parameters({"environment"})
+	@Test(priority=6, enabled = true)
+	public void verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal(String environment) throws InterruptedException{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
@@ -114,12 +170,12 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgadddomainprivacypage = nrgdomainsearchpage.clickContinueToCheckout();
 		nrghostingandextraspage= nrgadddomainprivacypage.clickAddToCart();
 		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
-		nrgaccountcontactpage.setReturningCustomerContacts("MEL-6007", "comein22");
+		nrgaccountcontactpage.setReturningCustomerContacts("TES-2168", "comein22");
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
-		nrgbillingpage.selectExistingCreditCard("Prepaid credit: Current Balance: AU$19222.10 Available Balance: AU$19222.10");
+		nrgbillingpage.selectExistingCreditCardOption("Visa");	
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		
@@ -130,6 +186,113 @@ public class CustomerPortalJourneyTest extends TestBase{
 		System.out.println("Reference ID[0]:" + strWorkflowId);	
 		
 		driver.close();
+				
+	}
+	
+	@Parameters({"environment"})
+	@Test(priority=7, enabled = true)
+	public void verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingNewCardInCustomerPortal(String environment) throws InterruptedException{
+	
+		// Initialization (Test Data Creation and Assignment)
+		String strDomainName = null;
+		String strTld = null;
+		
+		String strCardOwnerName = null;
+		String strCardType = null;
+		String strCardNumber = null;
+	    String strCardExpiryMonth = null;
+	    String strCardExpiryYear = null;
+	    String strCardSecurityCode = null;
+				
+		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
+		Date d = new Date();
+		strDomainName = "TestConsoleRegression" + df.format(d);
+		
+		
+		if (environment.equals("uat1")) {
+			strTld = ".com";
+		}
+			
+		//Test Step 1: Login to customer portal and place an order for domain registration and domain privacy
+		System.out.println("Start Test: verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal");
+		initialization(environment, "customerportalurl_netregistry");
+		nrgonlineorderpage = new NRGOnlineOrderPage();
+		nrgonlineorderpage.clearDefaultTldSelections();
+		nrgonlineorderpage.setDomainNameAndTld(strDomainName, strTld);
+		nrgdomainsearchpage = nrgonlineorderpage.clickNewDomainSearchButton();
+		nrgadddomainprivacypage = nrgdomainsearchpage.clickContinueToCheckout();
+		nrghostingandextraspage= nrgadddomainprivacypage.clickAddToCart();
+		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
+		nrgaccountcontactpage.setReturningCustomerContacts("MEL-6007", "comein22");
+		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
+		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
+		
+		//Test Step 2: Input credit card details and submit the order 
+		nrgbillingpage.selectNewCreditCardOption();
+		
+		strCardOwnerName = "Quest Returning Customer";
+		strCardType = "Visa";
+		strCardNumber = "4005519200000004";
+	    strCardExpiryMonth = "08";
+	    strCardExpiryYear = "2025";
+	    strCardSecurityCode = "811";	
+	    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+		nrgbillingpage.tickTermsAndConditions();
+		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+
+		driver.close();
+	}
+	
+	@Parameters({"environment"})
+	@Test(priority=8, enabled = true)
+	public void verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal(String environment) throws InterruptedException{
+	
+		// Initialization (Test Data Creation and Assignment)
+		String strDomainName = null;
+		String strTld = null;
+		
+		String strCardOwnerName = null;
+		String strCardNumber = null;
+	    String strCardExpiryMonth = null;
+	    String strCardExpiryYear = null;
+	    String strCardSecurityCode = null;
+				
+		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
+		Date d = new Date();
+		strDomainName = "TestConsoleRegression" + df.format(d);
+		
+		
+		if (environment.equals("uat1")) {
+			strTld = ".com";
+		}
+			
+		//Test Step 1: Login to customer portal and place an order for domain registration and domain privacy
+		System.out.println("Start Test: verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal");
+		initialization(environment, "customerportalurl_netregistry");
+		nrgonlineorderpage = new NRGOnlineOrderPage();
+		nrgonlineorderpage.clearDefaultTldSelections();
+		nrgonlineorderpage.setDomainNameAndTld(strDomainName, strTld);
+		nrgdomainsearchpage = nrgonlineorderpage.clickNewDomainSearchButton();
+		nrgadddomainprivacypage = nrgdomainsearchpage.clickContinueToCheckout();
+		nrghostingandextraspage= nrgadddomainprivacypage.clickAddToCart();
+		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
+		nrgaccountcontactpage.setReturningCustomerContacts("TES-2168", "comein22");
+		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
+		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
+		
+		//Test Step 2: Input credit card details and submit the order 
+		nrgbillingpage.selectNewCreditCardOption();
+		
+		strCardOwnerName = "Braintree Returning Customer";
+		strCardNumber = "5555555555554444";
+	    strCardExpiryMonth = "05";
+	    strCardExpiryYear = "2028";
+	    strCardSecurityCode = "331";
+	    nrgbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+	    nrgbillingpage.tickTermsAndConditions();
+		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+	    
+	    driver.close();
 	}
 	
 }

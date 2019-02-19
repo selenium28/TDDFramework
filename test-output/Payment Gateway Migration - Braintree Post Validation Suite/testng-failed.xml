@@ -7,7 +7,7 @@
     <classes>
       <class name="com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest">
         <methods>
-          <include name="testMigratedCustomerWithYearlyBillingProduct" invocation-numbers="0"/>
+          <include name="testMigratedCustomerInDomainRegistrationAndEnableAutoRenew" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest -->
     </classes>

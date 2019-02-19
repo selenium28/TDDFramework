@@ -150,13 +150,13 @@ public class DomainzBTPostValidationTest extends TestBase{
 	
 		System.out.println("Maximum Iteration Count: " + intMaxCount);
 		System.out.println("Current Iteration Count: " + intMinCount);
-		//Test Step 1: Modify the login password of the account
-		initialization(environment, "consoleadmin");
-		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caaccountreferencepage = caheaderpage.searchAccountReference(strAccountReference);
-		caaccountreferencepage.updatePassword(strAccountReferenceNewPassword);
-		driver.close();
+//		//Test Step 1: Modify the login password of the account
+//		initialization(environment, "consoleadmin");
+//		caloginpage = new CALoginPage();
+//		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
+//		caaccountreferencepage = caheaderpage.searchAccountReference(strAccountReference);
+//		caaccountreferencepage.updatePassword(strAccountReferenceNewPassword);
+//		driver.close();
 		
 		//Test Step 2: Navigate to Domainz search page and purchase new domain name for migrated customer
 		initialization(environment, "cart_domainsearchurl_domainz");
