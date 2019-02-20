@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Console Regression Test Automation - PROD Test Suite]">
+  <parameter name="environment" value="prod"/>
+  <parameter name="pretest" value="enabled"/>
+  <listeners>
+    <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Regression Test Cases(failed)">
     <classes>
-      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
+      <class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest">
         <methods>
-          <include name="verify_NetDomain_and_DIFM_Order_InSalesDB"/>
+          <include name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
+      </class> <!-- com.consoleregression.testcases.production.CustomerPortalJourneyTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [Console Regression Test Automation - PROD Test Suite] -->

@@ -78,8 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = null;
-		String strTransactionid = null;
+		String strWorkflowId = "13969792";
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		
@@ -98,13 +97,12 @@ public class SalesDBJourneyTest extends TestBase{
 		}
 		
 		//Test Step 1: Login to sales db and place an order for domain registration
-		
 		if (pretest.equals("enabled")) {
 		
 			System.out.println("Start Test: verify_ComAuDomain_Order_InSalesDB");
 			initialization(environment, "salesdburl");
 			csloginpage = new CSLoginPage();
-			csloginpage.setDefaultLoginDetails("production");
+			csloginpage.setDefaultLoginDetails(environment);
 			csnrcrmpage = csloginpage.clickLoginButton();
 			csnrcrmpage.setGreenCode(strGreenCode);
 			cscreatedomainwindowpage = csnrcrmpage.clickNewDomainNPSButton();
@@ -126,7 +124,7 @@ public class SalesDBJourneyTest extends TestBase{
 			//Test Step 2: Verify if domain registration workflow is completed
 			initialization(environment, "consoleadmin");
 			caloginpage = new CALoginPage();
-			caheaderpage = caloginpage.login("roy.alcantara", "Stocks007");
+			caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 			caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
 			driver.close();
@@ -149,8 +147,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = null;
-		String strTransactionid = null;
+		String strWorkflowId = "13969805";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -168,13 +165,12 @@ public class SalesDBJourneyTest extends TestBase{
 		}
 	
 		//Test Step 1: Login to sales db and place an order for domain registration and a single product (e.g. Done For You Website)
-		
 		if (pretest.equals("enabled")) {
 			
 			System.out.println("Start Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
 			initialization(environment, "salesdburl");
 			csloginpage = new CSLoginPage();
-			csloginpage.setDefaultLoginDetails("production");
+			csloginpage.setDefaultLoginDetails(environment);
 			csnrcrmpage = csloginpage.clickLoginButton();
 			csnrcrmpage.setGreenCode(strGreenCode);
 			cscreatedomainwindowpage = csnrcrmpage.clickNewDomainNPSButton();
@@ -194,7 +190,7 @@ public class SalesDBJourneyTest extends TestBase{
 			//Test Step 2: Verify if domain registration workflow is completed
 			initialization(environment, "consoleadmin");
 			caloginpage = new CALoginPage();
-			caheaderpage = caloginpage.login("roy.alcantara", "Stocks007");	
+			caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 			caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 			strWorkflowEntity = caworkflowadminpage.getWorkflowEntity(strWorkflowId);
 			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
@@ -218,21 +214,11 @@ public class SalesDBJourneyTest extends TestBase{
 		String strDomainName = null;
 		String strTld = null;
 		String strRegistrationPeriod = null;
-		String strMajorProduct = null;
-		String strProductPeriod = null;
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = null;
-		String strTransactionid = null;
-		String strOffice365Product = null;
-		
-		String strOffice365ProductName = null;
-		String strOffice365Quantity = null;
-		String strSkykickProduct = null;
-		String strSkykickProductName  = null;
-		String strSkykickQuantity  = null;
-		
+		String strWorkflowId = "13969812";
+		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -240,26 +226,22 @@ public class SalesDBJourneyTest extends TestBase{
 		strDomainName = "testconsoleautomation" + df.format(d);
 
 		if (environment.equals("prod")) {
+			
 			strTld = "com";
 			strRegistrationPeriod = "1";
 			strGreenCode = "MEL-6007";
 			strPaymentMethod = "Invoice";
-			strRegistrantDetails = "Netregistry";
-			
+			strRegistrantDetails = "Netregistry";			
 			strOffice365Product = "O365-EESEN-QTY";
-			strOffice365ProductName = "Office 365 - Email Essentials 1 x Month";
-			strOffice365Quantity = "1";
-			
 		}
 	
-		//Test Step 1: Login to sales db and place an order for domain registration and a single product (e.g. Done For You Website)
-		
+		//Test Step 1: Login to sales db and place an order for domain registration and a single product (e.g. Done For You Website)	
 		if (pretest.equals("enabled")) {
 		
 			System.out.println("Start Test: verify_ComDomain_and_Office365_Order_InSalesDB");
 			initialization(environment, "salesdburl");
 			csloginpage = new CSLoginPage();
-			csloginpage.setDefaultLoginDetails("production");
+			csloginpage.setDefaultLoginDetails(environment);
 			csnrcrmpage = csloginpage.clickLoginButton();
 			csnrcrmpage.setGreenCode(strGreenCode);
 			cscreatedomainwindowpage = csnrcrmpage.clickNewDomainNPSButton();

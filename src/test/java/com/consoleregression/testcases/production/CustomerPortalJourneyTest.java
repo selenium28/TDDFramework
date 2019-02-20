@@ -77,10 +77,10 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Input credit card details and submit the order 
-		nrgbillingpage.setBTFormCreditCardDetails("Test Console Regression", "4715276659101053", "08", "2020", "390");
-	   //nrgbillingpage.tickTermsAndConditions();
-       // nrgordercompletepage = nrgbillingpage.clickContinueButton();
-       // driver.close();
+		//nrgbillingpage.setBTFormCreditCardDetails("Test Console Regression", "4715276659101053", "08", "2020", "390");
+		//nrgbillingpage.tickTermsAndConditions();
+        //nrgordercompletepage = nrgbillingpage.clickContinueButton();
+        // driver.close();
 	}
 	
 	@Parameters({"environment"})
@@ -111,12 +111,12 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgadddomainprivacypage = nrgdomainsearchpage.clickContinueToCheckout();
 		nrghostingandextraspage= nrgadddomainprivacypage.clickAddToCart();
 		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
-		nrgaccountcontactpage.setReturningCustomerContacts("MEL-6007", "Comein22");
+		nrgaccountcontactpage.setReturningCustomerContacts("MEL-6007", "comein22");
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
-		nrgbillingpage.selectExistingCreditCard("Prepaid credit: Current Balance: AU$19222.10 Available Balance: AU$19222.10");
+		//nrgbillingpage.selectExistingCreditCard("Visa credit card. Owner: Melbourne IT LTD Number: 4715xxxxxxxx1714 Expiry: 06/21");
 		//nrgbillingpage.tickTermsAndConditions();
 		//nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		//driver.close();
