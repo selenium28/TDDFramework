@@ -68,7 +68,7 @@ public class SalesDBJourneyTest extends TestBase{
 	}
 			
 	@Parameters({"environment"})
-	@Test(priority=1, enabled = false)
+	@Test(priority=1, enabled = true)
 	public void verify_ComAuDomain_Order_InSalesDB (String environment) throws InterruptedException{
 		
 		// Initialization (Test Data Creation and Assignment)
@@ -297,7 +297,7 @@ public class SalesDBJourneyTest extends TestBase{
 //	}
 	
 	@Parameters({"environment"})
-	@Test(priority=3, enabled = false)
+	@Test(priority=3, enabled = true)
 	public void verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB (String environment) throws InterruptedException{
 
 		// Initialization (Test Data Creation and Assignment)
