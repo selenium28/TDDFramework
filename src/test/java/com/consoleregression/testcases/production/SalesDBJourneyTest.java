@@ -78,7 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "13969792";
+		String strWorkflowId = "14004253";
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		
@@ -147,7 +147,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "13969805";
+		String strWorkflowId = "14004260";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -155,7 +155,7 @@ public class SalesDBJourneyTest extends TestBase{
 		strDomainName = "testconsoleautomation" + df.format(d);
 
 		if (environment.equals("prod")) {
-			strTld = "com";
+			strTld = "net";
 			strRegistrationPeriod = "1 x Y";
 			strGreenCode = "MEL-6007";
 			strMajorProduct = "Done For You Website";
@@ -217,7 +217,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "13969812";
+		String strWorkflowId = "14004263";
 		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		

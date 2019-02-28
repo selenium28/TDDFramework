@@ -17,12 +17,12 @@
                     <include name="verify_ComDomain_and_Office365_Order_InSalesDB" />
                 </methods>
 			</class>
-			<class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest">
-			    <methods>
-                    <include name="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal" />
-                    <include name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" />
-                </methods>
-			</class>
+<!-- 			<class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest"> -->
+<!-- 			    <methods> -->
+<!--                     <include name="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal" /> -->
+<!--                     <include name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" /> -->
+<!--                 </methods> -->
+<!-- 			</class> -->
 		</classes>
 	</test>  
 </suite> 
