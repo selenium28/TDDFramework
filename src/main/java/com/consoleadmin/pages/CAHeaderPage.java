@@ -62,7 +62,7 @@ public class CAHeaderPage extends TestBase{
     	Thread.sleep(8000);
     	driver.findElement(By.xpath("//table[@class='headerbar']/tbody/tr[1]/td[3]/form/input[@name='submit']")).click();
     	System.out.println ("Submit button clicked");
-    	Thread.sleep(8000);
+    	Thread.sleep(15000);
     	
     	return new CAAccountReferencePage();
     }
