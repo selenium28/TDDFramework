@@ -1,85 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Regression Test Automation - PROD Test Suite" duration-ms="250597" started-at="2019-02-27T02:32:02Z" finished-at="2019-02-27T02:36:12Z">
+  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="156681" started-at="2019-03-03T22:50:42Z" finished-at="2019-03-03T22:53:19Z">
     <groups>
     </groups>
-    <test name="Regression Test Cases" duration-ms="250597" started-at="2019-02-27T02:32:02Z" finished-at="2019-02-27T02:36:12Z">
-      <class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest">
-        <test-method status="PASS" signature="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.CustomerPortalJourneyTest@1a968a59]" name="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal" duration-ms="30359" started-at="2019-02-27T02:35:00Z" finished-at="2019-02-27T02:35:31Z">
+    <test name="Regression Test Cases" duration-ms="156681" started-at="2019-03-03T22:50:42Z" finished-at="2019-03-03T22:53:19Z">
+      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
+        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String)[pri:4, instance:com.consoleregression.testcases.SalesDBJourneyTest@42e26948]" name="verify_NzDomain_Order_InSalesDB" duration-ms="156656" started-at="2019-03-03T22:50:42Z" finished-at="2019-03-03T22:53:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[prod]]>
+                <![CDATA[uat1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDomainRegistrationOrderForNewCustomerInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.CustomerPortalJourneyTest@1a968a59]" name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" duration-ms="41516" started-at="2019-02-27T02:35:31Z" finished-at="2019-02-27T02:36:12Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal -->
-      </class> <!-- com.consoleregression.testcases.production.CustomerPortalJourneyTest -->
-      <class name="com.consoleregression.testcases.production.SalesDBJourneyTest">
-        <test-method status="PASS" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@548e7350]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="35149" started-at="2019-02-27T02:32:02Z" finished-at="2019-02-27T02:32:37Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@548e7350]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="64571" started-at="2019-02-27T02:32:37Z" finished-at="2019-02-27T02:33:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_ComDomain_and_Office365_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@548e7350]" name="verify_ComDomain_and_Office365_Order_InSalesDB" duration-ms="78948" started-at="2019-02-27T02:33:41Z" finished-at="2019-02-27T02:35:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ComDomain_and_Office365_Order_InSalesDB -->
-      </class> <!-- com.consoleregression.testcases.production.SalesDBJourneyTest -->
+        </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
+      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
     </test> <!-- Regression Test Cases -->
-  </suite> <!-- Console Regression Test Automation - PROD Test Suite -->
+  </suite> <!-- Console Regression Test Automation - UAT Test Suite -->
 </testng-results>

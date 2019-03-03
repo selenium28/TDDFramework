@@ -55,7 +55,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 	}
 
 	@Parameters({"environment"})
-	@Test(priority=4, enabled = true)
+	@Test(priority=5, enabled = true)
 	public void verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(String environment) throws InterruptedException{
 	
 		// Initialization (Test Data Creation and Assignment)
@@ -94,7 +94,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=5, enabled = true)
+	@Test(priority=6, enabled = true)
 	public void verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingExistingCardInCustomerPortal(String environment) throws InterruptedException{
 	
 		// Initialization (Test Data Creation and Assignment)
@@ -142,7 +142,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 	
 	
 	@Parameters({"environment"})
-	@Test(priority=6, enabled = true)
+	@Test(priority=7, enabled = true)
 	public void verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal(String environment) throws InterruptedException{
 	
 		// Initialization (Test Data Creation and Assignment)
@@ -190,7 +190,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=7, enabled = true)
+	@Test(priority=8, enabled = true)
 	public void verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingNewCardInCustomerPortal(String environment) throws InterruptedException{
 	
 		// Initialization (Test Data Creation and Assignment)
@@ -244,7 +244,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=8, enabled = true)
+	@Test(priority=9, enabled = true)
 	public void verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal(String environment) throws InterruptedException{
 	
 		// Initialization (Test Data Creation and Assignment)

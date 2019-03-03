@@ -225,7 +225,7 @@ public class RegressionSalesDB extends TestBase{
 					strCardOwner = "Test Master";
 					strCardNumber = "5454545454545454";
 					strCardExpiryMonth = "02";
-					strCardExpiryYear = "20";
+					strCardExpiryYear = "22";
 	
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
@@ -233,7 +233,7 @@ public class RegressionSalesDB extends TestBase{
 					strCardOwner = "Test Master";
 					strCardNumber = "5454545454545454";
 					strCardExpiryMonth = "02";
-					strCardExpiryYear = "20";
+					strCardExpiryYear = "22";
 	
 				}
 				
