@@ -89,8 +89,8 @@ public class SalesDBJourneyTest extends TestBase{
 		if (environment.equals("uat1")) {
 			strTld = "com.au";
 			strRegistrationPeriod = "2";
-			strGreenCode = "MEL-6007";
-			strPaymentMethod = "Invoice";
+			strGreenCode = "MEL-6038";
+			strPaymentMethod = "Resellers Default: Visa: 4111xxxxxxxx1111";
 			strRegistrantDetails = "Netregistry";
 			strRegistrantType = "ABN";
 			strRegistrantNumber = "13080859721";
@@ -158,7 +158,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strGreenCode = "MEL-6007";
 			strMajorProduct = "Done For You Website";
 			strProductPeriod = "1 x M";
-			strPaymentMethod = "Invoice";
+			strPaymentMethod = "Prepaid credit: ";
 			strRegistrantDetails = "Netregistry";
 		}
 	
@@ -229,15 +229,15 @@ public class SalesDBJourneyTest extends TestBase{
 		if (environment.equals("uat1")||environment.equals("uat2")) {
 			strTld = "com";
 			strRegistrationPeriod = "1 x Y";
-			strGreenCode = "MEL-6007";
+			strGreenCode = "NET-1218";
 			strMajorProduct = "Basic Cloud Hosting";
 			strProductPeriod = "1 x M";
-			strPaymentMethod = "Invoice";
+			strPaymentMethod = "MasterCard: 545454******5454";
 			strRegistrantDetails = "Netregistry";
 		}
 	
-		//Test Step 1: Login to sales db and place an order for domain registration and a single product (e.g. Done For You Website)
-		System.out.println("Start Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
+		//Test Step 1: Login to sales db and place an order for domain registration and a single product (e.g. Basic Cloud Hosting)
+		System.out.println("Start Test: verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB");
 		initialization(environment, "salesdburl");
 		csloginpage = new CSLoginPage();
 		csloginpage.setDefaultLoginDetails(environment);
@@ -275,7 +275,7 @@ public class SalesDBJourneyTest extends TestBase{
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", caworkflowadminpage.getWorkflowStatus("productsetup2"));
 		driver.close();
 		
-		System.out.println("End Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
+		System.out.println("End Test: verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB");
 	}
 	
 	@Parameters({"environment"})
@@ -298,16 +298,14 @@ public class SalesDBJourneyTest extends TestBase{
 		if (environment.equals("uat1")) {
 			strTld = "nz";
 			strRegistrationPeriod = "2";
-			strGreenCode = "MEL-6005";
-			strPaymentMethod = "Visa: 4111xxxxxxxx1111 01/32";
+			strGreenCode = "PAY-207";
+			strPaymentMethod = "Visa: 411111******1111";
 			strRegistrantDetails = "MelbourneIT";
 		}
 		
 		//Test Step 1: Login to sales db and place an order for domain registration
 		System.out.println("Start Test: verify_NzDomain_Order_InSalesDB");
 
-		
-		
 		initialization(environment, "salesdburl");
 		csloginpage = new CSLoginPage();
 		csloginpage.setDefaultLoginDetails(environment);
@@ -333,7 +331,7 @@ public class SalesDBJourneyTest extends TestBase{
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
-		driver.close();
+		//driver.close();
 		System.out.println("End Test: verify_NzDomain_Order_InSalesDB");
 		
 	}

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="156681" started-at="2019-03-03T22:50:42Z" finished-at="2019-03-03T22:53:19Z">
+  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="166003" started-at="2019-03-04T05:11:19Z" finished-at="2019-03-04T05:14:05Z">
     <groups>
     </groups>
-    <test name="Regression Test Cases" duration-ms="156681" started-at="2019-03-03T22:50:42Z" finished-at="2019-03-03T22:53:19Z">
+    <test name="Regression Test Cases" duration-ms="166003" started-at="2019-03-04T05:11:19Z" finished-at="2019-03-04T05:14:05Z">
       <class name="com.consoleregression.testcases.SalesDBJourneyTest">
-        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String)[pri:4, instance:com.consoleregression.testcases.SalesDBJourneyTest@42e26948]" name="verify_NzDomain_Order_InSalesDB" duration-ms="156656" started-at="2019-03-03T22:50:42Z" finished-at="2019-03-03T22:53:19Z">
+        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String)[pri:4, instance:com.consoleregression.testcases.SalesDBJourneyTest@42e26948]" name="verify_NzDomain_Order_InSalesDB" duration-ms="165956" started-at="2019-03-04T05:11:19Z" finished-at="2019-03-04T05:14:05Z">
           <params>
             <param index="0">
               <value>
