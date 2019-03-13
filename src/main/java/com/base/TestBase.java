@@ -81,6 +81,9 @@ public class TestBase{
 		else if(entrypoint.equals("cart_domainsearchurl_domainz")){
 			driver.get(testEnvironment.cart_domainsearchurl_domainz());
 		}
+		else if(entrypoint.equals("cart_domainsearchurl_netregistry")){
+			driver.get(testEnvironment.cart_domainsearchurl_netregistry());
+		}
 		else if(entrypoint.equals("salesdburl")){
 			driver.get(testEnvironment.salesdburl());
 		}

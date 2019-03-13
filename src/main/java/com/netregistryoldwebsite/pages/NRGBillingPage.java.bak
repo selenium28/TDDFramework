@@ -32,9 +32,6 @@ public class NRGBillingPage extends TestBase{
     @FindBy(how=How.NAME, using = "billing.id")
     WebElement existingCardSelection;
 
-	@FindBy(how=How.XPATH, using = "//div[@class='next']/input[2]")
-    WebElement placeYourOrderButton;
-
     //Initializing Page Objects
     public NRGBillingPage(){
         PageFactory.initElements(driver, this);
@@ -227,18 +224,5 @@ public class NRGBillingPage extends TestBase{
        	}
 
     }
-
-	public NRGOrderCompletePage clickPlaceYourOrder(){
-       	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", placeYourOrderButton);
-       	System.out.println("clicking place your order button");
-       	if(placeYourOrderButton.isDisplayed()||placeYourOrderButton.isEnabled()) {
-       		placeYourOrderButton.click();
-       	}
-    	else {
-    		System.out.println("element not found");
-    	}       	
-       	return new NRGOrderCompletePage();
-    }
-
     
 }

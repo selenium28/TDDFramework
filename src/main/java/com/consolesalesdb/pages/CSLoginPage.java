@@ -45,7 +45,7 @@ public class CSLoginPage extends TestBase{
 		else if (environment.equalsIgnoreCase("prod")) {
 			
 			userName.sendKeys("roy.alcantara");
-	    	password.sendKeys("");
+	    	password.sendKeys("Stocks007");
 		}
     }
     

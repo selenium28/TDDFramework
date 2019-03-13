@@ -78,7 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14004253";
+		String strWorkflowId = "14034973";
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		
@@ -147,7 +147,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14004260";
+		String strWorkflowId = "14034979";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -217,7 +217,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14004263";
+		String strWorkflowId = "14035014";
 		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		
@@ -230,7 +230,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strTld = "com";
 			strRegistrationPeriod = "1";
 			strGreenCode = "MEL-6007";
-			strPaymentMethod = "Invoice";
+			strPaymentMethod = "Visa: 4715xxxxxxxx1714";
 			strRegistrantDetails = "Netregistry";			
 			strOffice365Product = "O365-EESEN-QTY";
 		}
@@ -279,4 +279,66 @@ public class SalesDBJourneyTest extends TestBase{
 	
 		System.out.println("End Test: verify_ComDomain_and_Office365_Order_InSalesDB");
 	}
+	
+	@Parameters({"environment", "pretest"})
+	@Test
+	public void verify_NzDomain_Order_InSalesDB (String environment, String pretest) throws InterruptedException{
+
+		// Initialization (Test Data Creation and Assignment)
+		String strDomainName = null;
+		String strTld = null;
+		String strRegistrationPeriod = null;
+		String strGreenCode = null;
+		String strPaymentMethod = null;
+		String strRegistrantDetails = null;
+		String strWorkflowId = "14035383";
+		//String strWorkflowId = "14035027";
+		
+		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
+		Date d = new Date();
+		strDomainName = "testconsoleautomation" + df.format(d);
+
+		if (environment.equals("prod")) {
+			strTld = "com";
+			strRegistrationPeriod = "1 x Y";
+			strGreenCode = "825-00";
+			strPaymentMethod = "Prepaid credit: ";
+			strRegistrantDetails = "MelbourneIT";
+		}
+	
+		//Test Step 1: Login to sales db and place an order for domain registration and a single product (e.g. Done For You Website)
+		if (pretest.equals("enabled")) {
+			
+			System.out.println("Start Test: verify_NzDomain_Order_InSalesDB");
+			initialization(environment, "salesdburl");
+			csloginpage = new CSLoginPage();
+			csloginpage.setDefaultLoginDetails(environment);
+			csnrcrmpage = csloginpage.clickLoginButton();
+			csnrcrmpage.setGreenCode(strGreenCode);
+			cscreatedomainwindowpage = csnrcrmpage.clickNewDomainNPSButton();			
+			cscreatedomainwindowpage.setDomainDetails(strDomainName, strTld, strRegistrationPeriod, strPaymentMethod);
+			csregistrantdetailspage = csnrcrmpage.clickRegistrantDetails(strDomainName, "Update Details");
+			csnrcrmpage = csregistrantdetailspage.setRegistrantDetails(strRegistrantDetails);
+			csshowdomainservicespage = csnrcrmpage.clickShowDomainServices(strDomainName);
+			csworkflownotificationpage = csshowdomainservicespage.clickConfirmAllServices();
+			strWorkflowId = csworkflownotificationpage.getWorkflowID();
+			csworkflownotificationpage.clickOKButton();
+			System.out.println("Workflow ID: " + strWorkflowId);
+			System.out.println("Domain Name: " + strDomainName + "." + strTld);
+			driver.close();
+		}
+		else {
+			
+			//Test Step 2: Verify if domain registration workflow is completed
+			initialization(environment, "consoleadmin");
+			caloginpage = new CALoginPage();
+			caheaderpage = caloginpage.setDefaultLoginDetails(environment);
+			caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
+			driver.close();		
+		}
+		
+		System.out.println("End Test: verify_NzDomain_Order_InSalesDB");
+	}
+	
 }

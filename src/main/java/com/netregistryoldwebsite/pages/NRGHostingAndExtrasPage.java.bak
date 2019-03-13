@@ -26,18 +26,6 @@ public class NRGHostingAndExtrasPage extends TestBase{
     
     @FindBy(how=How.XPATH, using = "//div[@class='catalogue-options']/div[4]/input")
     WebElement domainManagerRadioButton;
-
-	@FindBy(how=How.XPATH, using = "//div[@class='domainAdd']/form/input[2]")
-    WebElement addHostingButton;
-    
-    @FindBy(how=How.XPATH, using = "//*[@id='CLOUD-BASIC']/div[2]/form/div/div[1]")
-    WebElement basicCouldHosting;
-    
-    @FindBy(how=How.XPATH, using = "//*[@id='CLOUD-BASIC']/div[2]/form/div/div[2]/div[2]/span[1]")
-    WebElement monthlyProduct;
-    
-    @FindBy(how=How.XPATH, using = "//*[@id=\"CLOUD-BASIC\"]/div[2]/form/div/div[2]/div[3]/span[2]")
-    WebElement yearlyProduct;
     
     //Initializing Page Objects
     public NRGHostingAndExtrasPage(){
@@ -116,52 +104,6 @@ public class NRGHostingAndExtrasPage extends TestBase{
 			System.out.println("element not found");
 		}    	
     	return new NRGAccountContactPage();
-    }
-
-	public NRGAddHostingPage clickAddHostingButton(){
-    	System.out.println("clicking add hosting button");
-    	if(addHostingButton.isDisplayed()||addHostingButton.isEnabled()) {
-    		addHostingButton.click();
-    	}
-		else {
-			System.out.println("element not found");
-		}    	
-    	return new NRGAddHostingPage();
-    }
-    
-    
-    public NRGAddHostingPage selectBasicCloudHosting() throws InterruptedException {
-    	System.out.println("Selecting hosting product");
-    	try {
-			Thread.sleep(5000);
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", basicCouldHosting);
-			basicCouldHosting.click();
-			monthlyProduct.click();
-			Thread.sleep(2000);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("Element not found");
-		}
-    	
-		return new NRGAddHostingPage();
-    	
-    }
-    
-    public NRGAddHostingPage selectBasicCloudHostingYearly() throws InterruptedException {
-    	System.out.println("Selecting hosting product");
-    	try {
-			Thread.sleep(5000);
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", basicCouldHosting);
-			basicCouldHosting.click();
-			yearlyProduct.click();
-			Thread.sleep(3000);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("Element not found");
-		}
-    	
-		return new NRGAddHostingPage();
-    	
     }
 
 }

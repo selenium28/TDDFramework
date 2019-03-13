@@ -23,16 +23,12 @@ public class NRGAddDomainPrivacyPage extends TestBase{
     
     //Methods
     public NRGHostingAndExtrasPage clickNoThanks(){
-    	try {
-			System.out.println("clicking No Thanks");
-			if(noThanksButton.isDisplayed()||noThanksButton.isEnabled()) {
-				noThanksButton.click();
-			}
-			else {
-				System.out.println("element not found");
-			}
-		} catch (Exception e) {
-			System.out.println();
+    	System.out.println("clicking No Thanks");
+    	if(noThanksButton.isDisplayed()||noThanksButton.isEnabled()) {
+    		noThanksButton.click();
+    	}
+		else {
+			System.out.println("element not found");
 		}
     	return new NRGHostingAndExtrasPage();
     }

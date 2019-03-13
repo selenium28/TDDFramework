@@ -1,6 +1,5 @@
 package com.netregistryoldwebsite.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -13,9 +12,6 @@ public class NRGAccountPage extends TestBase{
 	//Objects
     @FindBy(how=How.XPATH, using = ".//*[@id='sidebar']/div/div[2]/ul/li[5]/a")
     WebElement cancelServicesLink;
-
-    @FindBy(how=How.XPATH, using = ".//div[@id='cc-details']/a")
-    WebElement editCreditCardsOnFileButton;
 
 	//Initializing Page Objects
 	public NRGAccountPage(){
@@ -42,22 +38,4 @@ public class NRGAccountPage extends TestBase{
 //
 //  	
 //  }
-
-	//Methods
-    public NRGCreditCardsDetailsPage clickEditCreditCardsOnFile() throws InterruptedException {
-
-    	Thread.sleep(2000);
-     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editCreditCardsOnFileButton);
-    	System.out.println("clicking edit credit cards on file");
-    	if(editCreditCardsOnFileButton.isDisplayed()||editCreditCardsOnFileButton.isEnabled()) {
-    		editCreditCardsOnFileButton.click();
-    	}
-		else {
-			System.out.println("element not found");
-		}
-
-    	return new NRGCreditCardsDetailsPage();
-    	
-    }
-
 }
