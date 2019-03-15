@@ -68,7 +68,7 @@ public class SalesDBJourneyTest extends TestBase{
 	}
 			
 	@Parameters({"environment"})
-	@Test(priority=1, enabled = true)
+	@Test
 	public void verify_ComAuDomain_Order_InSalesDB (String environment) throws InterruptedException{
 		
 		// Initialization (Test Data Creation and Assignment)
@@ -91,7 +91,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strRegistrationPeriod = "2";
 			strGreenCode = "MEL-6038";
 			strPaymentMethod = "Resellers Default: Visa: 4111xxxxxxxx1111";
-			strRegistrantDetails = "Netregistry";
+			strRegistrantDetails = "TPP";
 			strRegistrantType = "ABN";
 			strRegistrantNumber = "13080859721";
 		}
@@ -99,8 +99,6 @@ public class SalesDBJourneyTest extends TestBase{
 		//Test Step 1: Login to sales db and place an order for domain registration
 		System.out.println("Start Test: verify_ComAuDomain_Order_InSalesDB");
 
-		
-		
 		initialization(environment, "salesdburl");
 		csloginpage = new CSLoginPage();
 		csloginpage.setDefaultLoginDetails(environment);
@@ -123,7 +121,7 @@ public class SalesDBJourneyTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
 		
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
@@ -134,7 +132,7 @@ public class SalesDBJourneyTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=2, enabled = true)
+	@Test
 	public void verify_NetDomain_and_DIFM_Order_InSalesDB (String environment) throws InterruptedException{
 
 		// Initialization (Test Data Creation and Assignment)
@@ -186,7 +184,7 @@ public class SalesDBJourneyTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
 		
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
@@ -208,7 +206,7 @@ public class SalesDBJourneyTest extends TestBase{
 
 	
 	@Parameters({"environment"})
-	@Test(priority=3, enabled = true)
+	@Test
 	public void verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB (String environment) throws InterruptedException{
 
 		// Initialization (Test Data Creation and Assignment)
@@ -260,8 +258,8 @@ public class SalesDBJourneyTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
-		
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
@@ -279,7 +277,7 @@ public class SalesDBJourneyTest extends TestBase{
 	}
 	
 	@Parameters({"environment"})
-	@Test(priority=4, enabled = true)
+	@Test
 	public void verify_NzDomain_Order_InSalesDB (String environment) throws InterruptedException{
 		
 		// Initialization (Test Data Creation and Assignment)
@@ -326,7 +324,7 @@ public class SalesDBJourneyTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
 		
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);

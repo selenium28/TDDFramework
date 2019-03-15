@@ -68,14 +68,16 @@ public class CAWorkflowAdminPage extends TestBase{
     	
     	//Click Execute for Check ASIC
     	Thread.sleep(5000);
-    	System.out.println("Searching for ok button");
+    	System.out.println("Searching for check asic button");
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'check asic')]/parent::tr/td[3]/a[text()='Execute']")).click();
+    	System.out.println("Check asic button clicked");
     	Thread.sleep(10000);
     	
     	//Click Execute Action
     	System.out.println("Searching for Execute Action button");
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(10000);			
+    	System.out.println("Execute Action button clicked");
+    	Thread.sleep(20000);			
     }
     
     
@@ -162,7 +164,7 @@ public class CAWorkflowAdminPage extends TestBase{
     		
     	//Click Execute Action
     	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(10000);
+    	Thread.sleep(20000);
     			
     }
     	

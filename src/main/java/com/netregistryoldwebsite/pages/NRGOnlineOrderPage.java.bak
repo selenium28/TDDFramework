@@ -30,14 +30,6 @@ public class NRGOnlineOrderPage extends TestBase{
     	newDomainSearchBox.clear();
     	newDomainSearchBox.sendKeys(domainname);
     	tickTld(tldname);
-
-		try {
-    		Thread.sleep(2000);
-			driver.findElement(By.xpath("//*[@id='chatNow']/div/a[1]/img")).click();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("Chat window not present");
-		}
     }
     
     public void clearDefaultTldSelections(){
