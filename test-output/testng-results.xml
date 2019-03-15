@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="265183" started-at="2019-03-15T05:12:49Z" finished-at="2019-03-15T05:17:14Z">
+  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="107195" started-at="2019-03-15T05:56:25Z" finished-at="2019-03-15T05:58:12Z">
     <groups>
     </groups>
-    <test name="Regression Test Cases" duration-ms="265183" started-at="2019-03-15T05:12:49Z" finished-at="2019-03-15T05:17:14Z">
-      <class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
-        <test-method status="PASS" signature="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@5442a311]" name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" duration-ms="40182" started-at="2019-03-15T05:12:49Z" finished-at="2019-03-15T05:13:29Z">
+    <test name="Regression Test Cases" duration-ms="107195" started-at="2019-03-15T05:56:25Z" finished-at="2019-03-15T05:58:12Z">
+      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
+        <test-method status="PASS" signature="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" duration-ms="107167" started-at="2019-03-15T05:56:25Z" finished-at="2019-03-15T05:58:12Z">
           <params>
             <param index="0">
               <value>
@@ -17,52 +17,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingExistingCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@5442a311]" name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingExistingCardInCustomerPortal" duration-ms="65903" started-at="2019-03-15T05:13:29Z" finished-at="2019-03-15T05:14:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingExistingCardInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@5442a311]" name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" duration-ms="65745" started-at="2019-03-15T05:14:35Z" finished-at="2019-03-15T05:15:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@5442a311]" name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingNewCardInCustomerPortal" duration-ms="49891" started-at="2019-03-15T05:15:41Z" finished-at="2019-03-15T05:16:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingNewCardInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@5442a311]" name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" duration-ms="43404" started-at="2019-03-15T05:16:31Z" finished-at="2019-03-15T05:17:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal -->
-      </class> <!-- com.consoleregression.testcases.CustomerPortalJourneyTest -->
+        </test-method> <!-- verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB -->
+      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
     </test> <!-- Regression Test Cases -->
   </suite> <!-- Console Regression Test Automation - UAT Test Suite -->
 </testng-results>

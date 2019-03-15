@@ -67,6 +67,8 @@ public class CAWorkflowAdminPage extends TestBase{
     public void processCheckASIC() throws InterruptedException {
     	
     	//Click Execute for Check ASIC
+    	
+    	
     	Thread.sleep(5000);
     	System.out.println("Searching for check asic button");
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'check asic')]/parent::tr/td[3]/a[text()='Execute']")).click();
@@ -75,7 +77,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	
     	//Click Execute Action
     	System.out.println("Searching for Execute Action button");
-    	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
+    	driver.findElement(By.xpath("//table[3]/tbody/tr[3]/td[@class='cp']/input[@value='Execute Action']")).click();
     	System.out.println("Execute Action button clicked");
     	Thread.sleep(20000);			
     }
@@ -163,7 +165,8 @@ public class CAWorkflowAdminPage extends TestBase{
     	Thread.sleep(10000);
     		
     	//Click Execute Action
-    	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
+    	driver.findElement(By.xpath("//table[3]/tbody/tr[3]/td[@class='cp']/input[@value='Execute Action']")).click();
+    	//driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
     	Thread.sleep(20000);
     			
     }
