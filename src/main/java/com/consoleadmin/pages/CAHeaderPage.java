@@ -60,9 +60,19 @@ public class CAHeaderPage extends TestBase{
     	Thread.sleep(2000);
     	System.out.println ("Searching for submit button");
     	Thread.sleep(8000);
-    	driver.findElement(By.xpath("//table[@class='headerbar']/tbody/tr[1]/td[3]/form/input[@name='submit']")).click();
+    	
+    	try {
+    		
+    		driver.findElement(By.xpath("//table[@class='headerbar']/tbody/tr[1]/td[3]/form/input[@name='submit']")).click();
+    	} catch (Exception e) {
+    		
+    		System.out.println("Timeout after clicking submit button");
+    	}
+    	
     	System.out.println ("Submit button clicked");
-    	Thread.sleep(15000);
+    	
+    	//To add a waiting time for account reference page to load
+    	Thread.sleep(20000);
     	
     	return new CAAccountReferencePage();
     }

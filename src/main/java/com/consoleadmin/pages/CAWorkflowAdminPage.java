@@ -61,6 +61,9 @@ public class CAWorkflowAdminPage extends TestBase{
     		this.processCheckASIC();
     		this.processDelegateDomain();
     	}
+    	
+    	//To add a waiting time for workflow to complete processing
+    	Thread.sleep(15000);
     }
     
     
@@ -194,7 +197,9 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	System.out.println("Execute Action button clicked");
-    	Thread.sleep(15000);
+    	
+    	//To add a waiting time for workflow to complete processing
+    	Thread.sleep(30000);
     			
     }
     	
