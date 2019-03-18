@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="107195" started-at="2019-03-15T05:56:25Z" finished-at="2019-03-15T05:58:12Z">
+  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="935430" started-at="2019-03-18T00:49:54Z" finished-at="2019-03-18T01:05:29Z">
     <groups>
     </groups>
-    <test name="Regression Test Cases" duration-ms="107195" started-at="2019-03-15T05:56:25Z" finished-at="2019-03-15T05:58:12Z">
+    <test name="Regression Test Cases" duration-ms="935430" started-at="2019-03-18T00:49:54Z" finished-at="2019-03-18T01:05:29Z">
       <class name="com.consoleregression.testcases.SalesDBJourneyTest">
-        <test-method status="PASS" signature="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" duration-ms="107167" started-at="2019-03-15T05:56:25Z" finished-at="2019-03-15T05:58:12Z">
+        <test-method status="PASS" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="181262" started-at="2019-03-18T00:49:54Z" finished-at="2019-03-18T00:52:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
+        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="296275" started-at="2019-03-18T00:52:55Z" finished-at="2019-03-18T00:57:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
+        <test-method status="PASS" signature="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" duration-ms="295469" started-at="2019-03-18T00:57:51Z" finished-at="2019-03-18T01:02:47Z">
           <params>
             <param index="0">
               <value>
@@ -18,6 +40,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB -->
+        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_NzDomain_Order_InSalesDB" duration-ms="162386" started-at="2019-03-18T01:02:47Z" finished-at="2019-03-18T01:05:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
       </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
     </test> <!-- Regression Test Cases -->
   </suite> <!-- Console Regression Test Automation - UAT Test Suite -->

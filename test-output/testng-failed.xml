@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Migration - Braintree Post Validation Suite]" parallel="tests">
-  <parameter name="environment" value="stagingdev-5"/>
-  <parameter name="iteration" value="4"/>
-  <test thread-count="10" name="Payment Gateway Migration - Braintree Post Validation Test Cases(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Console Regression Test Automation - UAT Test Suite]">
+  <parameter name="environment" value="uat1"/>
+  <listeners>
+    <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="Regression Test Cases(failed)">
     <classes>
-      <class name="com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest">
+      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
         <methods>
-          <include name="testMigratedCustomerInDomainRegistrationAndEnableAutoRenew" invocation-numbers="0"/>
+          <include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest -->
+      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
     </classes>
-  </test> <!-- Payment Gateway Migration - Braintree Post Validation Test Cases(failed) -->
-</suite> <!-- Failed suite [Payment Gateway Migration - Braintree Post Validation Suite] -->
+  </test> <!-- Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [Console Regression Test Automation - UAT Test Suite] -->
