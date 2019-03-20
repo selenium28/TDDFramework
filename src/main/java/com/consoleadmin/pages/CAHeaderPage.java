@@ -71,7 +71,7 @@ public class CAHeaderPage extends TestBase{
     	System.out.println ("Submit button clicked");
     	
     	//To add a waiting time for account reference page to load
-    	Thread.sleep(30000);
+    	Thread.sleep(40000);
     	
     	return new CAAccountReferencePage();
     }

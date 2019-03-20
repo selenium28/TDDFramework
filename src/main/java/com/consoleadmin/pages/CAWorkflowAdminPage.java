@@ -89,7 +89,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	System.out.println("Execute Action button clicked");
-    	Thread.sleep(15000);			
+    	Thread.sleep(40000);			
     }
     
     
@@ -114,7 +114,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	System.out.println("Execute Action button clicked");
-    	Thread.sleep(15000);			
+    	Thread.sleep(40000);			
     }
     
     
@@ -199,7 +199,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	System.out.println("Execute Action button clicked");
     	
     	//To add a waiting time for workflow to complete processing
-    	Thread.sleep(30000);
+    	Thread.sleep(40000);
     			
     }
     	
