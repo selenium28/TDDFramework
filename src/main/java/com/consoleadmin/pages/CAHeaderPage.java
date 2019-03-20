@@ -59,7 +59,6 @@ public class CAHeaderPage extends TestBase{
     	accountReferenceInput.sendKeys(straccountreference);
     	Thread.sleep(2000);
     	System.out.println ("Searching for submit button");
-    	Thread.sleep(8000);
     	
     	try {
     		
@@ -72,7 +71,7 @@ public class CAHeaderPage extends TestBase{
     	System.out.println ("Submit button clicked");
     	
     	//To add a waiting time for account reference page to load
-    	Thread.sleep(20000);
+    	Thread.sleep(30000);
     	
     	return new CAAccountReferencePage();
     }
