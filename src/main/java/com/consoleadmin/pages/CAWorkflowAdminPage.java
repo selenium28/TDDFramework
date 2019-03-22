@@ -211,12 +211,25 @@ public class CAWorkflowAdminPage extends TestBase{
     	Thread.sleep(10000);
     		
     	//Click Execute for Run Setup
+    	System.out.println("Searching for Run Setup");
     	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'run setup')]/parent::tr/td[3]/a[text()='Execute']")).click();
+    	System.out.println("Run Setup button clicked");
     	Thread.sleep(10000);
     		
     	//Click Execute Action
-    	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
-    	Thread.sleep(10000);
+    	System.out.println("Searching for Execute Action button");
+    	try {
+    		
+    		driver.findElement(By.xpath("//table[3]/tbody/tr[3]/td[@class='cp']/input[@value='Execute Action']")).click();
+    	} catch (Exception e) {
+    		
+    		System.out.println("Transaction timeout");
+    	}
+    	
+    	System.out.println("Execute Action button clicked");
+    	
+    	//To add a waiting time for workflow to complete processing
+    	Thread.sleep(120000);
     			
     }
     	

@@ -177,12 +177,12 @@ public class NetregistryDataCreationTest extends TestBase{
 		
 		}
 		else if (intMinCount == 3) {
-			strCardOwnerName = "NetRegistry New Customer - Domain Reg 40091881";
-			strCardType = "Visa";
-			strCardNumber = "4009348888881881";
+			strCardOwnerName = "NetRegistry New Customer - Domain Reg 37820005";
+			strCardType = "Amex";
+			strCardNumber = "378282246310005";
 		    strCardExpiryMonth = "02";
 		    strCardExpiryYear = "2021";
-		    strCardSecurityCode = "457";
+		    strCardSecurityCode = "4578";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		
 		}
@@ -225,7 +225,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, "com");
 		caworkflowadminpage.processFraudCheck();
 		
 		//Test Step 5: Set the new password for the account reference
@@ -284,12 +284,12 @@ public class NetregistryDataCreationTest extends TestBase{
 
 		}
 		else {
-			strCardOwnerName = "NetRegistry Returning Customer - Domain Reg 55554444";
-			strCardType = "MasterCard";
-			strCardNumber = "5555555555554444";
+			strCardOwnerName = "NetRegistry Returning Customer - Domain Reg 37148431";
+			strCardType = "Amex";
+			strCardNumber = "371449635398431";
 		    strCardExpiryMonth = "08";
 		    strCardExpiryYear = "2021";
-		    strCardSecurityCode = "991";
+		    strCardSecurityCode = "9910";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		
@@ -311,7 +311,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, "com");
 		caworkflowadminpage.processFraudCheck();
 		driver.close();
 		
@@ -387,12 +387,12 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
-			strCardOwnerName = "NetRegistry New Customer - Monthly Product 40050004";
-			strCardType = "Visa";
-			strCardNumber = "4005519200000004";
+			strCardOwnerName = "NetRegistry New Customer - Monthly Product 37820005";
+			strCardType = "Amex";
+			strCardNumber = "378282246310005";
 		    strCardExpiryMonth = "02";
 		    strCardExpiryYear = "2022";
-		    strCardSecurityCode = "443";
+		    strCardSecurityCode = "4430";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
@@ -433,7 +433,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId_01, "net");
 		caworkflowadminpage.processFraudCheck();
 				
 		strWorkflowId_02 = caworkflowadminpage.getProductSetup2WorkflowID();
@@ -496,12 +496,12 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
-			strCardOwnerName = "NetRegistry Returning Customer - Monthly Product 22230011";
-			strCardType = "MasterCard";
-			strCardNumber = "2223000048400011";
+			strCardOwnerName = "NetRegistry Returning Customer - Monthly Product 37148431";
+			strCardType = "Amex";
+			strCardNumber = "371449635398431";
 		    strCardExpiryMonth = "08";
 		    strCardExpiryYear = "2022";
-		    strCardSecurityCode = "106";
+		    strCardSecurityCode = "1065";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		
@@ -523,8 +523,9 @@ public class NetregistryDataCreationTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_03);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_03);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId_03, "net");
 		caworkflowadminpage.processFraudCheck();
+		
 		
 		strWorkflowId_04 = caworkflowadminpage.getProductSetup2WorkflowID();
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_04);
@@ -603,12 +604,12 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
-			strCardOwnerName = "NetRegistry New Customer - Yearly Product 42171119";
-			strCardType = "Visa";
-			strCardNumber = "4217651111111119";
+			strCardOwnerName = "NetRegistry New Customer - Yearly Product 37820005";
+			strCardType = "Amex";
+			strCardNumber = "378282246310005";
 		    strCardExpiryMonth = "02";
 		    strCardExpiryYear = "2023";
-		    strCardSecurityCode = "668";
+		    strCardSecurityCode = "6689";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
@@ -649,7 +650,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId_01, "com");
 		caworkflowadminpage.processFraudCheck();
 		
 		strWorkflowId_02 = caworkflowadminpage.getProductSetup2WorkflowID();
@@ -714,12 +715,12 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
-			strCardOwnerName = "NetRegistry Returning Customer - Yearly Product 54545454";
-			strCardType = "MasterCard";
-			strCardNumber = "5454545454545454";
+			strCardOwnerName = "NetRegistry Returning Customer - Yearly Product 37148431";
+			strCardType = "Amex";
+			strCardNumber = "371449635398431";
 		    strCardExpiryMonth = "08";
 		    strCardExpiryYear = "2023";
-		    strCardSecurityCode = "755";
+		    strCardSecurityCode = "7556";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 
@@ -740,8 +741,8 @@ public class NetregistryDataCreationTest extends TestBase{
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_03);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_03);
+		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_03);		
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId_03, "com");
 		caworkflowadminpage.processFraudCheck();
 		
 		strWorkflowId_04 = caworkflowadminpage.getProductSetup2WorkflowID();
@@ -839,12 +840,12 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);	
 		}
 		else if (intMinCount == 3) {
-			strCardOwnerName = "NetRegistry New Customer - With Outstanding Invoice 40091881";
-			strCardType = "Visa";
-			strCardNumber = "4009348888881881";
+			strCardOwnerName = "NetRegistry New Customer - With Outstanding Invoice 37820005";
+			strCardType = "Amex";
+			strCardNumber = "378282246310005";
 		    strCardExpiryMonth = "10";
 		    strCardExpiryYear = "2024";
-		    strCardSecurityCode = "762";
+		    strCardSecurityCode = "7621";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);	
 		}
 		else if (intMinCount == 2) {
@@ -857,9 +858,9 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);	
 		}
 		else {
-			strCardOwnerName = "NetRegistry New Customer - With Outstanding Invoice 45000061";
-			strCardType = "Visa";
-			strCardNumber = "4500600000000061";
+			strCardOwnerName = "NetRegistry New Customer - With Outstanding Invoice 22230011";
+			strCardType = "MasterCard";
+			strCardNumber = "2223000048400011";
 		    strCardExpiryMonth = "12";
 		    strCardExpiryYear = "2024";
 		    strCardSecurityCode = "782";
@@ -884,10 +885,9 @@ public class NetregistryDataCreationTest extends TestBase{
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_01);
+		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);		
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId_01, "com");
 		caworkflowadminpage.processFraudCheck();
-		//caworkflowadminpage.processDelegateDomain();
 
 		//Test Step 5: Set the new password for the account reference
 		caheaderpage = new CAHeaderPage();
@@ -920,7 +920,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_02);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId_02);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId_02, "nz");
 		
 		strWorkflowId_03 = caworkflowadminpage.getProductSetup2WorkflowID();
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_03);
@@ -993,21 +993,21 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
-			strCardOwnerName = "NetRegistry New Customer 40091881";
-			strCardType = "Visa";
-			strCardNumber = "4009348888881881";
+			strCardOwnerName = "NetRegistry New Customer 37820005";
+			strCardType = "Amex";
+			strCardNumber = "378282246310005";
 		    strCardExpiryMonth = "02";
 		    strCardExpiryYear = "2025";
-		    strCardSecurityCode = "216";
+		    strCardSecurityCode = "2167";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
-			strCardOwnerName = "NetRegistry New Customer 54545454";
-			strCardType = "MasterCard";
-			strCardNumber = "5454545454545454";
+			strCardOwnerName = "NetRegistry New Customer 37148431";
+			strCardType = "Amex";
+			strCardNumber = "371449635398431";
 		    strCardExpiryMonth = "03";
 		    strCardExpiryYear = "2025";
-		    strCardSecurityCode = "443";
+		    strCardSecurityCode = "4438";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
@@ -1038,9 +1038,10 @@ public class NetregistryDataCreationTest extends TestBase{
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
+		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, "com");
 		caworkflowadminpage.processFraudCheck();
+
 		
 		//Test Step 5: Set the new password for the account reference
 		caheaderpage = new CAHeaderPage();
