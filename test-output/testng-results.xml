@@ -1,57 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="4" total="7" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="935430" started-at="2019-03-18T00:49:54Z" finished-at="2019-03-18T01:05:29Z">
+  <suite name="Payment Gateway Migration - Quest Data Creation Suite" duration-ms="1955151" started-at="2019-03-22T00:28:03Z" finished-at="2019-03-22T01:00:39Z">
     <groups>
     </groups>
-    <test name="Regression Test Cases" duration-ms="935430" started-at="2019-03-18T00:49:54Z" finished-at="2019-03-18T01:05:29Z">
-      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
-        <test-method status="PASS" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="181262" started-at="2019-03-18T00:49:54Z" finished-at="2019-03-18T00:52:55Z">
+    <test name="Payment Gateway Migration - Quest Data Creation Test Cases" duration-ms="1955151" started-at="2019-03-22T00:28:03Z" finished-at="2019-03-22T01:00:39Z">
+      <class name="com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest">
+        <test-method status="PASS" signature="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest@5442a311]" name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew" duration-ms="1955097" started-at="2019-03-22T00:28:04Z" finished-at="2019-03-22T01:00:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[uat1]]>
+                <![CDATA[stagingdev-5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[4]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="296275" started-at="2019-03-18T00:52:55Z" finished-at="2019-03-18T00:57:51Z">
+        </test-method> <!-- generateCustomerDataWithDomainRegistrationAndEnableAutoRenew -->
+        <test-method status="PASS" signature="createTextFileForGreencodeAndCreditCardDetails(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest@5442a311]" name="createTextFileForGreencodeAndCreditCardDetails" duration-ms="3" started-at="2019-03-22T01:00:39Z" finished-at="2019-03-22T01:00:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[uat1]]>
+                <![CDATA[stagingdev-5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" duration-ms="295469" started-at="2019-03-18T00:57:51Z" finished-at="2019-03-18T01:02:47Z">
+        </test-method> <!-- createTextFileForGreencodeAndCreditCardDetails -->
+        <test-method status="PASS" signature="createPropertyFileForDecryptedDataVerification(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest@5442a311]" name="createPropertyFileForDecryptedDataVerification" duration-ms="9" started-at="2019-03-22T01:00:39Z" finished-at="2019-03-22T01:00:39Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[uat1]]>
+                <![CDATA[stagingdev-5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB -->
-        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_NzDomain_Order_InSalesDB" duration-ms="162386" started-at="2019-03-18T01:02:47Z" finished-at="2019-03-18T01:05:29Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
-      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
-    </test> <!-- Regression Test Cases -->
-  </suite> <!-- Console Regression Test Automation - UAT Test Suite -->
+        </test-method> <!-- createPropertyFileForDecryptedDataVerification -->
+      </class> <!-- com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest -->
+    </test> <!-- Payment Gateway Migration - Quest Data Creation Test Cases -->
+  </suite> <!-- Payment Gateway Migration - Quest Data Creation Suite -->
 </testng-results>

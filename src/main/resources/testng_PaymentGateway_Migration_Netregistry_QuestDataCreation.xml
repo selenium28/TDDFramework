@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite
-	name="Payment Gateway Migration - Quest Data Creation Suite"
+	name="Payment Gateway - Migration - Netregistry - Quest Data Creation Suite"
 	thread-count="10" parallel="tests">
 	<parameter name="environment" value="stagingdev-5" />
 
@@ -14,7 +14,7 @@
 	</listeners>
 
 	<test
-		name="Payment Gateway Migration - Quest Data Creation Test Cases"
+		name="Payment Gateway - Migration - Netregistry - Quest Data Creation Test Cases"
 		parallel="none" preserve-order="true">
 
 		<classes>
