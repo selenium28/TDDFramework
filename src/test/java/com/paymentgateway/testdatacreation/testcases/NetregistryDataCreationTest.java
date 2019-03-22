@@ -1121,7 +1121,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d1 = new Date();
 		
-		PrintWriter writer = new PrintWriter("GreencodeAndCreditCardDetails_" + df.format(d1) + ".txt", "UTF-8");
+		PrintWriter writer = new PrintWriter("GreencodeAndCreditCardDetails" + df.format(d1) + ".txt", "UTF-8");
 		writer.println("green_code,card_digits,card_owner,card_expire_month,card_expire_year");
 		
 		
@@ -1164,7 +1164,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		properties.setProperty("sql", "SELECT * FROM public.v_companybilling_bt WHERE cm_greencode IN ("+ strDataMigrationGC +") AND card_digits IS NOT NULL AND braintree_migrated = false;");
 		properties.setProperty("output.file", "output.csv");	
 	
-		File file = new File("migration_" + df.format(d1) + ".properties");
+		File file = new File("migration" + df.format(d1) + ".properties");
 		FileOutputStream fileOut = new FileOutputStream(file);
 		properties.store(fileOut, "DB");
 		fileOut.close();
