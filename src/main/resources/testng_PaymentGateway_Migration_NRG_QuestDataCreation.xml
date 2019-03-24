@@ -6,7 +6,7 @@
 	<parameter name="environment" value="stagingdev-5" />
 
 	<!-- Iteration value can be set from 1 ~ 4 -->
-	<parameter name="iteration" value="4" />
+	<parameter name="iteration" value="1" />
 
 	<listeners>
 		<listener
@@ -23,10 +23,10 @@
 			<class name="com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest">
 				<methods>
 					<include name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew" />
-					<include name="generateCustomerDataWithMonthlyBillingProduct" />  
-					<include name="generateCustomerDataWithYearlyBillingProduct" />  
- 					<include name="generateCustomerDataWithOutstandingInvoice" />  
-					<include name="generateCustomerDataWithDefaultCreditCard" /> 
+<!-- 					<include name="generateCustomerDataWithMonthlyBillingProduct" />   -->
+<!-- 					<include name="generateCustomerDataWithYearlyBillingProduct" />   -->
+<!--  					<include name="generateCustomerDataWithOutstandingInvoice" />   -->
+<!-- 					<include name="generateCustomerDataWithDefaultCreditCard" />  -->
 
 					<!-- To save greencodes and credit card details in a text file -->
 					<include
