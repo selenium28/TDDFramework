@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="4" total="7" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Payment Gateway - Migration - NRG - Quest Data Creation Suite" duration-ms="686287" started-at="2019-03-24T23:09:07Z" finished-at="2019-03-24T23:20:33Z">
+  <suite name="Payment Gateway - Migration - NRG - Quest Data Creation Suite" duration-ms="462916" started-at="2019-03-25T23:07:18Z" finished-at="2019-03-25T23:15:01Z">
     <groups>
     </groups>
-    <test name="Payment Gateway - Migration - NRG - Quest Data Creation Test Cases" duration-ms="686287" started-at="2019-03-24T23:09:07Z" finished-at="2019-03-24T23:20:33Z">
+    <test name="Payment Gateway - Migration - NRG - Quest Data Creation Test Cases" duration-ms="462916" started-at="2019-03-25T23:07:18Z" finished-at="2019-03-25T23:15:01Z">
       <class name="com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest">
-        <test-method status="PASS" signature="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest@5442a311]" name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew" duration-ms="686238" started-at="2019-03-24T23:09:07Z" finished-at="2019-03-24T23:20:33Z">
+        <test-method status="PASS" signature="generateCustomerDataWithDefaultCreditCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest@5442a311]" name="generateCustomerDataWithDefaultCreditCard" duration-ms="462877" started-at="2019-03-25T23:07:18Z" finished-at="2019-03-25T23:15:01Z">
           <params>
             <param index="0">
               <value>
@@ -22,8 +22,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- generateCustomerDataWithDomainRegistrationAndEnableAutoRenew -->
-        <test-method status="PASS" signature="createTextFileForGreencodeAndCreditCardDetails(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest@5442a311]" name="createTextFileForGreencodeAndCreditCardDetails" duration-ms="4" started-at="2019-03-24T23:20:33Z" finished-at="2019-03-24T23:20:33Z">
+        </test-method> <!-- generateCustomerDataWithDefaultCreditCard -->
+        <test-method status="PASS" signature="createTextFileForGreencodeAndCreditCardDetails(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest@5442a311]" name="createTextFileForGreencodeAndCreditCardDetails" duration-ms="3" started-at="2019-03-25T23:15:01Z" finished-at="2019-03-25T23:15:01Z">
           <params>
             <param index="0">
               <value>
@@ -34,7 +34,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTextFileForGreencodeAndCreditCardDetails -->
-        <test-method status="PASS" signature="createPropertyFileForDecryptedDataVerification(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest@5442a311]" name="createPropertyFileForDecryptedDataVerification" duration-ms="8" started-at="2019-03-24T23:20:33Z" finished-at="2019-03-24T23:20:33Z">
+        <test-method status="PASS" signature="createPropertyFileForDecryptedDataVerification(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest@5442a311]" name="createPropertyFileForDecryptedDataVerification" duration-ms="7" started-at="2019-03-25T23:15:01Z" finished-at="2019-03-25T23:15:01Z">
           <params>
             <param index="0">
               <value>

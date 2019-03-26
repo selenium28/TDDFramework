@@ -167,26 +167,27 @@ public class NetregistryDataCreationTest extends TestBase{
 		
 		//Test Step 2: Input credit card details and submit the order 
 		if (intMinCount == 4) {
+			
 			strCardOwnerName = "NetRegistry New Customer - Domain Reg 41111111";
 			strCardType = "Visa";
 			strCardNumber = "4111111111111111";
 		    strCardExpiryMonth = "01";
 		    strCardExpiryYear = "2021";
 		    strCardSecurityCode = "125";
-			nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-		
+			nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);		
 		}
 		else if (intMinCount == 3) {
+			
 			strCardOwnerName = "NetRegistry New Customer - Domain Reg 37820005";
 			strCardType = "Amex";
 			strCardNumber = "378282246310005";
 		    strCardExpiryMonth = "02";
 		    strCardExpiryYear = "2021";
 		    strCardSecurityCode = "4578";
-		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-		
+		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);		
 		}
 		else if (intMinCount == 2) {
+			
 			strCardOwnerName = "NetRegistry New Customer - Domain Reg 40120026";
 			strCardType = "Visa";
 			strCardNumber = "4012000033330026";
@@ -194,9 +195,9 @@ public class NetregistryDataCreationTest extends TestBase{
 		    strCardExpiryYear = "2021";
 		    strCardSecurityCode = "781";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-		
 		}
 		else {
+			
 			strCardOwnerName = "NetRegistry New Customer - Domain Reg 40050004";
 			strCardType = "Visa";
 			strCardNumber = "4005519200000004";
@@ -254,6 +255,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		nrgbillingpage.selectNewCreditCardOption();
 		
 		if (intMinCount == 4) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Domain Reg 22230011";
 			strCardType = "MasterCard";
 			strCardNumber = "2223000048400011";
@@ -261,9 +263,9 @@ public class NetregistryDataCreationTest extends TestBase{
 		    strCardExpiryYear = "2021";
 		    strCardSecurityCode = "112";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-
 		}
 		else if (intMinCount == 3) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Domain Reg 54545454";
 			strCardType = "MasterCard";
 			strCardNumber = "5454545454545454";
@@ -271,9 +273,9 @@ public class NetregistryDataCreationTest extends TestBase{
 		    strCardExpiryYear = "2021";
 		    strCardSecurityCode = "883";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-
 		}
 		else if (intMinCount == 2) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Domain Reg 22230014";
 			strCardType = "MasterCard";
 			strCardNumber = "2223520043560014";
@@ -281,9 +283,9 @@ public class NetregistryDataCreationTest extends TestBase{
 		    strCardExpiryYear = "2021";
 		    strCardSecurityCode = "670";
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-
 		}
 		else {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Domain Reg 37148431";
 			strCardType = "Amex";
 			strCardNumber = "371449635398431";
@@ -378,6 +380,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		
 		//Test Step 2: Input credit card details and submit the order 
 		if (intMinCount == 4) {
+			
 			strCardOwnerName = "NetRegistry New Customer - Monthly Product 40091881";
 			strCardType = "Visa";
 			strCardNumber = "4009348888881881";
@@ -387,6 +390,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
+			
 			strCardOwnerName = "NetRegistry New Customer - Monthly Product 37820005";
 			strCardType = "Amex";
 			strCardNumber = "378282246310005";
@@ -396,6 +400,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
+			
 			strCardOwnerName = "NetRegistry New Customer - Monthly Product 45000061";
 			strCardType = "Visa";
 			strCardNumber = "4500600000000061";
@@ -405,6 +410,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
+			
 			strCardOwnerName = "NetRegistry New Customer - Monthly Product 40120026";
 			strCardType = "Visa";
 			strCardNumber = "4012000033330026";
@@ -469,6 +475,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		nrgbillingpage.selectNewCreditCardOption();
 		
 		if (intMinCount == 4) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Monthly Product 55554444";
 			strCardType = "MasterCard";
 			strCardNumber = "5555555555554444";
@@ -478,6 +485,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Monthly Product 22230014";
 			strCardType = "MasterCard";
 			strCardNumber = "2223520043560014";
@@ -487,6 +495,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Monthly Product 54545454";
 			strCardType = "MasterCard";
 			strCardNumber = "5454545454545454";
@@ -496,6 +505,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Monthly Product 37148431";
 			strCardType = "Amex";
 			strCardNumber = "371449635398431";
@@ -595,6 +605,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		
 		//Test Step 2: Input credit card details and submit the order 
 		if (intMinCount == 4) {
+			
 			strCardOwnerName = "NetRegistry New Customer - Yearly Product 40127777";
 			strCardType = "Visa";
 			strCardNumber = "4012000077777777";
@@ -604,6 +615,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
+			
 			strCardOwnerName = "NetRegistry New Customer - Yearly Product 37820005";
 			strCardType = "Amex";
 			strCardNumber = "378282246310005";
@@ -613,6 +625,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
+			
 			strCardOwnerName = "NetRegistry New Customer - Yearly Product 41111111";
 			strCardType = "Visa";
 			strCardNumber = "4111111111111111";
@@ -622,6 +635,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
+			
 			strCardOwnerName = "NetRegistry New Customer - Yearly Product 40121881";
 			strCardType = "Visa";
 			strCardNumber = "4012888888881881";
@@ -688,6 +702,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		nrgbillingpage.selectNewCreditCardOption();
 		
 		if (intMinCount == 4) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Yearly Product 22230011";
 			strCardType = "MasterCard";
 			strCardNumber = "2223000048400011";
@@ -697,6 +712,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Yearly Product 55554444";
 			strCardType = "MasterCard";
 			strCardNumber = "5555555555554444";
@@ -706,6 +722,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Yearly Product 22230014";
 			strCardType = "MasterCard";
 			strCardNumber = "2223520043560014";
@@ -715,6 +732,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Yearly Product 37148431";
 			strCardType = "Amex";
 			strCardNumber = "371449635398431";
@@ -831,6 +849,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		
 		//Test Step 2: Input credit card details and submit the order 
 		if (intMinCount == 4) {
+			
 			strCardOwnerName = "NetRegistry New Customer - With Outstanding Invoice 42171119";
 			strCardType = "Visa";
 			strCardNumber = "4217651111111119";
@@ -840,6 +859,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);	
 		}
 		else if (intMinCount == 3) {
+			
 			strCardOwnerName = "NetRegistry New Customer - With Outstanding Invoice 37820005";
 			strCardType = "Amex";
 			strCardNumber = "378282246310005";
@@ -849,6 +869,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);	
 		}
 		else if (intMinCount == 2) {
+			
 			strCardOwnerName = "NetRegistry New Customer - With Outstanding Invoice 40121881";
 			strCardType = "Visa";
 			strCardNumber = "4012888888881881";
@@ -858,6 +879,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);	
 		}
 		else {
+			
 			strCardOwnerName = "NetRegistry New Customer - With Outstanding Invoice 22230011";
 			strCardType = "MasterCard";
 			strCardNumber = "2223000048400011";
@@ -984,6 +1006,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		
 		//Test Step 2: Input credit card details and submit the order 
 		if (intMinCount == 4) {
+			
 			strCardOwnerName = "NetRegistry New Customer 41111111";
 			strCardType = "Visa";
 			strCardNumber = "4111111111111111";
@@ -993,6 +1016,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 3) {
+			
 			strCardOwnerName = "NetRegistry New Customer 37820005";
 			strCardType = "Amex";
 			strCardNumber = "378282246310005";
@@ -1002,6 +1026,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else if (intMinCount == 2) {
+			
 			strCardOwnerName = "NetRegistry New Customer 37148431";
 			strCardType = "Amex";
 			strCardNumber = "371449635398431";
@@ -1011,6 +1036,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		else {
+			
 			strCardOwnerName = "NetRegistry New Customer 22230011";
 			strCardType = "MasterCard";
 			strCardNumber = "2223000048400011";
@@ -1058,6 +1084,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		nrgcreditcardsdetailspage = nrgaccountpage.clickEditCreditCardsOnFile();
 		
 		if (intMinCount == 4) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Default Credit Card 55554444";
 			strCardType = "MasterCard";
 			strCardNumber = "5555555555554444";
@@ -1065,9 +1092,9 @@ public class NetregistryDataCreationTest extends TestBase{
 		    strCardExpiryYear = "2025";
 		    strCardSecurityCode = "122";	
 			nrgcreditcardsdetailspage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-		
 		}
 		else if (intMinCount == 3) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Default Credit Card 22230014";
 			strCardType = "MasterCard";
 			strCardNumber = "2223520043560014";
@@ -1075,9 +1102,9 @@ public class NetregistryDataCreationTest extends TestBase{
 		    strCardExpiryYear = "2025";
 		    strCardSecurityCode = "178";	
 			nrgcreditcardsdetailspage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-		
 		}
 		else if (intMinCount == 2) {
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Default Credit Card 40127777";
 			strCardType = "Visa";
 			strCardNumber = "4012000077777777";
@@ -1085,9 +1112,9 @@ public class NetregistryDataCreationTest extends TestBase{
 		    strCardExpiryYear = "2025";
 		    strCardSecurityCode = "144";	
 			nrgcreditcardsdetailspage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-		
 		}
 		else {	
+			
 			strCardOwnerName = "NetRegistry Returning Customer - Default Credit Card 40050004";
 			strCardType = "Visa";
 			strCardNumber = "4005519200000004";
@@ -1122,16 +1149,14 @@ public class NetregistryDataCreationTest extends TestBase{
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d1 = new Date();
 		
-		//PrintWriter writer = new PrintWriter("GreencodeAndCreditCardDetails" + df.format(d1) + ".txt", "UTF-8");
 		PrintWriter writer = new PrintWriter(System.getProperty("user.dir") + "\\QuestTestData\\Netregistry\\GreencodeAndCreditCardDetails_" + df.format(d1) + ".txt", "UTF-8");
-		
-		
 		writer.println("green_code,card_digits,card_owner,card_expire_month,card_expire_year");
 		
-		
 		for(intMinCount = 0; intMinCount<intMaxCount; intMinCount++) {
+			
 			writer.println(arrDataMigrationGCAndCCDetails.get(intMinCount));
 		}	
+		
 		writer.close();
 		System.out.println("Done with Text File Creation");
 		
@@ -1152,10 +1177,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		
 		for(intMinCount = 1; intMinCount<intMaxCount; intMinCount++) {
 		
-		
-		
-			strDataMigrationGC.append(","+"'"+ arrDataMigrationGC.get(intMinCount)+"'"); 
-			
+			strDataMigrationGC.append(","+"'"+ arrDataMigrationGC.get(intMinCount)+"'"); 	
 		}		
 		System.out.println(strDataMigrationGC);
 		
@@ -1168,7 +1190,6 @@ public class NetregistryDataCreationTest extends TestBase{
 		properties.setProperty("sql", "SELECT * FROM public.v_companybilling_bt WHERE cm_greencode IN ("+ strDataMigrationGC +") AND card_digits IS NOT NULL AND braintree_migrated = false;");
 		properties.setProperty("output.file", "output.csv");	
 	
-		//File file = new File("migration" + df.format(d1) + ".properties");
 		File file = new File(System.getProperty("user.dir") + "\\QuestTestData\\Netregistry\\migration_" + df.format(d1) + ".properties");
 		FileOutputStream fileOut = new FileOutputStream(file);
 		properties.store(fileOut, "DB");
