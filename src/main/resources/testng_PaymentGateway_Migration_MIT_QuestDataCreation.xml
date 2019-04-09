@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite
-	name="Payment Gateway Migration - Quest Data Creation Suite"
+	name="Payment Gateway - Migration - MIT - Quest Data Creation Suite"
 	thread-count="10" parallel="tests">
 	<parameter name="environment" value="stagingdev-5" />
 
 	<!-- Iteration value can be set from 1 ~ 4 -->
-	<parameter name="iteration" value="1" />
+	<parameter name="iteration" value="4" />
 
 	<listeners>
 		<listener
@@ -14,7 +14,7 @@
 	</listeners>
 
 	<test
-		name="Payment Gateway Migration - Quest Data Creation Test Cases"
+		name="Payment Gateway - Migration - MIT - Quest Data Creation Test Cases"
 		parallel="none" preserve-order="true">
 
 		<classes>

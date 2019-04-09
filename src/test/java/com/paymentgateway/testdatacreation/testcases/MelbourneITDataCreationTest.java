@@ -718,7 +718,7 @@ public class MelbourneITDataCreationTest extends TestBase{
 		}
 		else {
 			strCardOwnerName = "MelbourneIT Returning Customer - Yearly Product 37148431";
-			strCardType = "MasterCard";
+			strCardType = "Amex";
 			strCardNumber = "371449635398431";
 		    strCardExpiryMonth = "08";
 		    strCardExpiryYear = "2023";
