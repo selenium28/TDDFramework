@@ -12,11 +12,13 @@ public interface Environment extends Config{
 	String carturl();
 	String cartloginurl();
 	
-	String customerportalurl_netregistry();
 	String customerportalurl_domainz();
+	String customerportalurl_netregistry();
+	String customerportalurl_melbourneit();
 	
 	String cart_domainsearchurl_domainz();
 	String cart_domainsearchurl_netregistry();
+	String cart_domainsearchurl_melbourneit();
 	
 	String carturl_domainz();
 	String salesdburl();

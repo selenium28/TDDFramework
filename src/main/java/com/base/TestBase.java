@@ -72,17 +72,23 @@ public class TestBase{
 		else if(entrypoint.equals("cartlogin")){
 			driver.get(testEnvironment.cartloginurl());
 		}
+		else if(entrypoint.equals("customerportalurl_domainz")){
+			driver.get(testEnvironment.customerportalurl_domainz());
+		}
 		else if(entrypoint.equals("customerportalurl_netregistry")){
 			driver.get(testEnvironment.customerportalurl_netregistry());
 		}
-		else if(entrypoint.equals("customerportalurl_domainz")){
-			driver.get(testEnvironment.customerportalurl_domainz());
+		else if(entrypoint.equals("customerportalurl_melbourneit")){
+			driver.get(testEnvironment.customerportalurl_melbourneit());
 		}
 		else if(entrypoint.equals("cart_domainsearchurl_domainz")){
 			driver.get(testEnvironment.cart_domainsearchurl_domainz());
 		}
 		else if(entrypoint.equals("cart_domainsearchurl_netregistry")){
 			driver.get(testEnvironment.cart_domainsearchurl_netregistry());
+		}
+		else if(entrypoint.equals("cart_domainsearchurl_melbourneit")){
+			driver.get(testEnvironment.cart_domainsearchurl_melbourneit());
 		}
 		else if(entrypoint.equals("salesdburl")){
 			driver.get(testEnvironment.salesdburl());

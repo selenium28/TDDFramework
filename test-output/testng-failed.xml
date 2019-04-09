@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway - Migration - NRG - Quest Data Creation Suite]" parallel="tests">
+<suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Migration - Quest Data Creation Suite]" parallel="tests">
   <parameter name="environment" value="stagingdev-5"/>
   <parameter name="iteration" value="1"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="10" name="Payment Gateway - Migration - NRG - Quest Data Creation Test Cases(failed)">
+  <test thread-count="10" name="Payment Gateway Migration - Quest Data Creation Test Cases(failed)">
     <classes>
-      <class name="com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest">
+      <class name="com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest">
         <methods>
-          <include name="createPropertyFileForDecryptedDataVerification" invocation-numbers="0"/>
           <include name="generateCustomerDataWithDefaultCreditCard" invocation-numbers="0"/>
+          <include name="generateCustomerDataWithYearlyBillingProduct" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest -->
+      </class> <!-- com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest -->
     </classes>
-  </test> <!-- Payment Gateway - Migration - NRG - Quest Data Creation Test Cases(failed) -->
-</suite> <!-- Failed suite [Payment Gateway - Migration - NRG - Quest Data Creation Suite] -->
+  </test> <!-- Payment Gateway Migration - Quest Data Creation Test Cases(failed) -->
+</suite> <!-- Failed suite [Payment Gateway Migration - Quest Data Creation Suite] -->

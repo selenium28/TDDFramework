@@ -90,7 +90,7 @@ public class CustomerPortalJourneyTest extends TestBase{
         nrgbillingpage.tickTermsAndConditions();
         nrgordercompletepage = nrgbillingpage.clickContinueButton();
         
-        driver.close();
+        //driver.close();
 	}
 	
 	@Parameters({"environment"})

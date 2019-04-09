@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Migration - Braintree Post Validation Suite]" parallel="tests">
   <parameter name="environment" value="stagingdev-5"/>
-  <parameter name="iteration" value="4"/>
+  <parameter name="iteration" value="1"/>
   <test thread-count="10" name="Payment Gateway Migration - Braintree Post Validation Test Cases(failed)">
     <classes>
       <class name="com.paymentgateway.migration.braintreepostvalidation.testcases.DomainzBTPostValidationTest">

@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Console Regression Test Automation - PROD Test Suite">
 	<parameter name="environment"  value="prod"/>
-	<parameter name="pretest"  	   value="disbaled"/>
+	<parameter name="pretest"  	   value="disabled"/>
 	
 	<listeners>
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
@@ -12,18 +12,18 @@
 		<classes>
 			<class name="com.consoleregression.testcases.production.SalesDBJourneyTest">
                 <methods>
-<!--                     <include name="verify_ComAuDomain_Order_InSalesDB" /> -->
-<!--                     <include name="verify_NetDomain_and_DIFM_Order_InSalesDB" /> -->
-<!--                     <include name="verify_ComDomain_and_Office365_Order_InSalesDB" /> -->
+                    <include name="verify_ComAuDomain_Order_InSalesDB" />
+                    <include name="verify_NetDomain_and_DIFM_Order_InSalesDB" />
+                    <include name="verify_ComDomain_and_Office365_Order_InSalesDB" />
                     <include name="verify_NzDomain_Order_InSalesDB" />
                 </methods>
 			</class>
-<!-- 			<class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest"> -->
-<!-- 			    <methods> -->
-<!--                     <include name="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal" /> -->
-<!--                     <include name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" /> -->
-<!--                 </methods> -->
-<!-- 			</class> -->
+			<class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest">
+			    <methods>
+                    <include name="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal" />
+                    <include name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" />
+                </methods>
+			</class>
 		</classes>
 	</test>  
 </suite> 

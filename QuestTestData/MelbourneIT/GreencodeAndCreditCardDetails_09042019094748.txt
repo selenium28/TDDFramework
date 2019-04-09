@@ -1,0 +1,5 @@
+green_code,card_digits,card_owner,card_expire_month,card_expire_year
+TES-2514,4012000033330026,"MelbourneIT New Customer - Monthly Product 40120026",04,2022
+TES-2514,2223000048400011,"MelbourneIT Returning Customer - Monthly Product 22230011",08,2022
+TES-2515,4012888888881881,"MelbourneIT New Customer - Yearly Product 40121881",04,2023
+TES-2516,2223000048400011,"MelbourneIT New Customer 22230011",04,2025
