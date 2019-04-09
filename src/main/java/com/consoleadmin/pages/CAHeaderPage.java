@@ -61,8 +61,8 @@ public class CAHeaderPage extends TestBase{
     	System.out.println ("Searching for submit button");
     	
     	try {
-    		
-    		driver.findElement(By.xpath("//table[@class='headerbar']/tbody/tr[1]/td[3]/form/input[@name='submit']")).click();
+    		driver.findElement(By.xpath("//table/tbody/tr[1]/td/table[@class='headerbar']/tbody/tr[1]/td[3]/form/input[2]")).click();
+    		//driver.findElement(By.xpath("//table[@class='headerbar']/tbody/tr[1]/td[3]/form/input[@name='submit']")).click();
     	} catch (Exception e) {
     		
     		System.out.println("Timeout after clicking submit button");

@@ -1,0 +1,6 @@
+green_code,card_digits,card_owner,card_expire_month,card_expire_year
+TES-2529,4005519200000004,"MelbourneIT New Customer - Domain Reg 40050004",04,2021
+TES-2530,4012000033330026,"MelbourneIT New Customer - Monthly Product 40120026",04,2022
+TES-2531,4012888888881881,"MelbourneIT New Customer - Yearly Product 40121881",04,2023
+TES-2532,2223000048400011,"MelbourneIT New Customer 22230011",04,2025
+TES-2532,4005519200000004,"MelbourneIT Returning Customer - Default Credit Card 40050004",08,2025
