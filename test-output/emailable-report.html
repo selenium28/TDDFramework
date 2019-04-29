@@ -8,22 +8,22 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Payment Gateway - Migration - MIT - Quest Data Creation Suite</th></tr>
-<tr><td><a href="#t0">Payment Gateway - Migration - MIT - Quest Data Creation Test Cases</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,421,794</td><td></td><td></td></tr>
+<tr><th colspan="7">Console Regression Test Automation - UAT Test Suite</th></tr>
+<tr><td><a href="#t0">Regression Test Cases</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">248,017</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Payment Gateway - Migration - MIT - Quest Data Creation Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Payment Gateway - Migration - MIT - Quest Data Creation Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest</td><td><a href="#m0">generateCustomerDataWithMonthlyBillingProduct</a></td><td rowspan="1">1554784621252</td><td rowspan="1">717593</td></tr><tr><th colspan="4">Payment Gateway - Migration - MIT - Quest Data Creation Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest</td><td><a href="#m1">createPropertyFileForDecryptedDataVerification</a></td><td rowspan="1">1554786566565</td><td rowspan="1">11</td></tr><tr class="passedeven"><td><a href="#m2">createTextFileForGreencodeAndCreditCardDetails</a></td><td rowspan="1">1554786566560</td><td rowspan="1">3</td></tr><tr class="passedeven"><td><a href="#m3">generateCustomerDataWithDefaultCreditCard</a></td><td rowspan="1">1554786204812</td><td rowspan="1">361746</td></tr><tr class="passedeven"><td><a href="#m4">generateCustomerDataWithDomainRegistrationAndEnableAutoRenew</a></td><td rowspan="1">1554784144810</td><td rowspan="1">476440</td></tr><tr class="passedeven"><td><a href="#m5">generateCustomerDataWithYearlyBillingProduct</a></td><td rowspan="1">1554785338850</td><td rowspan="1">865958</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Regression Test Automation - UAT Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.consoleregression.testcases.SalesDBJourneyTest</td><td><a href="#m0">verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</a></td><td rowspan="1">1556495964276</td><td rowspan="1">247970</td></tr></tbody>
 </table>
-<h2>Payment Gateway - Migration - MIT - Quest Data Creation Test Cases</h2><h3 id="m0">com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest#generateCustomerDataWithMonthlyBillingProduct</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>stagingdev-5</td><td>1</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//tbody/tr/td/font[@class=&apos;cp&apos;][3]/a[@class=&apos;cp&apos;]&quot;}
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+<h2>Regression Test Cases</h2><h3 id="m0">com.consoleregression.testcases.SalesDBJourneyTest#verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table/tbody/tr/td/table[3]/tbody/tr[2]/td[2]&quot;}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
 System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:62276}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}
-Session ID: a95259048468cfd7a4661e17d21d5fe1
-*** Element info: {Using=xpath, value=//tbody/tr/td/font[@class=&apos;cp&apos;][3]/a[@class=&apos;cp&apos;]}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:59670}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.108, webStorageEnabled: true}
+Session ID: 5f327069c5902c34756bf88cbbec2652
+*** Element info: {Using=xpath, value=//table/tbody/tr/td/table[3]/tbody/tr[2]/td[2]}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
@@ -39,17 +39,8 @@ Session ID: a95259048468cfd7a4661e17d21d5fe1
 	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
 	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
 	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at com.consoleadmin.pages.CAWorkflowAdminPage.getProductSetup2WorkflowID(CAWorkflowAdminPage.java:276)
-	at com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest.generateCustomerDataWithMonthlyBillingProduct(MelbourneITDataCreationTest.java:530)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest#createPropertyFileForDecryptedDataVerification</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>stagingdev-5</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest#createTextFileForGreencodeAndCreditCardDetails</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>stagingdev-5</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest#generateCustomerDataWithDefaultCreditCard</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>stagingdev-5</td><td>1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest#generateCustomerDataWithDomainRegistrationAndEnableAutoRenew</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>stagingdev-5</td><td>1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest#generateCustomerDataWithYearlyBillingProduct</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>stagingdev-5</td><td>1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at com.consoleadmin.pages.CAWorkflowAdminPage.getWorkflowStatus(CAWorkflowAdminPage.java:332)
+	at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(SalesDBJourneyTest.java:265)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

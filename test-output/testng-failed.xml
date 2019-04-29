@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway - Migration - MIT - Quest Data Creation Suite]" parallel="tests">
-  <parameter name="environment" value="stagingdev-5"/>
-  <parameter name="iteration" value="1"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Console Regression Test Automation - UAT Test Suite]">
+  <parameter name="environment" value="uat1"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="10" name="Payment Gateway - Migration - MIT - Quest Data Creation Test Cases(failed)">
+  <test thread-count="5" name="Regression Test Cases(failed)">
     <classes>
-      <class name="com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest">
+      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
         <methods>
-          <include name="generateCustomerDataWithMonthlyBillingProduct" invocation-numbers="0"/>
+          <include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest -->
+      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
     </classes>
-  </test> <!-- Payment Gateway - Migration - MIT - Quest Data Creation Test Cases(failed) -->
-</suite> <!-- Failed suite [Payment Gateway - Migration - MIT - Quest Data Creation Suite] -->
+  </test> <!-- Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [Console Regression Test Automation - UAT Test Suite] -->

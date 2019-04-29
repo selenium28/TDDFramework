@@ -117,7 +117,8 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
-		nrgbillingpage.selectExistingCreditCard("Visa credit card. Owner: Melbourne IT LTD Number: 4715xxxxxxxx1714 Expiry: 06/21");
+		//nrgbillingpage.selectExistingCreditCard("Visa credit card. Owner: Melbourne IT LTD Number: 4715********1714 Expiry: 06/2021");
+		nrgbillingpage.selectExistingCreditCardOption("Visa");	
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		//driver.close();

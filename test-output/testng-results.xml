@@ -1,67 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="7" passed="5">
+<testng-results skipped="0" failed="1" ignored="3" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Payment Gateway - Migration - MIT - Quest Data Creation Suite" duration-ms="2421794" started-at="2019-04-09T04:29:04Z" finished-at="2019-04-09T05:09:26Z">
+  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="248017" started-at="2019-04-28T23:59:24Z" finished-at="2019-04-29T00:03:32Z">
     <groups>
     </groups>
-    <test name="Payment Gateway - Migration - MIT - Quest Data Creation Test Cases" duration-ms="2421794" started-at="2019-04-09T04:29:04Z" finished-at="2019-04-09T05:09:26Z">
-      <class name="com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest">
-        <test-method status="PASS" signature="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest@5442a311]" name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew" duration-ms="476440" started-at="2019-04-09T04:29:04Z" finished-at="2019-04-09T04:37:01Z">
+    <test name="Regression Test Cases" duration-ms="248017" started-at="2019-04-28T23:59:24Z" finished-at="2019-04-29T00:03:32Z">
+      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
+        <test-method status="FAIL" signature="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@5442a311]" name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" duration-ms="247970" started-at="2019-04-28T23:59:24Z" finished-at="2019-04-29T00:03:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateCustomerDataWithDomainRegistrationAndEnableAutoRenew -->
-        <test-method status="FAIL" signature="generateCustomerDataWithMonthlyBillingProduct(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest@5442a311]" name="generateCustomerDataWithMonthlyBillingProduct" duration-ms="717593" started-at="2019-04-09T04:37:01Z" finished-at="2019-04-09T04:48:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
+                <![CDATA[uat1]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//tbody/tr/td/font[@class='cp'][3]/a[@class='cp']"}
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr/td/table[3]/tbody/tr[2]/td[2]"}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
 System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:62276}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}
-Session ID: a95259048468cfd7a4661e17d21d5fe1
-*** Element info: {Using=xpath, value=//tbody/tr/td/font[@class='cp'][3]/a[@class='cp']}]]>
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:59670}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.108, webStorageEnabled: true}
+Session ID: 5f327069c5902c34756bf88cbbec2652
+*** Element info: {Using=xpath, value=//table/tbody/tr/td/table[3]/tbody/tr[2]/td[2]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//tbody/tr/td/font[@class='cp'][3]/a[@class='cp']"}
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr/td/table[3]/tbody/tr[2]/td[2]"}
+  (Session info: chrome=74.0.3729.108)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
 System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.45.615291 (ec3682e3c9061c..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:62276}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.86, webStorageEnabled: true}
-Session ID: a95259048468cfd7a4661e17d21d5fe1
-*** Element info: {Using=xpath, value=//tbody/tr/td/font[@class='cp'][3]/a[@class='cp']}
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:59670}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.108, webStorageEnabled: true}
+Session ID: 5f327069c5902c34756bf88cbbec2652
+*** Element info: {Using=xpath, value=//table/tbody/tr/td/table[3]/tbody/tr[2]/td[2]}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -78,14 +57,14 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
 at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
 at com.sun.proxy.$Proxy10.findElement(Unknown Source)
 at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-at com.consoleadmin.pages.CAWorkflowAdminPage.getProductSetup2WorkflowID(CAWorkflowAdminPage.java:276)
-at com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest.generateCustomerDataWithMonthlyBillingProduct(MelbourneITDataCreationTest.java:530)
+at com.consoleadmin.pages.CAWorkflowAdminPage.getWorkflowStatus(CAWorkflowAdminPage.java:332)
+at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(SalesDBJourneyTest.java:265)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -99,74 +78,25 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
-at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
-at java.util.concurrent.FutureTask.run(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-at java.lang.Thread.run(Unknown Source)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- generateCustomerDataWithMonthlyBillingProduct -->
-        <test-method status="PASS" signature="generateCustomerDataWithYearlyBillingProduct(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest@5442a311]" name="generateCustomerDataWithYearlyBillingProduct" duration-ms="865958" started-at="2019-04-09T04:48:58Z" finished-at="2019-04-09T05:03:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateCustomerDataWithYearlyBillingProduct -->
-        <test-method status="PASS" signature="generateCustomerDataWithDefaultCreditCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest@5442a311]" name="generateCustomerDataWithDefaultCreditCard" duration-ms="361746" started-at="2019-04-09T05:03:24Z" finished-at="2019-04-09T05:09:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generateCustomerDataWithDefaultCreditCard -->
-        <test-method status="PASS" signature="createTextFileForGreencodeAndCreditCardDetails(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest@5442a311]" name="createTextFileForGreencodeAndCreditCardDetails" duration-ms="3" started-at="2019-04-09T05:09:26Z" finished-at="2019-04-09T05:09:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createTextFileForGreencodeAndCreditCardDetails -->
-        <test-method status="PASS" signature="createPropertyFileForDecryptedDataVerification(java.lang.String)[pri:0, instance:com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest@5442a311]" name="createPropertyFileForDecryptedDataVerification" duration-ms="11" started-at="2019-04-09T05:09:26Z" finished-at="2019-04-09T05:09:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[stagingdev-5]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createPropertyFileForDecryptedDataVerification -->
-      </class> <!-- com.paymentgateway.testdatacreation.testcases.MelbourneITDataCreationTest -->
-    </test> <!-- Payment Gateway - Migration - MIT - Quest Data Creation Test Cases -->
-  </suite> <!-- Payment Gateway - Migration - MIT - Quest Data Creation Suite -->
+        </test-method> <!-- verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB -->
+      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
+    </test> <!-- Regression Test Cases -->
+  </suite> <!-- Console Regression Test Automation - UAT Test Suite -->
 </testng-results>

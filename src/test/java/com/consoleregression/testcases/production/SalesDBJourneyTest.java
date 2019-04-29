@@ -78,7 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14164451";
+		String strWorkflowId = "14227515";
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		
@@ -147,7 +147,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14164462";
+		String strWorkflowId = "14227518";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -217,7 +217,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14164470";
+		String strWorkflowId = "14227719";
 		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		
@@ -230,7 +230,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strTld = "com";
 			strRegistrationPeriod = "1";
 			strGreenCode = "MEL-6007";
-			strPaymentMethod = "Visa: 4715xxxxxxxx1714";
+			strPaymentMethod = "Visa: 471527******1714 06/2021";
 			strRegistrantDetails = "Netregistry";			
 			strOffice365Product = "O365-EESEN-QTY";
 		}
@@ -262,7 +262,7 @@ public class SalesDBJourneyTest extends TestBase{
 			//Test Step 2: Verify if domainregistration2 workflow status is "domain registration completed"
 			initialization(environment, "consoleadmin");
 			caloginpage = new CALoginPage();
-			caheaderpage = caloginpage.login("roy.alcantara", "Stocks007");
+			caheaderpage = caloginpage.login("roy.alcantara", "Stocks008");
 			caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 			strWorkflowEntity = caworkflowadminpage.getWorkflowEntity(strWorkflowId);
 			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
@@ -291,7 +291,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14164917";
+		String strWorkflowId = "14227522";
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
