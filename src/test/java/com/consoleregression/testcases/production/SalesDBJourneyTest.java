@@ -78,7 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14227515";
+		String strWorkflowId = "14287125";
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		
@@ -147,7 +147,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14227518";
+		String strWorkflowId = "14287127";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -217,13 +217,14 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14227719";
+		String strWorkflowId = "14287347";
 		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		
-		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
+		DateFormat df = new SimpleDateFormat("ddMMYYYY-hhmmss");
 		Date d = new Date();
 		strDomainName = "testconsoleautomation" + df.format(d);
+		System.out.println("O365 Domain: " + strDomainName);
 
 		if (environment.equals("prod")) {
 			
@@ -291,7 +292,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14227522";
+		String strWorkflowId = "14287161";
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();

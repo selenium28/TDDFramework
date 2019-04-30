@@ -8,39 +8,16 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Console Regression Test Automation - UAT Test Suite</th></tr>
-<tr><td><a href="#t0">Regression Test Cases</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">248,017</td><td></td><td></td></tr>
+<tr><th colspan="7">Console Regression Test Automation - PROD Test Suite</th></tr>
+<tr><td><a href="#t0">Regression Test Cases</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">313,222</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Regression Test Automation - UAT Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.consoleregression.testcases.SalesDBJourneyTest</td><td><a href="#m0">verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</a></td><td rowspan="1">1556495964276</td><td rowspan="1">247970</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Regression Test Automation - PROD Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.consoleregression.testcases.production.CustomerPortalJourneyTest</td><td><a href="#m0">verifyDomainRegistrationOrderForNewCustomerInCustomerPortal</a></td><td rowspan="1">1556584275975</td><td rowspan="1">39701</td></tr><tr class="passedeven"><td><a href="#m1">verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal</a></td><td rowspan="1">1556584315678</td><td rowspan="1">55735</td></tr><tr class="passedodd"><td rowspan="4">com.consoleregression.testcases.production.SalesDBJourneyTest</td><td><a href="#m2">verify_ComAuDomain_Order_InSalesDB</a></td><td rowspan="1">1556584371416</td><td rowspan="1">33940</td></tr><tr class="passedodd"><td><a href="#m3">verify_ComDomain_and_Office365_Order_InSalesDB</a></td><td rowspan="1">1556584470577</td><td rowspan="1">81863</td></tr><tr class="passedodd"><td><a href="#m4">verify_NetDomain_and_DIFM_Order_InSalesDB</a></td><td rowspan="1">1556584405358</td><td rowspan="1">65217</td></tr><tr class="passedodd"><td><a href="#m5">verify_NzDomain_Order_InSalesDB</a></td><td rowspan="1">1556584552441</td><td rowspan="1">36727</td></tr></tbody>
 </table>
-<h2>Regression Test Cases</h2><h3 id="m0">com.consoleregression.testcases.SalesDBJourneyTest#verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table/tbody/tr/td/table[3]/tbody/tr[2]/td[2]&quot;}
-  (Session info: chrome=74.0.3729.108)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:59670}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.108, webStorageEnabled: true}
-Session ID: 5f327069c5902c34756bf88cbbec2652
-*** Element info: {Using=xpath, value=//table/tbody/tr/td/table[3]/tbody/tr[2]/td[2]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at com.consoleadmin.pages.CAWorkflowAdminPage.getWorkflowStatus(CAWorkflowAdminPage.java:332)
-	at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(SalesDBJourneyTest.java:265)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Regression Test Cases</h2><h3 id="m0">com.consoleregression.testcases.production.CustomerPortalJourneyTest#verifyDomainRegistrationOrderForNewCustomerInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>prod</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.consoleregression.testcases.production.CustomerPortalJourneyTest#verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>prod</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.consoleregression.testcases.production.SalesDBJourneyTest#verify_ComAuDomain_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>prod</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.consoleregression.testcases.production.SalesDBJourneyTest#verify_ComDomain_and_Office365_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>prod</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.consoleregression.testcases.production.SalesDBJourneyTest#verify_NetDomain_and_DIFM_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>prod</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.consoleregression.testcases.production.SalesDBJourneyTest#verify_NzDomain_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>prod</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
