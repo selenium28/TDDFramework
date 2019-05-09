@@ -4,7 +4,6 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.aeonbits.owner.ConfigFactory;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -66,21 +65,17 @@ public class TestBase{
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		
-		if(entrypoint.equals("cart")){
-			driver.get(testEnvironment.carturl());
+		//Sales DB
+		if(entrypoint.equals("salesdburl")){
+			driver.get(testEnvironment.salesdburl());
 		}
-		else if(entrypoint.equals("cartlogin")){
-			driver.get(testEnvironment.cartloginurl());
+		
+		//Console Admin
+		else if(entrypoint.equals("consoleadmin")){
+			driver.get(testEnvironment.consoleadminurl());
 		}
-		else if(entrypoint.equals("customerportalurl_domainz")){
-			driver.get(testEnvironment.customerportalurl_domainz());
-		}
-		else if(entrypoint.equals("customerportalurl_netregistry")){
-			driver.get(testEnvironment.customerportalurl_netregistry());
-		}
-		else if(entrypoint.equals("customerportalurl_melbourneit")){
-			driver.get(testEnvironment.customerportalurl_melbourneit());
-		}
+		
+		//Old Shopping Cart
 		else if(entrypoint.equals("cart_domainsearchurl_domainz")){
 			driver.get(testEnvironment.cart_domainsearchurl_domainz());
 		}
@@ -90,14 +85,34 @@ public class TestBase{
 		else if(entrypoint.equals("cart_domainsearchurl_melbourneit")){
 			driver.get(testEnvironment.cart_domainsearchurl_melbourneit());
 		}
-		else if(entrypoint.equals("salesdburl")){
-			driver.get(testEnvironment.salesdburl());
+		
+		//New Shopping Cart
+		else if(entrypoint.equals("newcart_domainsearchurl_netregistry")){
+			driver.get(testEnvironment.newcart_domainsearchurl_netregistry());
 		}
-		else if(entrypoint.equals("consoleadmin")){
-			driver.get(testEnvironment.consoleadminurl());
+		
+		//Customer Portal
+		else if(entrypoint.equals("customerportalurl_domainz")){
+			driver.get(testEnvironment.customerportalurl_domainz());
 		}
+		else if(entrypoint.equals("customerportalurl_netregistry")){
+			driver.get(testEnvironment.customerportalurl_netregistry());
+		}
+		else if(entrypoint.equals("customerportalurl_melbourneit")){
+			driver.get(testEnvironment.customerportalurl_melbourneit());
+		}
+		
+		//Payment Gateway
 		else if(entrypoint.equals("braintree")){
 			driver.get(testEnvironment.braintreeurl());
+		}
+		
+		//Others
+		else if(entrypoint.equals("cart")){
+			driver.get(testEnvironment.carturl());
+		}
+		else if(entrypoint.equals("cartlogin")){
+			driver.get(testEnvironment.cartloginurl());
 		}
 		else{
 			/* for any url */

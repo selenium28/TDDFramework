@@ -8,11 +8,46 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Console Regression Test Automation - UAT Test Suite</th></tr>
-<tr><td><a href="#t0">Regression Test Cases</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">47,161</td><td></td><td></td></tr>
+<tr><th colspan="7">Payment Gateway Stage New Shopping Cart Test Suite</th></tr>
+<tr><td><a href="#t0">Payment Gateway Stage New Shopping Cart Test Cases</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">111,347</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Regression Test Automation - UAT Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.consoleregression.testcases.CustomerPortalJourneyTest</td><td><a href="#m0">verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal</a></td><td rowspan="1">1557209609660</td><td rowspan="1">47123</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Payment Gateway Stage New Shopping Cart Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Payment Gateway Stage New Shopping Cart Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest</td><td><a href="#m0">testDomainRegistrationOrderInNewShoppingCart</a></td><td rowspan="1">1557444017350</td><td rowspan="1">111201</td></tr></tbody>
 </table>
-<h2>Regression Test Cases</h2><h3 id="m0">com.consoleregression.testcases.CustomerPortalJourneyTest#verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Payment Gateway Stage New Shopping Cart Test Cases</h2><h3 id="m0">com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest#testDomainRegistrationOrderInNewShoppingCart</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>stagingdev-5</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;pg-body ng-scope&apos;]/div[1]/h1&quot;}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;MIT01524&apos;, ip: &apos;192.168.153.196&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51740}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 5922c84edc2538d6d271f5c8bf09cc53
+*** Element info: {Using=xpath, value=//div[@class=&apos;pg-body ng-scope&apos;]/div[1]/h1}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.getText(Unknown Source)
+	at com.netregistrynewwebsite.pages.NRGNSOrderCompletePage.isOrderComplete(NRGNSOrderCompletePage.java:31)
+	at com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest.testDomainRegistrationOrderInNewShoppingCart(RegressionNewShoppingCartTest.java:101)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

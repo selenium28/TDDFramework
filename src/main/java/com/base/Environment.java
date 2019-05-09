@@ -9,24 +9,36 @@ import org.aeonbits.owner.Config.Sources;
 
 public interface Environment extends Config{
 	
-	String carturl();
-	String cartloginurl();
+	//Sales DB
+	String salesdburl();
 	
-	String customerportalurl_domainz();
-	String customerportalurl_netregistry();
-	String customerportalurl_melbourneit();
+	//Console Admin
+	String consoleadminurl();
 	
+	//Old Shopping Cart
 	String cart_domainsearchurl_domainz();
 	String cart_domainsearchurl_netregistry();
 	String cart_domainsearchurl_melbourneit();
 	
+	//New Shopping Cart
+	String newcart_domainsearchurl_netregistry();
+	
+	//Customer Portal
+	String customerportalurl_domainz();
+	String customerportalurl_netregistry();
+	String customerportalurl_melbourneit();
+	
+	//Payment Gateway
+	String braintreeurl();
+	
+	//Others
+	String carturl();
+	String cartloginurl();
 	String carturl_domainz();
-	String salesdburl();
-	String consoleadminurl();
 	String username();
 	String password();
 	String browser();
-	String braintreeurl();
+	
 	
 	@Key("db.hostname")
 	String getDBHostname();

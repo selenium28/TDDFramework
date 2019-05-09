@@ -19,11 +19,11 @@
                     
 <!--                     <include name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingExistingCardInCustomerPortal" /> -->
                     
-<!--                     <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" /> -->
+                    <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" />
                     
 <!--                     <include name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingNewCardInCustomerPortal" /> -->
                     
-                    <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" />
+<!--                     <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" /> -->
                                
                 </methods>
 			</class>
@@ -35,7 +35,7 @@
                     
 <!--                     <include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" /> -->
                     
-<!--                     <include name="verify_NzDomain_Order_InSalesDB" /> -->
+                    <include name="verify_NzDomain_Order_InSalesDB" />
 <!--                 </methods> -->
 <!-- 			</class> -->
 
