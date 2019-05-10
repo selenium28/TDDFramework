@@ -95,6 +95,9 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     	
     	Thread.sleep(3000);
     	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")));
+    	System.out.println("Recaptcha Challenge Displayed!");
+    	System.out.println(recaptchaChallenge.getText());
+    	
     	
     	if(recaptchaChallenge.isDisplayed()) {
     		System.out.println("Recaptcha Challenge Displayed!");
