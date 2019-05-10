@@ -106,8 +106,8 @@ public class RegressionNewShoppingCartTest extends TestBase{
 			//Test Step 5: Verify if recaptcha challenge is dislayed 
 			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
 			
-//			driver.close();
-//			System.out.println("End Test: testDomainOrderInNewShoppingCartForNewBTCustomerUsingNewCard");
+			driver.close();
+			System.out.println("End Test: testDomainOrderInNewShoppingCartForNewBTCustomerUsingNewCard");
 		}	
 	}
 	
