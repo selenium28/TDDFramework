@@ -7,6 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
+import com.netregistryoldwebsite.pages.NRGRegistrantContactPage;
 
 public class NRGNSAboutYouPage extends TestBase{
 
@@ -51,6 +52,15 @@ public class NRGNSAboutYouPage extends TestBase{
     @FindBy(how=How.CSS, using = "button.btn.green")
     WebElement continueButton;
 	
+    @FindBy(how=How.ID, using = "login")
+    WebElement userName;
+    
+    @FindBy(how=How.ID, using = "password")
+    WebElement password;
+    
+    @FindBy(how=How.XPATH, using = "//div[@class='element-group cta']/button[@class='btn green']")
+    WebElement loginButton;
+    
     
     
     //Initializing Page Objects
@@ -77,6 +87,11 @@ public class NRGNSAboutYouPage extends TestBase{
     	
     }
     
+    public void setReturningCustomerContacts(String customeraccountreference, String customerpassword){
+    	userName.sendKeys(customeraccountreference);
+    	password.sendKeys(customerpassword);
+    }
+    
     public NRGNSRegistrantContactPage clickContinueButton() throws InterruptedException {
 
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", continueButton);
@@ -85,6 +100,22 @@ public class NRGNSAboutYouPage extends TestBase{
     	return new NRGNSRegistrantContactPage();
     	
     }
+    
+    public NRGNSRegistrantContactPage clickLoginButton(){
+    	
+    	System.out.println("clicking login button");   	
+    	if(loginButton.isDisplayed()||loginButton.isEnabled()) {
+    		
+    		loginButton.click();
+    	}
+    	else {
+ 			
+    		System.out.println("element not found");
+ 		}
+    	
+    	return new NRGNSRegistrantContactPage();
+    }
+    
  
     
 }

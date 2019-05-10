@@ -106,6 +106,8 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     		flag = true;
        	}
     	
+    	Thread.sleep(10000);
+    	
     	return flag;
     }
 }
