@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Payment_Gateway_Stage_New_Shopping_Cart_Test_Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Stage_New_Shopping_Cart_Test_Suite" title="com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest" hash-for-method="testDomainRegistrationOrderInNewShoppingCart(stagingdev-5, 2)">testDomainRegistrationOrderInNewShoppingCart(stagingdev-5, 2)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_Stage_New_Shopping_Cart_Test_Suite" title="com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest" hash-for-method="testDomainRegistrationOrderInNewShoppingCart(stagingdev-5, 3)">testDomainRegistrationOrderInNewShoppingCart(stagingdev-5, 3)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Payment_Gateway_Stage_New_Shopping_Cart_Test_Suite -->
@@ -125,19 +125,21 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testDomainRegistrationOrderInNewShoppingCart(stagingdev-5, 2)">
-                  </a> <!-- testDomainRegistrationOrderInNewShoppingCart(stagingdev-5, 2) -->
+                  <a name="testDomainRegistrationOrderInNewShoppingCart(stagingdev-5, 3)">
+                  </a> <!-- testDomainRegistrationOrderInNewShoppingCart(stagingdev-5, 3) -->
                   <span class="method-name">testDomainRegistrationOrderInNewShoppingCart</span>
-                  <span class="parameters">(stagingdev-5, 2)</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: timeout
+                  <span class="parameters">(stagingdev-5, 3)</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
   (Session info: chrome=74.0.3729.131)
   (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
 Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
 System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:60176}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
-Session ID: 4b6ea904dce7c507bca7796d10fa18e3
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61486}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 1f9d86a8185d66f838fa32db02ec3633
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
@@ -171,13 +173,13 @@ Session ID: 4b6ea904dce7c507bca7796d10fa18e3
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Payment Gateway Stage New Shopping Cart Test Suite&quot; parallel=&quot;tests&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Payment Gateway Stage New Shopping Cart Test Suite&quot; parallel=&quot;tests&quot;&gt;
   &lt;parameter name=&quot;environment&quot; value=&quot;stagingdev-5&quot;/&gt;
-  &lt;parameter name=&quot;iteration&quot; value=&quot;2&quot;/&gt;
+  &lt;parameter name=&quot;iteration&quot; value=&quot;3&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.reports.extentreportslistener.ExtentReportListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;Payment Gateway Stage New Shopping Cart Test Cases&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;Payment Gateway Stage New Shopping Cart Test Cases&quot; parallel=&quot;tests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest&quot;&gt;
         &lt;methods&gt;
@@ -227,12 +229,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testDomainRegistrationOrderInNewShoppingCart')
 data.setCell(0, 2, 'com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest')
-data.setCell(0, 3, 36276);
+data.setCell(0, 3, 34159);
 window.suiteTableData['Payment_Gateway_Stage_New_Shopping_Cart_Test_Suite']= { tableData: data, tableDiv: 'times-div-Payment_Gateway_Stage_New_Shopping_Cart_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 34 seconds</span>
               <div id="times-div-Payment_Gateway_Stage_New_Shopping_Cart_Test_Suite">
               </div> <!-- times-div-Payment_Gateway_Stage_New_Shopping_Cart_Test_Suite -->
             </div> <!-- times-div -->
@@ -262,7 +264,7 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testDomainRegistrationOrderInNewShoppingCart(stagingdev-5, 2)</span>
+                <span class="method-name">testDomainRegistrationOrderInNewShoppingCart(stagingdev-5, 3)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

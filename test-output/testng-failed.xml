@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Stage New Shopping Cart Test Suite]" parallel="tests">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Stage New Shopping Cart Test Suite]" parallel="tests">
   <parameter name="environment" value="stagingdev-5"/>
-  <parameter name="iteration" value="2"/>
+  <parameter name="iteration" value="3"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="1" name="Payment Gateway Stage New Shopping Cart Test Cases(failed)" parallel="tests">
+  <test thread-count="2" name="Payment Gateway Stage New Shopping Cart Test Cases(failed)" parallel="tests">
     <classes>
       <class name="com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest">
         <methods>
