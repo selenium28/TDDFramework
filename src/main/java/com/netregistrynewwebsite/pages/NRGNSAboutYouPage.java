@@ -64,16 +64,16 @@ public class NRGNSAboutYouPage extends TestBase{
     	
     	organisation.sendKeys("Netregistry");
     	industry.sendKeys("Automotive");
-    	firstName.sendKeys("Roy Jeffrey");
-    	lastName.sendKeys("Alcantara");
-    	streetAddress.sendKeys("469 La Trobe Street");
+    	firstName.sendKeys("QA");
+    	lastName.sendKeys("Team");
+    	streetAddress.sendKeys("505 Lt Collins Street");
     	city.sendKeys("Melbourne");
     	//country.sendKeys("Australia");
     	state.sendKeys("Victoria");
     	postcode.sendKeys("3000");
     	phoneNumber.sendKeys("0386242440");
-    	email.sendKeys("roy.alcantara@melbourneit.com.au");
-    	emailConfirmation.sendKeys("roy.alcantara@melbourneit.com.au");
+    	email.sendKeys("_qa-development@arq.group");
+    	emailConfirmation.sendKeys("_qa-development@arq.group");
     	
     }
     

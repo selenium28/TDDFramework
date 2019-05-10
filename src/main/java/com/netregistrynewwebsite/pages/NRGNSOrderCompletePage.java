@@ -1,6 +1,7 @@
 package com.netregistrynewwebsite.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -26,6 +27,9 @@ public class NRGNSOrderCompletePage extends TestBase{
     public Boolean isOrderComplete() throws InterruptedException{
     	Boolean flag = false;
     	System.out.println("Now in order complete page");
+    	
+    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", orderStatus);
+    	
     	
     	Thread.sleep(5000);
     	if (orderStatus.getText().contentEquals("Thank you for your order")) {
@@ -55,6 +59,7 @@ public class NRGNSOrderCompletePage extends TestBase{
 		
 		Thread.sleep(5000);
 		
+			
     	WebElement referenceIdNumberElement = driver.findElement(By.xpath("//div[@class='row row-domain']/div[1]"));
 		if (referenceIdNumberElement.isDisplayed()) {
 			referenceIDNumber = referenceIdNumberElement.getText(); 

@@ -1,6 +1,7 @@
 package com.netregistryoldwebsite.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -29,6 +30,8 @@ public class NRGOrderCompletePage extends TestBase{
     	Boolean flag = false;
     	System.out.println("Now in order complete page");
     	
+    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", orderStatus);
+  
     	Thread.sleep(5000);
     	if (orderStatus.getText().contentEquals("Order Complete")) {
     		System.out.println("Order Complete Status");

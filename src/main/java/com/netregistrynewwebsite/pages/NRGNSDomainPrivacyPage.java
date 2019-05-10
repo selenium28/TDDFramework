@@ -36,6 +36,7 @@ public class NRGNSDomainPrivacyPage extends TestBase{
     
     public NRGNSEmailAndOffice365PackagesPage clickContinueButton() throws InterruptedException {
 
+    	Thread.sleep(3000);
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", continueButton);
     	continueButton.click();
     	
