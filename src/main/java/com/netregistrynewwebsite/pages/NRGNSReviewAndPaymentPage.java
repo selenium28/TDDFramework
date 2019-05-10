@@ -25,6 +25,9 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     
     @FindBy(how=How.XPATH, using = "//div[@class='continue-btn-container']/button[@class='btn green']")
     WebElement completeOrderButton;
+    
+    @FindBy(how=How.ID, using = "recaptcha-token")
+    WebElement recaptchaChallenge;
 	
     
     //Initializing Page Objects
@@ -82,6 +85,25 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
        	
        	Thread.sleep(4000);
        	return new NRGNSOrderCompletePage();  	
+    }
+    
+    
+    public Boolean isReCaptchaChallengeDisplayed() throws InterruptedException{
+    	
+    	Boolean flag = false;
+    	System.out.println("Verify if recaptcha is displayed");
+    	
+    	Thread.sleep(3000);
+    	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")));
+    	
+    	if(recaptchaChallenge.isDisplayed()) {
+    		System.out.println("Recaptcha Challenge Displayed!");
+    		System.out.println(recaptchaChallenge.getText());
+    		flag = true;
+       	}
+    	
+    	return flag;
+    	
     }
 }
 
