@@ -91,20 +91,22 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     public Boolean isReCaptchaChallengeDisplayed() throws InterruptedException{
     	
     	Boolean flag = false;
+    	String recaptchatoken = null;
     	
     	Thread.sleep(3000);
     	System.out.println("Verify if recaptcha is displayed");
     	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")));
+    	((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('type', '')", recaptchaChallenge);
+    	recaptchatoken = 	recaptchaChallenge.getAttribute("value");
     	    	
-    	if(recaptchaChallenge.isDisplayed()) {
-	    	((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('type', '')", recaptchaChallenge);
+    	if(recaptchaChallenge != null) {
+    		
+    		System.out.println("Recaptch Token: " + recaptchatoken);
 	    	System.out.println("Recaptcha Challenge Displayed!");
-	    	System.out.println("Recaptch Token: " + recaptchaChallenge.getAttribute("value"));
     		flag = true;
        	}
     	
     	return flag;
-    	
     }
 }
 
