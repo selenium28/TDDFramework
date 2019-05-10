@@ -26,7 +26,7 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     @FindBy(how=How.XPATH, using = "//div[@class='continue-btn-container']/button[@class='btn green']")
     WebElement completeOrderButton;
     
-    @FindBy(how=How.ID, using = "recaptcha-token")
+    @FindBy(how=How.XPATH, using = "//body/input")
     WebElement recaptchaChallenge;
 	
     
@@ -91,28 +91,17 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     public Boolean isReCaptchaChallengeDisplayed() throws InterruptedException{
     	
     	Boolean flag = false;
-    	System.out.println("Verify if recaptcha is displayed");
     	
     	Thread.sleep(3000);
+    	System.out.println("Verify if recaptcha is displayed");
     	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")));
-    	
-    	
-    	((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('type', '')", driver.findElement(By.xpath("//body/input")));
-    	System.out.println("Recaptcha Challenge Displayed!");
-    	System.out.println((driver.findElement(By.xpath("//body/input"))).getAttribute("value"));
-  
-//    	System.out.println(driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")).getAttribute("value"));
-    	
-//    	
-//    	System.out.println(driver.findElement(By.id("recaptcha-token")).getAttribute("));
-    	//System.out.println(recaptchaChallenge.getText());
-    	//flag = true;
-    	
-//    	if(recaptchaChallenge.isDisplayed()) {
-//    		System.out.println("Recaptcha Challenge Displayed!");
-//    		System.out.println(recaptchaChallenge.getText());
-//    		flag = true;
-//       	}
+    	    	
+    	if(recaptchaChallenge.isDisplayed()) {
+	    	((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('type', '')", recaptchaChallenge);
+	    	System.out.println("Recaptcha Challenge Displayed!");
+	    	System.out.println("Recaptch Token: " + recaptchaChallenge.getAttribute("value"));
+    		flag = true;
+       	}
     	
     	return flag;
     	

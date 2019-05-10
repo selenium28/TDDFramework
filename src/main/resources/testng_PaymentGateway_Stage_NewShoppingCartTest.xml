@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Payment Gateway Stage New Shopping Cart Test Suite" thread-count="2" parallel="tests" preserve-order="true">
+<suite name="Payment Gateway Stage New Shopping Cart Test Suite" thread-count="1" parallel="tests" preserve-order="true">
 
 	<parameter name="environment" 	  value="stagingdev-5" />
 	<!-- 	Iteration value (minimum = 1, maximum = any) -->
