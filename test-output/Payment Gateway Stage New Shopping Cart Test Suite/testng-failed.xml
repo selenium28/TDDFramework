@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Stage New Shopping Cart Test Suite]" parallel="tests">
   <parameter name="environment" value="stagingdev-5"/>
+  <parameter name="iteration" value="2"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
