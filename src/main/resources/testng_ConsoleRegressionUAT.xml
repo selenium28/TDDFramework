@@ -15,7 +15,7 @@
 		<classes>
 			<class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
 			    <methods>
-<!--                     <include name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" /> -->
+                    <include name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" />
                     
 <!--                     <include name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingExistingCardInCustomerPortal" /> -->
                     

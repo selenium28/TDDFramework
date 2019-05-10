@@ -95,15 +95,19 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     	
     	Thread.sleep(3000);
     	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")));
+    	
+    	System.out.println(driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")).getAttribute("value"));
     	System.out.println("Recaptcha Challenge Displayed!");
-    	System.out.println(recaptchaChallenge.getText());
+//    	
+//    	System.out.println(driver.findElement(By.id("recaptcha-token")).getAttribute("));
+    	//System.out.println(recaptchaChallenge.getText());
+    	//flag = true;
     	
-    	
-    	if(recaptchaChallenge.isDisplayed()) {
-    		System.out.println("Recaptcha Challenge Displayed!");
-    		System.out.println(recaptchaChallenge.getText());
-    		flag = true;
-       	}
+//    	if(recaptchaChallenge.isDisplayed()) {
+//    		System.out.println("Recaptcha Challenge Displayed!");
+//    		System.out.println(recaptchaChallenge.getText());
+//    		flag = true;
+//       	}
     	
     	return flag;
     	
