@@ -101,17 +101,17 @@ public class RegressionNewShoppingCartTest extends TestBase{
 			//Test Step 4: Input customer credit card details and complete the order
 			nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 			nrgnsreviewandpaymentpage.tickTermsAndConditions();
-//			nrgnsordercompletepage = nrgnsreviewandpaymentpage.clickCompleteOrder();
-//			
-//			//Test Step 5: Verify if order is completed and get order details (Account Reference and Reference ID)
-//			Assert.assertTrue(nrgnsordercompletepage.isOrderComplete(), "Order is not completed");
-//			strWorkflowId_01 = nrgnsordercompletepage.getSingleReferenceID();
-//			strAccountReference = nrgnsordercompletepage.getAccountReferenceID();
-//			
-//			System.out.println("Account Reference:" + strAccountReference);	
-//			System.out.println("Reference ID[0]:" + strWorkflowId_01);
-//			
-//			driver.close();
+			nrgnsordercompletepage = nrgnsreviewandpaymentpage.clickCompleteOrder();
+			
+			//Test Step 5: Verify if order is completed and get order details (Account Reference and Reference ID)
+			Assert.assertTrue(nrgnsordercompletepage.isOrderComplete(), "Order is not completed");
+			strWorkflowId_01 = nrgnsordercompletepage.getSingleReferenceID();
+			strAccountReference = nrgnsordercompletepage.getAccountReferenceID();
+			
+			System.out.println("Account Reference:" + strAccountReference);	
+			System.out.println("Reference ID[0]:" + strWorkflowId_01);
+			
+			driver.close();
 			System.out.println("End Test: testDomainRegistrationOrderInNewShoppingCart");
 		}	
 	}
