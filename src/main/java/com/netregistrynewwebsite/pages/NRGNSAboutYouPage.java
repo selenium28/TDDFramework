@@ -58,7 +58,7 @@ public class NRGNSAboutYouPage extends TestBase{
     @FindBy(how=How.ID, using = "password")
     WebElement password;
     
-    @FindBy(how=How.XPATH, using = "//div[@class='element-group cta']/button[@class='btn green']")
+    @FindBy(how=How.XPATH, using = "//form[@name='loginForm']/div[1]/div[4]/button")
     WebElement loginButton;
     
     
@@ -107,6 +107,7 @@ public class NRGNSAboutYouPage extends TestBase{
     	if(loginButton.isDisplayed()||loginButton.isEnabled()) {
     		
     		loginButton.click();
+    		System.out.println("Login Button was clicked");
     	}
     	else {
  			

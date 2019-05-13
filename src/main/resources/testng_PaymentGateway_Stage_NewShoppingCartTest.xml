@@ -4,7 +4,7 @@
 
 	<parameter name="environment" 	  value="stagingdev-5" />
 	<!-- 	Iteration value (minimum = 1, maximum = any) -->
-	<parameter name="iteration"       value="3" />
+	<parameter name="iteration"       value="1" />
 	
 	
 	<listeners>
@@ -18,7 +18,7 @@
 			<class name="com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest">
 				<methods>
 	            		<include name="testDomainOrderInNewShoppingCartForNewBTCustomerUsingNewCard" />
-<!-- 	            		<include name="testDomainOrderInNewShoppingCartForReturningBTCustomerUsingNewCard" /> -->
+	            		<include name="testDomainOrderInNewShoppingCartForReturningBTCustomerUsingNewCard" />
 	            </methods>
 	        </class>
  

@@ -77,10 +77,9 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Input credit card details and submit the order 
-		//nrgbillingpage.setBTFormCreditCardDetails("Test Console Regression", "4715276659101053", "08", "2020", "390");
 		nrgbillingpage.setBTFormCreditCardDetails("MELBOURNE IT LTD", "4715276659601714", "06", "2021", "557");
 		nrgbillingpage.tickTermsAndConditions();
-        //nrgordercompletepage = nrgbillingpage.clickContinueButton();
+        nrgordercompletepage = nrgbillingpage.clickContinueButton();
         // driver.close();
 	}
 	
@@ -117,10 +116,9 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
-		//nrgbillingpage.selectExistingCreditCard("Visa credit card. Owner: Melbourne IT LTD Number: 4715********1714 Expiry: 06/2021");
 		nrgbillingpage.selectExistingCreditCardOption("Visa");	
 		nrgbillingpage.tickTermsAndConditions();
-		//nrgordercompletepage = nrgbillingpage.clickContinueButton();
+		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		//driver.close();
 	}
 	

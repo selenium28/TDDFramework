@@ -106,7 +106,7 @@ public class RegressionNewShoppingCartTest extends TestBase{
 			//Test Step 5: Verify if recaptcha challenge is dislayed 
 			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
 			
-			driver.close();
+	//		driver.close();
 			System.out.println("End Test: testDomainOrderInNewShoppingCartForNewBTCustomerUsingNewCard");
 		}	
 	}
@@ -142,15 +142,15 @@ public class RegressionNewShoppingCartTest extends TestBase{
 			
 			if (environment.equals("stagingdev-5")) {
 				
-				strTld = ".com";
-				strCardOwnerName = "Test NRG New Cart";
+				strTld = ".com";			    
+			    strCardOwnerName = "Braintree Returning Customer";
 				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
+			    strCardExpiryMonth = "05";
+			    strCardExpiryYear = "2028";
+			    strCardSecurityCode = "331";
 			    
-			    strCustomerAccountReference = "MEL-6007";
-			    strCustomerPassword = "comein22";
+			    strCustomerAccountReference = "NET-1278";
+			    strCustomerPassword = "tyyNeJwr8";
 			    
 			}
 			
@@ -174,16 +174,21 @@ public class RegressionNewShoppingCartTest extends TestBase{
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickLoginButton();
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
 			
-//			//Test Step 4: Input customer credit card details and complete the order
-//			nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-//			nrgnsreviewandpaymentpage.tickTermsAndConditions();
-//			nrgnsreviewandpaymentpage.clickCompleteOrder();
-//			
-//			//Test Step 5: Verify if recaptcha challenge is dislayed 
-//			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+			
+			
+			//Test Step 4: Input customer credit card details and complete the order
+			nrgnsreviewandpaymentpage.selectNewCreditCardOption();
+			
+			
+		    nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+		    nrgnsreviewandpaymentpage.tickTermsAndConditions();
+		    nrgnsreviewandpaymentpage.clickCompleteOrder();
+		
+			//Test Step 5: Verify if recaptcha challenge is dislayed 
+			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
 			
 //			driver.close();
-//			System.out.println("End Test: testDomainOrderInNewShoppingCartForReturningBTCustomerUsingNewCard");
+			System.out.println("End Test: testDomainOrderInNewShoppingCartForReturningBTCustomerUsingNewCard");
 		}	
 	}
 	

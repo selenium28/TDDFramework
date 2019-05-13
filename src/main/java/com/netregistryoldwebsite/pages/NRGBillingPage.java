@@ -34,6 +34,9 @@ public class NRGBillingPage extends TestBase{
 
 	@FindBy(how=How.XPATH, using = "//div[@class='next']/input[2]")
     WebElement placeYourOrderButton;
+	
+    @FindBy(how=How.XPATH, using = "//body/input")
+    WebElement recaptchaChallenge;
 
     //Initializing Page Objects
     public NRGBillingPage(){
@@ -227,6 +230,30 @@ public class NRGBillingPage extends TestBase{
        	}
 
     }
+    
+    public Boolean isReCaptchaChallengeDisplayed() throws InterruptedException{
+    	
+    	Boolean flag = false;
+    	String recaptchatoken = null;
+    	
+    	Thread.sleep(3000);
+    	System.out.println("Verify if recaptcha is displayed");
+    	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")));
+    	((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('type', '')", recaptchaChallenge);
+    	recaptchatoken = 	recaptchaChallenge.getAttribute("value");
+    	    	
+    	if(recaptchaChallenge != null) {
+    		
+    		System.out.println("Recaptcha Token: " + recaptchatoken);
+	    	System.out.println("Recaptcha Challenge Displayed!");
+    		flag = true;
+       	}
+    	
+    	Thread.sleep(10000);
+    	
+    	return flag;
+    }
+    
 
 	public NRGOrderCompletePage clickPlaceYourOrder(){
        	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", placeYourOrderButton);

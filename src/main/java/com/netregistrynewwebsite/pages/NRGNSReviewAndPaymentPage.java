@@ -38,6 +38,7 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     
     //Methods    
     public void setBTFormCreditCardDetails(String cardowner, String cardnumber, String cardexpirymonth, String cardexpiryyear, String cardsecuritycode){
+    	
     	driver.findElement(By.xpath("//div[@class='panel panel-default bootstrap-basic']/div[@class='table']/div[@class='element-group']/input[@id='name']")).clear();
     	driver.findElement(By.xpath("//div[@class='panel panel-default bootstrap-basic']/div[@class='table']/div[@class='element-group']/input[@id='name']")).sendKeys(cardowner);
     	driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='card-number']/iframe")));
@@ -58,7 +59,7 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     	driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='cvv']/iframe[@id='braintree-hosted-field-cvv']")));
     	driver.findElement(By.xpath("//form/input")).clear();
     	driver.findElement(By.xpath("//form/input")).sendKeys(cardsecuritycode); 
-    	driver.switchTo().defaultContent();
+    	driver.switchTo().defaultContent(); 		
     }
     
     public void tickTermsAndConditions(){
@@ -109,6 +110,11 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     	Thread.sleep(10000);
     	
     	return flag;
+    }
+    
+    public void selectNewCreditCardOption(){
+       	System.out.println("select new credit card option");
+       	driver.findElement(By.xpath("//div[@class='cart-box']/div[2]/div/div[2]/div[2]/div/label")).click();
     }
 }
 

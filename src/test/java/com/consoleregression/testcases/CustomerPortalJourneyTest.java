@@ -88,9 +88,12 @@ public class CustomerPortalJourneyTest extends TestBase{
 		//Test Step 2: Input credit card details and submit the order 
 		nrgbillingpage.setBTFormCreditCardDetails("Test Console Regression", "4111111111111111", "11", "2019", "123");
         nrgbillingpage.tickTermsAndConditions();
-        nrgordercompletepage = nrgbillingpage.clickContinueButton();
+        nrgbillingpage.clickContinueButton();
         
-        //driver.close();
+        //Test Step 3: Verify if recaptcha challenge is dislayed 
+		Assert.assertTrue(nrgbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+        
+        driver.close();
 	}
 	
 	@Parameters({"environment"})
@@ -131,6 +134,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		
+		//Test Step 3: Verify if order is completed
 		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
 		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
 		strAccountReference = nrgordercompletepage.getAccountReferenceID();
@@ -179,6 +183,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		
+		//Test Step 3: Verify if order is completed
 		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
 		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
 		strAccountReference = nrgordercompletepage.getAccountReferenceID();
@@ -195,7 +200,9 @@ public class CustomerPortalJourneyTest extends TestBase{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
+		String strAccountReference = null;
 		String strTld = null;
+		String strWorkflowId = null;
 		
 		String strCardOwnerName = null;
 		String strCardType = null;
@@ -229,7 +236,6 @@ public class CustomerPortalJourneyTest extends TestBase{
 		
 		//Test Step 2: Input credit card details and submit the order 
 		nrgbillingpage.selectNewCreditCardOption();
-		
 		strCardOwnerName = "Quest Returning Customer";
 		strCardType = "Visa";
 		strCardNumber = "4005519200000004";
@@ -239,6 +245,13 @@ public class CustomerPortalJourneyTest extends TestBase{
 	    nrgbillingpage.setQuestFormCreditCardDetails(strCardOwnerName, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+		
+		//Test Step 3: Verify if order is completed
+		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
+		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
+		strAccountReference = nrgordercompletepage.getAccountReferenceID();
+		System.out.println("Account Reference:" + strAccountReference);	
+		System.out.println("Reference ID[0]:" + strWorkflowId);	
 
 		driver.close();
 	}
@@ -290,9 +303,11 @@ public class CustomerPortalJourneyTest extends TestBase{
 	    strCardSecurityCode = "331";
 	    nrgbillingpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 	    nrgbillingpage.tickTermsAndConditions();
-		nrgordercompletepage = nrgbillingpage.clickContinueButton();
-	    
-	   // driver.close();
+		nrgbillingpage.clickContinueButton();
+		
+		//Test Step 3: Verify if recaptcha challenge is dislayed 
+		Assert.assertTrue(nrgbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+		
+		driver.close();
 	}
-	
 }
