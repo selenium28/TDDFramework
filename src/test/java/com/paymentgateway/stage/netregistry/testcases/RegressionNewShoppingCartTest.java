@@ -149,8 +149,8 @@ public class RegressionNewShoppingCartTest extends TestBase{
 			    strCardExpiryYear = "2028";
 			    strCardSecurityCode = "331";
 			    
-			    strCustomerAccountReference = "NET-1278";
-			    strCustomerPassword = "tyyNeJwr8";
+			    strCustomerAccountReference = "NET-1279";
+			    strCustomerPassword = "JxuY8i8T9";
 			    
 			}
 			
