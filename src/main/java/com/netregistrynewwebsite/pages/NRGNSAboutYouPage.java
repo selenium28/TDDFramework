@@ -119,7 +119,7 @@ public class NRGNSAboutYouPage extends TestBase{
  		}
     	
     	
-    	Thread.sleep(5000);
+    	Thread.sleep(10000);
     	return new NRGNSRegistrantContactPage();
     }
     
