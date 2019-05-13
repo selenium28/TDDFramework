@@ -87,8 +87,11 @@ public class NRGNSAboutYouPage extends TestBase{
     	
     }
     
-    public void setReturningCustomerContacts(String customeraccountreference, String customerpassword){
+    public void setReturningCustomerContacts(String customeraccountreference, String customerpassword) throws InterruptedException{
+    	
+    	Thread.sleep(2000);
     	userName.sendKeys(customeraccountreference);
+    	Thread.sleep(2000);
     	password.sendKeys(customerpassword);
     }
     
@@ -101,8 +104,9 @@ public class NRGNSAboutYouPage extends TestBase{
     	
     }
     
-    public NRGNSRegistrantContactPage clickLoginButton(){
+    public NRGNSRegistrantContactPage clickLoginButton() throws InterruptedException{
     	
+    	Thread.sleep(2000);
     	System.out.println("clicking login button");   	
     	if(loginButton.isDisplayed()||loginButton.isEnabled()) {
     		
