@@ -78,7 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14287125";
+		String strWorkflowId = "14356813";
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		
@@ -147,7 +147,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14287127";
+		String strWorkflowId = "14356824";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -217,7 +217,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14287347";
+		String strWorkflowId = "14356838";
 		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		
@@ -292,7 +292,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14287161";
+		String strWorkflowId = "14357046";
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
@@ -301,7 +301,7 @@ public class SalesDBJourneyTest extends TestBase{
 		if (environment.equals("prod")) {
 			strTld = "nz";
 			strRegistrationPeriod = "1 x Y";
-			strGreenCode = "825-00";
+			strGreenCode = "MEL-6005";
 			strPaymentMethod = "Prepaid credit: ";
 			strRegistrantDetails = "MelbourneIT";
 		}

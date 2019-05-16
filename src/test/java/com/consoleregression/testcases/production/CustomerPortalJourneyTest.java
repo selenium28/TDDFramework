@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -80,6 +81,10 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage.setBTFormCreditCardDetails("MELBOURNE IT LTD", "4715276659601714", "06", "2021", "557");
 		nrgbillingpage.tickTermsAndConditions();
         nrgordercompletepage = nrgbillingpage.clickContinueButton();
+        
+        //Test Step 3: Verify if recaptcha challenge is dislayed 
+      	Assert.assertTrue(nrgbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+        
         // driver.close();
 	}
 	
@@ -89,7 +94,9 @@ public class CustomerPortalJourneyTest extends TestBase{
 	
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
+		String strAccountReference = null;
 		String strTld = null;
+		String strWorkflowId = null;
 
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -119,6 +126,13 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage.selectExistingCreditCardOption("Visa");	
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+		
+		//Test Step 3: Verify if order is completed
+		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
+		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
+		strAccountReference = nrgordercompletepage.getAccountReferenceID();
+		System.out.println("Account Reference:" + strAccountReference);	
+		System.out.println("Reference ID[0]:" + strWorkflowId);	
 		//driver.close();
 	}
 	

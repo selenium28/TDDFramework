@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Payment Gateway Stage New Shopping Cart Test Suite" thread-count="1" parallel="tests" preserve-order="true">
 
-	<parameter name="environment" 	  value="stagingdev-5" />
-	<!-- Iteration value (minimum = 1, maximum = any) -->
-	<parameter name="iteration"       value="1" /> 
+	<parameter name="environment" 	  value="prod" />
+	<!-- 	Iteration value (minimum = 1, maximum = any) -->
+	<parameter name="iteration"       value="1" />
 	
 	<listeners>
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
@@ -14,11 +14,11 @@
 		<classes>
 		
 			<!-- Netregistry Virtualization -->
-			<class name="com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest"> 
+			<class name="com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest">
 				<methods>
 	            		<include name="testDomainOrderInNewShoppingCartForNewBTCustomerUsingNewCard" />
-	            		<include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingNewCard" />
-	            		<include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingExistingCard" />
+<!-- 	            		<include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingNewCard" /> -->
+<!-- 	            		<include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingExistingCard" /> -->
 	            		
 	            </methods>
 	        </class>

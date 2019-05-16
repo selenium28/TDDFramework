@@ -89,10 +89,11 @@ public class NRGNSAboutYouPage extends TestBase{
     
     public void setReturningCustomerContacts(String customeraccountreference, String customerpassword) throws InterruptedException{
     	
-    	Thread.sleep(2000);
+    	Thread.sleep(3000);
     	userName.sendKeys(customeraccountreference);
-    	Thread.sleep(2000);
+    	Thread.sleep(3000);
     	password.sendKeys(customerpassword);
+    	Thread.sleep(3000);
     }
     
     public NRGNSRegistrantContactPage clickContinueButton() throws InterruptedException {
@@ -117,7 +118,6 @@ public class NRGNSAboutYouPage extends TestBase{
  			
     		System.out.println("element not found");
  		}
-    	
     	
     	Thread.sleep(10000);
     	return new NRGNSRegistrantContactPage();

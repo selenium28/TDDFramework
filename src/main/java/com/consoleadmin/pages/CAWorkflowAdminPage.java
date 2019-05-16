@@ -89,7 +89,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	System.out.println("Execute Action button clicked");
-    	Thread.sleep(20000);			
+    	Thread.sleep(60000);			
     }
     
     

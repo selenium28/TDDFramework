@@ -38,8 +38,8 @@ public class TestBase{
 			System.setProperty("webdriver.chrome.driver", "seleniumwebdriver/chromedriver/chromedriver.exe");
 
 	        ChromeOptions options = new ChromeOptions();
-	        options.addArguments("--disable-gpu");
-	        options.addArguments("--disable-browser-side-navigation");
+//	        options.addArguments("--disable-gpu");
+//	        options.addArguments("--disable-browser-side-navigation");
 	        driver = new ChromeDriver(options);
 		}
 		else if(browserName.equals("firefox")){

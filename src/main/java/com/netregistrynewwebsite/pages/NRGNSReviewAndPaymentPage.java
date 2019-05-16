@@ -113,8 +113,16 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     }
     
     public void selectNewCreditCardOption(){
+    	
        	System.out.println("select new credit card option");
        	driver.findElement(By.xpath("//div[@class='cart-box']/div[2]/div/div[2]/div[2]/div/label")).click();
+    }
+    
+    public void selectExistingCreditCard(String cardnumber){
+
+    	System.out.println("select existing credit card");
+    	driver.findElement(By.xpath("//div[@class='cart-box']/div[2]/div/div[2]/div[1]/div/label")).click();
+//    	driver.findElement(By.partialLinkText("************4444"));
     }
 }
 

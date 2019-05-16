@@ -17,7 +17,8 @@ public class NRGNSRegistrantContactPage extends TestBase{
 	
     
     //Initializing Page Objects
-    public NRGNSRegistrantContactPage(){
+    public NRGNSRegistrantContactPage() throws InterruptedException{
+    	Thread.sleep(5000);
     	PageFactory.initElements(driver, this);
     }
 

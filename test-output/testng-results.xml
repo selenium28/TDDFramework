@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="2" passed="0">
+<testng-results skipped="0" failed="1" ignored="2" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Payment Gateway Stage New Shopping Cart Test Suite" duration-ms="59296" started-at="2019-05-13T01:45:12Z" finished-at="2019-05-13T01:46:11Z">
+  <suite name="Payment Gateway Stage New Shopping Cart Test Suite" duration-ms="82304" started-at="2019-05-15T23:42:15Z" finished-at="2019-05-15T23:43:38Z">
     <groups>
     </groups>
-    <test name="Payment Gateway Stage New Shopping Cart Test Cases" duration-ms="59296" started-at="2019-05-13T01:45:12Z" finished-at="2019-05-13T01:46:11Z">
+    <test name="Payment Gateway Stage New Shopping Cart Test Cases" duration-ms="82304" started-at="2019-05-15T23:42:15Z" finished-at="2019-05-15T23:43:38Z">
       <class name="com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest">
-        <test-method status="FAIL" signature="testDomainOrderInNewShoppingCartForReturningBTCustomerUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest@5442a311]" name="testDomainOrderInNewShoppingCartForReturningBTCustomerUsingNewCard" duration-ms="59252" started-at="2019-05-13T01:45:12Z" finished-at="2019-05-13T01:46:11Z">
+        <test-method status="FAIL" signature="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingExistingCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest@5442a311]" name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingExistingCard" duration-ms="82268" started-at="2019-05-15T23:42:15Z" finished-at="2019-05-15T23:43:38Z">
           <params>
             <param index="0">
               <value>
@@ -28,10 +28,10 @@
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
-System info: host: 'MIT01524', ip: '192.168.153.207', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50907}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
-Session ID: ce909ca339f19a099ca751483a2e939e
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54668}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 8c994c4d126ed83d8bea1d62f0d64e5a
 *** Element info: {Using=xpath, value=//div[@class='cart-box']/div[1]/div[2]/div/label}]]>
             </message>
             <full-stacktrace>
@@ -41,10 +41,10 @@ Session ID: ce909ca339f19a099ca751483a2e939e
 Command duration or timeout: 0 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
-System info: host: 'MIT01524', ip: '192.168.153.207', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50907}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
-Session ID: ce909ca339f19a099ca751483a2e939e
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54668}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 74.0.3729.131, webStorageEnabled: true}
+Session ID: 8c994c4d126ed83d8bea1d62f0d64e5a
 *** Element info: {Using=xpath, value=//div[@class='cart-box']/div[1]/div[2]/div/label}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -71,8 +71,8 @@ at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiri
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-at com.netregistrynewwebsite.pages.NRGNSReviewAndPaymentPage.tickTermsAndConditions(NRGNSReviewAndPaymentPage.java:92)
-at com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest.testDomainOrderInNewShoppingCartForReturningBTCustomerUsingNewCard(RegressionNewShoppingCartTest.java:188)
+at com.netregistrynewwebsite.pages.NRGNSReviewAndPaymentPage.tickTermsAndConditions(NRGNSReviewAndPaymentPage.java:68)
+at com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest.testDomainOrderInNewShoppingCartForExistingBTCustomerUsingExistingCard(RegressionNewShoppingCartTest.java:270)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -98,7 +98,7 @@ at java.lang.Thread.run(Unknown Source)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDomainOrderInNewShoppingCartForReturningBTCustomerUsingNewCard -->
+        </test-method> <!-- testDomainOrderInNewShoppingCartForExistingBTCustomerUsingExistingCard -->
       </class> <!-- com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest -->
     </test> <!-- Payment Gateway Stage New Shopping Cart Test Cases -->
   </suite> <!-- Payment Gateway Stage New Shopping Cart Test Suite -->
