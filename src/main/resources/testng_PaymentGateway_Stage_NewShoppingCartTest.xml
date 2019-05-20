@@ -16,8 +16,8 @@
 			<!-- Netregistry Virtualization -->
 			<class name="com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest"> 
 				<methods>
-	            		<include name="testDomainOrderInNewShoppingCartForNewBTCustomerUsingNewCard" />
-	            		<include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingNewCard" />
+<!-- 	            		<include name="testDomainOrderInNewShoppingCartForNewBTCustomerUsingNewCard" /> -->
+<!-- 	            		<include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingNewCard" /> -->
 	            		<include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingExistingCard" />
 	            		
 	            </methods>
