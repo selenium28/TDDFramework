@@ -120,8 +120,7 @@ public class NRGNSAboutYouPage extends TestBase{
     		System.out.println("element not found");
  		}
     	
-   // 	Thread.sleep(10000);
-//    	driver.manage().deleteAllCookies();
+    	Thread.sleep(5000);
     	return new NRGNSRegistrantContactPage();
     }
     

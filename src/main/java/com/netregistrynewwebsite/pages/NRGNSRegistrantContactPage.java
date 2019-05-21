@@ -39,13 +39,7 @@ public class NRGNSRegistrantContactPage extends TestBase{
     public NRGNSReviewAndPaymentPage clickSelectButton() throws InterruptedException {
 
     	Thread.sleep(5000);
-    	driver.navigate().refresh(); 
-    	Thread.sleep(5000);
-    	driver.get(driver.getCurrentUrl());
-    	Thread.sleep(3000);
-    	driver.get(driver.getCurrentUrl());
-    	
-    	
+
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", selectButton);
     	selectButton.click();
     	

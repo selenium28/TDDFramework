@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest">
+      <class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard">
         <methods>
-          <include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingNewCard"/>
-          <include name="testDomainOrderInNewShoppingCartForNewBTCustomerUsingNewCard"/>
           <include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingExistingCard"/>
+          <include name="testCaptchaForNewCustomerUsingNewCard"/>
+          <include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingNewCard"/>
         </methods>
-      </class> <!-- com.paymentgateway.stage.netregistry.testcases.RegressionNewShoppingCartTest -->
+      </class> <!-- com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
