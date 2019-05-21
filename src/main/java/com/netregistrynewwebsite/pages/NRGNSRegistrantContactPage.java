@@ -18,15 +18,34 @@ public class NRGNSRegistrantContactPage extends TestBase{
     
     //Initializing Page Objects
     public NRGNSRegistrantContactPage() throws InterruptedException{
-    	Thread.sleep(5000);
+   	
+
     	PageFactory.initElements(driver, this);
+
+//        try{
+//        	Thread.sleep(8000);
+//        	driver.navigate().refresh();
+//        	driver.get(driver.getCurrentUrl());
+//            
+//        }
+//        catch(Exception er){       
+//          
+//        	er.printStackTrace();
+//        } 
     }
 
 
     //Methods    
     public NRGNSReviewAndPaymentPage clickSelectButton() throws InterruptedException {
 
+    	Thread.sleep(5000);
+    	driver.navigate().refresh(); 
+    	Thread.sleep(5000);
+    	driver.get(driver.getCurrentUrl());
     	Thread.sleep(3000);
+    	driver.get(driver.getCurrentUrl());
+    	
+    	
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", selectButton);
     	selectButton.click();
     	

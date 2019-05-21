@@ -1,6 +1,7 @@
 package com.netregistrynewwebsite.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -65,8 +66,7 @@ public class NRGNSAboutYouPage extends TestBase{
     
     //Initializing Page Objects
     public NRGNSAboutYouPage(){
-    	PageFactory.initElements(driver, this);
-    }
+    	PageFactory.initElements(driver, this);    }
 
       
     //Methods    
@@ -94,6 +94,7 @@ public class NRGNSAboutYouPage extends TestBase{
     	Thread.sleep(3000);
     	password.sendKeys(customerpassword);
     	Thread.sleep(3000);
+    	password.sendKeys(Keys.ENTER);
     }
     
     public NRGNSRegistrantContactPage clickContinueButton() throws InterruptedException {
@@ -119,7 +120,8 @@ public class NRGNSAboutYouPage extends TestBase{
     		System.out.println("element not found");
  		}
     	
-    	Thread.sleep(10000);
+   // 	Thread.sleep(10000);
+//    	driver.manage().deleteAllCookies();
     	return new NRGNSRegistrantContactPage();
     }
     

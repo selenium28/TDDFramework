@@ -113,7 +113,7 @@ public class RegressionNewShoppingCartTest extends TestBase{
 			//Test Step 5: Verify if recaptcha challenge is dislayed 
 			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
 			
-			driver.close();
+			//driver.close();
 			System.out.println("End Test: testDomainOrderInNewShoppingCartForNewBTCustomerUsingNewCard");
 		}	
 	}
@@ -155,8 +155,11 @@ public class RegressionNewShoppingCartTest extends TestBase{
 			    strCardExpiryYear = "2028";
 			    strCardSecurityCode = "331";
 			    
-			    strCustomerAccountReference = "NET-1273";
-			    strCustomerPassword = "comein22";
+//			    strCustomerAccountReference = "NET-1273";
+//			    strCustomerPassword = "comein22";
+			    
+				strCustomerAccountReference = "NET-1290";
+				strCustomerPassword = "mjj6hrex8";
 			    
 			}
 			else if (environment.equals("prod")) {
@@ -201,7 +204,7 @@ public class RegressionNewShoppingCartTest extends TestBase{
 			//Test Step 5: Verify if recaptcha challenge is dislayed 
 			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
 			
-			driver.close();
+			//driver.close();
 			System.out.println("End Test: testDomainOrderInNewShoppingCartForExistingBTCustomerUsingNewCard");
 		}	
 	}
@@ -235,8 +238,12 @@ public class RegressionNewShoppingCartTest extends TestBase{
 				strTld = ".com";			    
 				strMaskedCardNumber = "************4444";
 				
-			    strCustomerAccountReference = "NET-1273";
-			    strCustomerPassword = "comein22";
+//			    strCustomerAccountReference = "NET-1273";
+//			    strCustomerPassword = "comein22";
+			   
+				strCustomerAccountReference = "NET-1290";
+				strCustomerPassword = "mjj6hrex8";
+			    
 			}
 			else if (environment.equals("prod")) {
 				
@@ -279,7 +286,7 @@ public class RegressionNewShoppingCartTest extends TestBase{
 			System.out.println("Account Reference:" + strAccountReference);	
 			System.out.println("Reference ID[0]:" + strWorkflowId);	
 			
-			driver.close();
+			//driver.close();
 			System.out.println("End Test: testDomainOrderInNewShoppingCartForExistingBTCustomerUsingExistingCard");
 		}	
 	}

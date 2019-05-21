@@ -33,6 +33,7 @@ public class NRGNSSearchAddDomainsPage extends TestBase{
     //Initializing Page Objects
     public NRGNSSearchAddDomainsPage(){
     	PageFactory.initElements(driver, this);
+    	 driver.manage().deleteAllCookies();
     }
 
  

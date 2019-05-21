@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.util.TestUtil;
@@ -36,11 +38,17 @@ public class TestBase{
 		if(browserName.equals("chrome")){
 			
 			System.setProperty("webdriver.chrome.driver", "seleniumwebdriver/chromedriver/chromedriver.exe");
-
-	        ChromeOptions options = new ChromeOptions();
+//
+//	        ChromeOptions options = new ChromeOptions();
+//	       
 //	        options.addArguments("--disable-gpu");
 //	        options.addArguments("--disable-browser-side-navigation");
-	        driver = new ChromeDriver(options);
+//	        
+//	        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+//	        capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
+//	        driver = new ChromeDriver(options);
+			driver = new ChromeDriver(); 
+	        driver.manage().deleteAllCookies();
 		}
 		else if(browserName.equals("firefox")){
 			
