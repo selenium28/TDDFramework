@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Payment Gateway Stage New Shopping Cart Test Suite" duration-ms="66752" started-at="2019-05-21T23:23:06Z" finished-at="2019-05-21T23:24:13Z">
+  <suite name="Payment Gateway Stage New Shopping Cart Test Suite" duration-ms="90246" started-at="2019-05-22T03:12:15Z" finished-at="2019-05-22T03:13:46Z">
     <groups>
     </groups>
-    <test name="Payment Gateway Stage New Shopping Cart Test Cases" duration-ms="66752" started-at="2019-05-21T23:23:06Z" finished-at="2019-05-21T23:24:13Z">
+    <test name="Payment Gateway Stage New Shopping Cart Test Cases" duration-ms="90246" started-at="2019-05-22T03:12:15Z" finished-at="2019-05-22T03:13:46Z">
       <class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard">
-        <test-method status="PASS" signature="testCaptchaForNewCustomerUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard@42e26948]" name="testCaptchaForNewCustomerUsingNewCard" duration-ms="66720" started-at="2019-05-21T23:23:06Z" finished-at="2019-05-21T23:24:13Z">
+        <test-method status="PASS" signature="testCaptchaForNewCustomerUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard@42e26948]" name="testCaptchaForNewCustomerUsingNewCard" duration-ms="90176" started-at="2019-05-22T03:12:15Z" finished-at="2019-05-22T03:13:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[prod]]>
+                <![CDATA[stagingdev-5]]>
               </value>
             </param>
             <param index="1">
