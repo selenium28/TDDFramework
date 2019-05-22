@@ -89,7 +89,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	System.out.println("Execute Action button clicked");
-    	Thread.sleep(60000);			
+    	Thread.sleep(30000);			
     }
     
     
@@ -114,7 +114,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	System.out.println("Execute Action button clicked");
-    	Thread.sleep(40000);			
+    	Thread.sleep(30000);			
     }
     
     
