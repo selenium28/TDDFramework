@@ -29,5 +29,16 @@ public class NRGRegistrantContactPage extends TestBase {
 		}    	
     	return new NRGBillingPage();
     }
+    
+    public NRGEligibilityDetailsPage clickContinueButtonForEligibilityDetails(){
+    	System.out.println("clicking continue button for eligibility details");
+    	if(continueButton.isDisplayed()||continueButton.isEnabled()) {
+    		continueButton.click();
+    	}
+		else {
+			System.out.println("element not found");
+		}    	
+    	return new NRGEligibilityDetailsPage();
+    }
 	
 }

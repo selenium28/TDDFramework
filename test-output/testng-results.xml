@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Payment Gateway Stage New Shopping Cart Test Suite" duration-ms="90246" started-at="2019-05-22T03:12:15Z" finished-at="2019-05-22T03:13:46Z">
+  <suite name="Console Release Regression Test Suite" duration-ms="858246" started-at="2019-05-28T07:19:07Z" finished-at="2019-05-28T07:33:25Z">
     <groups>
     </groups>
-    <test name="Payment Gateway Stage New Shopping Cart Test Cases" duration-ms="90246" started-at="2019-05-22T03:12:15Z" finished-at="2019-05-22T03:13:46Z">
-      <class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard">
-        <test-method status="PASS" signature="testCaptchaForNewCustomerUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard@42e26948]" name="testCaptchaForNewCustomerUsingNewCard" duration-ms="90176" started-at="2019-05-22T03:12:15Z" finished-at="2019-05-22T03:13:46Z">
+    <test name="Console Release Regression Test Cases" duration-ms="858246" started-at="2019-05-28T07:19:07Z" finished-at="2019-05-28T07:33:25Z">
+      <class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForComAu">
+        <test-method status="PASS" signature="testDomainRegistration2WorkflowForComAu(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForComAu@53b32d7]" name="testDomainRegistration2WorkflowForComAu" duration-ms="250881" started-at="2019-05-28T07:24:07Z" finished-at="2019-05-28T07:28:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[stagingdev-5]]>
+                <![CDATA[uat1]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[netregistry]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCaptchaForNewCustomerUsingNewCard -->
-      </class> <!-- com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard -->
-    </test> <!-- Payment Gateway Stage New Shopping Cart Test Cases -->
-  </suite> <!-- Payment Gateway Stage New Shopping Cart Test Suite -->
+        </test-method> <!-- testDomainRegistration2WorkflowForComAu -->
+      </class> <!-- com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForComAu -->
+      <class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom">
+        <test-method status="PASS" signature="testDomainRegistration2WorkflowForCom(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom@343f4d3d]" name="testDomainRegistration2WorkflowForCom" duration-ms="300007" started-at="2019-05-28T07:19:07Z" finished-at="2019-05-28T07:24:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[netregistry]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDomainRegistration2WorkflowForCom -->
+      </class> <!-- com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom -->
+      <class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForOrg">
+        <test-method status="PASS" signature="testDomainRegistration2WorkflowForOrg(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForOrg@5442a311]" name="testDomainRegistration2WorkflowForOrg" duration-ms="307323" started-at="2019-05-28T07:28:18Z" finished-at="2019-05-28T07:33:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[netregistry]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDomainRegistration2WorkflowForOrg -->
+      </class> <!-- com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForOrg -->
+    </test> <!-- Console Release Regression Test Cases -->
+  </suite> <!-- Console Release Regression Test Suite -->
 </testng-results>

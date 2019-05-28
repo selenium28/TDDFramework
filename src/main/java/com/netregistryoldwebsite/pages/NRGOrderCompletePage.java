@@ -15,7 +15,7 @@ public class NRGOrderCompletePage extends TestBase{
 	@FindBy(how=How.XPATH, using = "//div[@class='inner']/div/h1")
 	WebElement orderStatus; 
 	
-	@FindBy(how=How.XPATH, using = "//div[@class='inner']/div/div[2]/p")
+	@FindBy(how=How.XPATH, using = "//div[@id='completeOrder']/p")
 	WebElement orderCompleteMessage; 
 	
 	//Initializing Page Objects
