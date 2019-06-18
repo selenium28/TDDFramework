@@ -89,7 +89,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	System.out.println("Execute Action button clicked");
-    	Thread.sleep(30000);			
+    	Thread.sleep(60000);			
     }
     
     
@@ -114,7 +114,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	System.out.println("Execute Action button clicked");
-    	Thread.sleep(45000);			
+    	Thread.sleep(60000);			
     }
     
     
@@ -231,6 +231,20 @@ public class CAWorkflowAdminPage extends TestBase{
     	//To add a waiting time for workflow to complete processing
     	Thread.sleep(120000);
     			
+    }
+    
+    public void processApprove() throws InterruptedException {
+
+    	//Click Execute for Approve
+    	Thread.sleep(5000);
+    	driver.findElement(By.xpath("//tbody/tr[3]/td[contains(text(),'approve')]/parent::tr/td[3]/a[text()='Execute']")).click();
+    	Thread.sleep(10000);
+    		
+    	//Click Execute Action
+    	driver.findElement(By.xpath("//tbody/tr[3]/td/input[@value='Execute Action']")).click();
+    	Thread.sleep(45000);
+    	
+    	System.out.println("Execute Action button clicked");
     }
     	
     public void processProductSetup2O365() throws InterruptedException {

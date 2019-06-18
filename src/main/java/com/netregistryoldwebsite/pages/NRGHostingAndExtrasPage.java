@@ -1,4 +1,6 @@
 package com.netregistryoldwebsite.pages;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -38,6 +40,12 @@ public class NRGHostingAndExtrasPage extends TestBase{
     
     @FindBy(how=How.XPATH, using = "//*[@id=\"CLOUD-BASIC\"]/div[2]/form/div/div[2]/div[3]/span[2]")
     WebElement yearlyProduct;
+    
+    @FindBy(how=How.XPATH, using = "//input[@id ='upgrade-warning-agreement']")
+    WebElement upgradeWarningCheckBox;
+    
+    @FindBy(how=How.XPATH, using = "//input[@type='submit' and @name='save']")
+    WebElement warningContinueButton;
     
     //Initializing Page Objects
     public NRGHostingAndExtrasPage(){
@@ -147,6 +155,36 @@ public class NRGHostingAndExtrasPage extends TestBase{
     	
     }
     
+	public NRGAddHostingPage selectBasicCloudHosting(String strPeriod) throws InterruptedException {
+    	System.out.println("Selecting hosting product");
+    	
+    	try {
+			Thread.sleep(5000);
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", basicCouldHosting);
+			basicCouldHosting.click();
+	        List<WebElement> opt = driver.findElements(By.xpath("//div[@id='CLOUD-BASIC']/div[2]/form/div//div[@class='combo-list']//div//span[1][@class='period']"));
+	       // System.out.println(opt.size());
+	        
+	        for(int i=0;i<=opt.size();i++)
+	        {
+	        	System.out.println(opt.get(i).getText());
+	        	if(opt.get(i).getText().contains(strPeriod))
+	        	{
+	        		opt.get(i).click();
+	        		System.out.println(strPeriod);
+	        	}
+	        }
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Element not found");
+			Thread.sleep(3000);
+		}
+    	
+      return new NRGAddHostingPage();
+    	
+    }
+    
     public NRGAddHostingPage selectBasicCloudHostingYearly() throws InterruptedException {
     	System.out.println("Selecting hosting product");
     	try {
@@ -163,5 +201,49 @@ public class NRGHostingAndExtrasPage extends TestBase{
 		return new NRGAddHostingPage();
     	
     }
+    
+    public NRGBillingPage clickContinueButtonToBillingPage() {
+	     
+			System.out.println("Clicking continue button to billing page");
+		
+			try {
+	    		Thread.sleep(2000);
+				driver.findElement(By.xpath("//*[@id='chatNow']/div/a[1]/img")).click();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				System.out.println("Chat window not present");
+			}
+			
+    	if(continueButton.isDisplayed()||continueButton.isEnabled()) { 
+
+    		continueButton.click();
+    	} 
+    	else {
+    		System.out.println("Element not found"); 
+    	}
+    	
+    	try {
+		    Thread.sleep(2000);
+		  	System.out.println("Clicking continue button ON warning to billing page");
+        	if(upgradeWarningCheckBox.isDisplayed() || upgradeWarningCheckBox.isEnabled()) {
+        		upgradeWarningCheckBox.click();
+        		System.out.println("Warning button closed");
+        	}
+         	else { 
+         		System.out.println("Element not found");
+         	}
+        	if (warningContinueButton.isDisplayed() || warningContinueButton.isEnabled()){
+        		warningContinueButton.click(); 
+        	}
+         	else { 
+         		System.out.println("Element not found");
+         	}	    		
+    	}
+    	catch (Exception e) {
+    		System.out.println("Warning Window Not Present");
+    	}
+    	
+	return new NRGBillingPage();
+}
 
 }

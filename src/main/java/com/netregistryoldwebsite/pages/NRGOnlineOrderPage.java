@@ -20,6 +20,12 @@ public class NRGOnlineOrderPage extends TestBase{
     @FindBy(how=How.XPATH, using = "//div[@class='search']/input")
     WebElement newDomainSearchButton;
     
+    @FindBy(how=How.XPATH, using = "//*[@id='singleDomainSearchBox']/form/div[1]/div[2]/input")
+    WebElement existingDomainSearchBox;
+
+    @FindBy(how=How.XPATH, using = "//input[@name='searchHosting']")
+    WebElement existingDomainSearchButton;   
+    
 	//Initializing Page Objects
     public NRGOnlineOrderPage(){
         PageFactory.initElements(driver, this);
@@ -38,6 +44,24 @@ public class NRGOnlineOrderPage extends TestBase{
 			// TODO Auto-generated catch block
 			System.out.println("Chat window not present");
 		}
+    }
+    
+    public void setExistingDomainName(String domainname) {
+    	existingDomainSearchBox.clear();
+    	existingDomainSearchBox.sendKeys(domainname);
+    }
+    
+    public NRGOnlineOrderAccountDetailsPage setExistingDomainSearchButton() {
+    	System.out.println("clicking Existing domain search button");
+    	if(existingDomainSearchButton.isDisplayed()||existingDomainSearchButton.isEnabled()) {
+    		existingDomainSearchButton.click();
+    	}
+    	else {
+			System.out.println("element not found");
+		}
+    	//need to write return    	
+		return new NRGOnlineOrderAccountDetailsPage();
+    	    	
     }
     
     public void clearDefaultTldSelections(){
