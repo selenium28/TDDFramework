@@ -153,7 +153,7 @@ public class SalesDBJourneyTest extends TestBase{
 		if (environment.equals("uat1")||environment.equals("uat2")) {
 			strTld = "net";
 			strRegistrationPeriod = "1 x Y";
-			strGreenCode = "MEL-6007";
+			strGreenCode = "NET-1222";
 			strMajorProduct = "Done For You Website";
 			strProductPeriod = "1 x M";
 			strPaymentMethod = "Prepaid credit: ";
@@ -297,7 +297,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strTld = "nz";
 			strRegistrationPeriod = "2";
 			strGreenCode = "PAY-207";
-			strPaymentMethod = "Visa: 411111******1111";
+			strPaymentMethod = "American Express: 371449******8431 08/2026";
 			strRegistrantDetails = "MelbourneIT";
 		}
 		
@@ -329,7 +329,7 @@ public class SalesDBJourneyTest extends TestBase{
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
-		//driver.close();
+		driver.close();
 		System.out.println("End Test: verify_NzDomain_Order_InSalesDB");
 		
 	}

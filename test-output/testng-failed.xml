@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Console Release Regression Test Suite]" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Console Regression Test Automation - UAT Test Suite]">
   <parameter name="environment" value="uat1"/>
-  <parameter name="virtualization" value="netregistry"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="1" name="Console Release Regression Test Cases(failed)" parallel="tests">
+  <test thread-count="5" name="Regression Test Cases(failed)">
     <classes>
-      <class name="com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForBasicCloudHosting">
+      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
         <methods>
-          <include name="testProductSetup2WorkflowForBasicCloudHosting" invocation-numbers="0"/>
+          <include name="verify_ComAuDomain_Order_InSalesDB" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForBasicCloudHosting -->
+      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
     </classes>
-  </test> <!-- Console Release Regression Test Cases(failed) -->
-</suite> <!-- Failed suite [Console Release Regression Test Suite] -->
+  </test> <!-- Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [Console Regression Test Automation - UAT Test Suite] -->

@@ -38,9 +38,9 @@ public class CSAUEligibilityPage extends TestBase {
 		registrantTypeDropdownButton.click();
 		Thread.sleep(2000);
     	driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/*[contains(text(),'"+strregistranttype+"')]")).click();    	
-    	Thread.sleep(3000);
+    	Thread.sleep(5000);
     	updateButton.click();
-    	Thread.sleep(2000);
+    	Thread.sleep(5000);
 		
 		return new CSNrCRMPage();
     
