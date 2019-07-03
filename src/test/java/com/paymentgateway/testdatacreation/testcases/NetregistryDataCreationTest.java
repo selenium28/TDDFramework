@@ -143,7 +143,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		strDomainName_01 = "TestNetRegistryNewCustomer" + df.format(d1);
 		strDomainName_02 = "TestNetRegistryReturningCustomer" + df.format(d1);
 					
-		if (environment.equals("stagingdev-5")) {
+		if (environment.equals("stagingdev-5")||environment.equals("stagingdev-8")) {
 			strTld = ".com";
 		}
 			
@@ -355,7 +355,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		strDomainName_01 = "TestNetRegistryNewCustomer" + df.format(d1);
 		strDomainName_02 = "TestNetRegistryReturningCustomer" + df.format(d1);
 					
-		if (environment.equals("stagingdev-5")) {
+		if (environment.equals("stagingdev-5")||environment.equals("stagingdev-8")) {
 			strTld = ".net";
 		}
 			
@@ -579,7 +579,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		strDomainName_01 = "TestNetRegistryNewCustomer" + df.format(d1);
 		strDomainName_02 = "TestNetRegistryReturningCustomer" + df.format(d1);
 					
-		if (environment.equals("stagingdev-5")) {
+		if (environment.equals("stagingdev-5")||environment.equals("stagingdev-8")) {
 			strTld = ".com";
 		}
 			
@@ -810,7 +810,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		strDomainName_01 = "TestNetRegistryNewCustomer" + df.format(d1);
 		strDomainName_02 = "TestNetRegistryReturningCustomer" + df.format(d1);
 					
-		if (environment.equals("stagingdev-5")) {
+		if (environment.equals("stagingdev-5")||environment.equals("stagingdev-8")) {
 			strTld_01 = ".com";
 			
 			//For Sales DB
@@ -982,7 +982,7 @@ public class NetregistryDataCreationTest extends TestBase{
 		Date d1 = new Date();
 		strDomainName_01 = "TestNetRegistryNewCustomer" + df.format(d1);
 					
-		if (environment.equals("stagingdev-5")) {
+		if (environment.equals("stagingdev-5")||environment.equals("stagingdev-8")) {
 			strTld = ".com";
 		}
 			

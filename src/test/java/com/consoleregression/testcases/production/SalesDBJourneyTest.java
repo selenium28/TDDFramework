@@ -78,7 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14492248";
+		String strWorkflowId = "14592433";
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		
@@ -90,7 +90,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strTld = "com.au";
 			strRegistrationPeriod = "2";
 			strGreenCode = "MEL-6038";
-			strPaymentMethod = "Resellers Default: Visa";
+			strPaymentMethod = "Invoice";
 			strRegistrantDetails = "TPP";
 			strRegistrantType = "ABN";
 			strRegistrantNumber = "13080859721";
@@ -147,7 +147,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14492253";
+		String strWorkflowId = "14592544";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -160,7 +160,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strGreenCode = "MEL-6007";
 			strMajorProduct = "Done For You Website";
 			strProductPeriod = "1 x M";
-			strPaymentMethod = "Invoice";
+			strPaymentMethod = "Visa: 471527******1053 08/2020";
 			strRegistrantDetails = "Netregistry";
 		}
 	
@@ -217,7 +217,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14492367";
+		String strWorkflowId = "14592557";
 		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		
@@ -231,7 +231,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strTld = "com";
 			strRegistrationPeriod = "1";
 			strGreenCode = "MEL-6007";
-			strPaymentMethod = "Visa: 471527******1714 06/2021";
+			strPaymentMethod = "Visa: 471527******1053 08/2020";
 			strRegistrantDetails = "Netregistry";			
 			strOffice365Product = "O365-EESEN-QTY";
 		}
@@ -292,7 +292,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14492405";
+		String strWorkflowId = "14592443";
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();

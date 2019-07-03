@@ -1,3 +1,0 @@
-green_code,card_digits,card_owner,card_expire_month,card_expire_year
-TES-2409,2223000048400011,"NetRegistry New Customer 22230011",04,2025
-TES-2409,4005519200000004,"NetRegistry Returning Customer - Default Credit Card 40050004",08,2025

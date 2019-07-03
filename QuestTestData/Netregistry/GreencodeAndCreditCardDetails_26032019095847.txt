@@ -1,2 +1,0 @@
-green_code,card_digits,card_owner,card_expire_month,card_expire_year
-TES-2408,2223000048400011,"NetRegistry New Customer 22230011",04,2025

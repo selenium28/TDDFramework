@@ -116,18 +116,18 @@ public class SalesDBJourneyTest extends TestBase{
 		csworkflownotificationpage.clickOKButton();
 		driver.close();
 		
-		//Test Step 2: Process the domain registration order in console admin
-		initialization(environment, "consoleadmin");
-		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
-		
-		//Test Step 3: Verify if domain registration workflow is completed
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
-		driver.close();
-		System.out.println("End Test: verify_ComAuDomain_Order_InSalesDB");
+//		//Test Step 2: Process the domain registration order in console admin
+//		initialization(environment, "consoleadmin");
+//		caloginpage = new CALoginPage();
+//		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+//		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+//		
+//		//Test Step 3: Verify if domain registration workflow is completed
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+//		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
+//		driver.close();
+//		System.out.println("End Test: verify_ComAuDomain_Order_InSalesDB");
 		
 	}
 	
@@ -156,7 +156,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strGreenCode = "NET-1222";
 			strMajorProduct = "Done For You Website";
 			strProductPeriod = "1 x M";
-			strPaymentMethod = "Prepaid credit: ";
+			strPaymentMethod = "Invoice";
 			strRegistrantDetails = "Netregistry";
 		}
 	
@@ -179,27 +179,27 @@ public class SalesDBJourneyTest extends TestBase{
 		csworkflownotificationpage.clickOKButton();
 		driver.close();
 		
-		//Test Step 2: Process the domain registration workflow in console admin
-		initialization(environment, "consoleadmin");
-		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
-		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
-		
-		//Test Step 3: Verify if domain registration workflow is completed
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
-		
-		//Test Step 4: Process the productsetup2 workflow in console admin
-		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
-		caworkflowadminpage.processProductSetup2();
-		
-		//Test Step 5: Verify if productsetup2 workflow is approved
-		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
-		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "halting current workflow", caworkflowadminpage.getWorkflowStatus("productsetup2"));
-		driver.close();
-		
-		System.out.println("End Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
+//		//Test Step 2: Process the domain registration workflow in console admin
+//		initialization(environment, "consoleadmin");
+//		caloginpage = new CALoginPage();
+//		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
+//		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+//		
+//		//Test Step 3: Verify if domain registration workflow is completed
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+//		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
+//		
+//		//Test Step 4: Process the productsetup2 workflow in console admin
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
+//		caworkflowadminpage.processProductSetup2();
+//		
+//		//Test Step 5: Verify if productsetup2 workflow is approved
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
+//		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "halting current workflow", caworkflowadminpage.getWorkflowStatus("productsetup2"));
+//		driver.close();
+//		
+//		System.out.println("End Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
 	}
 	
 	
@@ -253,27 +253,27 @@ public class SalesDBJourneyTest extends TestBase{
 		csworkflownotificationpage.clickOKButton();
 		driver.close();
 		
-		//Test Step 2: Process the domain registration workflow in console admin
-		initialization(environment, "consoleadmin");
-		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
-		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
-
-		//Test Step 3: Verify if domain registration workflow is completed
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
-		
-		//Test Step 4: Process the productsetup2 workflow in console admin
-		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
-		caworkflowadminpage.processProductSetup2();
-		
-		//Test Step 5: Verify if productsetup2 workflow is approved
-		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
-		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", caworkflowadminpage.getWorkflowStatus("productsetup2"));
-		driver.close();
-		
-		System.out.println("End Test: verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB");
+//		//Test Step 2: Process the domain registration workflow in console admin
+//		initialization(environment, "consoleadmin");
+//		caloginpage = new CALoginPage();
+//		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
+//		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+//
+//		//Test Step 3: Verify if domain registration workflow is completed
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+//		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
+//		
+//		//Test Step 4: Process the productsetup2 workflow in console admin
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
+//		caworkflowadminpage.processProductSetup2();
+//		
+//		//Test Step 5: Verify if productsetup2 workflow is approved
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
+//		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", caworkflowadminpage.getWorkflowStatus("productsetup2"));
+//		driver.close();
+//		
+//		System.out.println("End Test: verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB");
 	}
 	
 	@Parameters({"environment"})
@@ -319,18 +319,18 @@ public class SalesDBJourneyTest extends TestBase{
 		csworkflownotificationpage.clickOKButton();
 		driver.close();
 		
-		//Test Step 2: Process the domain registration order in console admin
-		initialization(environment, "consoleadmin");
-		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
-		
-		//Test Step 3: Verify if domain registration workflow is completed
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
-		driver.close();
-		System.out.println("End Test: verify_NzDomain_Order_InSalesDB");
+//		//Test Step 2: Process the domain registration order in console admin
+//		initialization(environment, "consoleadmin");
+//		caloginpage = new CALoginPage();
+//		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+//		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+//		
+//		//Test Step 3: Verify if domain registration workflow is completed
+//		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+//		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
+//		driver.close();
+//		System.out.println("End Test: verify_NzDomain_Order_InSalesDB");
 		
 	}
 	

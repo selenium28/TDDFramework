@@ -27,7 +27,7 @@ public class CSLoginPage extends TestBase{
     //Methods
     public void setDefaultLoginDetails(String environment) {
 		
-		if(environment.equalsIgnoreCase("stagingdev-5")) {
+		if(environment.equalsIgnoreCase("stagingdev-5")||environment.equalsIgnoreCase("stagingdev-8")) {
 			
 	    	userName.sendKeys("erwin.sukarna");
 	    	password.sendKeys("comein22");
