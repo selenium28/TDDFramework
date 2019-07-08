@@ -1,0 +1,3 @@
+green_code,card_digits,card_owner,card_expire_month,card_expire_year
+TES-2502,4009348888881881,"NetRegistry New Customer - Monthly Product 40091881",01,2022
+TES-2502,5555555555554444,"NetRegistry Returning Customer - Monthly Product 55554444",05,2022

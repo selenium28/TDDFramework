@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway - Migration - NRG - Quest Data Creation Suite]" parallel="tests">
-  <parameter name="environment" value="stagingdev-5"/>
-  <parameter name="iteration" value="1"/>
+  <parameter name="environment" value="stagingdev-8"/>
+  <parameter name="iteration" value="4"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
@@ -10,8 +10,8 @@
     <classes>
       <class name="com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest">
         <methods>
-          <include name="createPropertyFileForDecryptedDataVerification" invocation-numbers="0"/>
-          <include name="generateCustomerDataWithDefaultCreditCard" invocation-numbers="0"/>
+          <include name="generateCustomerDataWithMonthlyBillingProduct" invocation-numbers="0"/>
+          <include name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest -->
     </classes>

@@ -14,12 +14,12 @@
 		
 			<class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom">  
 			</class>
-			<class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForComAu">
-			</class>
-			<class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForOrg">
-			</class>
-			<class name="com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForBasicCloudHosting">
-			</class>
+<!-- 			<class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForComAu"> -->
+<!-- 			</class> -->
+<!-- 			<class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForOrg"> -->
+<!-- 			</class> -->
+<!-- 			<class name="com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForBasicCloudHosting"> -->
+<!-- 			</class> -->
 
 		</classes>
 	</test>  

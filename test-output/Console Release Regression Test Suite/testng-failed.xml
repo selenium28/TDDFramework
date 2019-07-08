@@ -8,11 +8,11 @@
   </listeners>
   <test thread-count="1" name="Console Release Regression Test Cases(failed)" parallel="tests">
     <classes>
-      <class name="com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForBasicCloudHosting">
+      <class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom">
         <methods>
-          <include name="testProductSetup2WorkflowForBasicCloudHosting" invocation-numbers="0"/>
+          <include name="testDomainRegistration2WorkflowForCom" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForBasicCloudHosting -->
+      </class> <!-- com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom -->
     </classes>
   </test> <!-- Console Release Regression Test Cases(failed) -->
 </suite> <!-- Failed suite [Console Release Regression Test Suite] -->

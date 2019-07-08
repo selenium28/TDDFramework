@@ -1,101 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Regression Test Automation - PROD Test Suite" duration-ms="333869" started-at="2019-07-02T03:56:31Z" finished-at="2019-07-02T04:02:05Z">
+  <suite name="Console Release Regression Test Suite" duration-ms="62962" started-at="2019-07-06T00:43:01Z" finished-at="2019-07-06T00:44:04Z">
     <groups>
     </groups>
-    <test name="Regression Test Cases" duration-ms="333869" started-at="2019-07-02T03:56:31Z" finished-at="2019-07-02T04:02:05Z">
-      <class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest">
-        <test-method status="PASS" signature="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.CustomerPortalJourneyTest@548e7350]" name="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal" duration-ms="49954" started-at="2019-07-02T03:56:31Z" finished-at="2019-07-02T03:57:21Z">
+    <test name="Console Release Regression Test Cases" duration-ms="62962" started-at="2019-07-06T00:43:01Z" finished-at="2019-07-06T00:44:04Z">
+      <class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom">
+        <test-method status="FAIL" signature="testDomainRegistration2WorkflowForCom(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom@42e26948]" name="testDomainRegistration2WorkflowForCom" duration-ms="62891" started-at="2019-07-06T00:43:01Z" finished-at="2019-07-06T00:44:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainRegistrationOrderForNewCustomerInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.CustomerPortalJourneyTest@548e7350]" name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" duration-ms="63811" started-at="2019-07-02T03:57:21Z" finished-at="2019-07-02T03:58:25Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal -->
-      </class> <!-- com.consoleregression.testcases.production.CustomerPortalJourneyTest -->
-      <class name="com.consoleregression.testcases.production.SalesDBJourneyTest">
-        <test-method status="PASS" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@1a968a59]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="37207" started-at="2019-07-02T03:58:25Z" finished-at="2019-07-02T03:59:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
+                <![CDATA[uat1]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[disabled]]>
+                <![CDATA[netregistry]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'Visa credit card. Owner: MELBOURNE IT LTD F SHARED SERVICES')]"}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '192.168.152.40', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50174}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: 8937dc3bc10780d094a8ba696489c15a
+*** Element info: {Using=xpath, value=//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'Visa credit card. Owner: MELBOURNE IT LTD F SHARED SERVICES')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'Visa credit card. Owner: MELBOURNE IT LTD F SHARED SERVICES')]"}
+  (Session info: chrome=75.0.3770.100)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '192.168.152.40', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50174}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.100, webStorageEnabled: true}
+Session ID: 8937dc3bc10780d094a8ba696489c15a
+*** Element info: {Using=xpath, value=//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'Visa credit card. Owner: MELBOURNE IT LTD F SHARED SERVICES')]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+at com.netregistryoldwebsite.pages.NRGBillingPage.selectExistingCreditCardOption(NRGBillingPage.java:212)
+at com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom.testDomainRegistration2WorkflowForCom(TestDomainRegistration2WorkflowForCom.java:92)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@1a968a59]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="66924" started-at="2019-07-02T03:59:02Z" finished-at="2019-07-02T04:00:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_ComDomain_and_Office365_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@1a968a59]" name="verify_ComDomain_and_Office365_Order_InSalesDB" duration-ms="81490" started-at="2019-07-02T04:00:09Z" finished-at="2019-07-02T04:01:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ComDomain_and_Office365_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@1a968a59]" name="verify_NzDomain_Order_InSalesDB" duration-ms="34439" started-at="2019-07-02T04:01:31Z" finished-at="2019-07-02T04:02:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
-      </class> <!-- com.consoleregression.testcases.production.SalesDBJourneyTest -->
-    </test> <!-- Regression Test Cases -->
-  </suite> <!-- Console Regression Test Automation - PROD Test Suite -->
+        </test-method> <!-- testDomainRegistration2WorkflowForCom -->
+      </class> <!-- com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom -->
+    </test> <!-- Console Release Regression Test Cases -->
+  </suite> <!-- Console Release Regression Test Suite -->
 </testng-results>
