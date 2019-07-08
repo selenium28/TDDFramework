@@ -209,7 +209,7 @@ public class NRGBillingPage extends TestBase{
        	    	
      	if (cardtype =="Visa") {
      		
-     		WebElement visacard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'Visa credit card. Owner: MELBOURNE IT LTD F SHARED SERVICES')]"));
+     		WebElement visacard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'Visa')]"));
      		visacarddetails = visacard.getText();
      		System.out.println("Card Details: " + visacarddetails);
      		

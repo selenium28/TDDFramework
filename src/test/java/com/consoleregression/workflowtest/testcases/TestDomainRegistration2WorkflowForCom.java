@@ -89,7 +89,7 @@ public class TestDomainRegistration2WorkflowForCom extends TestBase{
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
-		nrgbillingpage.selectExistingCreditCardOption("Visa");	
+		nrgbillingpage.selectExistingCreditCardOption("MasterCard");	
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		
@@ -113,7 +113,7 @@ public class TestDomainRegistration2WorkflowForCom extends TestBase{
 //		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 //		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
 		
-		driver.close();
+//		driver.close();
 		System.out.println("End Test: testDomainRegistration2WorkflowForCom");
 				
 	}
