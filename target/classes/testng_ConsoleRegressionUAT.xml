@@ -12,7 +12,7 @@
 		<classes>
 			<class name="com.consoleregression.testcases.SalesDBJourneyTest">
                 <methods>    
-<!--                 	<include name="verify_NetDomain_and_DIFM_Order_InSalesDB" /> -->
+                	<include name="verify_NetDomain_and_DIFM_Order_InSalesDB" />
                                               
                     <include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" />
                     
@@ -26,11 +26,11 @@
 			    <methods>
                     <include name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" />
                     
-                    <include name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingExistingCardInCustomerPortal" />
+<!--                     <include name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingExistingCardInCustomerPortal" /> -->
                     
                     <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" />
                     
-                    <include name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingNewCardInCustomerPortal" />
+<!--                     <include name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingNewCardInCustomerPortal" /> -->
                     
                     <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" />
                                

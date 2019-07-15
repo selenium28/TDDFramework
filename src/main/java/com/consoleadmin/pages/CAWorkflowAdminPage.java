@@ -52,7 +52,6 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	else if (strtld.equals("nz")) {
     		this.processCheckASIC();
-    		//this.processMarkAsRegistered(strworkflowid);
     	}
     	else if (strtld.equals("com.au")) {
     		this.processCheckASIC();
@@ -63,7 +62,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	//To add a waiting time for workflow to complete processing
-    	Thread.sleep(45000);
+    	Thread.sleep(80000);
     }
     
     

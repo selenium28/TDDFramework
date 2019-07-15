@@ -125,14 +125,14 @@ public class CustomerPortalJourneyTest extends TestBase{
 		//Test Step 2: Select existing credit card details and submit the order 
 		nrgbillingpage.selectExistingCreditCardOption("Visa");	
 		nrgbillingpage.tickTermsAndConditions();
-		nrgordercompletepage = nrgbillingpage.clickContinueButton();
-		
-		//Test Step 3: Verify if order is completed
-		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
-		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
-		strAccountReference = nrgordercompletepage.getAccountReferenceID();
-		System.out.println("Account Reference:" + strAccountReference);	
-		System.out.println("Reference ID[0]:" + strWorkflowId);	
+//		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+//		
+//		//Test Step 3: Verify if order is completed
+//		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
+//		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
+//		strAccountReference = nrgordercompletepage.getAccountReferenceID();
+//		System.out.println("Account Reference:" + strAccountReference);	
+//		System.out.println("Reference ID[0]:" + strWorkflowId);	
 		//driver.close();
 	}
 	

@@ -89,7 +89,7 @@ public class TestDomainRegistration2WorkflowForCom extends TestBase{
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
-		nrgbillingpage.selectExistingCreditCardOption("MasterCard");	
+		nrgbillingpage.selectExistingCreditCardOption("Number: 5555********4444 Expiry: 03/2021");	
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		
@@ -101,19 +101,19 @@ public class TestDomainRegistration2WorkflowForCom extends TestBase{
 		System.out.println("Reference ID[0]:" + strWorkflowId);	
 		driver.close();
 		
-//		//Test Step 4: Process the domain registration order in console admin
-//		initialization(environment, "consoleadmin");
-//		caloginpage = new CALoginPage();
-//		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-//		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-//		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
-//		caworkflowadminpage.processFraudCheck();
-//		
-//		//Test Step 5: Verify if domain registration workflow is completed
-//		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-//		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
+		//Test Step 4: Process the domain registration order in console admin
+		initialization(environment, "consoleadmin");
+		caloginpage = new CALoginPage();
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
+		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+		caworkflowadminpage.processFraudCheck();
 		
-//		driver.close();
+		//Test Step 5: Verify if domain registration workflow is completed
+		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
+		
+		driver.close();
 		System.out.println("End Test: testDomainRegistration2WorkflowForCom");
 				
 	}

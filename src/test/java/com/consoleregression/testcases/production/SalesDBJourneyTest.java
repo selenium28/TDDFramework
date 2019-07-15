@@ -78,7 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14592433";
+		String strWorkflowId = "14630494";
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		
@@ -147,7 +147,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14592544";
+		String strWorkflowId = "14630496";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -217,7 +217,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14592557";
+		String strWorkflowId = "14630499";
 		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		
@@ -263,7 +263,7 @@ public class SalesDBJourneyTest extends TestBase{
 			//Test Step 2: Verify if domainregistration2 workflow status is "domain registration completed"
 			initialization(environment, "consoleadmin");
 			caloginpage = new CALoginPage();
-			caheaderpage = caloginpage.login("roy.alcantara", "Stocks008");
+			caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 			caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 			strWorkflowEntity = caworkflowadminpage.getWorkflowEntity(strWorkflowId);
 			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
@@ -292,7 +292,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14592443";
+		String strWorkflowId = "14630503";
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();

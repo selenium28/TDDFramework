@@ -199,7 +199,7 @@ public class NRGBillingPage extends TestBase{
        	driver.findElement(By.xpath("//div[@class='orderBox']/div[2]/input")).click();
     }
     
-    public void selectExistingCreditCardOption(String cardtype){
+    public void selectExistingCreditCardOption(String carddetails){
        	
     	String visacarddetails;
     	String mastercarddetails;
@@ -207,7 +207,7 @@ public class NRGBillingPage extends TestBase{
     	
     	System.out.println("select existing credit card option");
        	    	
-     	if (cardtype =="Visa") {
+     	if (carddetails =="Visa") {
      		
      		WebElement visacard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'Visa')]"));
      		visacarddetails = visacard.getText();
@@ -217,7 +217,7 @@ public class NRGBillingPage extends TestBase{
        		System.out.println("Existing Visa credit card was clicked");
      	    		
        	}
-       	else if (cardtype =="MasterCard") {
+       	else if (carddetails =="MasterCard") {
        	
        		
        		WebElement mastercard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'MasterCard credit card')]"));
@@ -228,6 +228,17 @@ public class NRGBillingPage extends TestBase{
        		System.out.println("Existing MasterCard credit card was clicked");
        	
        	}
+       	else {
+       	
+       		//Only card number and card expiry details are needed.
+       		WebElement existingcarddetails = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[contains(text(),'"+ carddetails + "')]"));
+       		System.out.println("Card Details: " + existingcarddetails.getText());
+       		
+       		existingcarddetails.click();
+       		System.out.println("Existing credit card was clicked");
+       	
+       	}
+     	
 
     }
     

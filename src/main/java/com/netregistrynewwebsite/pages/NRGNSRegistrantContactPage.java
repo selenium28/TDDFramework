@@ -11,10 +11,11 @@ import com.base.TestBase;
 public class NRGNSRegistrantContactPage extends TestBase{
 
 	
-	//Objects        
-    @FindBy(how=How.XPATH, using = "//body/div[1]/div[2]/div/div/div/div/div[1]/div/div[2]/div")
+  //Objects        
+  //@FindBy(how=How.XPATH, using = "//body/div[1]/div[2]/div/div/div/div/div[1]/div/div[2]/div")
+	@FindBy(how=How.XPATH, using = "//div[@class='table contact-box ng-scope account']/div[2]/div")
     WebElement selectButton;
-	
+   
     
     //Initializing Page Objects
     public NRGNSRegistrantContactPage() throws InterruptedException{

@@ -107,7 +107,7 @@ public class TestDomainRegistration2WorkflowForComAu extends TestBase{
 		nrgbillingpage = nrgeligibilitydetailspage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
-		nrgbillingpage.selectExistingCreditCardOption("Visa");	
+		nrgbillingpage.selectExistingCreditCardOption("Number: 5555********4444 Expiry: 03/2021");
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		
@@ -124,8 +124,7 @@ public class TestDomainRegistration2WorkflowForComAu extends TestBase{
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		caworkflowadminpage.processDomainRegistrationWF(strWorkflowId);
-		caworkflowadminpage.processFraudCheck();
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
 		
 		//Test Step 5: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);

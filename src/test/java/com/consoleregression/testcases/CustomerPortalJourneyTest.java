@@ -179,7 +179,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
-		nrgbillingpage.selectExistingCreditCardOption("Visa");	
+		nrgbillingpage.selectExistingCreditCardOption("Number: 5555********4444 Expiry: 03/2021");	
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		

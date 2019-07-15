@@ -51,7 +51,7 @@ public class CALoginPage extends TestBase{
 		else if (environment.equalsIgnoreCase("prod")) {
 			
 			userName.sendKeys("roy.alcantara");
-	    	password.sendKeys("Stocks008");
+	    	password.sendKeys("Stocks009");
 		}
 		
 		submitButton.click();
