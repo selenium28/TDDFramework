@@ -120,11 +120,11 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
 		nrgaccountcontactpage.setReturningCustomerContacts("MEL-6007", "comein22");
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
-		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
-		
-		//Test Step 2: Select existing credit card details and submit the order 
-		nrgbillingpage.selectExistingCreditCardOption("Visa");	
-		nrgbillingpage.tickTermsAndConditions();
+//		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
+//		
+//		//Test Step 2: Select existing credit card details and submit the order 
+//		nrgbillingpage.selectExistingCreditCardOption("Visa");	
+//		nrgbillingpage.tickTermsAndConditions();
 //		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 //		
 //		//Test Step 3: Verify if order is completed

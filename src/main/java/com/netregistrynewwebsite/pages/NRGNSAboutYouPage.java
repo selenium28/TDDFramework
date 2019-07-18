@@ -93,8 +93,8 @@ public class NRGNSAboutYouPage extends TestBase{
     	userName.sendKeys(customeraccountreference);
     	Thread.sleep(3000);
     	password.sendKeys(customerpassword);
-    	Thread.sleep(3000);
-    	password.sendKeys(Keys.ENTER);
+    	//Thread.sleep(3000);
+    	//password.sendKeys(Keys.ENTER);
     }
     
     public NRGNSRegistrantContactPage clickContinueButton() throws InterruptedException {

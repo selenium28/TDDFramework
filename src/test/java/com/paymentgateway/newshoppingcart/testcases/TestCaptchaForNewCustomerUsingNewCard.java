@@ -76,6 +76,14 @@ public class TestCaptchaForNewCustomerUsingNewCard extends TestBase{
 			    strCardExpiryYear = "2026";
 			    strCardSecurityCode = "123";
 			}
+			else if (environment.equals("uat1")) {
+				strTld = ".com";
+				strCardOwnerName = "Test Captcha New Customer";
+				strCardNumber = "5555555555554444";
+			    strCardExpiryMonth = "10";
+			    strCardExpiryYear = "2026";
+			    strCardSecurityCode = "123";
+			}
 			else if (environment.equals("prod")) {
 				strTld = ".com";
 				strCardOwnerName = "Test Captcha New Customer";
@@ -103,6 +111,7 @@ public class TestCaptchaForNewCustomerUsingNewCard extends TestBase{
 			//Test Step 3: Input default customer details  
 			nrgnsaboutyoupage.setDefaultCustomerDetails();
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickContinueButton();
+			nrgnsregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
 			
 			//Test Step 4: Input customer credit card details and complete the order

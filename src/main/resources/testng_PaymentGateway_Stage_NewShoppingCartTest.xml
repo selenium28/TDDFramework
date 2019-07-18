@@ -14,10 +14,10 @@
 		<classes>
 		
 			<!-- Netregistry Virtualization				 -->
-<!-- 			<class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard">  -->
-<!-- 	        </class> -->
-<!-- 	        <class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForExistingCustomerUsingNewCard">  -->
-<!-- 	        </class> -->
+			<class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard"> 
+	        </class>
+	        <class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForExistingCustomerUsingNewCard"> 
+	        </class>
 	        <class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForExistingCustomerUsingExistingCard"> 
 	        </class>
  

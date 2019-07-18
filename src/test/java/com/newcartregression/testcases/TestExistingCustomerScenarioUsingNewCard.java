@@ -1,4 +1,4 @@
-package com.paymentgateway.newshoppingcart.testcases;
+package com.newcartregression.testcases;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -23,7 +23,7 @@ import com.netregistrynewwebsite.pages.NRGNSSearchFieldPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.util.TestUtil;
 
-public class TestCaptchaForExistingCustomerUsingNewCard extends TestBase{
+public class TestExistingCustomerScenarioUsingNewCard extends TestBase{
 	
 	//Netregistry New Shopping Cart Pages
 	NRGNSAboutYouPage nrgnsaboutyoupage;
@@ -41,14 +41,14 @@ public class TestCaptchaForExistingCustomerUsingNewCard extends TestBase{
 	static Environment testenvironment;
 	public static ExtentTest logger;
 
-	public TestCaptchaForExistingCustomerUsingNewCard() {
+	public TestExistingCustomerScenarioUsingNewCard() {
 		super();
 	}
 			
 
 	@Parameters({"environment", "iteration"})
 	@Test
-	public void testCaptchaForExistingCustomerUsingNewCard (String environment, Integer iteration) throws InterruptedException{
+	public void testExistingCustomerScenarioUsingNewCard (String environment, Integer iteration) throws InterruptedException{
 		
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
@@ -145,7 +145,7 @@ public class TestCaptchaForExistingCustomerUsingNewCard extends TestBase{
 			//Test Step 5: Verify if recaptcha challenge is dislayed 
 			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
 			
-			//driver.close();
+			driver.close();
 			System.out.println("End Test: testCaptchaForExistingCustomerUsingNewCard");
 		}	
 	}

@@ -75,9 +75,16 @@ public class TestCaptchaForExistingCustomerUsingExistingCard extends TestBase{
 				strTld = ".com";			    
 				strMaskedCardNumber = "************4444";
 				
-				strCustomerAccountReference = "NET-1290";
-				strCustomerPassword = "mjj6hrex8";
+				strCustomerAccountReference = "MEL-6007";
+				strCustomerPassword = "comein22";
 			    
+			}else if (environment.equals("uat1")) {
+				
+				strTld = ".com";			    
+				strMaskedCardNumber = "************4444";
+				
+			    strCustomerAccountReference = "TES-2168";
+			    strCustomerPassword = "comein22";	
 			}
 			else if (environment.equals("prod")) {
 				
@@ -106,6 +113,7 @@ public class TestCaptchaForExistingCustomerUsingExistingCard extends TestBase{
 			//Test Step 3: Login as returning or existing netregistry customer  
 			nrgnsaboutyoupage.setReturningCustomerContacts(strCustomerAccountReference, strCustomerPassword);
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickLoginButton();
+			nrgnsregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
 			
 			//Test Step 4: Select existing credit card and complete the order

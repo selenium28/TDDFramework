@@ -1,4 +1,4 @@
-package com.paymentgateway.newshoppingcart.testcases;
+package com.newcartregression.testcases;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -23,7 +23,7 @@ import com.netregistrynewwebsite.pages.NRGNSSearchFieldPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.util.TestUtil;
 
-public class TestCaptchaForExistingCustomerUsingNewCard extends TestBase{
+public class TestExistingCustomerScenarioUsingExistingCard extends TestBase{
 	
 	//Netregistry New Shopping Cart Pages
 	NRGNSAboutYouPage nrgnsaboutyoupage;
@@ -41,25 +41,22 @@ public class TestCaptchaForExistingCustomerUsingNewCard extends TestBase{
 	static Environment testenvironment;
 	public static ExtentTest logger;
 
-	public TestCaptchaForExistingCustomerUsingNewCard() {
+	public TestExistingCustomerScenarioUsingExistingCard() {
 		super();
 	}
 			
 
 	@Parameters({"environment", "iteration"})
 	@Test
-	public void testCaptchaForExistingCustomerUsingNewCard (String environment, Integer iteration) throws InterruptedException{
+	public void testExistingCustomerScenarioUsingExistingCard (String environment, Integer iteration) throws InterruptedException{
 		
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
 		String strTld = null;
+		String strWorkflowId = null;
+		String strAccountReference = null;
 		
-		String strCardOwnerName = null;
-		String strCardNumber = null;
-	    String strCardExpiryMonth = null;
-	    String strCardExpiryYear = null;
-	    String strCardSecurityCode = null;
-	    
+		String strMaskedCardNumber = null;
 	    String strCustomerAccountReference = null;
 	    String strCustomerPassword = null;
 		
@@ -76,42 +73,29 @@ public class TestCaptchaForExistingCustomerUsingNewCard extends TestBase{
 			if (environment.equals("stagingdev-5")) {
 				
 				strTld = ".com";			    
-				strCardOwnerName = "Test Captcha Existing Customer";
-				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
-			    			    
-				strCustomerAccountReference = "NET-1290";
-				strCustomerPassword = "mjj6hrex8";
-			    
-			}
-			else if (environment.equals("uat1")) {
+				strMaskedCardNumber = "************4444";
 				
-			    strTld = ".com";			    
-				strCardOwnerName = "Test Captcha Existing Customer";
-				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
-
+				strCustomerAccountReference = "MEL-6007";
+				strCustomerPassword = "comein22";
+			    
+			}else if (environment.equals("uat1")) {
+				
+				strTld = ".com";			    
+				strMaskedCardNumber = "************4444";
+				
 			    strCustomerAccountReference = "TES-2168";
-			    strCustomerPassword = "comein22";
+			    strCustomerPassword = "comein22";	
 			}
 			else if (environment.equals("prod")) {
 				
-			    strTld = ".com";			    
-				strCardOwnerName = "Test Captcha Existing Customer";
-				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
-
+				strTld = ".com";			    
+				strMaskedCardNumber = "************4444";
+				
 			    strCustomerAccountReference = "CAP-1059";
-			    strCustomerPassword = "comein22";
+			    strCustomerPassword = "comein22";	
 			}
 			
-			System.out.println("Start Test: testCaptchaForExistingCustomerUsingNewCard");
+			System.out.println("Start Test: testCaptchaForExistingCustomerUsingExistingCard");
 					
 			//Test Step 1: Navigate to domain search page of new shopping cart and place an order for a test domain
 			initialization(environment, "newcart_domainsearchurl_netregistry");
@@ -126,7 +110,7 @@ public class TestCaptchaForExistingCustomerUsingNewCard extends TestBase{
 			nrgnsaddservicestoyourdomainpage = nrgnsemailandoffice365packagespage.clickContinueButton();
 			nrgnsaboutyoupage = nrgnsaddservicestoyourdomainpage.clickContinueButton();
 			
-			//Test Step 3: Login as returning or existing netregistry customer 
+			//Test Step 3: Login as returning or existing netregistry customer  
 			nrgnsaboutyoupage.setReturningCustomerContacts(strCustomerAccountReference, strCustomerPassword);
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickLoginButton();
 			
@@ -136,19 +120,21 @@ public class TestCaptchaForExistingCustomerUsingNewCard extends TestBase{
 			nrgnsregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
 			
-			//Test Step 4: Input new credit card details and complete the order
-			nrgnsreviewandpaymentpage.selectNewCreditCardOption();
-		    nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+			//Test Step 4: Select existing credit card and complete the order
+			nrgnsreviewandpaymentpage.selectExistingCreditCard(strMaskedCardNumber);
 		    nrgnsreviewandpaymentpage.tickTermsAndConditions();
-		    nrgnsreviewandpaymentpage.clickCompleteOrder();
-		
-			//Test Step 5: Verify if recaptcha challenge is dislayed 
-			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+			nrgnsordercompletepage = nrgnsreviewandpaymentpage.clickCompleteOrder();
 			
-			//driver.close();
-			System.out.println("End Test: testCaptchaForExistingCustomerUsingNewCard");
+			//Test Step 5: Verify if the order is completed, get workflow id and account reference.
+			Assert.assertTrue(nrgnsordercompletepage.isOrderComplete(), "Order is not completed");
+			strWorkflowId = nrgnsordercompletepage.getSingleReferenceID();
+			strAccountReference = nrgnsordercompletepage.getAccountReferenceID();
+			System.out.println("Account Reference:" + strAccountReference);	
+			System.out.println("Reference ID[0]:" + strWorkflowId);	
+			
+			driver.close();
+			System.out.println("End Test: testCaptchaForExistingCustomerUsingExistingCard");
 		}	
 	}
 	
-
 }

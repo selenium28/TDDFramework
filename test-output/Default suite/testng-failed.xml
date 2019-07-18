@@ -5,9 +5,7 @@
     <classes>
       <class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard">
         <methods>
-          <include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingExistingCard"/>
           <include name="testCaptchaForNewCustomerUsingNewCard"/>
-          <include name="testDomainOrderInNewShoppingCartForExistingBTCustomerUsingNewCard"/>
         </methods>
       </class> <!-- com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard -->
     </classes>
