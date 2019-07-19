@@ -8,11 +8,11 @@
   </listeners>
   <test thread-count="1" name="New Cart Release Regression Test Cases(failed)" parallel="tests">
     <classes>
-      <class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForExistingCustomerUsingExistingCard">
+      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard">
         <methods>
-          <include name="testCaptchaForExistingCustomerUsingExistingCard" invocation-numbers="0"/>
+          <include name="testExistingCustomerScenarioUsingExistingCard" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.paymentgateway.newshoppingcart.testcases.TestCaptchaForExistingCustomerUsingExistingCard -->
+      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard -->
     </classes>
   </test> <!-- New Cart Release Regression Test Cases(failed) -->
 </suite> <!-- Failed suite [New Cart Release Regression Test Suite] -->

@@ -51,10 +51,13 @@ public class NRGNSRegistrantContactPage extends TestBase{
     		driver.navigate().refresh();
     		System.out.println("Refresh Retry: " + i);
     		
+    		//Add delay to check if registrant page is loaded after refresh
+    		Thread.sleep(5000);
     		currentURL = driver.getCurrentUrl();
+    		
     		System.out.println("Current URL: " + currentURL);
     		
-    		if (currentURL.contains("about-you/#login-box")) {
+    		if (currentURL.contains("/registrant/")) {
     			
     			System.out.println("Registrant Page loaded");
     			break;

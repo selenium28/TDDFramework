@@ -73,45 +73,45 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase{
 			Date d = new Date();
 			strDomainName = "TestConsoleRegression" + df.format(d);
 			
-			if (environment.equals("stagingdev-5")) {
+			if (environment.equals("uat1")) {
 				
 				strTld = ".com";			    
-				strCardOwnerName = "Test Captcha Existing Customer";
+				strCardOwnerName = "Test Existing Customer New Card";
 				strCardNumber = "5555555555554444";
 			    strCardExpiryMonth = "10";
 			    strCardExpiryYear = "2026";
 			    strCardSecurityCode = "123";
 			    			    
-				strCustomerAccountReference = "NET-1290";
-				strCustomerPassword = "mjj6hrex8";
+				strCustomerAccountReference = "TES-2168";
+				strCustomerPassword = "comein22";
 			    
 			}
-			else if (environment.equals("uat1")) {
+			else if (environment.equals("ote")) {
 				
 			    strTld = ".com";			    
-				strCardOwnerName = "Test Captcha Existing Customer";
+				strCardOwnerName = "Test Existing Customer New Card";
 				strCardNumber = "5555555555554444";
 			    strCardExpiryMonth = "10";
 			    strCardExpiryYear = "2026";
 			    strCardSecurityCode = "123";
 
-			    strCustomerAccountReference = "TES-2168";
+			    strCustomerAccountReference = "MEL-6007";
 			    strCustomerPassword = "comein22";
 			}
 			else if (environment.equals("prod")) {
 				
 			    strTld = ".com";			    
-				strCardOwnerName = "Test Captcha Existing Customer";
+				strCardOwnerName = "Test Existing Customer New Card";
 				strCardNumber = "5555555555554444";
 			    strCardExpiryMonth = "10";
 			    strCardExpiryYear = "2026";
 			    strCardSecurityCode = "123";
 
-			    strCustomerAccountReference = "CAP-1059";
+			    strCustomerAccountReference = "MEL-6007";
 			    strCustomerPassword = "comein22";
 			}
 			
-			System.out.println("Start Test: testCaptchaForExistingCustomerUsingNewCard");
+			System.out.println("Start Test: testExistingCustomerScenarioUsingNewCard");
 					
 			//Test Step 1: Navigate to domain search page of new shopping cart and place an order for a test domain
 			initialization(environment, "newcart_domainsearchurl_netregistry");
@@ -146,7 +146,7 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase{
 			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
 			
 			driver.close();
-			System.out.println("End Test: testCaptchaForExistingCustomerUsingNewCard");
+			System.out.println("End Test: testExistingCustomerScenarioUsingNewCard");
 		}	
 	}
 	

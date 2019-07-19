@@ -66,19 +66,19 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase{
 		    //Generate test domain name
 			DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 			Date d = new Date();
-			strDomainName = "TestConsoleRegression" + df.format(d);
+			strDomainName = "TestNewCartRegression" + df.format(d);
 			
-			if (environment.equals("stagingdev-5")) {
+			if (environment.equals("uat1")) {
 				strTld = ".com";
-				strCardOwnerName = "Test Captcha New Customer";
+				strCardOwnerName = "Test New Customer New Card";
 				strCardNumber = "5555555555554444";
 			    strCardExpiryMonth = "10";
 			    strCardExpiryYear = "2026";
 			    strCardSecurityCode = "123";
 			}
-			else if (environment.equals("uat1")) {
+			else if (environment.equals("ote")) {
 				strTld = ".com";
-				strCardOwnerName = "Test Captcha New Customer";
+				strCardOwnerName = "Test New Customer New Card";
 				strCardNumber = "5555555555554444";
 			    strCardExpiryMonth = "10";
 			    strCardExpiryYear = "2026";
@@ -86,14 +86,14 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase{
 			}
 			else if (environment.equals("prod")) {
 				strTld = ".com";
-				strCardOwnerName = "Test Captcha New Customer";
+				strCardOwnerName = "Test New Customer New Card";
 				strCardNumber = "5555555555554444";
 			    strCardExpiryMonth = "10";
 			    strCardExpiryYear = "2026";
 			    strCardSecurityCode = "123";
 			}
 			
-			System.out.println("Start Test: testCaptchaForNewCustomerUsingNewCard");
+			System.out.println("Start Test: testNewCustomerScenarioUsingNewCard");
 					
 			//Test Step 1: Navigate to domain search page of new shopping cart and place an order for a test domain
 			initialization(environment, "newcart_domainsearchurl_netregistry");
@@ -123,7 +123,7 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase{
 			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
 			
 			driver.close();
-			System.out.println("End Test: testCaptchaForNewCustomerUsingNewCard");
+			System.out.println("End Test: testNewCustomerScenarioUsingNewCard");
 		}	
 	}
 	

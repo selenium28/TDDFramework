@@ -70,32 +70,32 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase{
 			Date d = new Date();
 			strDomainName = "TestConsoleRegression" + df.format(d);
 			
-			if (environment.equals("stagingdev-5")) {
+			if (environment.equals("uat1")) {
 				
 				strTld = ".com";			    
 				strMaskedCardNumber = "************4444";
 				
-				strCustomerAccountReference = "MEL-6007";
+				strCustomerAccountReference = "TES-2168";
 				strCustomerPassword = "comein22";
 			    
-			}else if (environment.equals("uat1")) {
+			}else if (environment.equals("ote")) {
 				
 				strTld = ".com";			    
-				strMaskedCardNumber = "************4444";
+				strMaskedCardNumber = "************1053";
 				
-			    strCustomerAccountReference = "TES-2168";
+			    strCustomerAccountReference = "MEL-6007";
 			    strCustomerPassword = "comein22";	
 			}
 			else if (environment.equals("prod")) {
 				
 				strTld = ".com";			    
-				strMaskedCardNumber = "************4444";
+				strMaskedCardNumber = "************1053";
 				
-			    strCustomerAccountReference = "CAP-1059";
+			    strCustomerAccountReference = "MEL-6007";
 			    strCustomerPassword = "comein22";	
 			}
 			
-			System.out.println("Start Test: testCaptchaForExistingCustomerUsingExistingCard");
+			System.out.println("Start Test: testExistingCustomerScenarioUsingExistingCard");
 					
 			//Test Step 1: Navigate to domain search page of new shopping cart and place an order for a test domain
 			initialization(environment, "newcart_domainsearchurl_netregistry");
@@ -123,17 +123,20 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase{
 			//Test Step 4: Select existing credit card and complete the order
 			nrgnsreviewandpaymentpage.selectExistingCreditCard(strMaskedCardNumber);
 		    nrgnsreviewandpaymentpage.tickTermsAndConditions();
-			nrgnsordercompletepage = nrgnsreviewandpaymentpage.clickCompleteOrder();
+		    
+		    if (environment.equals("uat1")) {
+				nrgnsordercompletepage = nrgnsreviewandpaymentpage.clickCompleteOrder();
+				
+				//Test Step 5: Verify if the order is completed, get workflow id and account reference.
+				Assert.assertTrue(nrgnsordercompletepage.isOrderComplete(), "Order is not completed");
+				strWorkflowId = nrgnsordercompletepage.getSingleReferenceID();
+				strAccountReference = nrgnsordercompletepage.getAccountReferenceID();
+				System.out.println("Account Reference:" + strAccountReference);	
+				System.out.println("Reference ID[0]:" + strWorkflowId);	
 			
-			//Test Step 5: Verify if the order is completed, get workflow id and account reference.
-			Assert.assertTrue(nrgnsordercompletepage.isOrderComplete(), "Order is not completed");
-			strWorkflowId = nrgnsordercompletepage.getSingleReferenceID();
-			strAccountReference = nrgnsordercompletepage.getAccountReferenceID();
-			System.out.println("Account Reference:" + strAccountReference);	
-			System.out.println("Reference ID[0]:" + strWorkflowId);	
-			
+		    }
 			driver.close();
-			System.out.println("End Test: testCaptchaForExistingCustomerUsingExistingCard");
+			System.out.println("End Test: testExistingCustomerScenarioUsingExistingCard");
 		}	
 	}
 	

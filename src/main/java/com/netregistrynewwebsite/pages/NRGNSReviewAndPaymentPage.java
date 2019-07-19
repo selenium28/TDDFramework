@@ -121,8 +121,9 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     public void selectExistingCreditCard(String cardnumber){
 
     	System.out.println("select existing credit card");
-    	driver.findElement(By.xpath("//div[@class='cart-box']/div[2]/div/div[2]/div[1]/div/label")).click();
-//    	driver.findElement(By.partialLinkText("************4444"));
+    	driver.findElement(By.xpath("//span[@class='digits ng-binding'][text()='"+ cardnumber +"']")).click();
+    	System.out.println("Existing credit card was clicked");
+
     }
 }
 
