@@ -118,11 +118,13 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
        	driver.findElement(By.xpath("//div[@class='cart-box']/div[2]/div/div[2]/div[2]/div/label")).click();
     }
     
-    public void selectExistingCreditCard(String cardnumber){
+    public void selectExistingCreditCard(String cardnumber) throws InterruptedException{
 
     	System.out.println("select existing credit card");
     	driver.findElement(By.xpath("//span[@class='digits ng-binding'][text()='"+ cardnumber +"']")).click();
     	System.out.println("Existing credit card was clicked");
+    	
+    	Thread.sleep(5000);
 
     }
 }

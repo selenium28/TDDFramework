@@ -14,10 +14,10 @@
 		<classes>
 		
 			<!-- Netregistry Virtualization				 -->
-<!-- 			<class name="com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard">  -->
-<!-- 	        </class> -->
-<!-- 	        <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard">  -->
-<!-- 	        </class> -->
+			<class name="com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard"> 
+	        </class>
+	        <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard"> 
+	        </class>
 	        <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard"> 
 	        </class>
  
