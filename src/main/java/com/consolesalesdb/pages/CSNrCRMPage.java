@@ -29,9 +29,9 @@ public class CSNrCRMPage extends TestBase{
 
     //Methods
     public void setGreenCode(String strgreencode) throws InterruptedException {
-    	Thread.sleep(1000);
+    	Thread.sleep(3000);
     	greenCode.sendKeys(strgreencode);
-    	Thread.sleep(1000);
+    	Thread.sleep(2000);
     	greenCode.sendKeys(Keys.ENTER);
     }
     
@@ -85,7 +85,7 @@ public class CSNrCRMPage extends TestBase{
     }
       
     public CSCreateDomainWindowPage clickNewDomainNPSButton() throws InterruptedException {
-    	Thread.sleep(6000);
+    	Thread.sleep(8000);
     	System.out.println("searching for new domain (new price system) button");
     	if(newDomainNPS.isDisplayed()||newDomainNPS.isEnabled()) {
     		newDomainNPS.click();

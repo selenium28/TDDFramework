@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [New Cart Release Regression Test Suite]" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Console Regression Test Automation - PROD Test Suite]">
   <parameter name="environment" value="uat1"/>
-  <parameter name="iteration" value="1"/>
+  <parameter name="pretest" value="enabled"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="1" name="New Cart Release Regression Test Cases(failed)" parallel="tests">
+  <test thread-count="5" name="Regression Test Cases(failed)">
     <classes>
-      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard">
+      <class name="com.consoleregression.testcases.production.SalesDBJourneyTest">
         <methods>
-          <include name="testExistingCustomerScenarioUsingExistingCard" invocation-numbers="0"/>
+          <include name="verify_ComDomain_and_Office365_Order_InSalesDB" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard -->
+      </class> <!-- com.consoleregression.testcases.production.SalesDBJourneyTest -->
     </classes>
-  </test> <!-- New Cart Release Regression Test Cases(failed) -->
-</suite> <!-- Failed suite [New Cart Release Regression Test Suite] -->
+  </test> <!-- Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [Console Regression Test Automation - PROD Test Suite] -->

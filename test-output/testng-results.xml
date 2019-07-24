@@ -1,65 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="New Cart Release Regression Test Suite" duration-ms="296087" started-at="2019-07-19T01:47:39Z" finished-at="2019-07-19T01:52:35Z">
+  <suite name="Console Regression Test Automation - PROD Test Suite" duration-ms="370660" started-at="2019-07-24T00:31:20Z" finished-at="2019-07-24T00:37:31Z">
     <groups>
     </groups>
-    <test name="New Cart Release Regression Test Cases" duration-ms="296087" started-at="2019-07-19T01:47:39Z" finished-at="2019-07-19T01:52:35Z">
-      <class name="com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard">
-        <test-method status="PASS" signature="testNewCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@343f4d3d]" name="testNewCustomerScenarioUsingNewCard" duration-ms="70478" started-at="2019-07-19T01:47:39Z" finished-at="2019-07-19T01:48:49Z">
+    <test name="Regression Test Cases" duration-ms="370660" started-at="2019-07-24T00:31:20Z" finished-at="2019-07-24T00:37:31Z">
+      <class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest">
+        <test-method status="PASS" signature="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.CustomerPortalJourneyTest@548e7350]" name="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal" duration-ms="59756" started-at="2019-07-24T00:31:20Z" finished-at="2019-07-24T00:32:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
+                <![CDATA[prod]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNewCustomerScenarioUsingNewCard -->
-      </class> <!-- com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard -->
-      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard">
-        <test-method status="PASS" signature="testExistingCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard@53b32d7]" name="testExistingCustomerScenarioUsingNewCard" duration-ms="113067" started-at="2019-07-19T01:48:49Z" finished-at="2019-07-19T01:50:42Z">
+        </test-method> <!-- verifyDomainRegistrationOrderForNewCustomerInCustomerPortal -->
+        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.CustomerPortalJourneyTest@548e7350]" name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" duration-ms="71983" started-at="2019-07-24T00:32:20Z" finished-at="2019-07-24T00:33:32Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
+                <![CDATA[prod]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testExistingCustomerScenarioUsingNewCard -->
-      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard -->
-      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard">
-        <test-method status="PASS" signature="testExistingCustomerScenarioUsingExistingCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard@5442a311]" name="testExistingCustomerScenarioUsingExistingCard" duration-ms="112509" started-at="2019-07-19T01:50:42Z" finished-at="2019-07-19T01:52:35Z">
+        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal -->
+      </class> <!-- com.consoleregression.testcases.production.CustomerPortalJourneyTest -->
+      <class name="com.consoleregression.testcases.production.SalesDBJourneyTest">
+        <test-method status="PASS" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@1a968a59]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="42434" started-at="2019-07-24T00:33:32Z" finished-at="2019-07-24T00:34:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[uat1]]>
+                <![CDATA[prod]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[disabled]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testExistingCustomerScenarioUsingExistingCard -->
-      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard -->
-    </test> <!-- New Cart Release Regression Test Cases -->
-  </suite> <!-- New Cart Release Regression Test Suite -->
+        </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
+        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@1a968a59]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="71681" started-at="2019-07-24T00:34:14Z" finished-at="2019-07-24T00:35:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[disabled]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
+        <test-method status="PASS" signature="verify_ComDomain_and_Office365_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@1a968a59]" name="verify_ComDomain_and_Office365_Order_InSalesDB" duration-ms="85226" started-at="2019-07-24T00:35:26Z" finished-at="2019-07-24T00:36:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[disabled]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_ComDomain_and_Office365_Order_InSalesDB -->
+        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@1a968a59]" name="verify_NzDomain_Order_InSalesDB" duration-ms="39546" started-at="2019-07-24T00:36:51Z" finished-at="2019-07-24T00:37:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[prod]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[disabled]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
+      </class> <!-- com.consoleregression.testcases.production.SalesDBJourneyTest -->
+    </test> <!-- Regression Test Cases -->
+  </suite> <!-- Console Regression Test Automation - PROD Test Suite -->
 </testng-results>

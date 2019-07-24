@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Console Regression Test Automation - PROD Test Suite]">
-  <parameter name="environment" value="prod"/>
-  <parameter name="pretest" value="disabled"/>
+  <parameter name="environment" value="uat1"/>
+  <parameter name="pretest" value="enabled"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>

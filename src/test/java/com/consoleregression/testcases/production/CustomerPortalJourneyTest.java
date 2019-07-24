@@ -120,19 +120,19 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
 		nrgaccountcontactpage.setReturningCustomerContacts("MEL-6007", "comein22");
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
-//		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
-//		
-//		//Test Step 2: Select existing credit card details and submit the order 
-//		nrgbillingpage.selectExistingCreditCardOption("Visa");	
-//		nrgbillingpage.tickTermsAndConditions();
-//		nrgordercompletepage = nrgbillingpage.clickContinueButton();
-//		
-//		//Test Step 3: Verify if order is completed
-//		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
-//		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
-//		strAccountReference = nrgordercompletepage.getAccountReferenceID();
-//		System.out.println("Account Reference:" + strAccountReference);	
-//		System.out.println("Reference ID[0]:" + strWorkflowId);	
+		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
+		
+		//Test Step 2: Select existing credit card details and submit the order 
+		nrgbillingpage.selectExistingCreditCardOption("Number: 4715********1053 Expiry: 08/2020");	
+		nrgbillingpage.tickTermsAndConditions();
+		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+		
+		//Test Step 3: Verify if order is completed
+		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
+		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
+		strAccountReference = nrgordercompletepage.getAccountReferenceID();
+		System.out.println("Account Reference:" + strAccountReference);	
+		System.out.println("Reference ID[0]:" + strWorkflowId);	
 		//driver.close();
 	}
 	
