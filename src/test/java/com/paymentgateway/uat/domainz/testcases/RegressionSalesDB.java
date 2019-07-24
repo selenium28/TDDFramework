@@ -99,7 +99,7 @@ public class RegressionSalesDB extends TestBase{
 					strAccountReference = "MEL-6021";
 					strTld_01 = "com";
 					strRegistrationPeriod = "1 x Y";
-					strMajorProduct = "Basic cPanel Hosting";
+					strMajorProduct = "Basic Cloud Hosting";
 					strProductPeriod = "1 x M";
 					strPaymentMethod = "Invoice";
 					strRegistrantDetails = "Payment Gateway Test";	
@@ -110,7 +110,7 @@ public class RegressionSalesDB extends TestBase{
 					strAccountReference = "DOM-1309";
 					strTld_01 = "nz";
 					strRegistrationPeriod = "1 x Y";
-					strMajorProduct = "Basic cPanel Hosting";
+					strMajorProduct = "Basic Cloud Hosting";
 					strProductPeriod = "1 x M";
 					strPaymentMethod = "Invoice";
 					strRegistrantDetails = "Payment Gateway Test";	
