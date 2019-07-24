@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Payment Gateway Migration - Quest Data Creation Suite" thread-count="10" parallel="tests">
+<suite name="Payment Gateway - Migration - DMZ - Quest Data Creation Suite" thread-count="10" parallel="tests">
 	<parameter name="environment"  value="stagingdev-5"/>
 	
 	<!-- 	Iteration value can be set from 1 ~ 4 -->
@@ -10,7 +10,7 @@
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
 	</listeners>
 	
-	<test name="Payment Gateway Migration - Quest Data Creation Test Cases" parallel = "none" preserve-order="true">
+	<test name="Payment Gateway - Migration - DMZ - Quest Data Creatio Test Cases" parallel = "none" preserve-order="true">
 	
 		<classes>
 		<!-- Domainz Virtualization -->

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [New Cart Release Regression Test Suite]" parallel="tests">
-  <parameter name="environment" value="uat1"/>
+  <parameter name="environment" value="ote"/>
   <parameter name="iteration" value="1"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
