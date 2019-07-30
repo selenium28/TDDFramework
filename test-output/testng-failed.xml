@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [New Cart Release Regression Test Suite]" parallel="tests">
-  <parameter name="environment" value="ote"/>
-  <parameter name="iteration" value="1"/>
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Console Release Regression Test Suite]" parallel="tests">
+  <parameter name="environment" value="uat1"/>
+  <parameter name="virtualization" value="netregistry"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="1" name="New Cart Release Regression Test Cases(failed)" parallel="tests">
+  <test thread-count="1" name="Console Release Regression Test Cases(failed)" parallel="tests">
     <classes>
-      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard">
+      <class name="com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365">
         <methods>
-          <include name="testExistingCustomerScenarioUsingExistingCard" invocation-numbers="0"/>
+          <include name="testProductSetup2WorkflowForOffice365" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard -->
+      </class> <!-- com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365 -->
     </classes>
-  </test> <!-- New Cart Release Regression Test Cases(failed) -->
-</suite> <!-- Failed suite [New Cart Release Regression Test Suite] -->
+  </test> <!-- Console Release Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [Console Release Regression Test Suite] -->

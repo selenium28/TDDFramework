@@ -10,7 +10,6 @@
     <classes>
       <class name="com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest">
         <methods>
-          <include name="generateCustomerDataWithMonthlyBillingProduct" invocation-numbers="0"/>
           <include name="generateCustomerDataWithDomainRegistrationAndEnableAutoRenew" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.paymentgateway.testdatacreation.testcases.NetregistryDataCreationTest -->

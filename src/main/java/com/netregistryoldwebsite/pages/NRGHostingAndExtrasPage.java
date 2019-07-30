@@ -35,6 +35,18 @@ public class NRGHostingAndExtrasPage extends TestBase{
     @FindBy(how=How.XPATH, using = "//*[@id='CLOUD-BASIC']/div[2]/form/div/div[1]")
     WebElement basicCouldHosting;
     
+    @FindBy(how=How.XPATH, using = "//*[@id='O365-EESEN-QTY']/div[2]/form/div/div[1]")
+    WebElement o365EmailEssentials;
+           
+    @FindBy(how=How.XPATH, using = "//*[@id='O365-BESSEN-QTY']/div[2]/form/div/div[1]")
+    WebElement o365BusinessEssentials;
+    
+    @FindBy(how=How.XPATH, using = "//*[@id='O365-BPREM-QTY']/div[2]/form/div/div[1]")
+    WebElement o365BusinessPremium;
+    
+    @FindBy(how=How.XPATH, using = "//*[@id='O365-BUSINESS']/div[2]/form/div/div[1]")
+    WebElement o365Business;
+    
     @FindBy(how=How.XPATH, using = "//*[@id='CLOUD-BASIC']/div[2]/form/div/div[2]/div[2]/span[1]")
     WebElement monthlyProduct;
     
@@ -108,7 +120,7 @@ public class NRGHostingAndExtrasPage extends TestBase{
 //		else {
 //			System.out.println("element not found");
 //		}    
- //   	new Select(productDropdown).selectByVisibleText("1 Month");
+//   	new Select(productDropdown).selectByVisibleText("1 Month");
     	productDropdown.click(); 	
     	
     	//driver.findElement(By.xpath("//div[@class='x-combo-list-item']/*[contains(text(),'"+straddonproduct+"')]")).click();
@@ -126,6 +138,7 @@ public class NRGHostingAndExtrasPage extends TestBase{
     	return new NRGAccountContactPage();
     }
 
+    
 	public NRGAddHostingPage clickAddHostingButton(){
     	System.out.println("clicking add hosting button");
     	if(addHostingButton.isDisplayed()||addHostingButton.isEnabled()) {
@@ -151,9 +164,9 @@ public class NRGHostingAndExtrasPage extends TestBase{
 			System.out.println("Element not found");
 		}
     	
-		return new NRGAddHostingPage();
-    	
+		return new NRGAddHostingPage();  	
     }
+    
     
 	public NRGAddHostingPage selectBasicCloudHosting(String strPeriod) throws InterruptedException {
     	System.out.println("Selecting hosting product");
@@ -181,9 +194,96 @@ public class NRGHostingAndExtrasPage extends TestBase{
 			Thread.sleep(3000);
 		}
     	
-      return new NRGAddHostingPage();
-    	
+      return new NRGAddHostingPage();   	
     }
+	
+	
+	public NRGAddHostingPage selectOffice365(String strTypeOffice365, String strPeriod) throws InterruptedException {
+    	System.out.println("Selecting email hosting");
+    	    	  	
+    	try {
+			Thread.sleep(5000);
+			if (strTypeOffice365 == "o365EmailEssentials")
+			{
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", o365EmailEssentials);
+			      o365EmailEssentials.click();
+		        List<WebElement> opt = driver.findElements(By.xpath("//div[@id='O365-EESEN-QTY']/div[2]/form/div//div[@class='combo-list']//div//span[1][@class='period']"));
+		        System.out.println(opt.size());
+		        
+		        for(int i=0;i<=opt.size();i++)
+		        {
+		        	System.out.println(opt.get(i).getText());
+		        	if(opt.get(i).getText().contains(strPeriod))
+		        	{
+		        		opt.get(i).click();
+		        		System.out.println(strPeriod);
+		        	}
+		        }			
+			}
+			if (strTypeOffice365 == "o365BusinessEssentials")
+			{
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", o365BusinessEssentials);
+			      o365BusinessEssentials.click();
+		        List<WebElement> opt = driver.findElements(By.xpath("//div[@id='O365-BESSEN-QTY']/div[2]/form/div//div[@class='combo-list']//div//span[1][@class='period']"));
+		        System.out.println(opt.size());
+		        
+		        for(int i=0;i<=opt.size();i++)
+		        {
+		        	System.out.println(opt.get(i).getText());
+		        	if(opt.get(i).getText().contains(strPeriod))
+		        	{
+		        		opt.get(i).click();
+		        		System.out.println(strPeriod);
+		        	}
+		        }				
+			}
+			
+			if (strTypeOffice365 == "o365BusinessPremium")
+			{
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", o365BusinessPremium);
+			      o365BusinessPremium.click();
+		        List<WebElement> opt = driver.findElements(By.xpath("//div[@id='O365-BPREM-QTY']/div[2]/form/div//div[@class='combo-list']//div//span[1][@class='period']"));
+		        System.out.println(opt.size());
+		        
+		        for(int i=0;i<=opt.size();i++)
+		        {
+		        	System.out.println(opt.get(i).getText());
+		        	if(opt.get(i).getText().contains(strPeriod))
+		        	{
+		        		opt.get(i).click();
+		        		System.out.println(strPeriod);
+		        	}
+		        }
+			}
+		
+
+			if (strTypeOffice365 == "o365Business")
+			{
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", o365Business);
+			      o365Business.click();
+		        List<WebElement> opt = driver.findElements(By.xpath("//div[@id='O365-BUSINESS']/div[2]/form/div//div[@class='combo-list']//div//span[1][@class='period']"));
+		        System.out.println(opt.size());
+		        
+		        for(int i=0;i<=opt.size();i++)
+		        {
+		        	System.out.println(opt.get(i).getText());
+		        	if(opt.get(i).getText().contains(strPeriod))
+		        	{
+		        		opt.get(i).click();
+		        		System.out.println(strPeriod);
+		        	}
+		        }
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Element not found");
+			Thread.sleep(3000);
+		}
+    	
+      return new NRGAddHostingPage();   	
+    }	
+	
     
     public NRGAddHostingPage selectBasicCloudHostingYearly() throws InterruptedException {
     	System.out.println("Selecting hosting product");
@@ -198,21 +298,21 @@ public class NRGHostingAndExtrasPage extends TestBase{
 			System.out.println("Element not found");
 		}
     	
-		return new NRGAddHostingPage();
-    	
+		return new NRGAddHostingPage();  	
     }
+    
     
     public NRGBillingPage clickContinueButtonToBillingPage() {
 	     
-			System.out.println("Clicking continue button to billing page");
+		System.out.println("Clicking continue button to billing page");
 		
-			try {
-	    		Thread.sleep(2000);
-				driver.findElement(By.xpath("//*[@id='chatNow']/div/a[1]/img")).click();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				System.out.println("Chat window not present");
-			}
+		try {
+	    	Thread.sleep(2000);
+			driver.findElement(By.xpath("//*[@id='chatNow']/div/a[1]/img")).click();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Chat window not present");
+		}
 			
     	if(continueButton.isDisplayed()||continueButton.isEnabled()) { 
 
@@ -241,9 +341,8 @@ public class NRGHostingAndExtrasPage extends TestBase{
     	}
     	catch (Exception e) {
     		System.out.println("Warning Window Not Present");
-    	}
+    	} 
     	
-	return new NRGBillingPage();
-}
-
+    	return new NRGBillingPage();
+    }
 }

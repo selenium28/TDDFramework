@@ -1,0 +1,5 @@
+green_code,card_digits,card_owner,card_expire_month,card_expire_year
+TES-2537,4005519200000004,"NetRegistry New Customer - Domain Reg 40050004",04,2021
+TES-2537,371449635398431,"NetRegistry Returning Customer - Domain Reg 37148431",08,2021
+TES-2539,4012000033330026,"NetRegistry New Customer - Domain Reg 40120026",03,2021
+TES-2539,2223520043560014,"NetRegistry Returning Customer - Domain Reg 22230014",07,2021

@@ -1,111 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="New Cart Release Regression Test Suite" duration-ms="339090" started-at="2019-07-24T01:16:00Z" finished-at="2019-07-24T01:21:39Z">
+  <suite name="Console Release Regression Test Suite" duration-ms="590429" started-at="2019-07-30T06:56:10Z" finished-at="2019-07-30T07:06:00Z">
     <groups>
     </groups>
-    <test name="New Cart Release Regression Test Cases" duration-ms="339090" started-at="2019-07-24T01:16:00Z" finished-at="2019-07-24T01:21:39Z">
-      <class name="com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard">
-        <test-method status="PASS" signature="testNewCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@343f4d3d]" name="testNewCustomerScenarioUsingNewCard" duration-ms="75907" started-at="2019-07-24T01:16:00Z" finished-at="2019-07-24T01:17:16Z">
+    <test name="Console Release Regression Test Cases" duration-ms="590429" started-at="2019-07-30T06:56:10Z" finished-at="2019-07-30T07:06:00Z">
+      <class name="com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365">
+        <test-method status="FAIL" signature="testProductSetup2WorkflowForOffice365(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365@42e26948]" name="testProductSetup2WorkflowForOffice365" duration-ms="590390" started-at="2019-07-30T06:56:10Z" finished-at="2019-07-30T07:06:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ote]]>
+                <![CDATA[uat1]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[netregistry]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testNewCustomerScenarioUsingNewCard -->
-      </class> <!-- com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard -->
-      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard">
-        <test-method status="PASS" signature="testExistingCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard@53b32d7]" name="testExistingCustomerScenarioUsingNewCard" duration-ms="118178" started-at="2019-07-24T01:17:16Z" finished-at="2019-07-24T01:19:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ote]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExistingCustomerScenarioUsingNewCard -->
-      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard -->
-      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard">
-        <test-method status="FAIL" signature="testExistingCustomerScenarioUsingExistingCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard@5442a311]" name="testExistingCustomerScenarioUsingExistingCard" duration-ms="144944" started-at="2019-07-24T01:19:14Z" finished-at="2019-07-24T01:21:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ote]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='table registrant-details']/div[1]/input[@value='Have a business idea and reserving a domain for the future']"}
-  (Session info: chrome=75.0.3770.142)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
-System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58901}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
-Session ID: 546cc69151142341b7f42f8cafd66dab
-*** Element info: {Using=xpath, value=//div[@class='table registrant-details']/div[1]/input[@value='Have a business idea and reserving a domain for the future']}]]>
+              <![CDATA[productsetup2 status:  expected [approved] but found [start office365 setup]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='table registrant-details']/div[1]/input[@value='Have a business idea and reserving a domain for the future']"}
-  (Session info: chrome=75.0.3770.142)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
-System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:58901}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
-Session ID: 546cc69151142341b7f42f8cafd66dab
-*** Element info: {Using=xpath, value=//div[@class='table registrant-details']/div[1]/input[@value='Have a business idea and reserving a domain for the future']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-at com.netregistrynewwebsite.pages.NRGNSRegistrantContactPage.clickDomainInformation(NRGNSRegistrantContactPage.java:31)
-at com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard.testExistingCustomerScenarioUsingExistingCard(TestExistingCustomerScenarioUsingExistingCard.java:120)
+              <![CDATA[java.lang.AssertionError: productsetup2 status:  expected [approved] but found [start office365 setup]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365.testProductSetup2WorkflowForOffice365(TestProductSetup2WorkflowForOffice365.java:135)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -128,11 +54,11 @@ at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testExistingCustomerScenarioUsingExistingCard -->
-      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard -->
-    </test> <!-- New Cart Release Regression Test Cases -->
-  </suite> <!-- New Cart Release Regression Test Suite -->
+        </test-method> <!-- testProductSetup2WorkflowForOffice365 -->
+      </class> <!-- com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365 -->
+    </test> <!-- Console Release Regression Test Cases -->
+  </suite> <!-- Console Release Regression Test Suite -->
 </testng-results>
