@@ -72,7 +72,7 @@ public class TestProductSetup2WorkflowForOffice365 extends TestBase {
 		String strTypeOffice365 = null;
 
 		
-		DateFormat df = new SimpleDateFormat("ddMMYYYY-hhmmss");
+		DateFormat df = new SimpleDateFormat("ddMMYYYY-hhmmss");	
 		Date d = new Date();
 		strDomainName = "TestConsoleRegression" + df.format(d);
 		

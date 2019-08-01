@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Console Regression Test Automation - PROD Test Suite">
 	<parameter name="environment"  value="prod"/>
-	<parameter name="pretest"  	   value="disabled"/>
+	<parameter name="pretest"  	   value="enabled"/>
 	
 	<listeners>
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />

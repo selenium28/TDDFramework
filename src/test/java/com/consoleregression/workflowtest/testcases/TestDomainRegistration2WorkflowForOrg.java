@@ -64,7 +64,7 @@ public class TestDomainRegistration2WorkflowForOrg extends TestBase{
 		String strPassword = null;
 		String strWorkflowId = null;
 		
-		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
+		DateFormat df = new SimpleDateFormat("ddMMYYYY-hhmmss");
 		Date d = new Date();
 		strDomainName = "TestConsoleRegression" + df.format(d);
 		

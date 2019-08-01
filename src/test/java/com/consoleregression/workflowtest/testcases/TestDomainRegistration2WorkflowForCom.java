@@ -64,7 +64,7 @@ public class TestDomainRegistration2WorkflowForCom extends TestBase{
 		String strPassword = null;
 		String strWorkflowId = null;
 		
-		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
+		DateFormat df = new SimpleDateFormat("ddMMYYYY-hhmmss");
 		Date d = new Date();
 		strDomainName = "TestConsoleRegression" + df.format(d);
 		
@@ -107,7 +107,6 @@ public class TestDomainRegistration2WorkflowForCom extends TestBase{
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
-		caworkflowadminpage.processFraudCheck();
 		
 		//Test Step 5: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
