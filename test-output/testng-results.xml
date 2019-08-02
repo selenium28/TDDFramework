@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Release Regression Test Suite" duration-ms="607191" started-at="2019-08-02T06:05:29Z" finished-at="2019-08-02T06:15:36Z">
+  <suite name="Console Release Regression Test Suite" duration-ms="368693" started-at="2019-08-02T07:20:11Z" finished-at="2019-08-02T07:26:20Z">
     <groups>
     </groups>
-    <test name="Console Release Regression Test Cases" duration-ms="607191" started-at="2019-08-02T06:05:29Z" finished-at="2019-08-02T06:15:36Z">
+    <test name="Console Release Regression Test Cases" duration-ms="368693" started-at="2019-08-02T07:20:11Z" finished-at="2019-08-02T07:26:20Z">
       <class name="com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365">
-        <test-method status="FAIL" signature="testProductSetup2WorkflowForOffice365(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365@14bf9759]" name="testProductSetup2WorkflowForOffice365" duration-ms="607128" started-at="2019-08-02T06:05:29Z" finished-at="2019-08-02T06:15:36Z">
+        <test-method status="FAIL" signature="testProductSetup2WorkflowForOffice365(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365@14bf9759]" name="testProductSetup2WorkflowForOffice365" duration-ms="368650" started-at="2019-08-02T07:20:11Z" finished-at="2019-08-02T07:26:20Z">
           <params>
             <param index="0">
               <value>
@@ -22,16 +22,16 @@
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[productsetup2 status:  expected [approved] but found [start office365 setup]]]>
+              <![CDATA[operator check fraud expected [domain registration completed] but found [operator check fraud]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: productsetup2 status:  expected [approved] but found [start office365 setup]
+              <![CDATA[java.lang.AssertionError: operator check fraud expected [domain registration completed] but found [operator check fraud]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
-at com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365.testProductSetup2WorkflowForOffice365(TestProductSetup2WorkflowForOffice365.java:156)
+at com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365.testProductSetup2WorkflowForOffice365(TestProductSetup2WorkflowForOffice365.java:147)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)

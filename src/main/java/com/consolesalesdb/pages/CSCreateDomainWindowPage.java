@@ -43,7 +43,7 @@ public class CSCreateDomainWindowPage extends TestBase{
     //Methods
     public void setDomainDetails(String strdomainame, String strtld, String strperiod, String strpaymentMethod) throws InterruptedException {
     	
-    	Thread.sleep(4000);
+    	Thread.sleep(5000);
     	domainName.sendKeys(strdomainame);
     	Thread.sleep(2000);
     	tldDropdownButton.click();
@@ -62,7 +62,7 @@ public class CSCreateDomainWindowPage extends TestBase{
  
     public void setDomainDetailswithoutRegister(String strdomainame, String strtld, String strpaymentMethod) throws InterruptedException {
     	
-    	Thread.sleep(4000);
+    	Thread.sleep(5000);
     	domainName.sendKeys(strdomainame);
     	Thread.sleep(2000);
     	tldDropdownButton.click();
@@ -77,7 +77,7 @@ public class CSCreateDomainWindowPage extends TestBase{
     
     public void setDomainandMajorProductDetails(String strdomainame, String strtld, String strperiod, String strmajorproduct, String strproductperiod, String strpaymentMethod) throws InterruptedException {
     	
-    	Thread.sleep(4000);
+    	Thread.sleep(5000);
     	domainName.sendKeys(strdomainame);
     	Thread.sleep(2000);
     	tldDropdownButton.click();
@@ -102,7 +102,7 @@ public class CSCreateDomainWindowPage extends TestBase{
     
     public void setDomainandMajorProductwithoutRegistration(String strdomainame, String strtld, String strmajorproduct, String strproductperiod, String strpaymentMethod) throws InterruptedException {
     	
-    	Thread.sleep(4000);
+    	Thread.sleep(5000);
     	domainName.sendKeys(strdomainame);
     	Thread.sleep(2000);
     	tldDropdownButton.click();
@@ -124,7 +124,7 @@ public class CSCreateDomainWindowPage extends TestBase{
 
     public CSNrCRMPage clickCreateDomainButton() throws InterruptedException {
     	
-    	Thread.sleep(4000);
+    	Thread.sleep(5000);
     	System.out.println("clicking new domain (new price system)");
     	if(createDomainButton.isDisplayed()||createDomainButton.isEnabled()) {
     		createDomainButton.click();
