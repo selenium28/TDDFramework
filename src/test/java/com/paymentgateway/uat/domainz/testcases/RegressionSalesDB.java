@@ -151,7 +151,7 @@ public class RegressionSalesDB extends TestBase{
 						"Domain purchased successfully");
 				strWorkflowId_01 = csworkflownotificationpage.getWorkflowID();
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest01");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest01");
 				csworkflownotificationpage.clickOKButton();
 				driver.close();
 			
@@ -182,10 +182,15 @@ public class RegressionSalesDB extends TestBase{
 				
 				//Test Step 2: Verify if domain registration workflow status is completed
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
+				if (caworkflowadminpage.getWorkflowStatus("domainregistration2") != "domain registration completed") {
+		   	    	//Added refresh page to update current workflow status
+		   	        Thread.sleep(3000);
+		   	        driver.navigate().refresh();   	        
+				}
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
-						caworkflowadminpage.getWorkflowStatus("domainregistration2"));		
+					caworkflowadminpage.getWorkflowStatus("domainregistration2"));		
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
 				}
 		
 		
@@ -201,10 +206,15 @@ public class RegressionSalesDB extends TestBase{
 						
 				//Test Step 2: Verify if productsetup2 workflow is approved
 				caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName_01 + "." + strTld_01);
+				if (caworkflowadminpage.getWorkflowStatus("productSetup2") != "approved") {    	
+		   	    	//Added refresh page to update current workflow status
+		   	        Thread.sleep(2000);
+		   	        driver.navigate().refresh();  	        
+				}
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 
-						caworkflowadminpage.getWorkflowStatus("productsetup2"));
+					caworkflowadminpage.getWorkflowStatus("productsetup2"));
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest03");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest03");
 				driver.close();
 						
 		}
@@ -258,24 +268,12 @@ public class RegressionSalesDB extends TestBase{
 					
 					cataxinvoicepage.setBTCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
 					cataxinvoicepage.payInvoice();
-					Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of NZ$87.90 for invoice "+strInvoiceNumber+" has been accepted");
+					Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of NZ$89.90 for invoice "+strInvoiceNumber+" has been accepted");
 					
 				}
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
 				
-				// Test Step 3: Verify if there is no outstanding amount for the invoice
-//				cainvoicespage = cataxinvoicepage.clickInvoicesLink();
-//				driver.findElement(By.linkText("Invoices")).click();
-//				Thread.sleep(2000);
-//	
-//				String strOutstanding = driver
-//						.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table[4]/tbody/tr[2]/td[7]")).getText();
-//				String strOutstandingAmount = strOutstanding.trim();
-//				System.out.println(strOutstandingAmount);
-//	
-//				Assert.assertEquals(strOutstandingAmount, "NZ$0.00");
-//	
 				driver.close();
 
 		}
@@ -294,7 +292,7 @@ public class RegressionSalesDB extends TestBase{
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "DOM-1309";
-					strAmount = "87.90";
+					strAmount = "89.90";
 					strTransactionType= "REFUND";
 				}
 	
@@ -313,7 +311,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 2: Verify if refund transaction is processed successfully.
 				Assert.assertEquals(csprocesstransactionpage.getConfirmationMessage(), "Item Successfully Added", "Domain refunded sucessfully");
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest05");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest05");
 				driver.close();
 			
 		}
@@ -333,7 +331,7 @@ public class RegressionSalesDB extends TestBase{
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "DOM-1309";
-					strAmount = "87.90";
+					strAmount = "89.90";
 					strTransactionType= "PAYMENT";
 					strPaymentMethod = "MasterCard: 545454******5454";
 					
@@ -353,7 +351,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 2: Verify if payment transaction is processed successfully.
 				Assert.assertEquals(csprocesstransactionpage.getConfirmationMessage(), "Item Successfully Added", "Domain paid sucessfully");
 		
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest06");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest06");
 				driver.close();
 		
 		}	

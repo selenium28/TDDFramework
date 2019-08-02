@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard">
+      <class name="com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365">
         <methods>
-          <include name="testCaptchaForNewCustomerUsingNewCard"/>
+          <include name="testProductSetup2WorkflowForOffice365"/>
         </methods>
-      </class> <!-- com.paymentgateway.newshoppingcart.testcases.TestCaptchaForNewCustomerUsingNewCard -->
+      </class> <!-- com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,65 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="2" total="9" passed="6">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="2188281" started-at="2019-08-01T06:53:35Z" finished-at="2019-08-01T07:30:03Z">
+  <suite name="Console Release Regression Test Suite" duration-ms="607191" started-at="2019-08-02T06:05:29Z" finished-at="2019-08-02T06:15:36Z">
     <groups>
     </groups>
-    <test name="Regression Test Cases" duration-ms="2188281" started-at="2019-08-01T06:53:35Z" finished-at="2019-08-01T07:30:03Z">
-      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
-        <test-method status="PASS" signature="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@4667ae56]" name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" duration-ms="628479" started-at="2019-08-01T06:53:35Z" finished-at="2019-08-01T07:04:03Z">
+    <test name="Console Release Regression Test Cases" duration-ms="607191" started-at="2019-08-02T06:05:29Z" finished-at="2019-08-02T06:15:36Z">
+      <class name="com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365">
+        <test-method status="FAIL" signature="testProductSetup2WorkflowForOffice365(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365@14bf9759]" name="testProductSetup2WorkflowForOffice365" duration-ms="607128" started-at="2019-08-02T06:05:29Z" finished-at="2019-08-02T06:15:36Z">
           <params>
             <param index="0">
               <value>
                 <![CDATA[uat1]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB -->
-        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@4667ae56]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="596378" started-at="2019-08-01T07:04:03Z" finished-at="2019-08-01T07:14:00Z">
-          <params>
-            <param index="0">
+            <param index="1">
               <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@4667ae56]" name="verify_NzDomain_Order_InSalesDB" duration-ms="367640" started-at="2019-08-01T07:14:00Z" finished-at="2019-08-01T07:20:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
-        <test-method status="FAIL" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@4667ae56]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="386555" started-at="2019-08-01T07:20:07Z" finished-at="2019-08-01T07:26:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
+                <![CDATA[netregistry]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[update star rating expected [domain registration completed] but found [update star rating]]]>
+              <![CDATA[productsetup2 status:  expected [approved] but found [start office365 setup]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: update star rating expected [domain registration completed] but found [update star rating]
+              <![CDATA[java.lang.AssertionError: productsetup2 status:  expected [approved] but found [start office365 setup]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
-at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComAuDomain_Order_InSalesDB(SalesDBJourneyTest.java:128)
+at com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365.testProductSetup2WorkflowForOffice365(TestProductSetup2WorkflowForOffice365.java:156)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -73,60 +45,20 @@ at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
-      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
-      <class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
-        <test-method status="PASS" signature="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@77cd7a0]" name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" duration-ms="61651" started-at="2019-08-01T07:26:34Z" finished-at="2019-08-01T07:27:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@77cd7a0]" name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" duration-ms="82291" started-at="2019-08-01T07:27:36Z" finished-at="2019-08-01T07:28:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@77cd7a0]" name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" duration-ms="65221" started-at="2019-08-01T07:28:58Z" finished-at="2019-08-01T07:30:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal -->
-      </class> <!-- com.consoleregression.testcases.CustomerPortalJourneyTest -->
-    </test> <!-- Regression Test Cases -->
-  </suite> <!-- Console Regression Test Automation - UAT Test Suite -->
+        </test-method> <!-- testProductSetup2WorkflowForOffice365 -->
+      </class> <!-- com.consoleregression.workflowtest.testcases.TestProductSetup2WorkflowForOffice365 -->
+    </test> <!-- Console Release Regression Test Cases -->
+  </suite> <!-- Console Release Regression Test Suite -->
 </testng-results>

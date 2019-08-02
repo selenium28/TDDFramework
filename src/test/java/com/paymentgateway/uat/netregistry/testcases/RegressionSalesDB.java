@@ -261,18 +261,6 @@ public class RegressionSalesDB extends TestBase{
 				
 				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
 				
-				// Test Step 3: Verify if there is no outstanding amount for the invoice
-//				cainvoicespage = cataxinvoicepage.clickInvoicesLink();
-//				driver.findElement(By.linkText("Invoices")).click();
-//				Thread.sleep(2000);
-//	
-//				String strOutstanding = driver
-//						.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table[4]/tbody/tr[2]/td[7]")).getText();
-//				String strOutstandingAmount = strOutstanding.trim();
-//				System.out.println(strOutstandingAmount);
-//	
-//				Assert.assertEquals(strOutstandingAmount, "NZ$0.00");
-//	
 				driver.close();
 
 		}

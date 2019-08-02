@@ -95,7 +95,7 @@ public class RegressionSalesDB extends TestBase{
 					strAccountReference = "MEL-6005";
 					strTld_01 = "com";
 					strRegistrationPeriod = "1 x Y";
-					strMajorProduct = "Basic Cloud Hosting";
+					strMajorProduct = "Basic cPanel Hosting";
 					strProductPeriod = "1 x M";
 					strPaymentMethod = "Visa";
 					strRegistrantDetails = "Payment Gateway Test";	
@@ -106,7 +106,7 @@ public class RegressionSalesDB extends TestBase{
 					strAccountReference = "MIT-3302";
 					strTld_01 = "com";
 					strRegistrationPeriod = "1 x Y";
-					strMajorProduct = "Basic Cloud Hosting";
+					strMajorProduct = "Basic cPanel Hosting";
 					strProductPeriod = "1 x M";
 					strPaymentMethod = "Visa";
 					strRegistrantDetails = "Payment Gateway Test";	
@@ -147,7 +147,7 @@ public class RegressionSalesDB extends TestBase{
 						"Domain purchased successfully");
 				strWorkflowId_01 = csworkflownotificationpage.getWorkflowID();
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest01");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest01");
 				csworkflownotificationpage.clickOKButton();
 				driver.close();
 			
@@ -179,7 +179,7 @@ public class RegressionSalesDB extends TestBase{
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
 						caworkflowadminpage.getWorkflowStatus("domainregistration2"));		
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
 				}
 		
 		
@@ -204,7 +204,7 @@ public class RegressionSalesDB extends TestBase{
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 
 						caworkflowadminpage.getWorkflowStatus("productsetup2"));
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest03");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest03");
 				driver.close();
 		}
 		

@@ -16,19 +16,6 @@
           <include name="testProductSetup2WorkflowInConsoleAdmin" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB -->
-      <class name="com.paymentgateway.uat.netregistry.testcases.RegressionSalesDB">
-        <methods>
-          <include name="testPaySingleInvoiceInConsoleAdmin" invocation-numbers="0"/>
-          <include name="testPayInvoiceUsingExistingCardFromSalesDB" invocation-numbers="0"/>
-          <include name="testDomainRegistration2WorkflowInConsoleAdmin" invocation-numbers="0"/>
-          <include name="testRefundPaymentFromSalesDB" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.paymentgateway.uat.netregistry.testcases.RegressionSalesDB -->
-      <class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB">
-        <methods>
-          <include name="testPaySingleInvoiceInConsoleAdmin" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.paymentgateway.uat.domainz.testcases.RegressionSalesDB -->
     </classes>
   </test> <!-- Payment Gateway UAT Braintree Regression Test Cases(failed) -->
 </suite> <!-- Failed suite [Payment Gateway UAT Braintree Regression Test Suite] -->
