@@ -256,7 +256,7 @@ public class RegressionSalesDB extends TestBase{
 	
 					cataxinvoicepage.setBTCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear);
 					cataxinvoicepage.payInvoice();
-					Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$29.90 for invoice "+strInvoiceNumber+" has been accepted");
+					Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$36.90 for invoice "+strInvoiceNumber+" has been accepted");
 				}
 				
 				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
@@ -279,7 +279,7 @@ public class RegressionSalesDB extends TestBase{
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "NET-1218";
-					strAmount = "29.90";
+					strAmount = "36.90";
 					strTransactionType= "REFUND";
 				}
 	
@@ -318,7 +318,7 @@ public class RegressionSalesDB extends TestBase{
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "NET-1218";
-					strAmount = "29.90";
+					strAmount = "36.90";
 					strTransactionType= "PAYMENT";
 					strPaymentMethod = "MasterCard: 545454******5454";
 					
