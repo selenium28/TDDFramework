@@ -8,157 +8,17 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Console Regression Test Automation - UAT Test Suite</th></tr>
-<tr><td><a href="#t0">Regression Test Cases</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">5</td><td class="num">651,285</td><td></td><td></td></tr>
+<tr><th colspan="7">Console Release Regression Test Suite</th></tr>
+<tr><td><a href="#t0">Console Release Regression Test Cases</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">395,121</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Regression Test Automation - UAT Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.consoleregression.testcases.CustomerPortalJourneyTest</td><td><a href="#m0">verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal</a></td><td rowspan="1">1564971916632</td><td rowspan="1">89462</td></tr><tr class="failedodd"><td rowspan="4">com.consoleregression.testcases.SalesDBJourneyTest</td><td><a href="#m1">verify_ComAuDomain_Order_InSalesDB</a></td><td rowspan="1">1564971797348</td><td rowspan="1">119279</td></tr><tr class="failedodd"><td><a href="#m2">verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</a></td><td rowspan="1">1564971527167</td><td rowspan="1">104768</td></tr><tr class="failedodd"><td><a href="#m3">verify_NetDomain_and_DIFM_Order_InSalesDB</a></td><td rowspan="1">1564971631941</td><td rowspan="1">60915</td></tr><tr class="failedodd"><td><a href="#m4">verify_NzDomain_Order_InSalesDB</a></td><td rowspan="1">1564971692869</td><td rowspan="1">104476</td></tr><tr><th colspan="4">Regression Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.consoleregression.testcases.CustomerPortalJourneyTest</td><td><a href="#m5">verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal</a></td><td rowspan="1">1564972006097</td><td rowspan="1">82310</td></tr><tr class="passedeven"><td><a href="#m6">verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal</a></td><td rowspan="1">1564972088411</td><td rowspan="1">90013</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Release Regression Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Console Release Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom</td><td><a href="#m0">testDomainRegistration2WorkflowForCom</a></td><td rowspan="1">1564981952991</td><td rowspan="1">395076</td></tr></tbody>
 </table>
-<h2>Regression Test Cases</h2><h3 id="m0">com.consoleregression.testcases.CustomerPortalJourneyTest#verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: timeout
-  (Session info: chrome=75.0.3770.142)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49401}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
-Session ID: bd42e8ed454db71f272741272d2da014
-*** Element info: {Using=xpath, value=//div[@class=&apos;next&apos;]/form/input[2]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-	at com.netregistryoldwebsite.pages.NRGHostingAndExtrasPage.clickContinueButton(NRGHostingAndExtrasPage.java:132)
-	at com.consoleregression.testcases.CustomerPortalJourneyTest.verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(CustomerPortalJourneyTest.java:83)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.consoleregression.testcases.SalesDBJourneyTest#verify_ComAuDomain_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;ext-mb-text&apos;]&quot;}
-  (Session info: chrome=75.0.3770.142)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49292}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
-Session ID: c2bb0e93df90d205abbedc0f7493c3ad
-*** Element info: {Using=xpath, value=//*[@class=&apos;ext-mb-text&apos;]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at com.consolesalesdb.pages.CSWorkflowNotificationPage.getWorkflowID(CSWorkflowNotificationPage.java:26)
-	at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComAuDomain_Order_InSalesDB(SalesDBJourneyTest.java:115)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.consoleregression.testcases.SalesDBJourneyTest#verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li/a[contains(text(),&apos;(New Pricing Structure) : Show Domain Services&apos;)]&quot;}
-  (Session info: chrome=75.0.3770.142)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49157}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
-Session ID: 288c9d39803477ef17a6c5260799badf
-*** Element info: {Using=xpath, value=//li/a[contains(text(),&apos;(New Pricing Structure) : Show Domain Services&apos;)]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at com.consolesalesdb.pages.CSNrCRMPage.clickShowDomainServices(CSNrCRMPage.java:62)
-	at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(SalesDBJourneyTest.java:265)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.consoleregression.testcases.SalesDBJourneyTest#verify_NetDomain_and_DIFM_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;x-combo-list-inner&apos;]/div[text()=&apos;.net&apos;]&quot;}
-  (Session info: chrome=75.0.3770.142)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49200}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
-Session ID: 0b5d2a63626857ff9c4f8ec67cad1a96
-*** Element info: {Using=xpath, value=//div[@class=&apos;x-combo-list-inner&apos;]/div[text()=&apos;.net&apos;]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at com.consolesalesdb.pages.CSCreateDomainWindowPage.setDomainandMajorProductDetails(CSCreateDomainWindowPage.java:85)
-	at com.consoleregression.testcases.SalesDBJourneyTest.verify_NetDomain_and_DIFM_Order_InSalesDB(SalesDBJourneyTest.java:178)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.consoleregression.testcases.SalesDBJourneyTest#verify_NzDomain_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=75.0.3770.142)
-  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49248}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
-Session ID: c49b46dc807baa49fedb5d9f77fc756b
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:35)
-	at org.openqa.selenium.remote.RemoteMouse.mouseMove(RemoteMouse.java:89)
-	at org.openqa.selenium.support.events.internal.EventFiringMouse.mouseMove(EventFiringMouse.java:57)
-	at org.openqa.selenium.interactions.MoveMouseAction.perform(MoveMouseAction.java:43)
-	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:36)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:641)
-	at com.consolesalesdb.pages.CSNrCRMPage.clickShowDomainServices(CSNrCRMPage.java:61)
-	at com.consoleregression.testcases.SalesDBJourneyTest.verify_NzDomain_Order_InSalesDB(SalesDBJourneyTest.java:346)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.consoleregression.testcases.CustomerPortalJourneyTest#verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.consoleregression.testcases.CustomerPortalJourneyTest#verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Console Release Regression Test Cases</h2><h3 id="m0">com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom#testDomainRegistration2WorkflowForCom</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>netregistry</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: product setup expected [domain registration completed] but found [product setup]
+	at com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom.testDomainRegistration2WorkflowForCom(TestDomainRegistration2WorkflowForCom.java:114)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

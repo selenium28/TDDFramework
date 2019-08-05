@@ -62,8 +62,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	//To add a waiting time for workflow to complete processing
-    	Thread.sleep(120000);
-    	driver.navigate().refresh(); 
+    	Thread.sleep(60000);
     }
     
     
@@ -89,7 +88,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	System.out.println("Execute Action button clicked");
-    	Thread.sleep(100000);			
+    	Thread.sleep(60000);			
     }
     
     
