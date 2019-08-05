@@ -7,9 +7,17 @@
   </listeners>
   <test thread-count="5" name="Regression Test Cases(failed)">
     <classes>
+      <class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
+        <methods>
+          <include name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.consoleregression.testcases.CustomerPortalJourneyTest -->
       <class name="com.consoleregression.testcases.SalesDBJourneyTest">
         <methods>
           <include name="verify_ComAuDomain_Order_InSalesDB" invocation-numbers="0"/>
+          <include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" invocation-numbers="0"/>
+          <include name="verify_NetDomain_and_DIFM_Order_InSalesDB" invocation-numbers="0"/>
+          <include name="verify_NzDomain_Order_InSalesDB" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
     </classes>

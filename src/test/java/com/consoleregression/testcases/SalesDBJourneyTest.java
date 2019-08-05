@@ -127,7 +127,7 @@ public class SalesDBJourneyTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		if (caworkflowadminpage.getWorkflowStatus("domainregistration2") != "domain registration completed") {
    	    	//Added refresh page to update current workflow status
-   	        Thread.sleep(3000);
+   	        Thread.sleep(5000);
    	        driver.navigate().refresh();   	        
    	    }
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
@@ -197,7 +197,7 @@ public class SalesDBJourneyTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		if (caworkflowadminpage.getWorkflowStatus("domainregistration2") != "domain registration completed") {	
    	    	//Added refresh page to update current workflow status
-   	        Thread.sleep(3000);
+   	        Thread.sleep(5000);
    	        driver.navigate().refresh();   	        
    	    }
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
@@ -211,7 +211,7 @@ public class SalesDBJourneyTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
 		if (caworkflowadminpage.getWorkflowStatus("productSetup2") != "halting current workflow") {
    	    	//Added refresh page to update current workflow status
-   	        Thread.sleep(2000);
+   	        Thread.sleep(5000);
    	        driver.navigate().refresh();  	        
    	    }
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "halting current workflow", 
@@ -281,7 +281,7 @@ public class SalesDBJourneyTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		if (caworkflowadminpage.getWorkflowStatus("domainregistration2") != "domain registration completed") {	
    	    	//Added refresh page to update current workflow status
-   	        Thread.sleep(3000);
+   	        Thread.sleep(5000);
    	        driver.navigate().refresh();   	        
    	    }
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
@@ -295,7 +295,7 @@ public class SalesDBJourneyTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
 		if (caworkflowadminpage.getWorkflowStatus("productSetup2") != "approved") {	
    	    	//Added refresh page to update current workflow status
-   	        Thread.sleep(2000);
+   	        Thread.sleep(5000);
    	        driver.navigate().refresh();  	        
    	    }
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 
@@ -360,7 +360,7 @@ public class SalesDBJourneyTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		if (caworkflowadminpage.getWorkflowStatus("domainregistration2") != "domain registration completed") {	
    	    	//Added refresh page to update current workflow status
-   	        Thread.sleep(3000);
+   	        Thread.sleep(5000);
    	        driver.navigate().refresh();   	        
    	    }
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
