@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="5" ignored="0" total="6" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Release Regression Test Suite" duration-ms="395121" started-at="2019-08-05T05:12:32Z" finished-at="2019-08-05T05:19:08Z">
+  <suite name="Payment Gateway UAT Braintree Regression Test Suite" duration-ms="656133" started-at="2019-08-06T03:52:28Z" finished-at="2019-08-06T04:03:24Z">
     <groups>
     </groups>
-    <test name="Console Release Regression Test Cases" duration-ms="395121" started-at="2019-08-05T05:12:32Z" finished-at="2019-08-05T05:19:08Z">
-      <class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom">
-        <test-method status="FAIL" signature="testDomainRegistration2WorkflowForCom(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom@14bf9759]" name="testDomainRegistration2WorkflowForCom" duration-ms="395076" started-at="2019-08-05T05:12:32Z" finished-at="2019-08-05T05:19:08Z">
+    <test name="Payment Gateway UAT Braintree Regression Test Cases" duration-ms="656133" started-at="2019-08-06T03:52:28Z" finished-at="2019-08-06T04:03:24Z">
+      <class name="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB">
+        <test-method status="PASS" signature="testCreateDomainAndMajorProductOrderInSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testCreateDomainAndMajorProductOrderInSalesDB" duration-ms="118879" started-at="2019-08-06T03:52:28Z" finished-at="2019-08-06T03:54:27Z">
           <params>
             <param index="0">
               <value>
@@ -16,22 +16,43 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[netregistry]]>
+                <![CDATA[braintree]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateDomainAndMajorProductOrderInSalesDB -->
+        <test-method status="FAIL" signature="testDomainRegistration2WorkflowInConsoleAdmin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testDomainRegistration2WorkflowInConsoleAdmin" duration-ms="206007" started-at="2019-08-06T03:54:27Z" finished-at="2019-08-06T03:57:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[braintree]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[disabled]]>
               </value>
             </param>
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[product setup expected [domain registration completed] but found [product setup]]]>
+              <![CDATA[register domain failed expected [domain registration completed] but found [register domain failed]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: product setup expected [domain registration completed] but found [product setup]
+              <![CDATA[java.lang.AssertionError: register domain failed expected [domain registration completed] but found [register domain failed]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
-at com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom.testDomainRegistration2WorkflowForCom(TestDomainRegistration2WorkflowForCom.java:114)
+at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testDomainRegistration2WorkflowInConsoleAdmin(RegressionSalesDB.java:180)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -57,8 +78,326 @@ at java.lang.Thread.run(Unknown Source)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDomainRegistration2WorkflowForCom -->
-      </class> <!-- com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom -->
-    </test> <!-- Console Release Regression Test Cases -->
-  </suite> <!-- Console Release Regression Test Suite -->
+        </test-method> <!-- testDomainRegistration2WorkflowInConsoleAdmin -->
+        <test-method status="FAIL" signature="testProductSetup2WorkflowInConsoleAdmin(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testProductSetup2WorkflowInConsoleAdmin" duration-ms="39037" started-at="2019-08-06T03:57:53Z" finished-at="2019-08-06T03:58:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[braintree]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52299}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: f2d0a8180c361d8ecdfa41b74c21f512
+*** Element info: {Using=xpath, value=//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52299}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: f2d0a8180c361d8ecdfa41b74c21f512
+*** Element info: {Using=xpath, value=//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+at com.consoleadmin.pages.CAWorkflowAdminPage.processProductSetup2(CAWorkflowAdminPage.java:179)
+at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testProductSetup2WorkflowInConsoleAdmin(RegressionSalesDB.java:194)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductSetup2WorkflowInConsoleAdmin -->
+        <test-method status="FAIL" signature="testPaySingleInvoiceInConsoleAdmin(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testPaySingleInvoiceInConsoleAdmin" duration-ms="188482" started-at="2019-08-06T03:58:32Z" finished-at="2019-08-06T04:01:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[braintree]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='cp'][text()='12082351']/parent::td/parent::tr/td[9]/a[2]"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52381}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 83be90bae6b188d4fc9a9ad730e1e7b9
+*** Element info: {Using=xpath, value=//*[@class='cp'][text()='12082351']/parent::td/parent::tr/td[9]/a[2]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='cp'][text()='12082351']/parent::td/parent::tr/td[9]/a[2]"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52381}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 83be90bae6b188d4fc9a9ad730e1e7b9
+*** Element info: {Using=xpath, value=//*[@class='cp'][text()='12082351']/parent::td/parent::tr/td[9]/a[2]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+at com.consoleadmin.pages.CAInvoicesPage.selectInvoiceNumber(CAInvoicesPage.java:25)
+at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPaySingleInvoiceInConsoleAdmin(RegressionSalesDB.java:240)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPaySingleInvoiceInConsoleAdmin -->
+        <test-method status="FAIL" signature="testRefundPaymentFromSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testRefundPaymentFromSalesDB" duration-ms="51942" started-at="2019-08-06T04:01:40Z" finished-at="2019-08-06T04:02:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[braintree]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Domain refunded sucessfully expected [Item Successfully Added] but found [You can not refund more than the invoice total of $26.7]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Domain refunded sucessfully expected [Item Successfully Added] but found [You can not refund more than the invoice total of $26.7]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testRefundPaymentFromSalesDB(RegressionSalesDB.java:294)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRefundPaymentFromSalesDB -->
+        <test-method status="FAIL" signature="testPayInvoiceUsingExistingCardFromSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testPayInvoiceUsingExistingCardFromSalesDB" duration-ms="51708" started-at="2019-08-06T04:02:32Z" finished-at="2019-08-06T04:03:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[braintree]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'MasterCard: 545454******5454')]"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52507}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 52d4d31aa936aa628e03e06d717684ea
+*** Element info: {Using=xpath, value=//*[contains(text(),'MasterCard: 545454******5454')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'MasterCard: 545454******5454')]"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52507}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 52d4d31aa936aa628e03e06d717684ea
+*** Element info: {Using=xpath, value=//*[contains(text(),'MasterCard: 545454******5454')]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+at com.consolesalesdb.pages.CSProcessTransactionPage.setProcessTransactionDetails(CSProcessTransactionPage.java:113)
+at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPayInvoiceUsingExistingCardFromSalesDB(RegressionSalesDB.java:330)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPayInvoiceUsingExistingCardFromSalesDB -->
+      </class> <!-- com.paymentgateway.uat.tpp.testcases.RegressionSalesDB -->
+    </test> <!-- Payment Gateway UAT Braintree Regression Test Cases -->
+  </suite> <!-- Payment Gateway UAT Braintree Regression Test Suite -->
 </testng-results>

@@ -54,7 +54,7 @@
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2019-08-05 15:19:10</span>
+					<span class='suite-started-time'>2019-08-06 14:03:26</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -84,25 +84,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 6m 37s+172ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 10m 58s+392ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 6m 37s+172ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 10m 58s+392ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2019-08-05 15:12:32</span> 
+							<span class='panel-lead suite-started-time'>2019-08-06 13:52:28</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2019-08-05 15:19:10</span> 
+							<span class='panel-lead suite-ended-time'>2019-08-06 14:03:26</span> 
 						</div> 
 					</div>
 				</div>
@@ -238,17 +238,54 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active fail ' extentid='9f55c0b8-d0e6-4f61-9b4e-6026d7489bda'>
+										<li class='collection-item test displayed active pass ' extentid='59992c1a-daa4-40fe-826b-8286157e672e'>
 											<div class='test-head'>
-												<span class='test-name'>testDomainRegistration2WorkflowForCom </span>
+												<span class='test-name'>testCreateDomainAndMajorProductOrderInSalesDB </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-08-06 13:52:28</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-08-06 13:54:27</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 58s+879ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>13:54:27</td>
+																	<td class='step-details'>Test passed</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='2852066a-1dde-4af5-a897-d8957c23feaa'>
+											<div class='test-head'>
+												<span class='test-name'>testPayInvoiceUsingExistingCardFromSalesDB </span>
 												<span class='test-status label right outline capitalize fail'>fail</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-08-05 15:12:32</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-08-05 15:19:08</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 6m 35s+76ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-08-06 14:02:32</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-08-06 14:03:24</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 51s+708ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -265,14 +302,354 @@
 														<tbody>
 																<tr>
 																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>15:19:08</td>
-																	<td class='step-details'><pre>java.lang.AssertionError: product setup expected [domain registration completed] but found [product setup]
+																	<td class='timestamp'>14:03:24</td>
+																	<td class='step-details'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'MasterCard: 545454******5454')]"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52507}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 52d4d31aa936aa628e03e06d717684ea
+*** Element info: {Using=xpath, value=//*[contains(text(),'MasterCard: 545454******5454')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consolesalesdb.pages.CSProcessTransactionPage.setProcessTransactionDetails(CSProcessTransactionPage.java:113)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPayInvoiceUsingExistingCardFromSalesDB(RegressionSalesDB.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='602d0392-563e-4499-93d9-5f8e9a33508a'>
+											<div class='test-head'>
+												<span class='test-name'>testPaySingleInvoiceInConsoleAdmin </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-08-06 13:58:32</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-08-06 14:01:40</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 3m 8s+482ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:01:40</td>
+																	<td class='step-details'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='cp'][text()='12082351']/parent::td/parent::tr/td[9]/a[2]"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52381}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 83be90bae6b188d4fc9a9ad730e1e7b9
+*** Element info: {Using=xpath, value=//*[@class='cp'][text()='12082351']/parent::td/parent::tr/td[9]/a[2]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consoleadmin.pages.CAInvoicesPage.selectInvoiceNumber(CAInvoicesPage.java:25)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPaySingleInvoiceInConsoleAdmin(RegressionSalesDB.java:240)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='b26c2d80-1d77-4239-a269-5bd5e3ee78a9'>
+											<div class='test-head'>
+												<span class='test-name'>testRefundPaymentFromSalesDB </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-08-06 14:01:40</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-08-06 14:02:32</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 51s+942ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:02:32</td>
+																	<td class='step-details'><pre>java.lang.AssertionError: Domain refunded sucessfully expected [Item Successfully Added] but found [You can not refund more than the invoice total of $26.7]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom.testDomainRegistration2WorkflowForCom(TestDomainRegistration2WorkflowForCom.java:114)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testRefundPaymentFromSalesDB(RegressionSalesDB.java:294)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='ef104787-dbdc-4e69-ba43-11e042b5fc81'>
+											<div class='test-head'>
+												<span class='test-name'>testDomainRegistration2WorkflowInConsoleAdmin </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-08-06 13:54:27</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-08-06 13:57:53</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 3m 26s+7ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>13:57:53</td>
+																	<td class='step-details'><pre>java.lang.AssertionError: register domain failed expected [domain registration completed] but found [register domain failed]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testDomainRegistration2WorkflowInConsoleAdmin(RegressionSalesDB.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='a942a67c-393b-4d1a-a1e5-583f8cb818ee'>
+											<div class='test-head'>
+												<span class='test-name'>testProductSetup2WorkflowInConsoleAdmin </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-08-06 13:57:53</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-08-06 13:58:32</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 39s+37ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>13:58:32</td>
+																	<td class='step-details'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52299}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: f2d0a8180c361d8ecdfa41b74c21f512
+*** Element info: {Using=xpath, value=//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consoleadmin.pages.CAWorkflowAdminPage.processProductSetup2(CAWorkflowAdminPage.java:179)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testProductSetup2WorkflowInConsoleAdmin(RegressionSalesDB.java:194)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -357,7 +734,7 @@
 													<span class='exception-name'>java.lang.AssertionError</span>
 												</div>
 												<div class='exception-test-count'>
-													<span class='fail label'>1</span>
+													<span class='fail label'>2</span>
 												</div>
 												<div class='exception-body'>
 													<div class='exception-tests'>
@@ -371,15 +748,250 @@
 															</thead>
 															<tbody>
                                                                    <tr class='fail'>
-                                                                       <td>2019-08-05 15:12:32</td>
-                                                                       <td><span class='exception-link linked' extentid='9f55c0b8-d0e6-4f61-9b4e-6026d7489bda'>testDomainRegistration2WorkflowForCom</span></td>
-                                                                       <td><pre class='exception-message'>java.lang.AssertionError: product setup expected [domain registration completed] but found [product setup]
+                                                                       <td>2019-08-06 14:01:40</td>
+                                                                       <td><span class='exception-link linked' extentid='b26c2d80-1d77-4239-a269-5bd5e3ee78a9'>testRefundPaymentFromSalesDB</span></td>
+                                                                       <td><pre class='exception-message'>java.lang.AssertionError: Domain refunded sucessfully expected [Item Successfully Added] but found [You can not refund more than the invoice total of $26.7]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 	at org.testng.Assert.assertEquals(Assert.java:118)
 	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom.testDomainRegistration2WorkflowForCom(TestDomainRegistration2WorkflowForCom.java:114)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testRefundPaymentFromSalesDB(RegressionSalesDB.java:294)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></td>
+                                                                   </tr>
+                                                                   <tr class='fail'>
+                                                                       <td>2019-08-06 13:54:27</td>
+                                                                       <td><span class='exception-link linked' extentid='ef104787-dbdc-4e69-ba43-11e042b5fc81'>testDomainRegistration2WorkflowInConsoleAdmin</span></td>
+                                                                       <td><pre class='exception-message'>java.lang.AssertionError: register domain failed expected [domain registration completed] but found [register domain failed]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testDomainRegistration2WorkflowInConsoleAdmin(RegressionSalesDB.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></td>
+                                                                   </tr>
+                                                            </tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+											<li class='exception-item displayed'>
+												<div class='exception-head'>
+													<span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+												</div>
+												<div class='exception-test-count'>
+													<span class='fail label'>3</span>
+												</div>
+												<div class='exception-body'>
+													<div class='exception-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Exception</th>
+																</tr>
+															</thead>
+															<tbody>
+                                                                   <tr class='fail'>
+                                                                       <td>2019-08-06 14:02:32</td>
+                                                                       <td><span class='exception-link linked' extentid='2852066a-1dde-4af5-a897-d8957c23feaa'>testPayInvoiceUsingExistingCardFromSalesDB</span></td>
+                                                                       <td><pre class='exception-message'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'MasterCard: 545454******5454')]"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52507}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 52d4d31aa936aa628e03e06d717684ea
+*** Element info: {Using=xpath, value=//*[contains(text(),'MasterCard: 545454******5454')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consolesalesdb.pages.CSProcessTransactionPage.setProcessTransactionDetails(CSProcessTransactionPage.java:113)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPayInvoiceUsingExistingCardFromSalesDB(RegressionSalesDB.java:330)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></td>
+                                                                   </tr>
+                                                                   <tr class='fail'>
+                                                                       <td>2019-08-06 13:58:32</td>
+                                                                       <td><span class='exception-link linked' extentid='602d0392-563e-4499-93d9-5f8e9a33508a'>testPaySingleInvoiceInConsoleAdmin</span></td>
+                                                                       <td><pre class='exception-message'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='cp'][text()='12082351']/parent::td/parent::tr/td[9]/a[2]"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52381}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 83be90bae6b188d4fc9a9ad730e1e7b9
+*** Element info: {Using=xpath, value=//*[@class='cp'][text()='12082351']/parent::td/parent::tr/td[9]/a[2]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consoleadmin.pages.CAInvoicesPage.selectInvoiceNumber(CAInvoicesPage.java:25)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPaySingleInvoiceInConsoleAdmin(RegressionSalesDB.java:240)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></td>
+                                                                   </tr>
+                                                                   <tr class='fail'>
+                                                                       <td>2019-08-06 13:57:53</td>
+                                                                       <td><span class='exception-link linked' extentid='a942a67c-393b-4d1a-a1e5-583f8cb818ee'>testProductSetup2WorkflowInConsoleAdmin</span></td>
+                                                                       <td><pre class='exception-message'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a"}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52299}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: f2d0a8180c361d8ecdfa41b74c21f512
+*** Element info: {Using=xpath, value=//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consoleadmin.pages.CAWorkflowAdminPage.processProductSetup2(CAWorkflowAdminPage.java:179)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testProductSetup2WorkflowInConsoleAdmin(RegressionSalesDB.java:194)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)

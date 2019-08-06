@@ -104,15 +104,15 @@ public class RegressionSalesDB extends TestBase{
 					strRegistrantNumber = "13080859721";
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-//					strAccountReference = "DOM-1305";
-//					strTld_01 = "nz";
-//					strRegistrationPeriod = "1 x Y";
-//					strMajorProduct = "Basic cPanel Hosting";
-//					strProductPeriod = "1 x M";
-//					strPaymentMethod = "Invoice";
-//					strRegistrantDetails = "Payment Gateway Test";	
-//					strRegistrantType = "ABN";
-//					strRegistrantNumber = "13080859721";
+					strAccountReference = "TPP-60053";
+					strTld_01 = "com";
+					strRegistrationPeriod = "1 x Y";
+					strMajorProduct = "Business cPanel Hosting";
+					strProductPeriod = "1 x M";
+					strPaymentMethod = "Invoice";
+					strRegistrantDetails = "Payment Gateway Test";	
+					strRegistrantType = "ABN";
+					strRegistrantNumber = "13080859721";
 				}
 					
 				//Test Step 1: Login to Sales DB page, then create an order for domain and product 
@@ -148,7 +148,7 @@ public class RegressionSalesDB extends TestBase{
 						"Domain purchased successfully");
 				strWorkflowId_01 = csworkflownotificationpage.getWorkflowID();
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest01");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest01");
 				csworkflownotificationpage.clickOKButton();
 				driver.close();
 			
@@ -180,7 +180,7 @@ public class RegressionSalesDB extends TestBase{
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
 						caworkflowadminpage.getWorkflowStatus("domainregistration2"));		
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
 				}
 		
 		
@@ -198,7 +198,7 @@ public class RegressionSalesDB extends TestBase{
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 
 						caworkflowadminpage.getWorkflowStatus("productsetup2"));
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest03");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest03");
 				driver.close();
 		}
 		
@@ -223,11 +223,11 @@ public class RegressionSalesDB extends TestBase{
 	
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-//					strAccountReference = "DOM-1305";
-//					strCardOwner = "Test Master";
-//					strCardNumber = "5454545454545454";
-//					strCardExpiryMonth = "02";
-//					strCardExpiryYear = "20";
+					strAccountReference = "TPP-60053";
+					strCardOwner = "Test Master";
+					strCardNumber = "5454545454545454";
+					strCardExpiryMonth = "02";
+					strCardExpiryYear = "20";
 	
 				}
 				
@@ -255,19 +255,7 @@ public class RegressionSalesDB extends TestBase{
 				// Test Step 2: Verify if the payment for invoice is successful.
 				Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$27.70 for invoice "+strInvoiceNumber+" has been accepted");
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
-				// Test Step 3: Verify if there is no outstanding amount for the invoice
-//				cainvoicespage = cataxinvoicepage.clickInvoicesLink();
-//				driver.findElement(By.linkText("Invoices")).click();
-//				Thread.sleep(2000);
-//	
-//				String strOutstanding = driver
-//						.findElement(By.xpath("/html/body/table/tbody/tr[2]/td/table/tbody/tr/td/table[4]/tbody/tr[2]/td[7]")).getText();
-//				String strOutstandingAmount = strOutstanding.trim();
-//				System.out.println(strOutstandingAmount);
-//	
-//				Assert.assertEquals(strOutstandingAmount, "NZ$0.00");
-//	
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
 				driver.close();
 
 		}
@@ -285,9 +273,9 @@ public class RegressionSalesDB extends TestBase{
 		
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-//					strAccountReference = "DOM-1305";
-//					strAmount = "65.84";
-//					strTransactionType= "REFUND";
+					strAccountReference = "TPP-60053";
+					strAmount = "65.84";
+					strTransactionType= "REFUND";
 				}
 	
 				//Test Step 1: Login to Sales DB page, then refund an invoice
@@ -305,7 +293,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 2: Verify if refund transaction is processed successfully.
 				Assert.assertEquals(csprocesstransactionpage.getConfirmationMessage(), "Item Successfully Added", "Domain refunded sucessfully");
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest05");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest05");
 				driver.close();
 			
 		}
@@ -324,11 +312,10 @@ public class RegressionSalesDB extends TestBase{
 					strPaymentMethod = "Visa: 4111xxxxxxxx1111";
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-//					strAccountReference = "DOM-1305";
-//					strAmount = "65.84";
-//					strTransactionType= "PAYMENT";
-//					strPaymentMethod = "MasterCard: 545454******5454";
-					
+					strAccountReference = "TPP-60053";
+					strAmount = "65.84";
+					strTransactionType= "PAYMENT";
+					strPaymentMethod = "MasterCard: 545454******5454";					
 				}
 			
 				//Test Step 1: Login to Sales DB page, then pay for an existing invoice for domain and product via existing credit card
@@ -345,7 +332,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 2: Verify if payment transaction is processed successfully.
 				Assert.assertEquals(csprocesstransactionpage.getConfirmationMessage(), "Item Successfully Added", "Domain paid sucessfully");
 		
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest06");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest06");
 				driver.close();
 		
 		}	

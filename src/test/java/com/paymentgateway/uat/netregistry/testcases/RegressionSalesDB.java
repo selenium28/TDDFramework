@@ -147,7 +147,7 @@ public class RegressionSalesDB extends TestBase{
 						"Domain purchased successfully");
 				strWorkflowId_01 = csworkflownotificationpage.getWorkflowID();
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest01");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest01");
 				csworkflownotificationpage.clickOKButton();
 				driver.close();
 			
@@ -179,7 +179,7 @@ public class RegressionSalesDB extends TestBase{
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
 						caworkflowadminpage.getWorkflowStatus("domainregistration2"));		
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
 				}
 		
 		
@@ -204,7 +204,7 @@ public class RegressionSalesDB extends TestBase{
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 
 						caworkflowadminpage.getWorkflowStatus("productsetup2"));
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest03");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest03");
 				driver.close();
 		}
 		
@@ -259,8 +259,7 @@ public class RegressionSalesDB extends TestBase{
 					Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$36.90 for invoice "+strInvoiceNumber+" has been accepted");
 				}
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
-				
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
 				driver.close();
 
 		}
@@ -298,7 +297,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 2: Verify if refund transaction is processed successfully.
 				Assert.assertEquals(csprocesstransactionpage.getConfirmationMessage(), "Item Successfully Added", "Domain refunded sucessfully");
 				
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest05");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest05");
 				driver.close();
 			
 		}
@@ -338,7 +337,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 2: Verify if payment transaction is processed successfully.
 				Assert.assertEquals(csprocesstransactionpage.getConfirmationMessage(), "Item Successfully Added", "Domain paid sucessfully");
 		
-				TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest06");
+				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest06");
 				driver.close();
 		
 		}	

@@ -8,17 +8,124 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Console Release Regression Test Suite</th></tr>
-<tr><td><a href="#t0">Console Release Regression Test Cases</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">395,121</td><td></td><td></td></tr>
+<tr><th colspan="7">Payment Gateway UAT Braintree Regression Test Suite</th></tr>
+<tr><td><a href="#t0">Payment Gateway UAT Braintree Regression Test Cases</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">5</td><td class="num">656,133</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Release Regression Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Console Release Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom</td><td><a href="#m0">testDomainRegistration2WorkflowForCom</a></td><td rowspan="1">1564981952991</td><td rowspan="1">395076</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Payment Gateway UAT Braintree Regression Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Payment Gateway UAT Braintree Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="5">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB</td><td><a href="#m0">testDomainRegistration2WorkflowInConsoleAdmin</a></td><td rowspan="1">1565063667158</td><td rowspan="1">206007</td></tr><tr class="failedeven"><td><a href="#m1">testPayInvoiceUsingExistingCardFromSalesDB</a></td><td rowspan="1">1565064152640</td><td rowspan="1">51708</td></tr><tr class="failedeven"><td><a href="#m2">testPaySingleInvoiceInConsoleAdmin</a></td><td rowspan="1">1565063912210</td><td rowspan="1">188482</td></tr><tr class="failedeven"><td><a href="#m3">testProductSetup2WorkflowInConsoleAdmin</a></td><td rowspan="1">1565063873168</td><td rowspan="1">39037</td></tr><tr class="failedeven"><td><a href="#m4">testRefundPaymentFromSalesDB</a></td><td rowspan="1">1565064100696</td><td rowspan="1">51942</td></tr><tr><th colspan="4">Payment Gateway UAT Braintree Regression Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB</td><td><a href="#m5">testCreateDomainAndMajorProductOrderInSalesDB</a></td><td rowspan="1">1565063548269</td><td rowspan="1">118879</td></tr></tbody>
 </table>
-<h2>Console Release Regression Test Cases</h2><h3 id="m0">com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom#testDomainRegistration2WorkflowForCom</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>netregistry</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: product setup expected [domain registration completed] but found [product setup]
-	at com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom.testDomainRegistration2WorkflowForCom(TestDomainRegistration2WorkflowForCom.java:114)
+<h2>Payment Gateway UAT Braintree Regression Test Cases</h2><h3 id="m0">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testDomainRegistration2WorkflowInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td><td>disabled</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.AssertionError: register domain failed expected [domain registration completed] but found [register domain failed]
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testDomainRegistration2WorkflowInConsoleAdmin(RegressionSalesDB.java:180)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 ... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testPayInvoiceUsingExistingCardFromSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;MasterCard: 545454******5454&apos;)]&quot;}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52507}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 52d4d31aa936aa628e03e06d717684ea
+*** Element info: {Using=xpath, value=//*[contains(text(),&apos;MasterCard: 545454******5454&apos;)]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consolesalesdb.pages.CSProcessTransactionPage.setProcessTransactionDetails(CSProcessTransactionPage.java:113)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPayInvoiceUsingExistingCardFromSalesDB(RegressionSalesDB.java:330)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testPaySingleInvoiceInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;cp&apos;][text()=&apos;12082351&apos;]/parent::td/parent::tr/td[9]/a[2]&quot;}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52381}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: 83be90bae6b188d4fc9a9ad730e1e7b9
+*** Element info: {Using=xpath, value=//*[@class=&apos;cp&apos;][text()=&apos;12082351&apos;]/parent::td/parent::tr/td[9]/a[2]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consoleadmin.pages.CAInvoicesPage.selectInvoiceNumber(CAInvoicesPage.java:25)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPaySingleInvoiceInConsoleAdmin(RegressionSalesDB.java:240)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testProductSetup2WorkflowInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a&quot;}
+  (Session info: chrome=75.0.3770.142)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 74.0.3729.6 (255758eccf3d24..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:52299}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 75.0.3770.142, webStorageEnabled: true}
+Session ID: f2d0a8180c361d8ecdfa41b74c21f512
+*** Element info: {Using=xpath, value=//table/tbody/tr/td/table[3]/tbody/tr[3]/td[1]/a}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consoleadmin.pages.CAWorkflowAdminPage.processProductSetup2(CAWorkflowAdminPage.java:179)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testProductSetup2WorkflowInConsoleAdmin(RegressionSalesDB.java:194)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testRefundPaymentFromSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Domain refunded sucessfully expected [Item Successfully Added] but found [You can not refund more than the invoice total of $26.7]
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testRefundPaymentFromSalesDB(RegressionSalesDB.java:294)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testCreateDomainAndMajorProductOrderInSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
