@@ -52,7 +52,7 @@ public class NRGNSRegistrantContactPage extends TestBase{
     		System.out.println("Refresh Retry: " + i);
     		
     		//Add delay to check if registrant page is loaded after refresh
-    		Thread.sleep(5000);
+    		Thread.sleep(10000);
     		currentURL = driver.getCurrentUrl();
     		
     		System.out.println("Current URL: " + currentURL);
