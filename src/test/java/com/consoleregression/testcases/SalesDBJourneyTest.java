@@ -127,7 +127,7 @@ public class SalesDBJourneyTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		if (caworkflowadminpage.getWorkflowStatus("domainregistration2") != "domain registration completed") {
    	    	//Added refresh page to update current workflow status
-   	        Thread.sleep(5000);
+   	        Thread.sleep(10000);
    	        driver.navigate().refresh();   	        
    	    }
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 

@@ -124,7 +124,7 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase{
 			nrgnsreviewandpaymentpage.selectExistingCreditCard(strMaskedCardNumber);
 		    nrgnsreviewandpaymentpage.tickTermsAndConditions();
 		    
-		    if (environment.equals("uat1")) {
+		    //if (environment.equals("uat1")) {
 				nrgnsordercompletepage = nrgnsreviewandpaymentpage.clickCompleteOrder();
 				
 				//Test Step 5: Verify if the order is completed, get workflow id and account reference.
@@ -134,7 +134,7 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase{
 				System.out.println("Account Reference:" + strAccountReference);	
 				System.out.println("Reference ID[0]:" + strWorkflowId);	
 			
-		    }
+		    //}
 			driver.close();
 			System.out.println("End Test: testExistingCustomerScenarioUsingExistingCard");
 		}	
