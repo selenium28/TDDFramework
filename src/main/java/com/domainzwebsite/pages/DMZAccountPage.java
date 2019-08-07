@@ -1,5 +1,6 @@
 package com.domainzwebsite.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,9 +36,20 @@ public class DMZAccountPage extends TestBase{
 		else {
 			System.out.println("element not found");
 		}
-
-    	return new DMZCreditCardsDetailsPage();
+    	return new DMZCreditCardsDetailsPage(); 	
+    }
+    
+    public void makeCardDefault() throws InterruptedException {
     	
+    	Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id='cc-table']/tbody/tr[td//text()[contains(., 'Test Master')]]/td[5]/*")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@name='removeOrMakeDefaultCreditCard']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id='cc-table']/tbody/tr[td//text()[contains(., 'Test Visa')]]/td[5]/*")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@name='removeOrMakeDefaultCreditCard']")).click();
+		Thread.sleep(2000);
     }
 	
 }

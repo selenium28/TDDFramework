@@ -62,7 +62,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	//To add a waiting time for workflow to complete processing
-    	Thread.sleep(60000);
+    	Thread.sleep(150000);
     }
     
     

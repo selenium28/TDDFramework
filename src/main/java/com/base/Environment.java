@@ -16,9 +16,9 @@ public interface Environment extends Config{
 	String consoleadminurl();
 	
 	//Old Shopping Cart
-	String cart_domainsearchurl_domainz();
-	String cart_domainsearchurl_netregistry();
-	String cart_domainsearchurl_melbourneit();
+	String oldcart_domainsearchurl_domainz();
+	String oldcart_domainsearchurl_netregistry();
+	String oldcart_domainsearchurl_melbourneit();
 	
 	//New Shopping Cart
 	String newcart_domainsearchurl_netregistry();

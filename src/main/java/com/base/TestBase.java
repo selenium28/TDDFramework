@@ -84,14 +84,14 @@ public class TestBase{
 		}
 		
 		//Old Shopping Cart
-		else if(entrypoint.equals("cart_domainsearchurl_domainz")){
-			driver.get(testEnvironment.cart_domainsearchurl_domainz());
+		else if(entrypoint.equals("oldcart_domainsearchurl_domainz")){
+			driver.get(testEnvironment.oldcart_domainsearchurl_domainz());
 		}
-		else if(entrypoint.equals("cart_domainsearchurl_netregistry")){
-			driver.get(testEnvironment.cart_domainsearchurl_netregistry());
+		else if(entrypoint.equals("oldcart_domainsearchurl_netregistry")){
+			driver.get(testEnvironment.oldcart_domainsearchurl_netregistry());
 		}
-		else if(entrypoint.equals("cart_domainsearchurl_melbourneit")){
-			driver.get(testEnvironment.cart_domainsearchurl_melbourneit());
+		else if(entrypoint.equals("oldcart_domainsearchurl_melbourneit")){
+			driver.get(testEnvironment.oldcart_domainsearchurl_melbourneit());
 		}
 		
 		//New Shopping Cart

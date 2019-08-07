@@ -28,6 +28,9 @@ public class DMZBillingPage extends TestBase{
     
     @FindBy(how=How.XPATH, using = "//table[@class='form']/tbody/tr[4]/td[3]/input[@name='btbilling.nonce']")
     WebElement paymentMethodNonce;
+    
+    @FindBy(how=How.XPATH, using = "//body/input")
+    WebElement recaptchaChallenge;
 
     //Initializing Page Objects
     public DMZBillingPage(){
@@ -36,6 +39,7 @@ public class DMZBillingPage extends TestBase{
       
     //Methods
     public void setBTFormCreditCardDetails(String cardowner, String cardnumber, String cardexpirymonth, String cardexpiryyear, String cardsecuritycode){
+    	
     	driver.findElement(By.xpath("//table[@class='form']/tbody/tr[1]/td[2]/input[@name='btbilling.owner']")).clear();
     	driver.findElement(By.xpath("//table[@class='form']/tbody/tr[1]/td[2]/input[@name='btbilling.owner']")).sendKeys(cardowner);
     	driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[2]/td[2]/div[@id='btbilling.number']/iframe")));
@@ -58,7 +62,9 @@ public class DMZBillingPage extends TestBase{
     	driver.switchTo().defaultContent();
     }
     
+    
     public void setQuestFormCreditCardDetails(String cardowner, String cardtype, String cardnumber, String cardexpirymonth, String cardexpiryyear, String cardsecuritycode) throws InterruptedException {
+    	
     	Thread.sleep(1000);
     	driver.findElement(By.xpath("//div[@id='creditCardForm']/table/tbody/tr[1]/td[2]/input[@name='billing.owner']")).sendKeys(cardowner);
     	Thread.sleep(1000);
@@ -74,13 +80,17 @@ public class DMZBillingPage extends TestBase{
     	Thread.sleep(1000);
     }
     
+    
     public String getBTClientToken(){
+    	
     	((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('type', '')", BTClientToken);
     	clienttoken = BTClientToken.getAttribute("value");
     	return clienttoken;
     }
     
+    
     public Boolean isBTFormDisplayed(){
+    	
     	Boolean flag = false;
     	if (driver.findElement(By.xpath("//table[@class='form']/tbody/tr[2]/td[2]/div[@id='btbilling.number']/iframe")).isDisplayed()) {
     		System.out.println("BT Form is displayed");
@@ -89,7 +99,9 @@ public class DMZBillingPage extends TestBase{
     	return flag;
     }
     
+    
     public Boolean isQuestFormDisplayed(){
+    	
     	Boolean flag = false;
     	if (driver.findElement(By.xpath("//div[@id='creditCardForm']/table/tbody/tr[2]/td[2]/select[@name='billing.type']")).isDisplayed()) {
     		System.out.println("Quest Form is displayed");
@@ -99,6 +111,7 @@ public class DMZBillingPage extends TestBase{
     }
     
     public DMZOrderCompletePage clickPlaceYourOrder(){
+    	
        	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", placeYourOrderButton);
        	System.out.println("clicking place your order button");
        	if(placeYourOrderButton.isDisplayed()||placeYourOrderButton.isEnabled()) {
@@ -110,7 +123,9 @@ public class DMZBillingPage extends TestBase{
        	return new DMZOrderCompletePage();
     }
     
+    
     public void tickAutoRenew(){
+    	
        	System.out.println("tick auto renew");
        	if(autoRenew.isDisplayed()||autoRenew.isEnabled()) {
        		autoRenew.click();
@@ -120,7 +135,9 @@ public class DMZBillingPage extends TestBase{
     	}
     }
     
+    
     public void tickTermsAndConditions(){
+    	
        	System.out.println("tick agree to terms and conditions");
        	if(agreeTermsAndConditions.isDisplayed()||agreeTermsAndConditions.isEnabled()) {
        		agreeTermsAndConditions.click();
@@ -130,13 +147,17 @@ public class DMZBillingPage extends TestBase{
     	}
     }
     
+    
     public String getPaymentMethodNonce(){
+    	
     	String paymentmethodnoncevalue;
     	paymentmethodnoncevalue = paymentMethodNonce.getText();    	
     	return paymentmethodnoncevalue;
     }
     
+    
     public Boolean isCardDetailHighlightedInRed(String carddetailname){
+    	
     	Boolean flag = false;
     	WebElement cardDetail = null;
     	if (carddetailname.contentEquals("Card Owner")) {
@@ -159,7 +180,9 @@ public class DMZBillingPage extends TestBase{
     	return flag;
     }
     
+    
     public Boolean isErroMessageCorrect(String carddetailname, String expectederrormessage){
+    	
     	Boolean flag = false;
     	String actualErrorMessage = null;
     	if (carddetailname.contentEquals("Card Owner")) {
@@ -182,12 +205,16 @@ public class DMZBillingPage extends TestBase{
     	return flag;
     }
     
+    
     public void selectNewCreditCardOption(){
+    	
        	System.out.println("select new credit card option");
        	driver.findElement(By.xpath("//div[@class='orderBox']/div[2]/input")).click();
     }
     
+    
     public void selectExistingCreditCardOption(String carddetails){
+    	
        	System.out.println("select existing credit card option");
        	
        	WebElement visacard = driver.findElement(By.xpath("//div[@class='orderBox']/div[1]/select[@class='existingAccounts']/option[text() = '"+carddetails+"']"));
@@ -239,8 +266,7 @@ public class DMZBillingPage extends TestBase{
      		System.out.println("Array: " + arrcarddetails [2]);
      		System.out.println("Array: " + arrcarddetails [3]);
      		System.out.println("Array: " + arrcarddetails [4]);
-     		System.out.println("Array: " + arrcarddetails [5]);
-    		
+     		System.out.println("Array: " + arrcarddetails [5]);    		
        	}
        	else if ((cardtype =="MasterCard") & (mastercard.isDisplayed())){
        		
@@ -258,26 +284,43 @@ public class DMZBillingPage extends TestBase{
      		arrcarddetails [4] = mastercarddetails.substring((mastercarddetails.indexOf("Expiry:")+8), (mastercarddetails.indexOf("Expiry:")+10));
      		//Card Expiry Year
      		arrcarddetails [5] = mastercarddetails.substring((mastercarddetails.indexOf("Expiry:")+11), (mastercarddetails.indexOf("Expiry:")+15));
-     		
-     		
+     		    		
      		System.out.println("Array: " + arrcarddetails [0]);
      		System.out.println("Array: " + arrcarddetails [1]);
      		System.out.println("Array: " + arrcarddetails [2]);
      		System.out.println("Array: " + arrcarddetails [3]);
      		System.out.println("Array: " + arrcarddetails [4]);
-     		System.out.println("Array: " + arrcarddetails [5]);
-    		
-    		
+     		System.out.println("Array: " + arrcarddetails [5]);    		    		
        	}
        	else {
        		System.out.println("No credit card found");
-       	}
-     	
+       	}     	
      	return arrcarddetails;
-    	
-
     }
     
+    
+    public Boolean isReCaptchaChallengeDisplayed() throws InterruptedException{
+    	
+    	Boolean flag = false;
+    	String recaptchatoken = null;
+    	
+    	Thread.sleep(3000);
+    	System.out.println("Verify if recaptcha is displayed");
+    	driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")));
+    	((JavascriptExecutor) driver).executeScript("arguments[0].setAttribute('type', '')", recaptchaChallenge);
+    	recaptchatoken = 	recaptchaChallenge.getAttribute("value");
+    	    	
+    	if(recaptchaChallenge != null) {
+    		
+    		System.out.println("Recaptcha Token: " + recaptchatoken);
+	    	System.out.println("Recaptcha Challenge Displayed!");
+    		flag = true;
+       	}
+    	
+    	Thread.sleep(10000);
+    	
+    	return flag;
+    }
     
     
 }

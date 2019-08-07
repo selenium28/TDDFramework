@@ -15,80 +15,89 @@
 		
 
 <!-- Domainz Virtualization -->
-			<class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB">
+<!-- 			<class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB"> -->
+<!--                 <methods> -->
+<!--                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" /> -->
+<!--                     <include name="testDomainRegistration2WorkflowInConsoleAdmin" /> -->
+<!--                     <include name="testProductSetup2WorkflowInConsoleAdmin" /> -->
+<!--                     <include name="testPaySingleInvoiceInConsoleAdmin" /> -->
+<!--                     <include name="testRefundPaymentFromSalesDB" /> -->
+<!--                     <include name="testPayInvoiceUsingExistingCardFromSalesDB" /> -->
+<!--                 </methods> -->
+<!--             </class> -->
+<!--             <class name="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin"> -->
+<!--                 <methods> -->
+<!--                     <include name="testViewBillingInConsoleAdmin" /> -->
+<!--                     <include name="testUpdateExpiryInConsoleAdmin" /> -->
+<!--                 </methods> -->
+<!--             </class> -->
+            <class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI">
                 <methods>
-                    <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
-                    <include name="testDomainRegistration2WorkflowInConsoleAdmin" />
-                    <include name="testProductSetup2WorkflowInConsoleAdmin" />
-                    <include name="testPaySingleInvoiceInConsoleAdmin" />
-                    <include name="testRefundPaymentFromSalesDB" />
-                    <include name="testPayInvoiceUsingExistingCardFromSalesDB" />
+<!--                     <include name="testAddNewCreditCardInSMUI" /> -->
+<!--                     <include name="testModifyExistingCreditCardInSMUI" /> -->
+                    <include name="testMakeCreditCardDefaultInSMUI" />
+<!--                     <include name="testDeleteCreditCardInSMUI" /> -->
                 </methods>
-            </class>
-            <class name="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin">
-                <methods>
-                    <include name="testViewBillingInConsoleAdmin" />
-                    <include name="testUpdateExpiryInConsoleAdmin" />
-                </methods>
-            </class>
+            </class> 
 	
 
 <!-- Netregistry Virtualization -->
-			<class name="com.paymentgateway.uat.netregistry.testcases.RegressionSalesDB">
-                <methods>
-                    <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
-                    <include name="testDomainRegistration2WorkflowInConsoleAdmin" />
-                    <include name="testProductSetup2WorkflowInConsoleAdmin" />
-                    <include name="testPaySingleInvoiceInConsoleAdmin" />
-                    <include name="testRefundPaymentFromSalesDB" />
-                    <include name="testPayInvoiceUsingExistingCardFromSalesDB" />
-                </methods>
-            </class>
-            <class name="com.paymentgateway.uat.netregistry.testcases.RegressionConsoleAdmin">
-                <methods>
-                    <include name="testViewBillingInConsoleAdmin" />
-                    <include name="testUpdateExpiryInConsoleAdmin" />
-                </methods>
-            </class>
+<!-- 			<class name="com.paymentgateway.uat.netregistry.testcases.RegressionSalesDB"> -->
+<!--                 <methods> -->
+<!--                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" /> -->
+<!--                     <include name="testDomainRegistration2WorkflowInConsoleAdmin" /> -->
+<!--                     <include name="testProductSetup2WorkflowInConsoleAdmin" /> -->
+<!--                     <include name="testPaySingleInvoiceInConsoleAdmin" /> -->
+<!--                     <include name="testRefundPaymentFromSalesDB" /> -->
+<!--                     <include name="testPayInvoiceUsingExistingCardFromSalesDB" /> -->
+<!--                 </methods> -->
+<!--             </class> -->
+<!--             <class name="com.paymentgateway.uat.netregistry.testcases.RegressionConsoleAdmin"> -->
+<!--                 <methods> -->
+<!--                     <include name="testViewBillingInConsoleAdmin" /> -->
+<!--                     <include name="testUpdateExpiryInConsoleAdmin" /> -->
+<!--                 </methods> -->
+<!--             </class> -->
+ 
 
 <!-- MelbourneIT Virtualization -->
-			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB">
-                <methods>
-                    <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
+<!-- 			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB"> -->
+<!--                 <methods> -->
+<!--                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" /> -->
 <!--                     <include name="testDomainRegistration2WorkflowInConsoleAdmin" /> -->
 <!--                     <include name="testProductSetup2WorkflowInConsoleAdmin" /> -->
-                </methods>
-            </class>
-            <class name="com.paymentgateway.uat.melbourneit.testcases.RegressionConsoleAdmin">
-                <methods>
-                    <include name="testViewBillingInConsoleAdmin" />
-                    <include name="testUpdateExpiryInConsoleAdmin" />
-                </methods>
-            </class>
+<!--                 </methods> -->
+<!--             </class> -->
+<!--             <class name="com.paymentgateway.uat.melbourneit.testcases.RegressionConsoleAdmin"> -->
+<!--                 <methods> -->
+<!--                     <include name="testViewBillingInConsoleAdmin" /> -->
+<!--                     <include name="testUpdateExpiryInConsoleAdmin" /> -->
+<!--                 </methods> -->
+<!--             </class> -->
 
 <!-- 		DPS Virtualization -->
-			<class name="com.paymentgateway.uat.dps.testcases.RegressionSalesDB">
-                <methods>
-                    <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
+<!-- 			<class name="com.paymentgateway.uat.dps.testcases.RegressionSalesDB"> -->
+<!--                 <methods> -->
+<!--                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" /> -->
 <!--                     <include name="testDomainRegistration2WorkflowInConsoleAdmin" /> -->
 <!--                     <include name="testProductSetup2WorkflowInConsoleAdmin" /> -->
 <!--                     <include name="testPaySingleInvoiceInConsoleAdmin" /> -->
 <!--                     <include name="testRefundPaymentFromSalesDB" /> -->
 <!--                     <include name="testPayInvoiceUsingExistingCardFromSalesDB" /> -->
-                </methods>
-            </class>
+<!--                 </methods> -->
+<!--             </class> -->
 
 <!-- 		TPP Virtualization -->
-			<class name="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB">
-                <methods>
-                    <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
+<!-- 			<class name="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB"> -->
+<!--                 <methods> -->
+<!--                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" /> -->
 <!--                     <include name="testDomainRegistration2WorkflowInConsoleAdmin" /> -->
 <!--                     <include name="testProductSetup2WorkflowInConsoleAdmin" /> -->
 <!--                     <include name="testPaySingleInvoiceInConsoleAdmin" /> -->
 <!--                     <include name="testRefundPaymentFromSalesDB" /> -->
 <!--                     <include name="testPayInvoiceUsingExistingCardFromSalesDB" /> -->
-                </methods>
-            </class>
+<!--                 </methods> -->
+<!--             </class> -->
 
 
 		</classes>
