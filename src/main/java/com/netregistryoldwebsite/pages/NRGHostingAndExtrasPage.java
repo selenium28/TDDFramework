@@ -126,8 +126,9 @@ public class NRGHostingAndExtrasPage extends TestBase{
     	//driver.findElement(By.xpath("//div[@class='x-combo-list-item']/*[contains(text(),'"+straddonproduct+"')]")).click();
     }
        
-    public NRGAccountContactPage clickContinueButton() {
+    public NRGAccountContactPage clickContinueButton() throws InterruptedException {
     	
+    	Thread.sleep(8000);
     	System.out.println("clicking continue button");
     	if(continueButton.isDisplayed()||continueButton.isEnabled()) {
     		continueButton.click();

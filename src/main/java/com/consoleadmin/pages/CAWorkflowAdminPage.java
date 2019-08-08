@@ -62,7 +62,7 @@ public class CAWorkflowAdminPage extends TestBase{
     	}
     	
     	//To add a waiting time for workflow to complete processing
-    	Thread.sleep(150000);
+    	Thread.sleep(60000);
     }
     
     
@@ -473,9 +473,19 @@ public class CAWorkflowAdminPage extends TestBase{
   	  
     		return workflowparametervalue;
     }
+    
+    public void refreshWorkflowAdminPage () throws InterruptedException {
     	
-    	
-    		
+    		int maximumNumberOfRetry = 3;
+    		Thread.sleep(2000);
+ 	        
+	    	for (int i = 1; i <= maximumNumberOfRetry; i++) {
+		    	
+	    		//Added refresh action to retrieve the latest workflow status 
+	    		driver.navigate().refresh(); 
+		        Thread.sleep(10000);  		
+		    }    	
+    }   		
 }
 
 
