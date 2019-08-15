@@ -11,7 +11,8 @@
     <classes>
       <class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI">
         <methods>
-          <include name="testMakeCreditCardDefaultInSMUI" invocation-numbers="0"/>
+          <include name="testRechargePrepaidUsingNewCardInSMUI" invocation-numbers="0"/>
+          <include name="testRechargePrepaidUsingExistingCardInSMUI" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.paymentgateway.uat.domainz.testcases.RegressionSMUI -->
     </classes>

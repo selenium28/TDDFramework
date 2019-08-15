@@ -1,101 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="2" ignored="3" total="5" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Regression Test Automation - PROD Test Suite" duration-ms="387329" started-at="2019-08-08T00:34:42Z" finished-at="2019-08-08T00:41:09Z">
+  <suite name="Payment Gateway UAT Braintree Regression Test Suite" duration-ms="373560" started-at="2019-08-14T03:53:02Z" finished-at="2019-08-14T03:59:16Z">
     <groups>
     </groups>
-    <test name="Regression Test Cases" duration-ms="387329" started-at="2019-08-08T00:34:42Z" finished-at="2019-08-08T00:41:09Z">
-      <class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest">
-        <test-method status="PASS" signature="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.CustomerPortalJourneyTest@589838eb]" name="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal" duration-ms="64563" started-at="2019-08-08T00:34:42Z" finished-at="2019-08-08T00:35:46Z">
+    <test name="Payment Gateway UAT Braintree Regression Test Cases" duration-ms="373560" started-at="2019-08-14T03:53:02Z" finished-at="2019-08-14T03:59:16Z">
+      <class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI">
+        <test-method status="FAIL" signature="testRechargePrepaidUsingExistingCardInSMUI(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSMUI@271053e1]" name="testRechargePrepaidUsingExistingCardInSMUI" duration-ms="223838" started-at="2019-08-14T03:53:02Z" finished-at="2019-08-14T03:56:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainRegistrationOrderForNewCustomerInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.CustomerPortalJourneyTest@589838eb]" name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" duration-ms="82064" started-at="2019-08-08T00:35:46Z" finished-at="2019-08-08T00:37:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal -->
-      </class> <!-- com.consoleregression.testcases.production.CustomerPortalJourneyTest -->
-      <class name="com.consoleregression.testcases.production.SalesDBJourneyTest">
-        <test-method status="PASS" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@42dafa95]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="41708" started-at="2019-08-08T00:37:08Z" finished-at="2019-08-08T00:37:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
+                <![CDATA[uat1]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[disabled]]>
+                <![CDATA[braintree]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53520}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 571dd4c46a5b9e847ec7875c357a00f2]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53520}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 571dd4c46a5b9e847ec7875c357a00f2
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:368)
+at com.sun.proxy.$Proxy15.click(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:380)
+at com.domainzwebsite.pages.DMZPrepaidAccountPage.clickSubmitButton(DMZPrepaidAccountPage.java:30)
+at com.paymentgateway.uat.domainz.testcases.RegressionSMUI.testRechargePrepaidUsingExistingCardInSMUI(RegressionSMUI.java:219)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@42dafa95]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="70369" started-at="2019-08-08T00:37:50Z" finished-at="2019-08-08T00:39:01Z">
+        </test-method> <!-- testRechargePrepaidUsingExistingCardInSMUI -->
+        <test-method status="FAIL" signature="testRechargePrepaidUsingNewCardInSMUI(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSMUI@271053e1]" name="testRechargePrepaidUsingNewCardInSMUI" duration-ms="149426" started-at="2019-08-14T03:56:46Z" finished-at="2019-08-14T03:59:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[prod]]>
+                <![CDATA[uat1]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[disabled]]>
+                <![CDATA[braintree]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: chrome=76.0.3809.100)
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53754}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d2b9672b239497041e94160d20248eaa]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=76.0.3809.100)
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53754}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: d2b9672b239497041e94160d20248eaa
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:368)
+at com.sun.proxy.$Proxy15.click(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:380)
+at com.domainzwebsite.pages.DMZPrepaidAccountPage.clickOnNewCreditCard(DMZPrepaidAccountPage.java:36)
+at com.paymentgateway.uat.domainz.testcases.RegressionSMUI.testRechargePrepaidUsingNewCardInSMUI(RegressionSMUI.java:260)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_ComDomain_and_Office365_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@42dafa95]" name="verify_ComDomain_and_Office365_Order_InSalesDB" duration-ms="86721" started-at="2019-08-08T00:39:01Z" finished-at="2019-08-08T00:40:27Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ComDomain_and_Office365_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@42dafa95]" name="verify_NzDomain_Order_InSalesDB" duration-ms="41844" started-at="2019-08-08T00:40:27Z" finished-at="2019-08-08T00:41:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
-      </class> <!-- com.consoleregression.testcases.production.SalesDBJourneyTest -->
-    </test> <!-- Regression Test Cases -->
-  </suite> <!-- Console Regression Test Automation - PROD Test Suite -->
+        </test-method> <!-- testRechargePrepaidUsingNewCardInSMUI -->
+      </class> <!-- com.paymentgateway.uat.domainz.testcases.RegressionSMUI -->
+    </test> <!-- Payment Gateway UAT Braintree Regression Test Cases -->
+  </suite> <!-- Payment Gateway UAT Braintree Regression Test Suite -->
 </testng-results>

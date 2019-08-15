@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Console Regression Test Automation - UAT Test Suite]">
+<suite thread-count="10" guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway UAT Braintree Regression Test Suite]" parallel="tests">
   <parameter name="environment" value="uat1"/>
+  <parameter name="obsidian" value="disabled"/>
+  <parameter name="paymentgateway" value="braintree"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="5" name="Regression Test Cases(failed)">
+  <test thread-count="10" name="Payment Gateway UAT Braintree Regression Test Cases(failed)">
     <classes>
-      <class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
+      <class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI">
         <methods>
-          <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" invocation-numbers="0"/>
+          <include name="testRechargePrepaidUsingNewCardInSMUI" invocation-numbers="0"/>
+          <include name="testRechargePrepaidUsingExistingCardInSMUI" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.consoleregression.testcases.CustomerPortalJourneyTest -->
+      </class> <!-- com.paymentgateway.uat.domainz.testcases.RegressionSMUI -->
     </classes>
-  </test> <!-- Regression Test Cases(failed) -->
-</suite> <!-- Failed suite [Console Regression Test Automation - UAT Test Suite] -->
+  </test> <!-- Payment Gateway UAT Braintree Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [Payment Gateway UAT Braintree Regression Test Suite] -->
