@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AU Project Regression Test Suite" thread-count="1" parallel="tests" preserve-order="true">
+
+	<parameter name="environment" 	  value="dev2" />
+
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+    
+    <test name="AU Project Regression Test Cases" >
+		<classes>
+		
+			<class name="com.auprojectregression.testcases.TestAUDomainRegistrationForNetregistryInOldCart.java">  
+			</class>			
+<!-- 			<class name="com.auprojectregression.testcases.TestAUDomainRegistrationForMelbourneITInOldCart">   -->
+<!-- 			</class> -->
+<!-- 			<class name="com.auprojectregression.testcases.TestAUDomainRegistrationForDomainzInOldCart">   -->
+<!-- 			</class> -->
+<!-- 			<class name="com.auprojectregression.testcases.TestAUDomainRegistrationForTPPInOldCart">   -->
+<!-- 			</class> -->
+<!-- 			<class name="com.auprojectregression.testcases.TestAUDomainRegistrationForMelbourneITDPSInOldCart">   -->
+<!-- 			</class> -->
+
+		</classes>
+	</test>  
+	
+</suite> 
