@@ -64,10 +64,12 @@ public class NRGOnlineOrderPage extends TestBase{
     	    	
     }
     
-    public void clearDefaultTldSelections(){
-    	tickTld(".com");
-    	tickTld(".com.au");
-    	tickTld(".net.au");
+    public void clearDefaultTldSelections() {
+    	   	
+    	List<WebElement> defaultTLDs = driver.findElements(By.cssSelector("#search-tlds [checked]"));
+    	for (WebElement tld : defaultTLDs) {
+    	     tld.click();
+    	}	
     }
     
     public void tickTld(String tldname){

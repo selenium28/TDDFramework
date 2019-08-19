@@ -9,60 +9,22 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Payment Gateway UAT Braintree Regression Test Suite</th></tr>
-<tr><td><a href="#t0">Payment Gateway UAT Braintree Regression Test Cases</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">373,560</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Payment Gateway UAT Braintree Regression Test Cases</a></td><td class="num">13</td><td class="num">0</td><td class="num">0</td><td class="num">1,373,894</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Payment Gateway UAT Braintree Regression Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Payment Gateway UAT Braintree Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.paymentgateway.uat.domainz.testcases.RegressionSMUI</td><td><a href="#m0">testRechargePrepaidUsingExistingCardInSMUI</a></td><td rowspan="1">1565754782878</td><td rowspan="1">223838</td></tr><tr class="failedeven"><td><a href="#m1">testRechargePrepaidUsingNewCardInSMUI</a></td><td rowspan="1">1565755006809</td><td rowspan="1">149426</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Payment Gateway UAT Braintree Regression Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Payment Gateway UAT Braintree Regression Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin</td><td><a href="#m0">testUpdateExpiryInConsoleAdmin</a></td><td rowspan="1">1566176704656</td><td rowspan="1">19875</td></tr><tr class="passedeven"><td><a href="#m1">testViewBillingInConsoleAdmin</a></td><td rowspan="1">1566176552160</td><td rowspan="1">152495</td></tr><tr class="passedodd"><td rowspan="5">com.paymentgateway.uat.domainz.testcases.RegressionSMUI</td><td><a href="#m2">testAddNewCreditCardInSMUI</a></td><td rowspan="1">1566176724533</td><td rowspan="1">57896</td></tr><tr class="passedodd"><td><a href="#m3">testMakeCreditCardDefaultInSMUI</a></td><td rowspan="1">1566176833097</td><td rowspan="1">90627</td></tr><tr class="passedodd"><td><a href="#m4">testModifyExistingCreditCardInSMUI</a></td><td rowspan="1">1566176782433</td><td rowspan="1">50661</td></tr><tr class="passedodd"><td><a href="#m5">testRechargePrepaidUsingExistingCardInSMUI</a></td><td rowspan="1">1566176923726</td><td rowspan="1">73074</td></tr><tr class="passedodd"><td><a href="#m6">testRechargePrepaidUsingNewCardInSMUI</a></td><td rowspan="1">1566176996802</td><td rowspan="1">63142</td></tr><tr class="passedeven"><td rowspan="6">com.paymentgateway.uat.domainz.testcases.RegressionSalesDB</td><td><a href="#m7">testCreateDomainAndMajorProductOrderInSalesDB</a></td><td rowspan="1">1566175686086</td><td rowspan="1">113517</td></tr><tr class="passedeven"><td><a href="#m8">testDomainRegistration2WorkflowInConsoleAdmin</a></td><td rowspan="1">1566175799611</td><td rowspan="1">224729</td></tr><tr class="passedeven"><td><a href="#m9">testPayInvoiceUsingExistingCardFromSalesDB</a></td><td rowspan="1">1566176507357</td><td rowspan="1">44800</td></tr><tr class="passedeven"><td><a href="#m10">testPaySingleInvoiceInConsoleAdmin</a></td><td rowspan="1">1566176245555</td><td rowspan="1">212048</td></tr><tr class="passedeven"><td><a href="#m11">testProductSetup2WorkflowInConsoleAdmin</a></td><td rowspan="1">1566176024342</td><td rowspan="1">221209</td></tr><tr class="passedeven"><td><a href="#m12">testRefundPaymentFromSalesDB</a></td><td rowspan="1">1566176457604</td><td rowspan="1">49750</td></tr></tbody>
 </table>
-<h2>Payment Gateway UAT Braintree Regression Test Cases</h2><h3 id="m0">com.paymentgateway.uat.domainz.testcases.RegressionSMUI#testRechargePrepaidUsingExistingCardInSMUI</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: chrome=76.0.3809.100)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53520}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 571dd4c46a5b9e847ec7875c357a00f2
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:368)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:380)
-	at com.domainzwebsite.pages.DMZPrepaidAccountPage.clickSubmitButton(DMZPrepaidAccountPage.java:30)
-	at com.paymentgateway.uat.domainz.testcases.RegressionSMUI.testRechargePrepaidUsingExistingCardInSMUI(RegressionSMUI.java:219)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.paymentgateway.uat.domainz.testcases.RegressionSMUI#testRechargePrepaidUsingNewCardInSMUI</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=76.0.3809.100)
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53754}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d2b9672b239497041e94160d20248eaa
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:368)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.click(EventFiringWebDriver.java:380)
-	at com.domainzwebsite.pages.DMZPrepaidAccountPage.clickOnNewCreditCard(DMZPrepaidAccountPage.java:36)
-	at com.paymentgateway.uat.domainz.testcases.RegressionSMUI.testRechargePrepaidUsingNewCardInSMUI(RegressionSMUI.java:260)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Payment Gateway UAT Braintree Regression Test Cases</h2><h3 id="m0">com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin#testUpdateExpiryInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin#testViewBillingInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.paymentgateway.uat.domainz.testcases.RegressionSMUI#testAddNewCreditCardInSMUI</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.paymentgateway.uat.domainz.testcases.RegressionSMUI#testMakeCreditCardDefaultInSMUI</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.paymentgateway.uat.domainz.testcases.RegressionSMUI#testModifyExistingCreditCardInSMUI</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.paymentgateway.uat.domainz.testcases.RegressionSMUI#testRechargePrepaidUsingExistingCardInSMUI</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.paymentgateway.uat.domainz.testcases.RegressionSMUI#testRechargePrepaidUsingNewCardInSMUI</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.paymentgateway.uat.domainz.testcases.RegressionSalesDB#testCreateDomainAndMajorProductOrderInSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.paymentgateway.uat.domainz.testcases.RegressionSalesDB#testDomainRegistration2WorkflowInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.paymentgateway.uat.domainz.testcases.RegressionSalesDB#testPayInvoiceUsingExistingCardFromSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.paymentgateway.uat.domainz.testcases.RegressionSalesDB#testPaySingleInvoiceInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">com.paymentgateway.uat.domainz.testcases.RegressionSalesDB#testProductSetup2WorkflowInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">com.paymentgateway.uat.domainz.testcases.RegressionSalesDB#testRefundPaymentFromSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
