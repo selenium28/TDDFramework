@@ -89,7 +89,7 @@ public class RegressionConsoleAdmin extends TestBase {
 				Assert.assertEquals(caviewcreditcardspage.getUpdateExpiryConfirmation(), "Credit card: Visa: 4111xxxxxxxx1111 "+strExpiryMonth+"/"+strExpiryYear+" expiry date updated.", "Updated Expiry Sucessfully");
 			}
 			else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
-				Assert.assertEquals(caviewcreditcardspage.getUpdateExpiryConfirmation(), "Credit card: Visa: 411111******1111 01/2024 "+strExpiryMonth+"/20"+strExpiryYear+" expiry date updated.", "Updated Expiry Sucessfully");	
+				Assert.assertEquals(caviewcreditcardspage.getUpdateExpiryConfirmation(), "Credit card: Visa: 411111******1111 "+strExpiryMonth+"/20"+strExpiryYear+" expiry date updated.", "Updated Expiry Sucessfully");	
 			}
 			
 			//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest08");

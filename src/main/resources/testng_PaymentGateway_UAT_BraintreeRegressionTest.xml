@@ -19,10 +19,10 @@
                 <methods>
                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
                     <include name="testDomainRegistration2WorkflowInConsoleAdmin" />
-<!--                     <include name="testProductSetup2WorkflowInConsoleAdmin" /> -->
-<!--                     <include name="testPaySingleInvoiceInConsoleAdmin" /> -->
-<!--                     <include name="testRefundPaymentFromSalesDB" /> -->
-<!--                     <include name="testPayInvoiceUsingExistingCardFromSalesDB" /> -->
+                    <include name="testProductSetup2WorkflowInConsoleAdmin" />
+                    <include name="testPaySingleInvoiceInConsoleAdmin" />
+                    <include name="testRefundPaymentFromSalesDB" />
+                    <include name="testPayInvoiceUsingExistingCardFromSalesDB" />
                 </methods>
             </class>
 
