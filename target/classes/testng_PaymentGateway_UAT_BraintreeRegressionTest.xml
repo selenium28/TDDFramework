@@ -19,12 +19,13 @@
                 <methods>
                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
                     <include name="testDomainRegistration2WorkflowInConsoleAdmin" />
-                    <include name="testProductSetup2WorkflowInConsoleAdmin" />
-                    <include name="testPaySingleInvoiceInConsoleAdmin" />
-                    <include name="testRefundPaymentFromSalesDB" />
-                    <include name="testPayInvoiceUsingExistingCardFromSalesDB" />
+<!--                     <include name="testProductSetup2WorkflowInConsoleAdmin" /> -->
+<!--                     <include name="testPaySingleInvoiceInConsoleAdmin" /> -->
+<!--                     <include name="testRefundPaymentFromSalesDB" /> -->
+<!--                     <include name="testPayInvoiceUsingExistingCardFromSalesDB" /> -->
                 </methods>
             </class>
+
             <class name="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin">
                 <methods>
                     <include name="testViewBillingInConsoleAdmin" />
@@ -41,7 +42,7 @@
 					<include name="testRechargePrepaidUsingNewCardInSMUI" />
                 </methods>
             </class> 
-	
+
 
 <!-- Netregistry Virtualization -->
 			<class name="com.paymentgateway.uat.netregistry.testcases.RegressionSalesDB">

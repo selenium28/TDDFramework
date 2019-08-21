@@ -185,7 +185,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 2: Verify if domain registration workflow status is completed
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 				workflowstatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
-				Assert.assertTrue(workflowstatus == (("domain registration completed")) || workflowstatus == (("update star rating")), workflowstatus);	
+				Assert.assertTrue(workflowstatus.equalsIgnoreCase("domain registration completed") || workflowstatus.equalsIgnoreCase("update star rating"));	
 						
 				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
 				}
@@ -203,11 +203,6 @@ public class RegressionSalesDB extends TestBase{
 						
 				//Test Step 2: Verify if productsetup2 workflow is approved
 				caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName_01 + "." + strTld_01);
-				if (caworkflowadminpage.getWorkflowStatus("productSetup2") != "approved") {    	
-		   	    	//Added refresh page to update current workflow status
-		   	        Thread.sleep(2000);
-		   	        driver.navigate().refresh();  	        
-				}
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 
 					caworkflowadminpage.getWorkflowStatus("productsetup2"));
 				

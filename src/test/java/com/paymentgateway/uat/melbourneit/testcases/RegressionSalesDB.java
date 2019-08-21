@@ -179,7 +179,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 2: Verify if domain registration workflow status is completed
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
 				workflowstatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
-				Assert.assertTrue(workflowstatus == (("domain registration completed")) || workflowstatus == (("update star rating")), workflowstatus);
+				Assert.assertTrue(workflowstatus.equalsIgnoreCase("domain registration completed") || workflowstatus.equalsIgnoreCase("update star rating"));	
 		
 				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
 				}
