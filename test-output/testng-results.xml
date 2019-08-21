@@ -1,95 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
+<testng-results skipped="0" failed="3" ignored="0" total="6" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Payment Gateway UAT Braintree Regression Test Suite" duration-ms="1373894" started-at="2019-08-19T00:48:06Z" finished-at="2019-08-19T01:10:59Z">
+  <suite name="Payment Gateway UAT Braintree Regression Test Suite" duration-ms="910022" started-at="2019-08-21T01:39:58Z" finished-at="2019-08-21T01:55:08Z">
     <groups>
     </groups>
-    <test name="Payment Gateway UAT Braintree Regression Test Cases" duration-ms="1373894" started-at="2019-08-19T00:48:06Z" finished-at="2019-08-19T01:10:59Z">
-      <class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI">
-        <test-method status="PASS" signature="testAddNewCreditCardInSMUI(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSMUI@4cf777e8]" name="testAddNewCreditCardInSMUI" duration-ms="57896" started-at="2019-08-19T01:05:24Z" finished-at="2019-08-19T01:06:22Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[braintree]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddNewCreditCardInSMUI -->
-        <test-method status="PASS" signature="testModifyExistingCreditCardInSMUI(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSMUI@4cf777e8]" name="testModifyExistingCreditCardInSMUI" duration-ms="50661" started-at="2019-08-19T01:06:22Z" finished-at="2019-08-19T01:07:13Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[braintree]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testModifyExistingCreditCardInSMUI -->
-        <test-method status="PASS" signature="testMakeCreditCardDefaultInSMUI(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSMUI@4cf777e8]" name="testMakeCreditCardDefaultInSMUI" duration-ms="90627" started-at="2019-08-19T01:07:13Z" finished-at="2019-08-19T01:08:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[braintree]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testMakeCreditCardDefaultInSMUI -->
-        <test-method status="PASS" signature="testRechargePrepaidUsingExistingCardInSMUI(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSMUI@4cf777e8]" name="testRechargePrepaidUsingExistingCardInSMUI" duration-ms="73074" started-at="2019-08-19T01:08:43Z" finished-at="2019-08-19T01:09:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[braintree]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRechargePrepaidUsingExistingCardInSMUI -->
-        <test-method status="PASS" signature="testRechargePrepaidUsingNewCardInSMUI(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSMUI@4cf777e8]" name="testRechargePrepaidUsingNewCardInSMUI" duration-ms="63142" started-at="2019-08-19T01:09:56Z" finished-at="2019-08-19T01:10:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[braintree]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRechargePrepaidUsingNewCardInSMUI -->
-      </class> <!-- com.paymentgateway.uat.domainz.testcases.RegressionSMUI -->
-      <class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB">
-        <test-method status="PASS" signature="testCreateDomainAndMajorProductOrderInSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSalesDB@402a079c]" name="testCreateDomainAndMajorProductOrderInSalesDB" duration-ms="113517" started-at="2019-08-19T00:48:06Z" finished-at="2019-08-19T00:49:59Z">
+    <test name="Payment Gateway UAT Braintree Regression Test Cases" duration-ms="910022" started-at="2019-08-21T01:39:58Z" finished-at="2019-08-21T01:55:08Z">
+      <class name="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB">
+        <test-method status="PASS" signature="testCreateDomainAndMajorProductOrderInSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testCreateDomainAndMajorProductOrderInSalesDB" duration-ms="114523" started-at="2019-08-21T01:39:58Z" finished-at="2019-08-21T01:41:53Z">
           <params>
             <param index="0">
               <value>
@@ -105,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateDomainAndMajorProductOrderInSalesDB -->
-        <test-method status="PASS" signature="testDomainRegistration2WorkflowInConsoleAdmin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSalesDB@402a079c]" name="testDomainRegistration2WorkflowInConsoleAdmin" duration-ms="224729" started-at="2019-08-19T00:49:59Z" finished-at="2019-08-19T00:53:44Z">
+        <test-method status="PASS" signature="testDomainRegistration2WorkflowInConsoleAdmin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testDomainRegistration2WorkflowInConsoleAdmin" duration-ms="291097" started-at="2019-08-21T01:41:53Z" finished-at="2019-08-21T01:46:44Z">
           <params>
             <param index="0">
               <value>
@@ -126,7 +44,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDomainRegistration2WorkflowInConsoleAdmin -->
-        <test-method status="PASS" signature="testProductSetup2WorkflowInConsoleAdmin(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSalesDB@402a079c]" name="testProductSetup2WorkflowInConsoleAdmin" duration-ms="221209" started-at="2019-08-19T00:53:44Z" finished-at="2019-08-19T00:57:25Z">
+        <test-method status="PASS" signature="testProductSetup2WorkflowInConsoleAdmin(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testProductSetup2WorkflowInConsoleAdmin" duration-ms="225123" started-at="2019-08-21T01:46:44Z" finished-at="2019-08-21T01:50:29Z">
           <params>
             <param index="0">
               <value>
@@ -142,7 +60,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testProductSetup2WorkflowInConsoleAdmin -->
-        <test-method status="PASS" signature="testPaySingleInvoiceInConsoleAdmin(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSalesDB@402a079c]" name="testPaySingleInvoiceInConsoleAdmin" duration-ms="212048" started-at="2019-08-19T00:57:25Z" finished-at="2019-08-19T01:00:57Z">
+        <test-method status="FAIL" signature="testPaySingleInvoiceInConsoleAdmin(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testPaySingleInvoiceInConsoleAdmin" duration-ms="180248" started-at="2019-08-21T01:50:29Z" finished-at="2019-08-21T01:53:29Z">
           <params>
             <param index="0">
               <value>
@@ -155,10 +73,66 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoAlertPresentException">
+            <message>
+              <![CDATA[no such alert
+  (Session info: chrome=76.0.3809.100)
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53129}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 84fa641151152a619b877bbb2fa89d20]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=76.0.3809.100)
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53129}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 84fa641151152a619b877bbb2fa89d20
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:987)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringTargetLocator.alert(EventFiringWebDriver.java:650)
+at com.consoleadmin.pages.CATaxInvoicePage.payInvoice(CATaxInvoicePage.java:93)
+at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPaySingleInvoiceInConsoleAdmin(RegressionSalesDB.java:251)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPaySingleInvoiceInConsoleAdmin -->
-        <test-method status="PASS" signature="testRefundPaymentFromSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSalesDB@402a079c]" name="testRefundPaymentFromSalesDB" duration-ms="49750" started-at="2019-08-19T01:00:57Z" finished-at="2019-08-19T01:01:47Z">
+        <test-method status="FAIL" signature="testRefundPaymentFromSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testRefundPaymentFromSalesDB" duration-ms="54115" started-at="2019-08-21T01:53:29Z" finished-at="2019-08-21T01:54:23Z">
           <params>
             <param index="0">
               <value>
@@ -171,10 +145,77 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='ext-mb-text']"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53211}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2c734e71e6d5c34742c78528a67b04c4
+*** Element info: {Using=xpath, value=//*[@class='ext-mb-text']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='ext-mb-text']"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53211}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2c734e71e6d5c34742c78528a67b04c4
+*** Element info: {Using=xpath, value=//*[@class='ext-mb-text']}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+at com.consolesalesdb.pages.CSProcessTransactionPage.getConfirmationMessage(CSProcessTransactionPage.java:149)
+at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testRefundPaymentFromSalesDB(RegressionSalesDB.java:294)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRefundPaymentFromSalesDB -->
-        <test-method status="PASS" signature="testPayInvoiceUsingExistingCardFromSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionSalesDB@402a079c]" name="testPayInvoiceUsingExistingCardFromSalesDB" duration-ms="44800" started-at="2019-08-19T01:01:47Z" finished-at="2019-08-19T01:02:32Z">
+        <test-method status="FAIL" signature="testPayInvoiceUsingExistingCardFromSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.tpp.testcases.RegressionSalesDB@271053e1]" name="testPayInvoiceUsingExistingCardFromSalesDB" duration-ms="44847" started-at="2019-08-21T01:54:23Z" finished-at="2019-08-21T01:55:08Z">
           <params>
             <param index="0">
               <value>
@@ -187,44 +228,77 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'MasterCard: 545454******5454')]"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f55314ff62858156985595ce49d8dc65
+*** Element info: {Using=xpath, value=//*[contains(text(),'MasterCard: 545454******5454')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'MasterCard: 545454******5454')]"}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
+System info: host: 'MIT01524', ip: '10.40.3.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f55314ff62858156985595ce49d8dc65
+*** Element info: {Using=xpath, value=//*[contains(text(),'MasterCard: 545454******5454')]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+at com.consolesalesdb.pages.CSProcessTransactionPage.setProcessTransactionDetails(CSProcessTransactionPage.java:113)
+at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPayInvoiceUsingExistingCardFromSalesDB(RegressionSalesDB.java:330)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPayInvoiceUsingExistingCardFromSalesDB -->
-      </class> <!-- com.paymentgateway.uat.domainz.testcases.RegressionSalesDB -->
-      <class name="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin">
-        <test-method status="PASS" signature="testViewBillingInConsoleAdmin(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin@59ec2012]" name="testViewBillingInConsoleAdmin" duration-ms="152495" started-at="2019-08-19T01:02:32Z" finished-at="2019-08-19T01:05:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[braintree]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testViewBillingInConsoleAdmin -->
-        <test-method status="PASS" signature="testUpdateExpiryInConsoleAdmin(java.lang.String, java.lang.String)[pri:0, instance:com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin@59ec2012]" name="testUpdateExpiryInConsoleAdmin" duration-ms="19875" started-at="2019-08-19T01:05:04Z" finished-at="2019-08-19T01:05:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[braintree]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUpdateExpiryInConsoleAdmin -->
-      </class> <!-- com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin -->
+      </class> <!-- com.paymentgateway.uat.tpp.testcases.RegressionSalesDB -->
     </test> <!-- Payment Gateway UAT Braintree Regression Test Cases -->
   </suite> <!-- Payment Gateway UAT Braintree Regression Test Suite -->
 </testng-results>

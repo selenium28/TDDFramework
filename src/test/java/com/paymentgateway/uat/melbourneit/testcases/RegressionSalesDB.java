@@ -159,6 +159,8 @@ public class RegressionSalesDB extends TestBase{
 		public void testDomainRegistration2WorkflowInConsoleAdmin(String environment, String paymentgateway, String obsidian)
 				throws InterruptedException, IOException{
 
+				String workflowstatus;
+			
 				//Test Step 1: Login to console admin, then process domainregistration2 workflow		
 				initialization(environment, "consoleadmin");
 				caloginpage = new CALoginPage();
@@ -176,9 +178,9 @@ public class RegressionSalesDB extends TestBase{
 				
 				//Test Step 2: Verify if domain registration workflow status is completed
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
-				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
-						caworkflowadminpage.getWorkflowStatus("domainregistration2"));		
-				
+				workflowstatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
+				Assert.assertTrue(workflowstatus == (("domain registration completed")) || workflowstatus == (("update star rating")), workflowstatus);
+		
 				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
 				}
 		

@@ -96,7 +96,7 @@ public class RegressionSalesDB extends TestBase{
 					strAccountReference = "MEL-6038";
 					strTld_01 = "com";
 					strRegistrationPeriod = "1 x Y";
-					strMajorProduct = "Business cPanel Hosting";
+					strMajorProduct = "Domain Manager";
 					strProductPeriod = "1 x M";
 					strPaymentMethod = "Invoice";
 					strRegistrantDetails = "Payment Gateway Test";	
@@ -105,9 +105,9 @@ public class RegressionSalesDB extends TestBase{
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "TPP-60053";
-					strTld_01 = "com";
+					strTld_01 = "org";
 					strRegistrationPeriod = "1 x Y";
-					strMajorProduct = "Business cPanel Hosting";
+					strMajorProduct = "Domain Manager";
 					strProductPeriod = "1 x M";
 					strPaymentMethod = "Invoice";
 					strRegistrantDetails = "Payment Gateway Test";	
@@ -159,6 +159,8 @@ public class RegressionSalesDB extends TestBase{
 		@Test
 		public void testDomainRegistration2WorkflowInConsoleAdmin(String environment, String paymentgateway, String obsidian)
 				throws InterruptedException, IOException{
+			
+				String workflowstatus;
 
 				//Test Step 1: Login to console admin, then process domainregistration2 workflow		
 				initialization(environment, "consoleadmin");
@@ -177,9 +179,9 @@ public class RegressionSalesDB extends TestBase{
 				
 				//Test Step 2: Verify if domain registration workflow status is completed
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
-				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
-						caworkflowadminpage.getWorkflowStatus("domainregistration2"));		
-				
+				workflowstatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
+				Assert.assertTrue(workflowstatus == (("domain registration completed")) || workflowstatus == (("update star rating")), workflowstatus);
+	
 				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
 				}
 		
@@ -274,7 +276,7 @@ public class RegressionSalesDB extends TestBase{
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "TPP-60053";
-					strAmount = "65.84";
+					strAmount = "16.45";
 					strTransactionType= "REFUND";
 				}
 	
@@ -313,9 +315,9 @@ public class RegressionSalesDB extends TestBase{
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "TPP-60053";
-					strAmount = "65.84";
+					strAmount = "16.45";
 					strTransactionType= "PAYMENT";
-					strPaymentMethod = "MasterCard: 545454******5454";					
+					strPaymentMethod = "Visa: 411111******1111";					
 				}
 			
 				//Test Step 1: Login to Sales DB page, then pay for an existing invoice for domain and product via existing credit card

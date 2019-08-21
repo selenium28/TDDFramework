@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite">
-              <span class="suite-name border-passed">Payment Gateway UAT Braintree Regression Test Suite</span>
+              <span class="suite-name border-failed">Payment Gateway UAT Braintree Regression Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">13 methods,   13 passed</span>
+                    <span class="method-stats">6 methods, 3 failed,   3 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" class="hide-methods failed suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite -->
+                      <a href="#" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" class="show-methods failed suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite"> (show)</a> <!-- show-methods failed suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB" hash-for-method="testPayInvoiceUsingExistingCardFromSalesDB(uat1, braintree)">testPayInvoiceUsingExistingCardFromSalesDB(uat1, braintree)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB" hash-for-method="testPaySingleInvoiceInConsoleAdmin(uat1, braintree)">testPaySingleInvoiceInConsoleAdmin(uat1, braintree)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB" hash-for-method="testRefundPaymentFromSalesDB(uat1, braintree)">testRefundPaymentFromSalesDB(uat1, braintree)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,67 +126,17 @@
                     <div class="method-list-content passed suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSMUI" hash-for-method="testAddNewCreditCardInSMUI(uat1, braintree)">testAddNewCreditCardInSMUI(uat1, braintree)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB" hash-for-method="testCreateDomainAndMajorProductOrderInSalesDB(uat1, braintree)">testCreateDomainAndMajorProductOrderInSalesDB(uat1, braintree)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB" hash-for-method="testCreateDomainAndMajorProductOrderInSalesDB(uat1, braintree)">testCreateDomainAndMajorProductOrderInSalesDB(uat1, braintree)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB" hash-for-method="testDomainRegistration2WorkflowInConsoleAdmin(uat1, braintree, disabled)">testDomainRegistration2WorkflowInConsoleAdmin(uat1, braintree, disabled)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB" hash-for-method="testDomainRegistration2WorkflowInConsoleAdmin(uat1, braintree, disabled)">testDomainRegistration2WorkflowInConsoleAdmin(uat1, braintree, disabled)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSMUI" hash-for-method="testMakeCreditCardDefaultInSMUI(uat1, braintree)">testMakeCreditCardDefaultInSMUI(uat1, braintree)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSMUI" hash-for-method="testModifyExistingCreditCardInSMUI(uat1, braintree)">testModifyExistingCreditCardInSMUI(uat1, braintree)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB" hash-for-method="testPayInvoiceUsingExistingCardFromSalesDB(uat1, braintree)">testPayInvoiceUsingExistingCardFromSalesDB(uat1, braintree)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB" hash-for-method="testPaySingleInvoiceInConsoleAdmin(uat1, braintree)">testPaySingleInvoiceInConsoleAdmin(uat1, braintree)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB" hash-for-method="testProductSetup2WorkflowInConsoleAdmin(uat1, braintree)">testProductSetup2WorkflowInConsoleAdmin(uat1, braintree)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSMUI" hash-for-method="testRechargePrepaidUsingExistingCardInSMUI(uat1, braintree)">testRechargePrepaidUsingExistingCardInSMUI(uat1, braintree)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSMUI" hash-for-method="testRechargePrepaidUsingNewCardInSMUI(uat1, braintree)">testRechargePrepaidUsingNewCardInSMUI(uat1, braintree)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB" hash-for-method="testRefundPaymentFromSalesDB(uat1, braintree)">testRefundPaymentFromSalesDB(uat1, braintree)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin" hash-for-method="testUpdateExpiryInConsoleAdmin(uat1, braintree)">testUpdateExpiryInConsoleAdmin(uat1, braintree)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin" hash-for-method="testViewBillingInConsoleAdmin(uat1, braintree)">testViewBillingInConsoleAdmin(uat1, braintree)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" title="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB" hash-for-method="testProductSetup2WorkflowInConsoleAdmin(uat1, braintree)">testProductSetup2WorkflowInConsoleAdmin(uat1, braintree)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite -->
@@ -177,82 +151,126 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite" class="panel Payment_Gateway_UAT_Braintree_Regression_Test_Suite">
-          <div class="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite-class-passed">
+          <div class="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.paymentgateway.uat.domainz.testcases.RegressionSMUI</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAddNewCreditCardInSMUI(uat1, braintree)">
-                  </a> <!-- testAddNewCreditCardInSMUI(uat1, braintree) -->
-                  <span class="method-name">testAddNewCreditCardInSMUI</span>
+                  <a name="testPayInvoiceUsingExistingCardFromSalesDB(uat1, braintree)">
+                  </a> <!-- testPayInvoiceUsingExistingCardFromSalesDB(uat1, braintree) -->
+                  <span class="method-name">testPayInvoiceUsingExistingCardFromSalesDB</span>
                   <span class="parameters">(uat1, braintree)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;MasterCard: 545454******5454&apos;)]&quot;}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f55314ff62858156985595ce49d8dc65
+*** Element info: {Using=xpath, value=//*[contains(text(),&apos;MasterCard: 545454******5454&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consolesalesdb.pages.CSProcessTransactionPage.setProcessTransactionDetails(CSProcessTransactionPage.java:113)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPayInvoiceUsingExistingCardFromSalesDB(RegressionSalesDB.java:330)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testMakeCreditCardDefaultInSMUI(uat1, braintree)">
-                  </a> <!-- testMakeCreditCardDefaultInSMUI(uat1, braintree) -->
-                  <span class="method-name">testMakeCreditCardDefaultInSMUI</span>
+                  <a name="testPaySingleInvoiceInConsoleAdmin(uat1, braintree)">
+                  </a> <!-- testPaySingleInvoiceInConsoleAdmin(uat1, braintree) -->
+                  <span class="method-name">testPaySingleInvoiceInConsoleAdmin</span>
                   <span class="parameters">(uat1, braintree)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoAlertPresentException: no such alert
+  (Session info: chrome=76.0.3809.100)
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53129}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 84fa641151152a619b877bbb2fa89d20
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:987)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringTargetLocator.alert(EventFiringWebDriver.java:650)
+	at com.consoleadmin.pages.CATaxInvoicePage.payInvoice(CATaxInvoicePage.java:93)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPaySingleInvoiceInConsoleAdmin(RegressionSalesDB.java:251)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testModifyExistingCreditCardInSMUI(uat1, braintree)">
-                  </a> <!-- testModifyExistingCreditCardInSMUI(uat1, braintree) -->
-                  <span class="method-name">testModifyExistingCreditCardInSMUI</span>
+                  <a name="testRefundPaymentFromSalesDB(uat1, braintree)">
+                  </a> <!-- testRefundPaymentFromSalesDB(uat1, braintree) -->
+                  <span class="method-name">testRefundPaymentFromSalesDB</span>
                   <span class="parameters">(uat1, braintree)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testRechargePrepaidUsingExistingCardInSMUI(uat1, braintree)">
-                  </a> <!-- testRechargePrepaidUsingExistingCardInSMUI(uat1, braintree) -->
-                  <span class="method-name">testRechargePrepaidUsingExistingCardInSMUI</span>
-                  <span class="parameters">(uat1, braintree)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testRechargePrepaidUsingNewCardInSMUI(uat1, braintree)">
-                  </a> <!-- testRechargePrepaidUsingNewCardInSMUI(uat1, braintree) -->
-                  <span class="method-name">testRechargePrepaidUsingNewCardInSMUI</span>
-                  <span class="parameters">(uat1, braintree)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;ext-mb-text&apos;]&quot;}
+  (Session info: chrome=76.0.3809.100)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53211}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 2c734e71e6d5c34742c78528a67b04c4
+*** Element info: {Using=xpath, value=//*[@class=&apos;ext-mb-text&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at com.consolesalesdb.pages.CSProcessTransactionPage.getConfirmationMessage(CSProcessTransactionPage.java:149)
+	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testRefundPaymentFromSalesDB(RegressionSalesDB.java:294)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite-class-passed -->
+          </div> <!-- suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite-class-failed -->
           <div class="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUpdateExpiryInConsoleAdmin(uat1, braintree)">
-                  </a> <!-- testUpdateExpiryInConsoleAdmin(uat1, braintree) -->
-                  <span class="method-name">testUpdateExpiryInConsoleAdmin</span>
-                  <span class="parameters">(uat1, braintree)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testViewBillingInConsoleAdmin(uat1, braintree)">
-                  </a> <!-- testViewBillingInConsoleAdmin(uat1, braintree) -->
-                  <span class="method-name">testViewBillingInConsoleAdmin</span>
-                  <span class="parameters">(uat1, braintree)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite-class-passed -->
-          <div class="suite-Payment_Gateway_UAT_Braintree_Regression_Test_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.paymentgateway.uat.domainz.testcases.RegressionSalesDB</span>
+              <span class="class-name">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -273,33 +291,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testPayInvoiceUsingExistingCardFromSalesDB(uat1, braintree)">
-                  </a> <!-- testPayInvoiceUsingExistingCardFromSalesDB(uat1, braintree) -->
-                  <span class="method-name">testPayInvoiceUsingExistingCardFromSalesDB</span>
-                  <span class="parameters">(uat1, braintree)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testPaySingleInvoiceInConsoleAdmin(uat1, braintree)">
-                  </a> <!-- testPaySingleInvoiceInConsoleAdmin(uat1, braintree) -->
-                  <span class="method-name">testPaySingleInvoiceInConsoleAdmin</span>
-                  <span class="parameters">(uat1, braintree)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="testProductSetup2WorkflowInConsoleAdmin(uat1, braintree)">
                   </a> <!-- testProductSetup2WorkflowInConsoleAdmin(uat1, braintree) -->
                   <span class="method-name">testProductSetup2WorkflowInConsoleAdmin</span>
-                  <span class="parameters">(uat1, braintree)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testRefundPaymentFromSalesDB(uat1, braintree)">
-                  </a> <!-- testRefundPaymentFromSalesDB(uat1, braintree) -->
-                  <span class="method-name">testRefundPaymentFromSalesDB</span>
                   <span class="parameters">(uat1, braintree)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -323,7 +317,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;10&quot; name=&quot;Payment Gateway UAT Braintree Regression Test Cases&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.paymentgateway.uat.domainz.testcases.RegressionSalesDB&quot;&gt;
+      &lt;class name=&quot;com.paymentgateway.uat.tpp.testcases.RegressionSalesDB&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;testCreateDomainAndMajorProductOrderInSalesDB&quot;/&gt;
           &lt;include name=&quot;testDomainRegistration2WorkflowInConsoleAdmin&quot;/&gt;
@@ -332,22 +326,7 @@
           &lt;include name=&quot;testRefundPaymentFromSalesDB&quot;/&gt;
           &lt;include name=&quot;testPayInvoiceUsingExistingCardFromSalesDB&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.paymentgateway.uat.domainz.testcases.RegressionSalesDB --&gt;
-      &lt;class name=&quot;com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;testViewBillingInConsoleAdmin&quot;/&gt;
-          &lt;include name=&quot;testUpdateExpiryInConsoleAdmin&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin --&gt;
-      &lt;class name=&quot;com.paymentgateway.uat.domainz.testcases.RegressionSMUI&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;testAddNewCreditCardInSMUI&quot;/&gt;
-          &lt;include name=&quot;testModifyExistingCreditCardInSMUI&quot;/&gt;
-          &lt;include name=&quot;testMakeCreditCardDefaultInSMUI&quot;/&gt;
-          &lt;include name=&quot;testRechargePrepaidUsingExistingCardInSMUI&quot;/&gt;
-          &lt;include name=&quot;testRechargePrepaidUsingNewCardInSMUI&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.paymentgateway.uat.domainz.testcases.RegressionSMUI --&gt;
+      &lt;/class&gt; &lt;!-- com.paymentgateway.uat.tpp.testcases.RegressionSalesDB --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Payment Gateway UAT Braintree Regression Test Cases --&gt;
 &lt;/suite&gt; &lt;!-- Payment Gateway UAT Braintree Regression Test Suite --&gt;
@@ -361,7 +340,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Payment Gateway UAT Braintree Regression Test Cases (3 classes)</span>
+                <span class="test-name">Payment Gateway UAT Braintree Regression Test Cases (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -387,64 +366,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(13);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testDomainRegistration2WorkflowInConsoleAdmin')
-data.setCell(0, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSalesDB')
-data.setCell(0, 3, 224729);
+data.setCell(0, 2, 'com.paymentgateway.uat.tpp.testcases.RegressionSalesDB')
+data.setCell(0, 3, 291097);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testProductSetup2WorkflowInConsoleAdmin')
-data.setCell(1, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSalesDB')
-data.setCell(1, 3, 221209);
+data.setCell(1, 2, 'com.paymentgateway.uat.tpp.testcases.RegressionSalesDB')
+data.setCell(1, 3, 225123);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testPaySingleInvoiceInConsoleAdmin')
-data.setCell(2, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSalesDB')
-data.setCell(2, 3, 212048);
+data.setCell(2, 2, 'com.paymentgateway.uat.tpp.testcases.RegressionSalesDB')
+data.setCell(2, 3, 180248);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testViewBillingInConsoleAdmin')
-data.setCell(3, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin')
-data.setCell(3, 3, 152495);
+data.setCell(3, 1, 'testCreateDomainAndMajorProductOrderInSalesDB')
+data.setCell(3, 2, 'com.paymentgateway.uat.tpp.testcases.RegressionSalesDB')
+data.setCell(3, 3, 114523);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testCreateDomainAndMajorProductOrderInSalesDB')
-data.setCell(4, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSalesDB')
-data.setCell(4, 3, 113517);
+data.setCell(4, 1, 'testRefundPaymentFromSalesDB')
+data.setCell(4, 2, 'com.paymentgateway.uat.tpp.testcases.RegressionSalesDB')
+data.setCell(4, 3, 54115);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testMakeCreditCardDefaultInSMUI')
-data.setCell(5, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSMUI')
-data.setCell(5, 3, 90627);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testRechargePrepaidUsingExistingCardInSMUI')
-data.setCell(6, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSMUI')
-data.setCell(6, 3, 73074);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testRechargePrepaidUsingNewCardInSMUI')
-data.setCell(7, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSMUI')
-data.setCell(7, 3, 63142);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testAddNewCreditCardInSMUI')
-data.setCell(8, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSMUI')
-data.setCell(8, 3, 57896);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testModifyExistingCreditCardInSMUI')
-data.setCell(9, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSMUI')
-data.setCell(9, 3, 50661);
-data.setCell(10, 0, 10)
-data.setCell(10, 1, 'testRefundPaymentFromSalesDB')
-data.setCell(10, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSalesDB')
-data.setCell(10, 3, 49750);
-data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testPayInvoiceUsingExistingCardFromSalesDB')
-data.setCell(11, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionSalesDB')
-data.setCell(11, 3, 44800);
-data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testUpdateExpiryInConsoleAdmin')
-data.setCell(12, 2, 'com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin')
-data.setCell(12, 3, 19875);
+data.setCell(5, 1, 'testPayInvoiceUsingExistingCardFromSalesDB')
+data.setCell(5, 2, 'com.paymentgateway.uat.tpp.testcases.RegressionSalesDB')
+data.setCell(5, 3, 44847);
 window.suiteTableData['Payment_Gateway_UAT_Braintree_Regression_Test_Suite']= { tableData: data, tableDiv: 'times-div-Payment_Gateway_UAT_Braintree_Regression_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 minutes</span>
+              <span class="suite-total-time">Total running time: 15 minutes</span>
               <div id="times-div-Payment_Gateway_UAT_Braintree_Regression_Test_Suite">
               </div> <!-- times-div-Payment_Gateway_UAT_Braintree_Regression_Test_Suite -->
             </div> <!-- times-div -->
@@ -470,64 +421,36 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.paymentgateway.uat.domainz.testcases.RegressionSalesDB</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testCreateDomainAndMajorProductOrderInSalesDB(uat1, braintree)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testDomainRegistration2WorkflowInConsoleAdmin(uat1, braintree, disabled)</span>
-                <span class="method-start">113525 ms</span>
+                <span class="method-start">114531 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testProductSetup2WorkflowInConsoleAdmin(uat1, braintree)</span>
-                <span class="method-start">338256 ms</span>
+                <span class="method-start">405630 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testPaySingleInvoiceInConsoleAdmin(uat1, braintree)</span>
-                <span class="method-start">559469 ms</span>
+                <span class="method-start">630756 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testRefundPaymentFromSalesDB(uat1, braintree)</span>
-                <span class="method-start">771518 ms</span>
+                <span class="method-start">811015 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testPayInvoiceUsingExistingCardFromSalesDB(uat1, braintree)</span>
-                <span class="method-start">821271 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testViewBillingInConsoleAdmin(uat1, braintree)</span>
-                <span class="method-start">866074 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testUpdateExpiryInConsoleAdmin(uat1, braintree)</span>
-                <span class="method-start">1018570 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.paymentgateway.uat.domainz.testcases.RegressionSMUI</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testAddNewCreditCardInSMUI(uat1, braintree)</span>
-                <span class="method-start">1038447 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testModifyExistingCreditCardInSMUI(uat1, braintree)</span>
-                <span class="method-start">1096347 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testMakeCreditCardDefaultInSMUI(uat1, braintree)</span>
-                <span class="method-start">1147011 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testRechargePrepaidUsingExistingCardInSMUI(uat1, braintree)</span>
-                <span class="method-start">1237640 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">testRechargePrepaidUsingNewCardInSMUI(uat1, braintree)</span>
-                <span class="method-start">1310716 ms</span>
+                <span class="method-start">865133 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
