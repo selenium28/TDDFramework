@@ -81,6 +81,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strWorkflowId = null;
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
+		String strWorkflowStatus = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
@@ -125,16 +126,9 @@ public class SalesDBJourneyTest extends TestBase{
 		
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		if (caworkflowadminpage.getWorkflowStatus("domainregistration2") == "update star rating") {
-   	    	//Added refresh page to update current workflow status
-			caworkflowadminpage.refreshWorkflowAdminPage();
-   	    }
-		else {
-			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
-					caworkflowadminpage.getWorkflowStatus("domainregistration2"));
-		}
-		
-		
+		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
+		Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("domain registration completed") || strWorkflowStatus.equalsIgnoreCase("update star rating"));	
+	
 		driver.close();
 		System.out.println("End Test: verify_ComAuDomain_Order_InSalesDB");
 		
@@ -154,6 +148,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
 		String strWorkflowId = null;
+		String strWorkflowStatus = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
@@ -197,15 +192,9 @@ public class SalesDBJourneyTest extends TestBase{
 		
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		if (caworkflowadminpage.getWorkflowStatus("domainregistration2") == "update star rating") {
-			//Added refresh page to update current workflow status
-			caworkflowadminpage.refreshWorkflowAdminPage();
-   	    }
-		else {
-			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
-					caworkflowadminpage.getWorkflowStatus("domainregistration2"));
-		}
-		
+		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
+		Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("domain registration completed") || strWorkflowStatus.equalsIgnoreCase("update star rating"));	
+	
 		//Test Step 4: Process the productsetup2 workflow in console admin
 		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
 		caworkflowadminpage.processProductSetup2();
@@ -240,6 +229,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
 		String strWorkflowId = null;
+		String strWorkflowStatus = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
@@ -283,14 +273,8 @@ public class SalesDBJourneyTest extends TestBase{
 
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		if (caworkflowadminpage.getWorkflowStatus("domainregistration2") == "update star rating") {
-			//Added refresh page to update current workflow status
-			caworkflowadminpage.refreshWorkflowAdminPage();
-   	    }
-		else {
-			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
-					caworkflowadminpage.getWorkflowStatus("domainregistration2"));
-		}
+		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
+		Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("domain registration completed") || strWorkflowStatus.equalsIgnoreCase("update star rating"));	
 		
 		//Test Step 4: Process the productsetup2 workflow in console admin
 		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
@@ -324,6 +308,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
 		String strWorkflowId = null;
+		String strWorkflowStatus = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
@@ -364,14 +349,8 @@ public class SalesDBJourneyTest extends TestBase{
 		
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		if (caworkflowadminpage.getWorkflowStatus("domainregistration2") == "update star rating") {
-			//Added refresh page to update current workflow status
-			caworkflowadminpage.refreshWorkflowAdminPage();
-   	    }
-		else {
-			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
-					caworkflowadminpage.getWorkflowStatus("domainregistration2"));
-		}
+		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
+		Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("domain registration completed") || strWorkflowStatus.equalsIgnoreCase("update star rating"));	
 		
 		driver.close();
 		System.out.println("End Test: verify_NzDomain_Order_InSalesDB");
