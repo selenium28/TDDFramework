@@ -30,7 +30,7 @@ public class CSWorkflowNotificationPage extends TestBase{
 	}
     
     public String getNotificationMessage() throws InterruptedException {
-  		Thread.sleep(10000);
+  		Thread.sleep(15000);
   		String strPopUpMessage = driver.findElement(By.xpath("//*[@class='ext-mb-text']")).getText();
 		String strMessage = strPopUpMessage.substring(0, 35);
   		return strMessage;

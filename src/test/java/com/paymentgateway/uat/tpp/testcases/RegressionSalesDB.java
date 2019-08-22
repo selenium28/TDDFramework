@@ -94,7 +94,7 @@ public class RegressionSalesDB extends TestBase{
 		
 				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
 					strAccountReference = "MEL-6038";
-					strTld_01 = "com";
+					strTld_01 = "org";
 					strRegistrationPeriod = "1 x Y";
 					strMajorProduct = "Domain Manager";
 					strProductPeriod = "1 x M";
@@ -255,7 +255,7 @@ public class RegressionSalesDB extends TestBase{
 				
 				
 				// Test Step 2: Verify if the payment for invoice is successful.
-				Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$27.70 for invoice "+strInvoiceNumber+" has been accepted");
+				Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$16.45 for invoice "+strInvoiceNumber+" has been accepted");
 				
 				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
 				driver.close();
@@ -270,7 +270,7 @@ public class RegressionSalesDB extends TestBase{
 				// Initialization (Test Data Creation and Assignment)
 				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
 					strAccountReference = "MEL-6038";
-					strAmount = "27.70";
+					strAmount = "16.45";
 					strTransactionType= "REFUND";
 		
 				}
@@ -309,7 +309,7 @@ public class RegressionSalesDB extends TestBase{
 				// Initialization (Test Data Creation and Assignment)
 				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
 					strAccountReference = "MEL-6038";
-					strAmount = "27.70";
+					strAmount = "16.45";
 					strTransactionType= "PAYMENT";
 					strPaymentMethod = "Visa: 4111xxxxxxxx1111";
 				}

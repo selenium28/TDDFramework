@@ -262,8 +262,7 @@ public class RegressionSMUI extends TestBase {
 		//	dmzprepaidaccountpage.setNewCreditCardDetailsQuest(cardowner, cardnumber, cardexpirymonth, cardexpiryyear,
 		//			cardsecuritycode);
 		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
-			dmzprepaidaccountpage.setNewCreditCardDetailsBT(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear,
-					strCardSecurityCode);
+			dmzprepaidaccountpage.setNewCreditCardDetailsBT(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 		dmzprepaidaccountpage.enterRechargeAmount(strAmount);
 		dmzprepaidaccountpage.clickSubmitButton();

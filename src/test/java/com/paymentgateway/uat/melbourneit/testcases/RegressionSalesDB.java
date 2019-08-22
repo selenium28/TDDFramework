@@ -93,7 +93,7 @@ public class RegressionSalesDB extends TestBase{
 		
 				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
 					strAccountReference = "MEL-6005";
-					strTld_01 = "com";
+					strTld_01 = "com.au";
 					strRegistrationPeriod = "1 x Y";
 					strMajorProduct = "Basic cPanel Hosting";
 					strProductPeriod = "1 x M";
@@ -104,7 +104,7 @@ public class RegressionSalesDB extends TestBase{
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "MIT-3302";
-					strTld_01 = "com";
+					strTld_01 = "com.au";
 					strRegistrationPeriod = "1 x Y";
 					strMajorProduct = "Basic cPanel Hosting";
 					strProductPeriod = "1 x M";
