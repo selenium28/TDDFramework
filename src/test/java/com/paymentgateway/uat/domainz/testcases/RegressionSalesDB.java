@@ -121,6 +121,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 1: Login to Sales DB page, then create an order for domain and product 
 				initialization(environment, "salesdburl");
 				csloginpage = new CSLoginPage();
+				Thread.sleep(20000);
 				csloginpage.setDefaultLoginDetails(environment);
 				csnrcrmpage = csloginpage.clickLoginButton();
 				csnrcrmpage.setGreenCode(strAccountReference);

@@ -8,94 +8,16 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Payment Gateway UAT Braintree Regression Test Suite</th></tr>
-<tr><td><a href="#t0">Payment Gateway UAT Braintree Regression Test Cases</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">3</td><td class="num">910,022</td><td></td><td></td></tr>
+<tr><th colspan="7">Console Regression Test Automation - PROD Test Suite</th></tr>
+<tr><td><a href="#t0">Regression Test Cases</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">396,435</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Payment Gateway UAT Braintree Regression Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Payment Gateway UAT Braintree Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB</td><td><a href="#m0">testPayInvoiceUsingExistingCardFromSalesDB</a></td><td rowspan="1">1566352463819</td><td rowspan="1">44847</td></tr><tr class="failedeven"><td><a href="#m1">testPaySingleInvoiceInConsoleAdmin</a></td><td rowspan="1">1566352229442</td><td rowspan="1">180248</td></tr><tr class="failedeven"><td><a href="#m2">testRefundPaymentFromSalesDB</a></td><td rowspan="1">1566352409701</td><td rowspan="1">54115</td></tr><tr><th colspan="4">Payment Gateway UAT Braintree Regression Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB</td><td><a href="#m3">testCreateDomainAndMajorProductOrderInSalesDB</a></td><td rowspan="1">1566351598686</td><td rowspan="1">114523</td></tr><tr class="passedeven"><td><a href="#m4">testDomainRegistration2WorkflowInConsoleAdmin</a></td><td rowspan="1">1566351713217</td><td rowspan="1">291097</td></tr><tr class="passedeven"><td><a href="#m5">testProductSetup2WorkflowInConsoleAdmin</a></td><td rowspan="1">1566352004316</td><td rowspan="1">225123</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Regression Test Automation - PROD Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.consoleregression.testcases.production.CustomerPortalJourneyTest</td><td><a href="#m0">verifyDomainRegistrationOrderForNewCustomerInCustomerPortal</a></td><td rowspan="1">1566450926746</td><td rowspan="1">82935</td></tr><tr class="passedeven"><td><a href="#m1">verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal</a></td><td rowspan="1">1566451009683</td><td rowspan="1">82379</td></tr><tr class="passedodd"><td rowspan="4">com.consoleregression.testcases.production.SalesDBJourneyTest</td><td><a href="#m2">verify_ComAuDomain_Order_InSalesDB</a></td><td rowspan="1">1566451163857</td><td rowspan="1">38326</td></tr><tr class="passedodd"><td><a href="#m3">verify_ComDomain_and_Office365_Order_InSalesDB</a></td><td rowspan="1">1566451202186</td><td rowspan="1">83712</td></tr><tr class="passedodd"><td><a href="#m4">verify_NetDomain_and_DomainManager_InSalesDB</a></td><td rowspan="1">1566451092065</td><td rowspan="1">71790</td></tr><tr class="passedodd"><td><a href="#m5">verify_NzDomain_Order_InSalesDB</a></td><td rowspan="1">1566451285899</td><td rowspan="1">37252</td></tr></tbody>
 </table>
-<h2>Payment Gateway UAT Braintree Regression Test Cases</h2><h3 id="m0">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testPayInvoiceUsingExistingCardFromSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;MasterCard: 545454******5454&apos;)]&quot;}
-  (Session info: chrome=76.0.3809.100)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53248}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: f55314ff62858156985595ce49d8dc65
-*** Element info: {Using=xpath, value=//*[contains(text(),&apos;MasterCard: 545454******5454&apos;)]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at com.consolesalesdb.pages.CSProcessTransactionPage.setProcessTransactionDetails(CSProcessTransactionPage.java:113)
-	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPayInvoiceUsingExistingCardFromSalesDB(RegressionSalesDB.java:330)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testPaySingleInvoiceInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoAlertPresentException: no such alert
-  (Session info: chrome=76.0.3809.100)
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53129}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 84fa641151152a619b877bbb2fa89d20
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:987)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringTargetLocator.alert(EventFiringWebDriver.java:650)
-	at com.consoleadmin.pages.CATaxInvoicePage.payInvoice(CATaxInvoicePage.java:93)
-	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testPaySingleInvoiceInConsoleAdmin(RegressionSalesDB.java:251)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testRefundPaymentFromSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@class=&apos;ext-mb-text&apos;]&quot;}
-  (Session info: chrome=76.0.3809.100)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;MIT01524&apos;, ip: &apos;10.40.3.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:53211}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2c734e71e6d5c34742c78528a67b04c4
-*** Element info: {Using=xpath, value=//*[@class=&apos;ext-mb-text&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at com.consolesalesdb.pages.CSProcessTransactionPage.getConfirmationMessage(CSProcessTransactionPage.java:149)
-	at com.paymentgateway.uat.tpp.testcases.RegressionSalesDB.testRefundPaymentFromSalesDB(RegressionSalesDB.java:294)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testCreateDomainAndMajorProductOrderInSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testDomainRegistration2WorkflowInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.paymentgateway.uat.tpp.testcases.RegressionSalesDB#testProductSetup2WorkflowInConsoleAdmin</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>braintree</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Regression Test Cases</h2><h3 id="m0">com.consoleregression.testcases.production.CustomerPortalJourneyTest#verifyDomainRegistrationOrderForNewCustomerInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>prod</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.consoleregression.testcases.production.CustomerPortalJourneyTest#verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>prod</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.consoleregression.testcases.production.SalesDBJourneyTest#verify_ComAuDomain_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>prod</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.consoleregression.testcases.production.SalesDBJourneyTest#verify_ComDomain_and_Office365_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>prod</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.consoleregression.testcases.production.SalesDBJourneyTest#verify_NetDomain_and_DomainManager_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>prod</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.consoleregression.testcases.production.SalesDBJourneyTest#verify_NzDomain_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>prod</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
