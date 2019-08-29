@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Payment Gateway UAT Braintree Regression Test Suite" thread-count="10" parallel="tests">
+	<parameter name="environment"     value="uat1"/>
+	<parameter name="paymentgateway"  value="braintree"/>
+	<parameter name="obsidian"  	  value="disabled"/>
+	
+	<listeners>
+		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
+	</listeners>
+	
+	<test name="Payment Gateway UAT Braintree Regression Test Cases" parallel = "none" preserve-order="true">
+    
+		<classes>
+		
+
+<!-- Netregistry Virtualization -->
+
+           <class name="com.paymentgateway.uat.netregistry.testcases.RegressionSMUI">
+                <methods>
+<!--                     <include name="testAddNewCreditCardInSMUI" /> -->
+<!--                     <include name="testModifyExistingCreditCardInSMUI" /> -->
+<!--                     <include name="testMakeCreditCardDefaultInSMUI" /> -->
+<!--                <include name="testDeleteCreditCardInSMUI" /> -->
+					<include name="testRechargePrepaidUsingExistingCardInSMUI" />
+<!-- 					<include name="testRechargePrepaidUsingNewCardInSMUI" /> -->
+                </methods>
+            </class> 
+ 
+
+
+		</classes>
+	</test>  
+</suite> 
