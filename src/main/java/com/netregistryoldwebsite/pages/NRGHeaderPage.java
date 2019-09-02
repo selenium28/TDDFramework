@@ -6,6 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
+import com.domainzwebsite.pages.DMZBillingPage;
 
 public class NRGHeaderPage extends TestBase{
 
@@ -47,7 +48,8 @@ public class NRGHeaderPage extends TestBase{
     	return new NRGAccountPage();
     	
     }
-//    
+
+    
 //    public ConsoleClientOrderPage clickOrderTab() throws InterruptedException {
 //
 //    	System.out.println("clicking order tab");
@@ -61,5 +63,15 @@ public class NRGHeaderPage extends TestBase{
 //    	return new ConsoleClientOrderPage(driver);
 //    	
 //    }
+    
+    
+	public NRGBillingPage clickBillingTab() throws InterruptedException {
+		
+		System.out.println("clicking account tab");
+		Thread.sleep(5000);
+		billingTab.click();
+		Thread.sleep(5000);
+		return new NRGBillingPage();
+	}
 	
 }

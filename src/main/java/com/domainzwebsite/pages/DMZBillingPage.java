@@ -322,5 +322,12 @@ public class DMZBillingPage extends TestBase{
     	return flag;
     }
     
+    public DMZPrepaidAccountPage clickEditPrepaidAccountLink() throws InterruptedException {
+    	
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//*[@id=\"sidebar\"]/div[2]/div[1]/h3/span/a")).click();
+		return new DMZPrepaidAccountPage();
+	}
+    
     
 }

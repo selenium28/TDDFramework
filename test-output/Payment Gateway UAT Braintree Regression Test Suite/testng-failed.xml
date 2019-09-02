@@ -9,11 +9,11 @@
   </listeners>
   <test thread-count="10" name="Payment Gateway UAT Braintree Regression Test Cases(failed)">
     <classes>
-      <class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI">
+      <class name="com.paymentgateway.uat.netregistry.testcases.RegressionSMUI">
         <methods>
-          <include name="testMakeCreditCardDefaultInSMUI" invocation-numbers="0"/>
+          <include name="testRechargePrepaidUsingExistingCardInSMUI" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.paymentgateway.uat.domainz.testcases.RegressionSMUI -->
+      </class> <!-- com.paymentgateway.uat.netregistry.testcases.RegressionSMUI -->
     </classes>
   </test> <!-- Payment Gateway UAT Braintree Regression Test Cases(failed) -->
 </suite> <!-- Failed suite [Payment Gateway UAT Braintree Regression Test Suite] -->

@@ -1,5 +1,6 @@
 package com.netregistryoldwebsite.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -57,7 +58,17 @@ public class NRGAccountPage extends TestBase{
 		}
 
     	return new NRGCreditCardsDetailsPage();
+    }
+    
+    
+    public void makeCardDefault(String cardowner) throws InterruptedException {
     	
+    	Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id='cc-table']/tbody/tr[td//text()[contains(., '"+ cardowner +"')]]/td[5]/*")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@name='removeOrMakeDefaultCreditCard']")).click();
+		Thread.sleep(2000);
+
     }
 
 }

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import com.base.TestBase;
+import com.domainzwebsite.pages.DMZPrepaidAccountPage;
 
 
 public class NRGBillingPage extends TestBase{
@@ -277,6 +278,14 @@ public class NRGBillingPage extends TestBase{
     	}       	
        	return new NRGOrderCompletePage();
     }
+	
+	
+    public NRGPrepaidAccountPage clickEditPrepaidAccountLink() throws InterruptedException {
+    	
+		Thread.sleep(5000);
+		driver.findElement(By.linkText("Add pre-paid credit")).click();
+		return new NRGPrepaidAccountPage();
+	}
 
     
 }

@@ -8,6 +8,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
+import com.domainzwebsite.pages.DMZBillingPage;
 
 public class NRGCreditCardsDetailsPage extends TestBase{
 
@@ -26,6 +27,7 @@ public class NRGCreditCardsDetailsPage extends TestBase{
 
 	//Initializing Page Objects
 	public NRGCreditCardsDetailsPage(){
+		
         PageFactory.initElements(driver, this);
     }
 
@@ -45,6 +47,7 @@ public class NRGCreditCardsDetailsPage extends TestBase{
 //    }
 	
 	  public void setQuestFormCreditCardDetails(String cardowner, String cardtype, String cardnumber, String cardexpirymonth, String cardexpiryyear, String cardsecuritycode){
+		  
 		    driver.findElement(By.xpath("//form[@id='creditCardForm']/div[@class='ccNew cc-form form-horizontal']/div[@class='control-group'][1]/div[@class='controls']/input")).sendKeys(cardowner);
 	    	driver.findElement(By.xpath("//form[@id='creditCardForm']/div[@class='ccNew cc-form form-horizontal']/div[@class='control-group select'][1]/div[@class='controls']/select")).sendKeys(cardtype);
 	    	driver.findElement(By.xpath("//form[@id='creditCardForm']/div[@class='ccNew cc-form form-horizontal']/div[@class='control-group'][2]/div[@class='controls']/input")).sendKeys(cardnumber);
@@ -55,6 +58,7 @@ public class NRGCreditCardsDetailsPage extends TestBase{
 	  
 	  
 	  public void setBTFormCreditCardDetails(String cardowner, String cardnumber, String cardexpirymonth, String cardexpiryyear, String cardsecuritycode){
+		  
 		  	driver.findElement(By.xpath("//form[@id='creditCardForm']/div[@class='ccNew cc-form form-horizontal']/div[@class='control-group'][1]/div[@class='controls']/input[@id='btCreditCard.owner']")).clear();
 		    driver.findElement(By.xpath("//form[@id='creditCardForm']/div[@class='ccNew cc-form form-horizontal']/div[@class='control-group'][1]/div[@class='controls']/input[@id='btCreditCard.owner']")).sendKeys(cardowner);
 		    driver.switchTo().frame(driver.findElement(By.xpath("//form[@id='creditCardForm']/div[@class='ccNew cc-form form-horizontal']/div[@class='control-group'][2]/div[@class='controls']/div[@id='btCreditCard.number']/iframe")));
@@ -76,11 +80,11 @@ public class NRGCreditCardsDetailsPage extends TestBase{
 	    	driver.findElement(By.xpath("//form/input")).clear();
 	    	driver.findElement(By.xpath("//form/input")).sendKeys(cardsecuritycode); 
 	    	driver.switchTo().defaultContent();
-	  
 	  }
 
 	  
 	  public void tickMakeCreditCardAsDefaultPayment() {
+		  
 	       	System.out.println("tick make credit card the default payment menthod for ALL billing services");
 	       	if(makeDefaultCreditCard.isDisplayed()||makeDefaultCreditCard.isEnabled()) {
 	       		makeDefaultCreditCard.click();
@@ -91,7 +95,7 @@ public class NRGCreditCardsDetailsPage extends TestBase{
 	  }
 
 	  
-	  public void clickAddCreditCard() {
+	  public NRGBillingPage clickAddCreditCard() {
 		  
 	       	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addCardButton);
 	       	System.out.println("clicking add card button");
@@ -101,10 +105,12 @@ public class NRGCreditCardsDetailsPage extends TestBase{
 	    	else {
 	    		System.out.println("element not found");
 	    	}       	
-
+	       	return new NRGBillingPage();
 	  }
 	  
+	  
 	  public Boolean isNewCreditCardAdded() throws InterruptedException{
+		  
 	    	Boolean flag = false;
 	    	
 	    	Thread.sleep(5000);
@@ -113,6 +119,36 @@ public class NRGCreditCardsDetailsPage extends TestBase{
 	    		flag = true;
 	    	}
 	    	return flag;
+	  }
+	  
+	  
+	  public void clickOnExistingCard(String cardowner) throws InterruptedException {
+			
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//*[@id=\"cc-table\"]/tbody/tr[td//text()[contains(., '"+ cardowner +"')]]/td[7]"))
+					.click();
+	  }
+	  
+	  
+	  public void modifyCreditCardDetailsBT(String cardexpirymonth, String cardexpiryyear) throws InterruptedException {
+			
+			Thread.sleep(2000);
+			driver.findElement(By.name("expiryMonth")).sendKeys(cardexpirymonth);
+			Thread.sleep(1000);
+			driver.findElement(By.name("expiryYear")).sendKeys(cardexpiryyear);
+			Thread.sleep(1000);
+			driver.findElement(By.name("modifyCreditCard")).click();
+			Thread.sleep(2000);  
+	  }
+
+	
+	  public String getConfirmationMessage() {
+
+			String strConfirmationMessage = null;
+			
+			strConfirmationMessage = driver.findElement(By.xpath("//*[@class='success-box']")).getText();
+			return strConfirmationMessage;
+			
 	  }
 	  
 	  

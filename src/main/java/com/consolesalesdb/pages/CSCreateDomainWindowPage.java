@@ -91,7 +91,7 @@ public class CSCreateDomainWindowPage extends TestBase{
         Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+strmajorproduct+"']")).click();      
         productPeriodButton.click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strproductperiod+"')]")).click();
         paymentMethodButton.click();
         Thread.sleep(2000);

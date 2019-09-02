@@ -78,7 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14786346";
+		String strWorkflowId = "14853836";
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		
@@ -136,7 +136,7 @@ public class SalesDBJourneyTest extends TestBase{
 	
 	@Parameters({"environment", "pretest"})
 	@Test
-	public void verify_NetDomain_and_DIFM_Order_InSalesDB (String environment, String pretest) throws InterruptedException{
+	public void verify_NetDomain_and_DomainManager_InSalesDB (String environment, String pretest) throws InterruptedException{
 
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
@@ -147,7 +147,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14786348";
+		String strWorkflowId = "14853825";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -158,16 +158,16 @@ public class SalesDBJourneyTest extends TestBase{
 			strTld = "net";
 			strRegistrationPeriod = "1 x Y";
 			strGreenCode = "MEL-6007";
-			strMajorProduct = "Done For You Website";
-			strProductPeriod = "1 x M";
+			strMajorProduct = "Domain Manager";
+			strProductPeriod = "1 x Y AU$15.95[ AU$0 setup]";
 			strPaymentMethod = "Visa: 471527******1053 08/2020";
 			strRegistrantDetails = "Netregistry";
 		}
 	
-		//Test Step 1: Login to sales db and place an order for domain registration and a single product (e.g. Done For You Website)
+		//Test Step 1: Login to sales db and place an order for domain registration and a single product (e.g. Domain Manager)
 		if (pretest.equals("enabled")) {
 			
-			System.out.println("Start Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
+			System.out.println("Start Test: verify_NetDomain_and_DomainManager_InSalesDB");
 			initialization(environment, "salesdburl");
 			csloginpage = new CSLoginPage();
 			csloginpage.setDefaultLoginDetails(environment);
@@ -202,7 +202,7 @@ public class SalesDBJourneyTest extends TestBase{
 			driver.close();
 		}
 		
-		System.out.println("End Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
+		System.out.println("End Test: verify_NetDomain_and_DomainManager_InSalesDB");
 	}
 	
 	
@@ -217,7 +217,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14786351";
+		String strWorkflowId = "14853848";
 		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		
@@ -292,7 +292,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14786355";
+		String strWorkflowId = "14853858";
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();

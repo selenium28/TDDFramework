@@ -121,6 +121,7 @@ public class RegressionSalesDB extends TestBase{
 				//Test Step 1: Login to Sales DB page, then create an order for domain and product 
 				initialization(environment, "salesdburl");
 				csloginpage = new CSLoginPage();
+				Thread.sleep(20000);
 				csloginpage.setDefaultLoginDetails(environment);
 				csnrcrmpage = csloginpage.clickLoginButton();
 				csnrcrmpage.setGreenCode(strAccountReference);
@@ -162,6 +163,8 @@ public class RegressionSalesDB extends TestBase{
 		@Test
 		public void testDomainRegistration2WorkflowInConsoleAdmin(String environment, String paymentgateway, String obsidian)
 				throws InterruptedException, IOException{
+			
+				String strWorkflowStatus;
 
 				//Test Step 1: Login to console admin, then process domainregistration2 workflow		
 				initialization(environment, "consoleadmin");
@@ -182,14 +185,9 @@ public class RegressionSalesDB extends TestBase{
 				
 				//Test Step 2: Verify if domain registration workflow status is completed
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
-				if (caworkflowadminpage.getWorkflowStatus("domainregistration2") != "domain registration completed") {
-		   	    	//Added refresh page to update current workflow status
-		   	        Thread.sleep(3000);
-		   	        driver.navigate().refresh();   	        
-				}
-				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
-					caworkflowadminpage.getWorkflowStatus("domainregistration2"));		
-				
+				strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
+				Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("domain registration completed") || strWorkflowStatus.equalsIgnoreCase("update star rating"));	
+						
 				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
 				}
 		
@@ -206,11 +204,6 @@ public class RegressionSalesDB extends TestBase{
 						
 				//Test Step 2: Verify if productsetup2 workflow is approved
 				caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName_01 + "." + strTld_01);
-				if (caworkflowadminpage.getWorkflowStatus("productSetup2") != "approved") {    	
-		   	    	//Added refresh page to update current workflow status
-		   	        Thread.sleep(2000);
-		   	        driver.navigate().refresh();  	        
-				}
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 
 					caworkflowadminpage.getWorkflowStatus("productsetup2"));
 				

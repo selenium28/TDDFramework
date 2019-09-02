@@ -1,101 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Regression Test Automation - PROD Test Suite" duration-ms="387329" started-at="2019-08-08T00:34:42Z" finished-at="2019-08-08T00:41:09Z">
+  <suite name="AU Project Regression Test Suite" duration-ms="45" started-at="2019-09-02T00:41:45Z" finished-at="2019-09-02T00:41:45Z">
     <groups>
     </groups>
-    <test name="Regression Test Cases" duration-ms="387329" started-at="2019-08-08T00:34:42Z" finished-at="2019-08-08T00:41:09Z">
-      <class name="com.consoleregression.testcases.production.CustomerPortalJourneyTest">
-        <test-method status="PASS" signature="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.CustomerPortalJourneyTest@589838eb]" name="verifyDomainRegistrationOrderForNewCustomerInCustomerPortal" duration-ms="64563" started-at="2019-08-08T00:34:42Z" finished-at="2019-08-08T00:35:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
+    <test name="AU Project Regression Test Cases" duration-ms="45" started-at="2019-09-02T00:41:45Z" finished-at="2019-09-02T00:41:45Z">
+      <class name="com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom">
+        <test-method status="FAIL" signature="testDomainRegistration2WorkflowForCom(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom@14bf9759]" name="testDomainRegistration2WorkflowForCom" duration-ms="0" started-at="2019-09-02T00:41:45Z" finished-at="2019-09-02T00:41:45Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'virtualization' is required by @Test on method testDomainRegistration2WorkflowForCom but has not been marked @Optional or defined
+in C:\Users\roy.alcantara\Desktop\Automation\TestAutomationProject\src\main\resources\testng_AUProjectRegression_DEV2.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'virtualization' is required by @Test on method testDomainRegistration2WorkflowForCom but has not been marked @Optional or defined
+in C:\Users\roy.alcantara\Desktop\Automation\TestAutomationProject\src\main\resources\testng_AUProjectRegression_DEV2.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:290)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDomainRegistrationOrderForNewCustomerInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.CustomerPortalJourneyTest@589838eb]" name="verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal" duration-ms="82064" started-at="2019-08-08T00:35:46Z" finished-at="2019-08-08T00:37:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal -->
-      </class> <!-- com.consoleregression.testcases.production.CustomerPortalJourneyTest -->
-      <class name="com.consoleregression.testcases.production.SalesDBJourneyTest">
-        <test-method status="PASS" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@42dafa95]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="41708" started-at="2019-08-08T00:37:08Z" finished-at="2019-08-08T00:37:50Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@42dafa95]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="70369" started-at="2019-08-08T00:37:50Z" finished-at="2019-08-08T00:39:01Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_ComDomain_and_Office365_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@42dafa95]" name="verify_ComDomain_and_Office365_Order_InSalesDB" duration-ms="86721" started-at="2019-08-08T00:39:01Z" finished-at="2019-08-08T00:40:27Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_ComDomain_and_Office365_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.production.SalesDBJourneyTest@42dafa95]" name="verify_NzDomain_Order_InSalesDB" duration-ms="41844" started-at="2019-08-08T00:40:27Z" finished-at="2019-08-08T00:41:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[prod]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
-      </class> <!-- com.consoleregression.testcases.production.SalesDBJourneyTest -->
-    </test> <!-- Regression Test Cases -->
-  </suite> <!-- Console Regression Test Automation - PROD Test Suite -->
+        </test-method> <!-- testDomainRegistration2WorkflowForCom -->
+      </class> <!-- com.consoleregression.workflowtest.testcases.TestDomainRegistration2WorkflowForCom -->
+    </test> <!-- AU Project Regression Test Cases -->
+  </suite> <!-- AU Project Regression Test Suite -->
 </testng-results>

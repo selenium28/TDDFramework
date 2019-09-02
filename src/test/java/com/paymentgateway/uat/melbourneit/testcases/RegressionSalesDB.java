@@ -93,7 +93,7 @@ public class RegressionSalesDB extends TestBase{
 		
 				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
 					strAccountReference = "MEL-6005";
-					strTld_01 = "com";
+					strTld_01 = "com.au";
 					strRegistrationPeriod = "1 x Y";
 					strMajorProduct = "Basic cPanel Hosting";
 					strProductPeriod = "1 x M";
@@ -104,7 +104,7 @@ public class RegressionSalesDB extends TestBase{
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "MIT-3302";
-					strTld_01 = "com";
+					strTld_01 = "com.au";
 					strRegistrationPeriod = "1 x Y";
 					strMajorProduct = "Basic cPanel Hosting";
 					strProductPeriod = "1 x M";
@@ -159,6 +159,8 @@ public class RegressionSalesDB extends TestBase{
 		public void testDomainRegistration2WorkflowInConsoleAdmin(String environment, String paymentgateway, String obsidian)
 				throws InterruptedException, IOException{
 
+				String strWorkflowStatus;
+			
 				//Test Step 1: Login to console admin, then process domainregistration2 workflow		
 				initialization(environment, "consoleadmin");
 				caloginpage = new CALoginPage();
@@ -176,9 +178,9 @@ public class RegressionSalesDB extends TestBase{
 				
 				//Test Step 2: Verify if domain registration workflow status is completed
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId_01);
-				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", 
-						caworkflowadminpage.getWorkflowStatus("domainregistration2"));		
-				
+				strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
+				Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("domain registration completed") || strWorkflowStatus.equalsIgnoreCase("update star rating"));	
+		
 				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest02");
 				}
 		

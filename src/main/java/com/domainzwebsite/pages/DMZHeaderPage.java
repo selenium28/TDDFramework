@@ -16,7 +16,8 @@ public class DMZHeaderPage extends TestBase{
     @FindBy(how=How.XPATH, using = ".//*[@id='wrap']/div[2]/div[2]/div[1]/ul/li[2]/a/span")
     WebElement orderTab;
     
-    @FindBy(how=How.XPATH, using = ".//*[@id='wrap']/div[2]/div[2]/div[1]/ul/li[3]/a/span")
+    //@FindBy(how=How.XPATH, using = ".//*[@id='wrap']/div[2]/div[2]/div[1]/ul/li[3]/a/span")
+    @FindBy(how=How.LINK_TEXT, using = "Billing")
     WebElement billingTab;
     
     @FindBy(how=How.XPATH, using = ".//*[@id='wrap']/div[2]/div[2]/div[1]/ul/li[4]/a/span")
@@ -61,5 +62,14 @@ public class DMZHeaderPage extends TestBase{
 //    	return new ConsoleClientOrderPage(driver);
 //    	
 //    }
+    
+	public DMZBillingPage clickBillingTab() throws InterruptedException {
+		
+		System.out.println("clicking account tab");
+		Thread.sleep(5000);
+		billingTab.click();
+		Thread.sleep(5000);
+		return new DMZBillingPage();
+	}
 	
 }

@@ -107,7 +107,7 @@ public class TestDomainRegistration2WorkflowForCom extends TestBase{
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
-		caworkflowadminpage.processFraudCheck();
+		//caworkflowadminpage.processFraudCheck();
 		
 		//Test Step 5: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
