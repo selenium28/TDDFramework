@@ -73,7 +73,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 			
 		//Test Step 1: Login to customer portal and place an order for domain registration 
 		System.out.println("Start Test: verifyDomainRegistrationOrderForNewCustomerInCustomerPortal");
-		initialization(environment, "customerportalurl_netregistry");
+		initialization(environment, "oldcart_domainsearchurl_netregistry");
 		nrgonlineorderpage = new NRGOnlineOrderPage();
 		nrgonlineorderpage.clearDefaultTldSelections();
 		nrgonlineorderpage.setDomainNameAndTld(strDomainName, strTld);
@@ -117,7 +117,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 			
 		//Test Step 1: Login to customer portal and place an order for domain registration and domain privacy
 		System.out.println("Start Test: verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal");
-		initialization(environment, "customerportalurl_netregistry");
+		initialization(environment, "oldcart_domainsearchurl_netregistry");
 		nrgonlineorderpage = new NRGOnlineOrderPage();
 		nrgonlineorderpage.clearDefaultTldSelections();
 		nrgonlineorderpage.setDomainNameAndTld(strDomainName, strTld);
@@ -166,7 +166,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 			
 		//Test Step 1: Login to customer portal and place an order for domain registration and domain privacy
 		System.out.println("Start Test: verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal");
-		initialization(environment, "customerportalurl_netregistry");
+		initialization(environment, "oldcart_domainsearchurl_netregistry");
 		nrgonlineorderpage = new NRGOnlineOrderPage();
 		nrgonlineorderpage.clearDefaultTldSelections();
 		nrgonlineorderpage.setDomainNameAndTld(strDomainName, strTld);
@@ -222,7 +222,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 			
 		//Test Step 1: Login to customer portal and place an order for domain registration and domain privacy
 		System.out.println("Start Test: verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal");
-		initialization(environment, "customerportalurl_netregistry");
+		initialization(environment, "oldcart_domainsearchurl_netregistry");
 		nrgonlineorderpage = new NRGOnlineOrderPage();
 		nrgonlineorderpage.clearDefaultTldSelections();
 		nrgonlineorderpage.setDomainNameAndTld(strDomainName, strTld);
@@ -281,7 +281,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 			
 		//Test Step 1: Login to customer portal and place an order for domain registration and domain privacy
 		System.out.println("Start Test: verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal");
-		initialization(environment, "customerportalurl_netregistry");
+		initialization(environment, "oldcart_domainsearchurl_netregistry");
 		nrgonlineorderpage = new NRGOnlineOrderPage();
 		nrgonlineorderpage.clearDefaultTldSelections();
 		nrgonlineorderpage.setDomainNameAndTld(strDomainName, strTld);
