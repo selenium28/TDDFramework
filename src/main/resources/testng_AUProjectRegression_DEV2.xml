@@ -10,8 +10,8 @@
     
     <test name="AU Project Regression Test Cases" >
 		<classes>
-		
-			<class name="com.auprojectregression.testcases.TestAUDomainRegistrationForNetregistryInOldCart.java">  
+
+			<class name="com.auprojectregression.testcases.TestAUDomainRegistrationForNetregistryInOldCart">  
 			</class>			
 <!-- 			<class name="com.auprojectregression.testcases.TestAUDomainRegistrationForMelbourneITInOldCart">   -->
 <!-- 			</class> -->
