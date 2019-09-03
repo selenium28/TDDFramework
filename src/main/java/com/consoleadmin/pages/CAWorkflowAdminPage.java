@@ -48,13 +48,13 @@ public class CAWorkflowAdminPage extends TestBase{
     	Thread.sleep(3000);
     		
     	if (strtld.equals("com")||strtld.equals("net")){
-    		this.processCheckASIC();
+    		//this.processCheckASIC();
     	}
     	else if (strtld.equals("nz")) {
-    		this.processCheckASIC();
+    		//this.processCheckASIC();
     	}
     	else if (strtld.equals("com.au")) {
-    		this.processCheckASIC();
+    		//this.processCheckASIC();
     	}
     	else if (strtld.equals("org")||strtld.equals("info")){
     		this.processCheckASIC();
