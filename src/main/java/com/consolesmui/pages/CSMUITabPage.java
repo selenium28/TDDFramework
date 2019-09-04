@@ -37,42 +37,66 @@ public class CSMUITabPage extends TestBase {
 	public CSMUIDashboardPage clickDashoardTab() {
 
 		System.out.println("Clicking Dashboard tab");
-		dashboardTab.click();
+		if (dashboardTab.isDisplayed() || dashboardTab.isEnabled()) {
+			dashboardTab.click();
+		} else {
+			System.out.println("element not found");
+		}
 		return new CSMUIDashboardPage();
 	}
 
 	public CSMUIDomainNamePage clickDomainNameTab() {
 
 		System.out.println("Clicking Domain Name tab");
-		domainNameTab.click();
+		if (domainNameTab.isDisplayed() || domainNameTab.isEnabled()) {
+			domainNameTab.click();
+		} else {
+			System.out.println("element not found");
+		}
 		return new CSMUIDomainNamePage();
 	}
 
 	public CSMUIZoneManagerPage clickZoneManagerTab() {
 
 		System.out.println("Clicking Zone Manager tab");
-		zoneManagerTab.click();
+		if (zoneManagerTab.isDisplayed() || zoneManagerTab.isEnabled()) {
+			zoneManagerTab.click();
+		} else {
+			System.out.println("element not found");
+		}
 		return new CSMUIZoneManagerPage();
 	}
 
 	public CSMUIDelegateDomainPage clickDelegateDomainTab() {
 
 		System.out.println("Clicking Domain Delegation tab");
-		delegateDomainTab.click();
+		if (delegateDomainTab.isDisplayed() || delegateDomainTab.isEnabled()) {
+			delegateDomainTab.click();
+		} else {
+			System.out.println("element not found");
+		}
 		return new CSMUIDelegateDomainPage();
 	}
 
 	public CSMUIDelegateRedirectPage clickDelegateRedirectorTab() {
 
 		System.out.println("Clicking Domain Redirector tab");
-		delegateRedirectorTab.click();
+		if (delegateRedirectorTab.isDisplayed() || delegateRedirectorTab.isEnabled()) {
+			delegateRedirectorTab.click();
+		} else {
+			System.out.println("element not found");
+		}
 		return new CSMUIDelegateRedirectPage();
 	}
 
 	public CSMUIManageO365MainPage clickOffice365Tab() {
 
 		System.out.println("Clicking Office 365 tab");
-		office365Tab.click();
+		if (office365Tab.isDisplayed() || office365Tab.isEnabled()) {
+			office365Tab.click();
+		} else {
+			System.out.println("element not found");
+		}
 		return new CSMUIManageO365MainPage();
 	}
 
