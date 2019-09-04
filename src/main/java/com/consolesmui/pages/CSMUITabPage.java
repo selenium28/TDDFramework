@@ -36,36 +36,42 @@ public class CSMUITabPage extends TestBase {
 	// Methods
 	public CSMUIDashboardPage clickDashoardTab() {
 
+		System.out.println("Clicking Dashboard tab");
 		dashboardTab.click();
 		return new CSMUIDashboardPage();
 	}
 
 	public CSMUIDomainNamePage clickDomainNameTab() {
 
+		System.out.println("Clicking Domain Name tab");
 		domainNameTab.click();
 		return new CSMUIDomainNamePage();
 	}
 
 	public CSMUIZoneManagerPage clickZoneManagerTab() {
 
+		System.out.println("Clicking Zone Manager tab");
 		zoneManagerTab.click();
 		return new CSMUIZoneManagerPage();
 	}
 
 	public CSMUIDelegateDomainPage clickDelegateDomainTab() {
 
+		System.out.println("Clicking Domain Delegation tab");
 		delegateDomainTab.click();
 		return new CSMUIDelegateDomainPage();
 	}
 
 	public CSMUIDelegateRedirectPage clickDelegateRedirectorTab() {
 
+		System.out.println("Clicking Domain Redirector tab");
 		delegateRedirectorTab.click();
 		return new CSMUIDelegateRedirectPage();
 	}
 
 	public CSMUIManageO365MainPage clickOffice365Tab() {
 
+		System.out.println("Clicking Office 365 tab");
 		office365Tab.click();
 		return new CSMUIManageO365MainPage();
 	}
