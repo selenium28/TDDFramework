@@ -1,5 +1,6 @@
 package com.consolesmui.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -89,11 +90,13 @@ public class CSMUITabPage extends TestBase {
 		return new CSMUIDelegateRedirectPage();
 	}
 
-	public CSMUIManageO365MainPage clickOffice365Tab() {
+	public CSMUIManageO365MainPage clickOffice365Tab() throws InterruptedException {
 
 		System.out.println("Clicking Office 365 tab");
 		if (office365Tab.isDisplayed() || office365Tab.isEnabled()) {
 			office365Tab.click();
+			Thread.sleep(5000);
+			driver.switchTo().frame(driver.findElement(By.name("o365_frame")));
 		} else {
 			System.out.println("element not found");
 		}
