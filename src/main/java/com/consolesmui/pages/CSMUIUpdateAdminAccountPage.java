@@ -95,10 +95,13 @@ public class CSMUIUpdateAdminAccountPage extends TestBase {
 
 	}
 
-	public void updateAdminDetails(String firstName, String LastName, String displayName) {
+	public void updateAdminDetails(String firstName, String lastName, String displayName) {
 
 		System.out.println("Enter new admin details");
-		enterFirstName(firstName).enterLastName(LastName).enterDisplayName(displayName).clickSaveButton();
+		enterFirstName(firstName);
+		enterLastName(lastName);
+		enterDisplayName(displayName);
+		clickSaveButton();
 
 	}
 
@@ -130,7 +133,9 @@ public class CSMUIUpdateAdminAccountPage extends TestBase {
 	public void resetPassword(String password, String confirmPassword) {
 
 		System.out.println("Reset admin password");
-		enterNewPassword(password).enterRepeatPassword(confirmPassword).clickResetButton();
+		enterNewPassword(password);
+		enterRepeatPassword(confirmPassword);
+		clickResetButton();
 
 	}
 
@@ -152,14 +157,14 @@ public class CSMUIUpdateAdminAccountPage extends TestBase {
 
 	public String getEditDetailsSuccessMessage() {
 
-		System.out.println("Return edit details sucess message");
+		System.out.println("Return edit details success message");
 		return editDetailsSuccessMessage.getText();
 
 	}
 
 	public String getResetPasswordSuccessMessage() {
 
-		System.out.println("Return reset password sucess message");
+		System.out.println("Return reset password success message");
 		return resetPasswordSuccessMessage.getText();
 
 	}

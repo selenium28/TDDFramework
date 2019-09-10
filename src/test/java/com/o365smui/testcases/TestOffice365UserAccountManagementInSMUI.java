@@ -35,7 +35,7 @@ public class TestOffice365UserAccountManagementInSMUI extends TestBase {
 
 	@Parameters({ "environment" })
 	@Test
-	public void TestOffice365Smui(String environment) throws InterruptedException {
+	public void TestOffice365UserAccountManagementInSMUI(String environment) throws InterruptedException {
 
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
