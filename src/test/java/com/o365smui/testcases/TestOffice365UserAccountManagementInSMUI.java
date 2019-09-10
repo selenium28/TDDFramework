@@ -35,11 +35,10 @@ public class TestOffice365UserAccountManagementInSMUI extends TestBase {
 
 	@Parameters({ "environment" })
 	@Test
-	public void TestOffice365UserAccountManagementInSMUI(String environment) throws InterruptedException {
+	public void testOffice365UserAccountManagementInSMUI(String environment) throws InterruptedException {
 
 		// Initialization (Test Data Creation and Assignment)
-		String strDomainName = null;
-		strDomainName = "testoffice365smui.com";
+		String strDomainName = "testoffice365smui.com";
 
 		// Test Step 1: Login to console and search for domain
 		System.out.println("Start Test: TestOffice365UserAccountManagementInSMUI");
