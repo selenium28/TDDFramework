@@ -3,11 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.auprojectregression.testcases.TestAUDomainRegistrationForNetregistryInOldCart">
+      <class name="com.paymentgateway.uat.dps.testcases.RegressionSalesDB">
         <methods>
-          <include name="testAUDomainRegistrationForNetregistryInOldCart"/>
+          <include name="testPayInvoiceUsingExistingCardFromSalesDB"/>
+          <include name="testProductSetup2WorkflowInConsoleAdmin"/>
+          <include name="testCreateDomainAndMajorProductOrderInSalesDB"/>
+          <include name="testPaySingleInvoiceInConsoleAdmin"/>
+          <include name="testDomainRegistration2WorkflowInConsoleAdmin"/>
+          <include name="testRefundPaymentFromSalesDB"/>
         </methods>
-      </class> <!-- com.auprojectregression.testcases.TestAUDomainRegistrationForNetregistryInOldCart -->
+      </class> <!-- com.paymentgateway.uat.dps.testcases.RegressionSalesDB -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

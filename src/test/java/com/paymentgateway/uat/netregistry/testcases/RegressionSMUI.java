@@ -228,57 +228,53 @@ public class RegressionSMUI extends TestBase {
 
 		driver.close();
 	}
-//
-//	@Parameters({ "environment", "paymentgateway" })
-//	@Test
-//	public void testRechargePrepaidUsingNewCardInSMUI(String environment, String paymentgateway)
-//			throws InterruptedException {
-//
-//		if ((environment.equals("uat1")) && (paymentgateway.equals("quest"))) {
-//			strAccountReference = "DOM-1218";
-//			strPassword = "comein22";
-//			strCardOwner = "Test Mastercard";
-//			strCardType = "MasterCard";
-//			strCardNumber = "5454545454545454";
-//			strCardExpiryMonth = "02";
-//			strCardExpiryYear = "2020";
-//			strCardSecurityCode = "123";
-//			strAmount = "10";
-//
-//		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
-//			strAccountReference = "DOM-1311";
-//			strPassword = "comein22";
-//			strCardOwner = "Test Mastercard";
-//			strCardType = "MasterCard";
-//			strCardNumber = "5454545454545454";
-//			strCardExpiryMonth = "02";
-//			strCardExpiryYear = "2020";
-//			strCardSecurityCode = "123";
-//			strAmount = "10";			
-//		}
-//		
-//		initialization(environment, "customerportalurl_domainz");
-//		dmzloginpage = new DMZLoginPage();
-//		dmzloginpage.setLoginDetails(strAccountReference, strPassword);
-//		dmzheaderpage = dmzloginpage.clickLoginButton();	
-//		dmzbillingpage = dmzheaderpage.clickBillingTab();
-//		dmzprepaidaccountpage = dmzbillingpage.clickEditPrepaidAccountLink();
-//		dmzprepaidaccountpage.clickRechargeUsingCreditCard();
-//
-//		dmzprepaidaccountpage.clickOnNewCreditCard();
-//		if ((environment.equals("uat1")) && (paymentgateway.equals("quest"))) {
-//		//	dmzprepaidaccountpage.setNewCreditCardDetailsQuest(cardowner, cardnumber, cardexpirymonth, cardexpiryyear,
-//		//			cardsecuritycode);
-//		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
-//			dmzprepaidaccountpage.setNewCreditCardDetailsBT(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear,
-//					strCardSecurityCode);
-//		}
-//		dmzprepaidaccountpage.enterRechargeAmount(strAmount);
-//		dmzprepaidaccountpage.clickSubmitButton();
-//
-//		driver.close();
-//
-//	}
+
+	@Parameters({ "environment", "paymentgateway" })
+	@Test
+	public void testRechargePrepaidUsingNewCardInSMUI(String environment, String paymentgateway)
+			throws InterruptedException {
+
+		if ((environment.equals("uat1")) && (paymentgateway.equals("quest"))) {
+			strAccountReference = "";
+			strPassword = "";
+			strCardOwner = "";
+			strCardType = "";
+			strCardNumber = "";
+			strCardExpiryMonth = "";
+			strCardExpiryYear = "";
+			strCardSecurityCode = "";
+			strAmount = "";
+
+		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
+			strAccountReference = "NET-1218";
+			strPassword = "comein22";
+			strCardOwner = "Test Mastercard";
+			strCardType = "MasterCard";
+			strCardNumber = "5454545454545454";
+			strCardExpiryMonth = "02";
+			strCardExpiryYear = "2020";
+			strCardSecurityCode = "123";
+			strAmount = "10";			
+		}
+		
+		initialization(environment, "customerportalurl_netregistry");
+		nrgloginpage = new NRGLoginPage();
+		nrgloginpage.setLoginDetails(strAccountReference, strPassword);
+		nrgheaderpage = nrgloginpage.clickLoginButton();	
+		nrgbillingpage = nrgheaderpage.clickBillingTab();
+		nrgprepaidaccountpage = nrgbillingpage.clickEditPrepaidAccountLink();
+		nrgprepaidaccountpage.clickRechargeUsingCreditCard();
+		nrgprepaidaccountpage.clickOnNewCreditCard();
+		if ((environment.equals("uat1")) && (paymentgateway.equals("quest"))) {	
+			/* Set new credit card details in Quest*/
+		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
+			nrgprepaidaccountpage.setNewCreditCardDetailsBT(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+		}
+		nrgprepaidaccountpage.enterRechargeAmount(strAmount);
+		nrgprepaidaccountpage.clickSubmitButton();
+
+		driver.close();
+	}
 	
 	
 	

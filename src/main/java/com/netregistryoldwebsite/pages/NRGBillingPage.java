@@ -38,6 +38,9 @@ public class NRGBillingPage extends TestBase{
 	
     @FindBy(how=How.XPATH, using = "//body/input")
     WebElement recaptchaChallenge;
+    
+    @FindBy(how=How.XPATH, using = "//table[@class='prepaid']/parent::div/ul/li[1]")
+    WebElement addPrepaidCreditLink;
 
     //Initializing Page Objects
     public NRGBillingPage(){
@@ -283,7 +286,9 @@ public class NRGBillingPage extends TestBase{
     public NRGPrepaidAccountPage clickEditPrepaidAccountLink() throws InterruptedException {
     	
 		Thread.sleep(5000);
-		driver.findElement(By.linkText("Add pre-paid credit")).click();
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addPrepaidCreditLink);
+		Thread.sleep(2000);
+		addPrepaidCreditLink.click();
 		return new NRGPrepaidAccountPage();
 	}
 

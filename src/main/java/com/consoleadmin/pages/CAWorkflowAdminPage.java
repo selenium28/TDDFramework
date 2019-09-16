@@ -57,12 +57,12 @@ public class CAWorkflowAdminPage extends TestBase{
     		this.processCheckASIC();
     	}
     	else if (strtld.equals("org")||strtld.equals("info")){
-    		this.processCheckASIC();
+    		//this.processCheckASIC();
     		this.processDelegateDomain();
     	}
     	
     	//To add a waiting time for workflow to complete processing
-    	Thread.sleep(100000);
+    	Thread.sleep(120000);
     }
     
     

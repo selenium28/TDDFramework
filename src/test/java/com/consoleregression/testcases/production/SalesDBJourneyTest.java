@@ -78,7 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14853836";
+		String strWorkflowId = "14926055";
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		
@@ -147,7 +147,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14853825";
+		String strWorkflowId = "14926050";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -217,7 +217,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14853848";
+		String strWorkflowId = "14926060";
 		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		
@@ -292,7 +292,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14853858";
+		String strWorkflowId = "14926065";
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();

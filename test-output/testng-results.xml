@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="9" passed="7">
+<testng-results skipped="0" failed="1" ignored="2" total="9" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="1854089" started-at="2019-09-02T06:31:46Z" finished-at="2019-09-02T07:02:40Z">
+  <suite name="Console Regression Test Automation - UAT Test Suite" duration-ms="2469193" started-at="2019-09-16T03:40:35Z" finished-at="2019-09-16T04:21:44Z">
     <groups>
     </groups>
-    <test name="Regression Test Cases" duration-ms="1854089" started-at="2019-09-02T06:31:46Z" finished-at="2019-09-02T07:02:40Z">
+    <test name="Regression Test Cases" duration-ms="2469193" started-at="2019-09-16T03:40:35Z" finished-at="2019-09-16T04:21:44Z">
       <class name="com.consoleregression.testcases.SalesDBJourneyTest">
-        <test-method status="PASS" signature="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@6500df86]" name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" duration-ms="551704" started-at="2019-09-02T06:31:46Z" finished-at="2019-09-02T06:40:58Z">
+        <test-method status="PASS" signature="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@6500df86]" name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" duration-ms="698134" started-at="2019-09-16T03:40:35Z" finished-at="2019-09-16T03:52:13Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB -->
-        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@6500df86]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="532407" started-at="2019-09-02T06:40:58Z" finished-at="2019-09-02T06:49:50Z">
+        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@6500df86]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="674842" started-at="2019-09-16T03:52:13Z" finished-at="2019-09-16T04:03:28Z">
           <params>
             <param index="0">
               <value>
@@ -29,7 +29,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@6500df86]" name="verify_NzDomain_Order_InSalesDB" duration-ms="268993" started-at="2019-09-02T06:49:50Z" finished-at="2019-09-02T06:54:19Z">
+        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@6500df86]" name="verify_NzDomain_Order_InSalesDB" duration-ms="412471" started-at="2019-09-16T04:03:28Z" finished-at="2019-09-16T04:10:20Z">
           <params>
             <param index="0">
               <value>
@@ -40,7 +40,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@6500df86]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="282994" started-at="2019-09-02T06:54:19Z" finished-at="2019-09-02T06:59:02Z">
+        <test-method status="FAIL" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@6500df86]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="409142" started-at="2019-09-16T04:10:20Z" finished-at="2019-09-16T04:17:09Z">
           <params>
             <param index="0">
               <value>
@@ -48,12 +48,51 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComAuDomain_Order_InSalesDB(SalesDBJourneyTest.java:130)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
       </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
       <class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
-        <test-method status="PASS" signature="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@402a079c]" name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" duration-ms="63726" started-at="2019-09-02T06:59:02Z" finished-at="2019-09-02T07:00:06Z">
+        <test-method status="PASS" signature="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@402a079c]" name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" duration-ms="75020" started-at="2019-09-16T04:17:09Z" finished-at="2019-09-16T04:18:24Z">
           <params>
             <param index="0">
               <value>
@@ -64,7 +103,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@402a079c]" name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" duration-ms="85913" started-at="2019-09-02T07:00:06Z" finished-at="2019-09-02T07:01:32Z">
+        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@402a079c]" name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" duration-ms="106139" started-at="2019-09-16T04:18:24Z" finished-at="2019-09-16T04:20:11Z">
           <params>
             <param index="0">
               <value>
@@ -75,7 +114,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@402a079c]" name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" duration-ms="68299" started-at="2019-09-02T07:01:32Z" finished-at="2019-09-02T07:02:40Z">
+        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@402a079c]" name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" duration-ms="93392" started-at="2019-09-16T04:20:11Z" finished-at="2019-09-16T04:21:44Z">
           <params>
             <param index="0">
               <value>

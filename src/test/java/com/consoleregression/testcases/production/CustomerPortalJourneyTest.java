@@ -123,7 +123,13 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
-		nrgbillingpage.selectExistingCreditCardOption("Number: 4715********1053 Expiry: 08/2020");	
+		
+		/* 
+		We will assign new credit card details once Finance Team provide a new one. 
+		nrgbillingpage.selectExistingCreditCardOption("Number: 4715********1053 Expiry: 08/2020"); 
+		*/	
+		
+		nrgbillingpage.selectExistingCreditCardOption("Prepaid credit:");
 		nrgbillingpage.tickTermsAndConditions();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		

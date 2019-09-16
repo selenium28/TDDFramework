@@ -94,9 +94,9 @@ public class RegressionSalesDB extends TestBase{
 		
 				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
 					strAccountReference = "MEL-6040";
-					strTld_01 = "com";
+					strTld_01 = "org";
 					strRegistrationPeriod = "1 x Y";
-					strMajorProduct = "Business cPanel Hosting";
+					strMajorProduct = "Domain Manager";
 					strProductPeriod = "1 x M";
 					strPaymentMethod = "Invoice";
 					strRegistrantDetails = "Payment Gateway Test";	
@@ -105,9 +105,9 @@ public class RegressionSalesDB extends TestBase{
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "DPS-32";
-					strTld_01 = "com";
+					strTld_01 = "org";
 					strRegistrationPeriod = "1 x Y";
-					strMajorProduct = "Business cPanel Hosting";
+					strMajorProduct = "Domain Manager";
 					strProductPeriod = "1 x M";
 					strPaymentMethod = "Invoice";
 					strRegistrantDetails = "Payment Gateway Test";	
@@ -254,7 +254,7 @@ public class RegressionSalesDB extends TestBase{
 				}
 				
 				// Test Step 2: Verify if the payment for invoice is successful.
-				Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$73.60 for invoice "+strInvoiceNumber+" has been accepted");
+				Assert.assertEquals(cataxinvoicepage.getInvoicePaymentConfirmation(), "The payment of AU$58.95 for invoice "+strInvoiceNumber+" has been accepted");
 				
 				//TestUtil.takeScreenshotAtEndOfTest(paymentgateway + strVirtualization + "PGTest04");
 				driver.close();
@@ -269,13 +269,13 @@ public class RegressionSalesDB extends TestBase{
 				// Initialization (Test Data Creation and Assignment)
 				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
 					strAccountReference = "MEL-6040";
-					strAmount = "73.60";
+					strAmount = "58.95";
 					strTransactionType= "REFUND";
 		
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "DPS-32";
-					strAmount = "73.60";
+					strAmount = "58.95";
 					strTransactionType= "REFUND";
 				}
 	
@@ -308,13 +308,13 @@ public class RegressionSalesDB extends TestBase{
 				// Initialization (Test Data Creation and Assignment)
 				if ((environment.equals("uat1"))&&(paymentgateway.equals("quest"))) {
 					strAccountReference = "MEL-6040";
-					strAmount = "73.60";
+					strAmount = "58.95";
 					strTransactionType= "PAYMENT";
 					strPaymentMethod = "Visa: 4111xxxxxxxx1111";
 				}
 				else if ((environment.equals("uat1"))&&(paymentgateway.equals("braintree"))) {
 					strAccountReference = "DPS-32";
-					strAmount = "73.60";
+					strAmount = "58.95";
 					strTransactionType= "PAYMENT";
 					strPaymentMethod = "MasterCard: 545454******5454";
 					

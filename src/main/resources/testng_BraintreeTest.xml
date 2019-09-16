@@ -14,19 +14,17 @@
 		<classes>
 		
 
-<!-- Netregistry Virtualization -->
-
-           <class name="com.paymentgateway.uat.netregistry.testcases.RegressionSMUI">
+<!-- 		TPP Virtualization -->
+			<class name="com.paymentgateway.uat.tpp.testcases.RegressionSalesDB">
                 <methods>
-<!--                     <include name="testAddNewCreditCardInSMUI" /> -->
-<!--                     <include name="testModifyExistingCreditCardInSMUI" /> -->
-<!--                     <include name="testMakeCreditCardDefaultInSMUI" /> -->
-<!--                <include name="testDeleteCreditCardInSMUI" /> -->
-					<include name="testRechargePrepaidUsingExistingCardInSMUI" />
-<!-- 					<include name="testRechargePrepaidUsingNewCardInSMUI" /> -->
+                    <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
+                    <include name="testDomainRegistration2WorkflowInConsoleAdmin" />
+                    <include name="testProductSetup2WorkflowInConsoleAdmin" />
+                    <include name="testPaySingleInvoiceInConsoleAdmin" />
+<!--                     <include name="testRefundPaymentFromSalesDB" /> -->
+<!--                     <include name="testPayInvoiceUsingExistingCardFromSalesDB" /> -->
                 </methods>
-            </class> 
- 
+            </class>
 
 
 		</classes>

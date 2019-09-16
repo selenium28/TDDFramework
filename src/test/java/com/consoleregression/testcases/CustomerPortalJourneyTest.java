@@ -83,6 +83,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
 		nrgaccountcontactpage.setCustomerDefaultInformation();
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickContinueButton();	
+		nrgregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Input credit card details and submit the order 
@@ -127,6 +128,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
 		nrgaccountcontactpage.setReturningCustomerContacts("MEL-6007", "comein22");
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
+		nrgregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
@@ -176,6 +178,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
 		nrgaccountcontactpage.setReturningCustomerContacts("TES-2168", "comein22");
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
+		nrgregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Select existing credit card details and submit the order 
@@ -232,6 +235,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
 		nrgaccountcontactpage.setReturningCustomerContacts("MEL-6007", "comein22");
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
+		nrgregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Input credit card details and submit the order 
@@ -291,6 +295,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
 		nrgaccountcontactpage.setReturningCustomerContacts("TES-2168", "comein22");
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
+		nrgregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Input credit card details and submit the order 

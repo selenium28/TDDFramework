@@ -229,7 +229,7 @@ public class RegressionSalesDB extends TestBase{
 					strCardOwner = "Test Master";
 					strCardNumber = "5454545454545454";
 					strCardExpiryMonth = "02";
-					strCardExpiryYear = "20";
+					strCardExpiryYear = "22";
 	
 				}
 				

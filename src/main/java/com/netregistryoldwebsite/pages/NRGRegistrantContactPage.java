@@ -1,5 +1,6 @@
 package com.netregistryoldwebsite.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -40,5 +41,12 @@ public class NRGRegistrantContactPage extends TestBase {
 		}    	
     	return new NRGEligibilityDetailsPage();
     }
+    
+    public void clickDomainInformation(String domaininformation) throws InterruptedException {
+    	
+    	Thread.sleep(3000);
+    	driver.findElement(By.xpath("//div[@class='instore']/div/div/form//div[1]/input[@value='"+ domaininformation + "']")).click();
+    }
+    
 	
 }
