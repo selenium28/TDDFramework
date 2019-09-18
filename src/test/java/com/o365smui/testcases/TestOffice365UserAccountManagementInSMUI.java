@@ -38,7 +38,7 @@ public class TestOffice365UserAccountManagementInSMUI extends TestBase {
 
 	@Parameters({ "environment" })
 	@Test
-	public void testOffice365UserAccountManagementInSMUI(String environment) throws InterruptedException {
+	public void testOffice365UserAccountManagementInSMUI(String environment) throws Exception {
 
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = "testoffice365smui.com";
@@ -48,7 +48,7 @@ public class TestOffice365UserAccountManagementInSMUI extends TestBase {
 		String displayName = "test";
 		String password = "passW0rd";
 		String confirmPassword = "passW0rd";
-		String strLicenceType = "Business Premium - Email and Office";
+		String strLicenceType = "Business Essentials - Email and Office Online";
 		String strUserDetails = username + "@" + strDomainName;
 
 		String eUsername = "ggg1";
@@ -68,40 +68,56 @@ public class TestOffice365UserAccountManagementInSMUI extends TestBase {
 		cadomainlevelpage = caheaderpage.searchDomain(strDomainName);
 		csmuitabpage = cadomainlevelpage.clickloginAsClientLink();
 
-		// Test Step 2: Login to office365 smui
+		// Test Step 2: In Office365 SMUI, create a new user account and assign an
+		// office365 license.
 		csmuimanageo365mainpage = csmuitabpage.clickOffice365Tab();
-
-		// Test Step 3: provide user details
-		csmuimanageo365mainpage = csmuimanageo365mainpage.clickCreateUser();
-		csmuimanageo365mainpage = csmuimanageo365mainpage.setUserAccountDetails(username, firstName, lastName,
-				displayName, password, confirmPassword);
-
-		// Test Step 4: Select Licence type
-		csmuimanageo365mainpage = csmuimanageo365mainpage.setSelectLicence(strLicenceType);
-
-		// Test Step 5: Verify if New account created successfully
-		csmuimanageo365mainpage = csmuimanageo365mainpage.clickCreateEmail();
+		csmuimanageo365mainpage.clickCreateUser();
+		csmuimanageo365mainpage.setUserAccountDetails(username, firstName, lastName, displayName, password,
+				confirmPassword);
+		csmuimanageo365mainpage.setSelectLicence(strLicenceType);
+		csmuimanageo365mainpage.clickCreateEmail();
 		Assert.assertTrue(csmuimanageo365mainpage.isAccountCreated());
 
-		// Test step6: Verify if user details updated successfully
+		/*
+		 * Test Step 3: Verify if user account is added in the table with the correct
+		 * license and user link. Test Step 3.1: Verify if user account is added in the
+		 * table with the correct license.
+		 */
+		String assignedLicence = csmuimanageo365mainpage.getAssignLicence(strUserDetails);
+		Assert.assertEquals(assignedLicence, strLicenceType,
+				"Verify that assigned licence is equal to the one selected during user ceation.");
+
+		// Test Step 3.2: Verify if user account is added in the table with the correct
+		// user link.
+		String actualUserLinkText = csmuimanageo365mainpage.getUserLinkText(strUserDetails);
+		Assert.assertEquals(actualUserLinkText, "Access Email Online",
+				"Verify that assigned licence is equal to the one selected during user ceation.");
+
+		// Test Step 4: Verify if user can edit details and reset a new password.
+		// Test Step 4.1: Verify if user details updated successfully
 		csmuiupdateuseraccountpage = csmuimanageo365mainpage.clickUserUpdateLink(strUserDetails);
 		csmuiupdateuseraccountpage.editUserAccountDetails(eUsername, eFirstName, eLastName, eDisplayName);
 		csmuiupdateuseraccountpage.clickSave();
 		Assert.assertTrue(csmuiupdateuseraccountpage.isAccountUpdated());
 
-		// Test step7: Verify if user pwd details updated successfully
+		// Test Step 4.2: Verify if user password details updated successfully
 		csmuiupdateuseraccountpage.editUserPwdDetails(newPassword, repeatPassword);
 		csmuiupdateuseraccountpage.clickReset();
 		Assert.assertTrue(csmuiupdateuseraccountpage.isPwdUpdated());
 
-		// Test step8: Verify if user Licence details updated successfully
+		// Test Step 5: Verify if user will be directed to microsoft login page when the
+		// "user link" is clicked.
+		csmuimanageo365mainpage = csmuiupdateuseraccountpage.clickGoBackButton();
+
+		Assert.assertTrue(csmuimanageo365mainpage.verifyUserLink(strUserDetails));
+
+		// Test Step 6: Verify if user Licence details updated successfully
 		csmuiupdateuseraccountpage.setNewLicence(strNewLicenceType);
 		csmuiupdateuseraccountpage.clickLicenceSave();
 		Assert.assertTrue(csmuiupdateuseraccountpage.isLicenceUpdated());
 
-		csmuimanageo365mainpage = csmuiupdateuseraccountpage.clickGoBackButton();
-
 		// Test Step 7: Verify if username for admin portal is o365-admin@[domainname]
+		csmuimanageo365mainpage = csmuiupdateuseraccountpage.clickGoBackButton();
 		Assert.assertTrue(csmuimanageo365mainpage.verifyAdminEmail(strDomainName));
 
 		// Test Step 8: Verify if user admin can edit details and reset a new password.

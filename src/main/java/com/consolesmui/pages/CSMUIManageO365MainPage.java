@@ -1,5 +1,6 @@
 package com.consolesmui.pages;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -157,7 +158,7 @@ public class CSMUIManageO365MainPage extends TestBase {
 		return flag;
 	}
 
-	public CSMUIUpdateUserAccountPage clickUserUpdateLink(String strUserDetails) throws InterruptedException {
+	public CSMUIUpdateUserAccountPage clickUserUpdateLink(String strUserDetails) throws Exception {
 		Thread.sleep(3000);
 		List<WebElement> noOfUsers = driver.findElements(By.cssSelector(".scrollable-table tbody tr"));
 		System.out.println(noOfUsers.size());
@@ -171,8 +172,7 @@ public class CSMUIManageO365MainPage extends TestBase {
 				break;
 			}
 		}
-
-		return new CSMUIUpdateUserAccountPage();
+		throw new Exception("Email address not found");
 	}
 
 	public boolean verifyAdminEmail(String domainName) {
@@ -195,4 +195,69 @@ public class CSMUIManageO365MainPage extends TestBase {
 		adminLoginLink.click();
 	}
 
+	public String getAssignLicence(String strUserDetails) throws Exception {
+
+		List<WebElement> noOfUsers = driver.findElements(By.cssSelector(".scrollable-table tbody tr"));
+		System.out.println(noOfUsers.size());
+
+		for (int i = 0; i <= noOfUsers.size(); i++) {
+
+			if (noOfUsers.get(i).findElement(By.cssSelector("td:first-child")).getText().equals(strUserDetails)) {
+				String assignedLicence = noOfUsers.get(i).findElement(By.cssSelector("td:nth-child(2)")).getText();
+				System.out.println("This is the assigned licence " + assignedLicence);
+				return assignedLicence;
+
+			}
+		}
+		throw new Exception("Email address not found");
+	}
+
+	public String getUserLinkText(String strUserDetails) throws Exception {
+
+		List<WebElement> noOfUsers = driver.findElements(By.cssSelector(".scrollable-table tbody tr"));
+		System.out.println(noOfUsers.size());
+
+		for (int i = 0; i <= noOfUsers.size(); i++) {
+
+			if (noOfUsers.get(i).findElement(By.cssSelector("td:first-child")).getText().equals(strUserDetails)) {
+				String actualUserLinkText = noOfUsers.get(i).findElement(By.cssSelector("td:nth-child(4) a")).getText();
+				System.out.println("This is the user link " + actualUserLinkText);
+				return actualUserLinkText;
+
+			}
+		}
+		throw new Exception("Email address not found");
+	}
+
+	public boolean verifyUserLink(String strUserDetails) throws Exception {
+
+		boolean flag = false;
+		List<WebElement> noOfUsers = driver.findElements(By.cssSelector(".scrollable-table tbody tr"));
+		System.out.println(noOfUsers.size());
+
+		for (int i = 0; i <= noOfUsers.size(); i++) {
+
+			if (noOfUsers.get(i).findElement(By.cssSelector("td:first-child")).getText().equals(strUserDetails)) {
+
+				noOfUsers.get(i).findElement(By.cssSelector("td:nth-child(4) a")).click();
+				Thread.sleep(3000);
+				// Store all currently open tabs in tabs
+				ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+				System.out.println(tabs.size());
+
+				// Switch newly open Tab
+				driver.switchTo().window(tabs.get(2));
+				Thread.sleep(3000);
+				String newTabUrl = driver.getCurrentUrl();
+				System.out.println(newTabUrl);
+
+				if (newTabUrl.contains("login.microsoftonline.com")) {
+					
+					flag = true;
+				}
+				return flag;
+			}
+		}
+		throw new Exception("Email address not found");
+	}
 }
