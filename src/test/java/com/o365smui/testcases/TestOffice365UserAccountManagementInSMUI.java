@@ -58,6 +58,9 @@ public class TestOffice365UserAccountManagementInSMUI extends TestBase {
 		String newPassword = "passW0rd1";
 		String repeatPassword = "passW0rd1";
 		String strNewLicenceType = "Email Essentials - Email Only";
+		
+		String assignedLicence = null;
+		String actualUserLinkText = null;
 
 		// Test Step 1: Login to console and search for domain
 		System.out.println("Start Test: TestOffice365UserAccountManagementInSMUI");
@@ -83,15 +86,19 @@ public class TestOffice365UserAccountManagementInSMUI extends TestBase {
 		 * license and user link. Test Step 3.1: Verify if user account is added in the
 		 * table with the correct license.
 		 */
-		String assignedLicence = csmuimanageo365mainpage.getAssignLicence(strUserDetails);
+		assignedLicence = csmuimanageo365mainpage.getAssignLicence(strUserDetails);
 		Assert.assertEquals(assignedLicence, strLicenceType,
 				"Verify that assigned licence is equal to the one selected during user ceation.");
 
 		// Test Step 3.2: Verify if user account is added in the table with the correct
 		// user link.
-		String actualUserLinkText = csmuimanageo365mainpage.getUserLinkText(strUserDetails);
+		actualUserLinkText = csmuimanageo365mainpage.getUserLinkText(strUserDetails);
 		Assert.assertEquals(actualUserLinkText, "Access Email Online",
 				"Verify that assigned licence is equal to the one selected during user ceation.");
+		
+		// Test Step 5: Verify if user will be directed to microsoft login page when the
+		// "user link" is clicked.
+		Assert.assertTrue(csmuimanageo365mainpage.verifyUserLink(strUserDetails));
 
 		// Test Step 4: Verify if user can edit details and reset a new password.
 		// Test Step 4.1: Verify if user details updated successfully
@@ -105,14 +112,8 @@ public class TestOffice365UserAccountManagementInSMUI extends TestBase {
 		csmuiupdateuseraccountpage.clickReset();
 		Assert.assertTrue(csmuiupdateuseraccountpage.isPwdUpdated());
 
-		// Test Step 5: Verify if user will be directed to microsoft login page when the
-		// "user link" is clicked.
-		csmuimanageo365mainpage = csmuiupdateuseraccountpage.clickGoBackButton();
-
-		Assert.assertTrue(csmuimanageo365mainpage.verifyUserLink(strUserDetails));
-
 		// Test Step 6: Verify if user Licence details updated successfully
-		csmuiupdateuseraccountpage.setNewLicence(strNewLicenceType);
+		csmuiupdateuseraccountpage.unAssignLicence(strLicenceType);
 		csmuiupdateuseraccountpage.clickLicenceSave();
 		Assert.assertTrue(csmuiupdateuseraccountpage.isLicenceUpdated());
 

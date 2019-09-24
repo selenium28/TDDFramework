@@ -180,6 +180,8 @@ public class CSMUIUpdateUserAccountPage extends TestBase {
 		return new CSMUIUpdateUserAccountPage();
 	}
 
+	
+	
 	public CSMUIUpdateUserAccountPage clickLicenceSave() throws InterruptedException {
 
 		Thread.sleep(3000);
@@ -209,5 +211,45 @@ public class CSMUIUpdateUserAccountPage extends TestBase {
 		return new CSMUIManageO365MainPage();
 
 	}
+
+	public CSMUIUpdateUserAccountPage unAssignLicence(String strLicenceType) throws InterruptedException {
+		System.out.println("Unassign licence");
+
+		try {
+			Thread.sleep(3000);
+			if (strLicenceType == "Simple Email - Email Only") {
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", simpleEmail);
+				simpleEmail.clear();
+			}
+
+			if (strLicenceType == "Email Essentials - Email Only") {
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", emailEssentials);
+				emailEssentials.clear();
+			}
+
+			if (strLicenceType == "Business Essentials - Email and Office Online") {
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", businessEssentials);
+				businessEssentials.clear();
+			}
+
+			if (strLicenceType == "Business Premium - Email and Office") {
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", businessPremium);
+				businessPremium.clear();
+			}
+
+			if (strLicenceType == "Business - Office Only") {
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", businessOffice);
+				businessOffice.clear();
+			}
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println("Element not found");
+			Thread.sleep(3000);
+		}
+
+		return new CSMUIUpdateUserAccountPage();
+	}
+		
 
 }

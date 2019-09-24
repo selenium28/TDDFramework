@@ -42,10 +42,10 @@ public class CSMUIManageO365MainPage extends TestBase {
 	@FindBy(how = How.CSS, using = ".advance_portal td:nth-of-type(1)")
 	WebElement adminEmailAddress;
 
-	@FindBy(how = How.CSS, using = ".advance_portal a[href^=\"#\"]")
+	@FindBy(how = How.CSS, using = ".advance_portal td:nth-child(2) a")
 	WebElement adminUpdateLink;
 
-	@FindBy(how = How.CSS, using = ".advance_portal a[href*=\"portal\"]")
+	@FindBy(how = How.CSS, using = ".advance_portal td:nth-child(3) a")
 	WebElement adminLoginLink;
 
 	// Initializing Page Objects
@@ -168,8 +168,7 @@ public class CSMUIManageO365MainPage extends TestBase {
 			if (noOfUsers.get(i).findElement(By.cssSelector("td:first-child")).getText().equals(strUserDetails)) {
 				noOfUsers.get(i).findElement(By.cssSelector("td:nth-child(3) a")).click();
 				System.out.println(strUserDetails);
-				Thread.sleep(3000);
-				break;
+				return new CSMUIUpdateUserAccountPage();
 			}
 		}
 		throw new Exception("Email address not found");
@@ -255,6 +254,8 @@ public class CSMUIManageO365MainPage extends TestBase {
 					
 					flag = true;
 				}
+				driver.switchTo().window(tabs.get(1));
+				driver.switchTo().frame(driver.findElement(By.name("o365_frame")));
 				return flag;
 			}
 		}
