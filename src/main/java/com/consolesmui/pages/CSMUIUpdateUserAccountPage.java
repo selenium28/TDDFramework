@@ -219,27 +219,27 @@ public class CSMUIUpdateUserAccountPage extends TestBase {
 			Thread.sleep(3000);
 			if (strLicenceType == "Simple Email - Email Only") {
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", simpleEmail);
-				simpleEmail.clear();
+				simpleEmail.click();
 			}
 
 			if (strLicenceType == "Email Essentials - Email Only") {
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", emailEssentials);
-				emailEssentials.clear();
+				emailEssentials.click();
 			}
 
 			if (strLicenceType == "Business Essentials - Email and Office Online") {
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", businessEssentials);
-				businessEssentials.clear();
+				businessEssentials.click();
 			}
 
 			if (strLicenceType == "Business Premium - Email and Office") {
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", businessPremium);
-				businessPremium.clear();
+				businessPremium.click();
 			}
 
 			if (strLicenceType == "Business - Office Only") {
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", businessOffice);
-				businessOffice.clear();
+				businessOffice.click();
 			}
 
 		} catch (Exception e) {
