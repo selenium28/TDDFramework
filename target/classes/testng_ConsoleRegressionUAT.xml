@@ -24,11 +24,8 @@
 			<class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
 			    <methods>
                     <include name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" />                    
-<!--                     <include name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingExistingCardInCustomerPortal" /> -->                    
                     <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" />                    
-<!--                     <include name="verifyDomainandMultipleProductOrderForReturningQuestCustomerUsingNewCardInCustomerPortal" /> -->                    
-                    <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" />
-                               
+                    <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" />                               
                 </methods>
 			</class>
 		
