@@ -78,12 +78,12 @@ public class CustomerPortalJourneyTest extends TestBase{
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		//Test Step 2: Input credit card details and submit the order 
-		nrgbillingpage.setBTFormCreditCardDetails("MELBOURNE IT LTD F SHARED SERVICES", "4715276659101053", "08", "2020", "390");
-		nrgbillingpage.tickTermsAndConditions();
-        nrgordercompletepage = nrgbillingpage.clickContinueButton();
+		//nrgbillingpage.setBTFormCreditCardDetails("MELBOURNE IT LTD F SHARED SERVICES", "4715276659101053", "08", "2020", "390");
+		//nrgbillingpage.tickTermsAndConditions();
+        //nrgordercompletepage = nrgbillingpage.clickContinueButton();
         
         //Test Step 3: Verify if recaptcha challenge is dislayed 
-      	Assert.assertTrue(nrgbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+      	//Assert.assertTrue(nrgbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
         
         // driver.close();
 	}
@@ -130,15 +130,15 @@ public class CustomerPortalJourneyTest extends TestBase{
 		*/	
 		
 		nrgbillingpage.selectExistingCreditCardOption("Prepaid credit:");
-		nrgbillingpage.tickTermsAndConditions();
-		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+		//nrgbillingpage.tickTermsAndConditions();
+		//nrgordercompletepage = nrgbillingpage.clickContinueButton();
 		
 		//Test Step 3: Verify if order is completed
-		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
-		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
-		strAccountReference = nrgordercompletepage.getAccountReferenceID();
-		System.out.println("Account Reference:" + strAccountReference);	
-		System.out.println("Reference ID[0]:" + strWorkflowId);	
+		//Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
+		//strWorkflowId = nrgordercompletepage.getSingleReferenceID();
+		//strAccountReference = nrgordercompletepage.getAccountReferenceID();
+		//System.out.println("Account Reference:" + strAccountReference);	
+		//System.out.println("Reference ID[0]:" + strWorkflowId);	
 		//driver.close();
 	}
 	

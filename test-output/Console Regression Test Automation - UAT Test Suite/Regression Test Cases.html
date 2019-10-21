@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Regression Test Cases</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 16 13:40:35 AEST 2019</td>
+<td>Started on:</td><td>Mon Oct 21 13:33:47 AEDT 2019</td>
 </tr>
-<tr><td>Total time:</td><td>2469 seconds (2469193 ms)</td>
+<tr><td>Total time:</td><td>29 seconds (29184 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,70 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.consoleregression.testcases.SalesDBJourneyTest.verify_ComAuDomain_Order_InSalesDB()'><b>verify_ComAuDomain_Order_InSalesDB</b><br>Test class: com.consoleregression.testcases.SalesDBJourneyTest<br>Parameters: uat1</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComAuDomain_Order_InSalesDB(SalesDBJourneyTest.java:130)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace859236022", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace859236022'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertTrue(Assert.java:44)
-	at org.testng.Assert.assertTrue(Assert.java:54)
-	at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComAuDomain_Order_InSalesDB(SalesDBJourneyTest.java:130)
+<td title='com.consoleregression.testcases.CustomerPortalJourneyTest.verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal()'><b>verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal</b><br>Test class: com.consoleregression.testcases.CustomerPortalJourneyTest<br>Parameters: uat1</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#continueCart&quot;}
+  (Session info: chrome=77.0.3865.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;WC063317&apos;, ip: &apos;192.168.216.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:64104}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9d6a2af67daf58318505b6fe4b2b260f
+*** Element info: {Using=id, value=continueCart}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
+	at com.netregistryoldwebsite.pages.NRGDomainSearchPage.clickContinueToCheckout(NRGDomainSearchPage.java:24)
+	at com.consoleregression.testcases.CustomerPortalJourneyTest.verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(CustomerPortalJourneyTest.java:81)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1365767549", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1365767549'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#continueCart&quot;}
+  (Session info: chrome=77.0.3865.120)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;WC063317&apos;, ip: &apos;192.168.216.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:64104}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 9d6a2af67daf58318505b6fe4b2b260f
+*** Element info: {Using=id, value=continueCart}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
+	at com.netregistryoldwebsite.pages.NRGDomainSearchPage.clickContinueToCheckout(NRGDomainSearchPage.java:24)
+	at com.consoleregression.testcases.CustomerPortalJourneyTest.verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(CustomerPortalJourneyTest.java:81)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -107,50 +161,12 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 	at org.testng.TestNG.runSuites(TestNG.java:1049)
 	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>409</td>
-<td>com.consoleregression.testcases.SalesDBJourneyTest@6500df86</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.consoleregression.testcases.CustomerPortalJourneyTest.verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal()'><b>verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal</b><br>Test class: com.consoleregression.testcases.CustomerPortalJourneyTest<br>Parameters: uat1</td>
-<td></td>
-<td>75</td>
-<td>com.consoleregression.testcases.CustomerPortalJourneyTest@402a079c</td></tr>
-<tr>
-<td title='com.consoleregression.testcases.CustomerPortalJourneyTest.verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal()'><b>verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal</b><br>Test class: com.consoleregression.testcases.CustomerPortalJourneyTest<br>Parameters: uat1</td>
-<td></td>
-<td>106</td>
-<td>com.consoleregression.testcases.CustomerPortalJourneyTest@402a079c</td></tr>
-<tr>
-<td title='com.consoleregression.testcases.CustomerPortalJourneyTest.verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal()'><b>verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal</b><br>Test class: com.consoleregression.testcases.CustomerPortalJourneyTest<br>Parameters: uat1</td>
-<td></td>
-<td>93</td>
-<td>com.consoleregression.testcases.CustomerPortalJourneyTest@402a079c</td></tr>
-<tr>
-<td title='com.consoleregression.testcases.SalesDBJourneyTest.verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB()'><b>verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</b><br>Test class: com.consoleregression.testcases.SalesDBJourneyTest<br>Parameters: uat1</td>
-<td></td>
-<td>698</td>
-<td>com.consoleregression.testcases.SalesDBJourneyTest@6500df86</td></tr>
-<tr>
-<td title='com.consoleregression.testcases.SalesDBJourneyTest.verify_NetDomain_and_DIFM_Order_InSalesDB()'><b>verify_NetDomain_and_DIFM_Order_InSalesDB</b><br>Test class: com.consoleregression.testcases.SalesDBJourneyTest<br>Parameters: uat1</td>
-<td></td>
-<td>674</td>
-<td>com.consoleregression.testcases.SalesDBJourneyTest@6500df86</td></tr>
-<tr>
-<td title='com.consoleregression.testcases.SalesDBJourneyTest.verify_NzDomain_Order_InSalesDB()'><b>verify_NzDomain_Order_InSalesDB</b><br>Test class: com.consoleregression.testcases.SalesDBJourneyTest<br>Parameters: uat1</td>
-<td></td>
-<td>412</td>
-<td>com.consoleregression.testcases.SalesDBJourneyTest@6500df86</td></tr>
+<td>29</td>
+<td>com.consoleregression.testcases.CustomerPortalJourneyTest@4f7d0008</td></tr>
 </table><p>
 </body>
 </html>
