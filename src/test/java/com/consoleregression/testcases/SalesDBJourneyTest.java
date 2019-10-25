@@ -229,12 +229,11 @@ public class SalesDBJourneyTest extends TestBase{
 		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + strTld);
 		if (caworkflowadminpage.getWorkflowStatus("productSetup2") != "halting current workflow") {
 			//Added refresh page to update current workflow status
-			caworkflowadminpage.refreshWorkflowAdminPage();	        
-   	    }
-		else {
-			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "halting current workflow", 
-					caworkflowadminpage.getWorkflowStatus("productsetup2"));
+			caworkflowadminpage.refreshWorkflowAdminPage();	   
 		}
+		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "halting current workflow", 
+			caworkflowadminpage.getWorkflowStatus("productsetup2"));
+
 		
 		driver.close();
 		System.out.println("End Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
@@ -320,10 +319,8 @@ public class SalesDBJourneyTest extends TestBase{
 			//Added refresh page to update current workflow status
 			caworkflowadminpage.refreshWorkflowAdminPage();	    	        
    	    }
-		else {
-			Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 
-					caworkflowadminpage.getWorkflowStatus("productsetup2"));
-		}
+		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 
+			caworkflowadminpage.getWorkflowStatus("productsetup2"));
 		
 		driver.close();
 		System.out.println("End Test: verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB");

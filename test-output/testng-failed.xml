@@ -2,6 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Console Release Regression UAT2 Test Suite]">
   <parameter name="environment" value="uat2"/>
+  <parameter name="obsidian" value="enabled"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
@@ -9,7 +10,6 @@
     <classes>
       <class name="com.consoleregression.testcases.SalesDBJourneyTest">
         <methods>
-          <include name="verify_ComAuDomain_Order_InSalesDB" invocation-numbers="0"/>
           <include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" invocation-numbers="0"/>
           <include name="verify_NetDomain_and_DIFM_Order_InSalesDB" invocation-numbers="0"/>
         </methods>

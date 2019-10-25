@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Console_Release_Regression_UAT2_Test_Suite">
-              <span class="suite-name border-passed">Console Release Regression UAT2 Test Suite</span>
+              <span class="suite-name border-failed">Console Release Regression UAT2 Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">7 methods, 2 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Console_Release_Regression_UAT2_Test_Suite" class="hide-methods failed suite-Console_Release_Regression_UAT2_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Console_Release_Regression_UAT2_Test_Suite -->
+                      <a href="#" panel-name="suite-Console_Release_Regression_UAT2_Test_Suite" class="show-methods failed suite-Console_Release_Regression_UAT2_Test_Suite"> (show)</a> <!-- show-methods failed suite-Console_Release_Regression_UAT2_Test_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Console_Release_Regression_UAT2_Test_Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Console_Release_Regression_UAT2_Test_Suite" title="com.consoleregression.testcases.SalesDBJourneyTest" hash-for-method="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(uat2, enabled)">verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(uat2, enabled)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Console_Release_Regression_UAT2_Test_Suite" title="com.consoleregression.testcases.SalesDBJourneyTest" hash-for-method="verify_NetDomain_and_DIFM_Order_InSalesDB(uat2, enabled)">verify_NetDomain_and_DIFM_Order_InSalesDB(uat2, enabled)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Console_Release_Regression_UAT2_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -122,16 +141,6 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Console_Release_Regression_UAT2_Test_Suite" title="com.consoleregression.testcases.SalesDBJourneyTest" hash-for-method="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(uat2, enabled)">verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(uat2, enabled)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Console_Release_Regression_UAT2_Test_Suite" title="com.consoleregression.testcases.SalesDBJourneyTest" hash-for-method="verify_NetDomain_and_DIFM_Order_InSalesDB(uat2, enabled)">verify_NetDomain_and_DIFM_Order_InSalesDB(uat2, enabled)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Console_Release_Regression_UAT2_Test_Suite" title="com.consoleregression.testcases.SalesDBJourneyTest" hash-for-method="verify_NzDomain_Order_InSalesDB(uat2, enabled)">verify_NzDomain_Order_InSalesDB(uat2, enabled)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -147,6 +156,38 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Console_Release_Regression_UAT2_Test_Suite" class="panel Console_Release_Regression_UAT2_Test_Suite">
+          <div class="suite-Console_Release_Regression_UAT2_Test_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.consoleregression.testcases.SalesDBJourneyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(uat2, enabled)">
+                  </a> <!-- verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(uat2, enabled) -->
+                  <span class="method-name">verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</span>
+                  <span class="parameters">(uat2, enabled)</span>
+                  <div class="stack-trace">java.lang.AssertionError: productsetup2 status:  expected [approved] but found [setup hosting package failed]
+	at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(SalesDBJourneyTest.java:322)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_NetDomain_and_DIFM_Order_InSalesDB(uat2, enabled)">
+                  </a> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB(uat2, enabled) -->
+                  <span class="method-name">verify_NetDomain_and_DIFM_Order_InSalesDB</span>
+                  <span class="parameters">(uat2, enabled)</span>
+                  <div class="stack-trace">java.lang.AssertionError: productsetup2 status:  expected [halting current workflow] but found [setup hosting package failed]
+	at com.consoleregression.testcases.SalesDBJourneyTest.verify_NetDomain_and_DIFM_Order_InSalesDB(SalesDBJourneyTest.java:234)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Console_Release_Regression_UAT2_Test_Suite-class-failed -->
           <div class="suite-Console_Release_Regression_UAT2_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -190,22 +231,6 @@
                   <a name="verify_ComAuDomain_Order_InSalesDB(uat2, enabled)">
                   </a> <!-- verify_ComAuDomain_Order_InSalesDB(uat2, enabled) -->
                   <span class="method-name">verify_ComAuDomain_Order_InSalesDB</span>
-                  <span class="parameters">(uat2, enabled)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(uat2, enabled)">
-                  </a> <!-- verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(uat2, enabled) -->
-                  <span class="method-name">verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</span>
-                  <span class="parameters">(uat2, enabled)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verify_NetDomain_and_DIFM_Order_InSalesDB(uat2, enabled)">
-                  </a> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB(uat2, enabled) -->
-                  <span class="method-name">verify_NetDomain_and_DIFM_Order_InSalesDB</span>
                   <span class="parameters">(uat2, enabled)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -294,36 +319,36 @@ data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verify_NetDomain_and_DIFM_Order_InSalesDB')
 data.setCell(0, 2, 'com.consoleregression.testcases.SalesDBJourneyTest')
-data.setCell(0, 3, 565536);
+data.setCell(0, 3, 581873);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB')
 data.setCell(1, 2, 'com.consoleregression.testcases.SalesDBJourneyTest')
-data.setCell(1, 3, 564623);
+data.setCell(1, 3, 577931);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verify_ComAuDomain_Order_InSalesDB')
 data.setCell(2, 2, 'com.consoleregression.testcases.SalesDBJourneyTest')
-data.setCell(2, 3, 296068);
+data.setCell(2, 3, 299284);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'verify_NzDomain_Order_InSalesDB')
 data.setCell(3, 2, 'com.consoleregression.testcases.SalesDBJourneyTest')
-data.setCell(3, 3, 283768);
+data.setCell(3, 3, 284133);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal')
 data.setCell(4, 2, 'com.consoleregression.testcases.CustomerPortalJourneyTest')
-data.setCell(4, 3, 72521);
+data.setCell(4, 3, 75530);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal')
 data.setCell(5, 2, 'com.consoleregression.testcases.CustomerPortalJourneyTest')
-data.setCell(5, 3, 65009);
+data.setCell(5, 3, 65605);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal')
 data.setCell(6, 2, 'com.consoleregression.testcases.CustomerPortalJourneyTest')
-data.setCell(6, 3, 55896);
+data.setCell(6, 3, 56719);
 window.suiteTableData['Console_Release_Regression_UAT2_Test_Suite']= { tableData: data, tableDiv: 'times-div-Console_Release_Regression_UAT2_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 minutes</span>
+              <span class="suite-total-time">Total running time: 32 minutes</span>
               <div id="times-div-Console_Release_Regression_UAT2_Test_Suite">
               </div> <!-- times-div-Console_Release_Regression_UAT2_Test_Suite -->
             </div> <!-- times-div -->
@@ -364,31 +389,35 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verify_NetDomain_and_DIFM_Order_InSalesDB(uat2, enabled)</span>
-                <span class="method-start">296072 ms</span>
+                <span class="method-start">299288 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(uat2, enabled)</span>
-                <span class="method-start">861610 ms</span>
+                <span class="method-start">881169 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verify_NzDomain_Order_InSalesDB(uat2, enabled)</span>
-                <span class="method-start">1426235 ms</span>
+                <span class="method-start">1459103 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.consoleregression.testcases.CustomerPortalJourneyTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(uat2)</span>
-                <span class="method-start">1710006 ms</span>
+                <span class="method-start">1743241 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal(uat2)</span>
-                <span class="method-start">1765905 ms</span>
+                <span class="method-start">1799963 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal(uat2)</span>
-                <span class="method-start">1838431 ms</span>
+                <span class="method-start">1875497 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
