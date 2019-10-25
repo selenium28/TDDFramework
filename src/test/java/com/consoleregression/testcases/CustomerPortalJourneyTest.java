@@ -67,7 +67,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		strDomainName = "TestConsoleRegression" + df.format(d);
 		
 		
-		if (environment.equals("uat1")) {
+		if (environment.equals("uat1")||environment.equals("uat2")) {
 			strTld = ".com";
 		}
 			
@@ -112,7 +112,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		strDomainName = "TestConsoleRegression" + df.format(d);
 		
 		
-		if (environment.equals("uat1")) {
+		if (environment.equals("uat1")||environment.equals("uat2")) {
 			strTld = ".com";
 		}
 			
@@ -162,7 +162,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		strDomainName = "TestConsoleRegression" + df.format(d);
 		
 		
-		if (environment.equals("uat1")) {
+		if (environment.equals("uat1")||environment.equals("uat2")) {
 			strTld = ".com";
 		}
 			
@@ -219,7 +219,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		strDomainName = "TestConsoleRegression" + df.format(d);
 		
 		
-		if (environment.equals("uat1")) {
+		if (environment.equals("uat1")||environment.equals("uat2")) {
 			strTld = ".com";
 		}
 			
@@ -279,7 +279,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		strDomainName = "TestConsoleRegression" + df.format(d);
 		
 		
-		if (environment.equals("uat1")) {
+		if (environment.equals("uat1")||environment.equals("uat2")) {
 			strTld = ".com";
 		}
 			

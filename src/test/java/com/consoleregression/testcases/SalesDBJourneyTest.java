@@ -66,10 +66,11 @@ public class SalesDBJourneyTest extends TestBase{
 	public SalesDBJourneyTest() {
 		super();
 	}
-			
-	@Parameters({"environment"})
+	
+
+	@Parameters({"environment", "obsidian"})
 	@Test
-	public void verify_ComAuDomain_Order_InSalesDB (String environment) throws InterruptedException{
+	public void verify_ComAuDomain_Order_InSalesDB (String environment, String obsidian) throws InterruptedException{
 		
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
@@ -94,7 +95,16 @@ public class SalesDBJourneyTest extends TestBase{
 			strPaymentMethod = "Resellers Default: Visa: 4111xxxxxxxx1111";
 			strRegistrantDetails = "TPP";
 			strRegistrantType = "ABN";
-			strRegistrantNumber = "13080859721";
+			strRegistrantNumber = "21073716793";
+		}
+		else if (environment.equals("uat2")) {
+			strTld = "com.au";
+			strRegistrationPeriod = "2";
+			strGreenCode = "TPP-60053";
+			strPaymentMethod = "Resellers Default: Visa: 411111******1111";
+			strRegistrantDetails = "TPP";
+			strRegistrantType = "ABN";
+			strRegistrantNumber = "21073716793";		
 		}
 		
 		//Test Step 1: Login to sales db and place an order for domain registration
@@ -121,8 +131,16 @@ public class SalesDBJourneyTest extends TestBase{
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+		
+		if (obsidian.equals("enabled")) {
+			
+			//Wait for workflow to be processed
+			Thread.sleep(150000);
+		}
+		else {
+			caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+			caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+		}
 		
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
@@ -134,9 +152,9 @@ public class SalesDBJourneyTest extends TestBase{
 		
 	}
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "obsidian"})
 	@Test
-	public void verify_NetDomain_and_DIFM_Order_InSalesDB (String environment) throws InterruptedException{
+	public void verify_NetDomain_and_DIFM_Order_InSalesDB (String environment, String obsidian) throws InterruptedException{
 
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
@@ -187,8 +205,16 @@ public class SalesDBJourneyTest extends TestBase{
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
-		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+		
+		if (obsidian.equals("enabled")) {
+			
+			//Wait for workflow to be processed
+			Thread.sleep(150000);
+		}
+		else {
+			caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+			caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+		}
 		
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
@@ -215,9 +241,9 @@ public class SalesDBJourneyTest extends TestBase{
 	}
 	
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "obsidian"})
 	@Test
-	public void verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB (String environment) throws InterruptedException{
+	public void verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB (String environment, String obsidian) throws InterruptedException{
 
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
@@ -268,9 +294,17 @@ public class SalesDBJourneyTest extends TestBase{
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);		
-		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
 
+		if (obsidian.equals("enabled")) {
+			
+			//Wait for workflow to be processed
+			Thread.sleep(150000);
+		}
+		else {
+			caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+			caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+		}
+		
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
@@ -296,9 +330,9 @@ public class SalesDBJourneyTest extends TestBase{
 	}
 	
 	
-	@Parameters({"environment"})
+	@Parameters({"environment", "obsidian"})
 	@Test
-	public void verify_NzDomain_Order_InSalesDB (String environment) throws InterruptedException{
+	public void verify_NzDomain_Order_InSalesDB (String environment, String obsidian) throws InterruptedException{
 		
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
@@ -314,7 +348,7 @@ public class SalesDBJourneyTest extends TestBase{
 		Date d = new Date();
 		strDomainName = "TestConsoleRegression" + df.format(d);
 		
-		if (environment.equals("uat1")) {
+		if (environment.equals("uat1")||environment.equals("uat2")) {
 			strTld = "nz";
 			strRegistrationPeriod = "2";
 			strGreenCode = "PAY-207";
@@ -343,10 +377,18 @@ public class SalesDBJourneyTest extends TestBase{
 		//Test Step 2: Process the domain registration order in console admin
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
-		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
-		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);		
 		
+		if (obsidian.equals("enabled")) {
+			
+			//Wait for workflow to be processed
+			Thread.sleep(150000);
+		}
+		else {
+			caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+			caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, strTld);
+		}
+
 		//Test Step 3: Verify if domain registration workflow is completed
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");

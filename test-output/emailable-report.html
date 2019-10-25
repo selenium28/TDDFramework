@@ -8,38 +8,17 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Console Regression Test Automation - UAT Test Suite</th></tr>
-<tr><td><a href="#t0">Regression Test Cases</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">28,538</td><td></td><td></td></tr>
+<tr><th colspan="7">Console Release Regression UAT2 Test Suite</th></tr>
+<tr><td><a href="#t0">Console Release Regression UAT2 Test Cases</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">1,903,470</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Regression Test Automation - UAT Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.consoleregression.testcases.CustomerPortalJourneyTest</td><td><a href="#m0">verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal</a></td><td rowspan="1">1571627039001</td><td rowspan="1">28508</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Release Regression UAT2 Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Console Release Regression UAT2 Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.consoleregression.testcases.CustomerPortalJourneyTest</td><td><a href="#m0">verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal</a></td><td rowspan="1">1571973453224</td><td rowspan="1">55896</td></tr><tr class="passedeven"><td><a href="#m1">verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal</a></td><td rowspan="1">1571973509123</td><td rowspan="1">72521</td></tr><tr class="passedeven"><td><a href="#m2">verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal</a></td><td rowspan="1">1571973581649</td><td rowspan="1">65009</td></tr><tr class="passedodd"><td rowspan="4">com.consoleregression.testcases.SalesDBJourneyTest</td><td><a href="#m3">verify_ComAuDomain_Order_InSalesDB</a></td><td rowspan="1">1571971743218</td><td rowspan="1">296068</td></tr><tr class="passedodd"><td><a href="#m4">verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</a></td><td rowspan="1">1571972604828</td><td rowspan="1">564623</td></tr><tr class="passedodd"><td><a href="#m5">verify_NetDomain_and_DIFM_Order_InSalesDB</a></td><td rowspan="1">1571972039290</td><td rowspan="1">565536</td></tr><tr class="passedodd"><td><a href="#m6">verify_NzDomain_Order_InSalesDB</a></td><td rowspan="1">1571973169453</td><td rowspan="1">283768</td></tr></tbody>
 </table>
-<h2>Regression Test Cases</h2><h3 id="m0">com.consoleregression.testcases.CustomerPortalJourneyTest#verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat1</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#continueCart&quot;}
-  (Session info: chrome=77.0.3865.120)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
-System info: host: &apos;WC063317&apos;, ip: &apos;192.168.216.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:64920}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c2572b1ab9c0225e5a12129599af77bf
-*** Element info: {Using=id, value=continueCart}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-	at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-	at com.netregistryoldwebsite.pages.NRGDomainSearchPage.clickContinueToCheckout(NRGDomainSearchPage.java:24)
-	at com.consoleregression.testcases.CustomerPortalJourneyTest.verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(CustomerPortalJourneyTest.java:81)
-... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Console Release Regression UAT2 Test Cases</h2><h3 id="m0">com.consoleregression.testcases.CustomerPortalJourneyTest#verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat2</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.consoleregression.testcases.CustomerPortalJourneyTest#verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat2</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.consoleregression.testcases.CustomerPortalJourneyTest#verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>uat2</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.consoleregression.testcases.SalesDBJourneyTest#verify_ComAuDomain_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat2</td><td>enabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.consoleregression.testcases.SalesDBJourneyTest#verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat2</td><td>enabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.consoleregression.testcases.SalesDBJourneyTest#verify_NetDomain_and_DIFM_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat2</td><td>enabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.consoleregression.testcases.SalesDBJourneyTest#verify_NzDomain_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat2</td><td>enabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

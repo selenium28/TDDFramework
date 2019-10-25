@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Console Regression Test Automation - UAT Test Suite">
-	<parameter name="environment"  value="uat1"/>
+	<parameter name="environment"  value="uat2"/>
 	
 	<listeners>
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
@@ -12,20 +12,20 @@
 		<classes>
 
 			
-<!-- 			<class name="com.consoleregression.testcases.SalesDBJourneyTest"> -->
-<!--                 <methods>                   -->
-<!--                 	<include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" />                 	 -->
-<!--                 	<include name="verify_NetDomain_and_DIFM_Order_InSalesDB" />                                               -->
-<!--                     <include name="verify_NzDomain_Order_InSalesDB" />                     -->
-<!--                     <include name="verify_ComAuDomain_Order_InSalesDB" /> -->
-<!--                 </methods> -->
-<!-- 			</class> -->
+			<class name="com.consoleregression.testcases.SalesDBJourneyTest">
+                <methods>                  
+                    <include name="verify_ComAuDomain_Order_InSalesDB" />
+                	<include name="verify_NetDomain_and_DIFM_Order_InSalesDB" />                                              
+                	<include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" />                 	
+                    <include name="verify_NzDomain_Order_InSalesDB" />                    
+                </methods>
+			</class>
 			
 			<class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
 			    <methods>
                     <include name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" />                    
-<!--                     <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" />                     -->
-<!--                     <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" />                                -->
+                    <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" />                    
+                    <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" />                               
                 </methods>
 			</class>
 		

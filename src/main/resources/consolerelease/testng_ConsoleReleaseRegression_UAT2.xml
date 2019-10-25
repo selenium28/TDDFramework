@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Console Regression Test Automation - UAT Test Suite">
+<suite name="Console Release Regression UAT2 Test Suite">
 	<parameter name="environment"  value="uat2"/>
+	<parameter name="obsidian"     value="enabled"/>
 	
 	<listeners>
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
 	</listeners>
 	
-	<test name="Regression Test Cases">
+	<test name="Console Release Regression UAT2 Test Cases">
 	
-		<classes>
-
-			
+		<classes>	
 			<class name="com.consoleregression.testcases.SalesDBJourneyTest">
                 <methods>                  
                     <include name="verify_ComAuDomain_Order_InSalesDB" />
@@ -20,7 +19,6 @@
                     <include name="verify_NzDomain_Order_InSalesDB" />                    
                 </methods>
 			</class>
-			
 			<class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
 			    <methods>
                     <include name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" />                    
@@ -28,10 +26,9 @@
                     <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" />                               
                 </methods>
 			</class>
-		
-
-
 		</classes>
 
 	</test>  
 </suite> 
+
+
