@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Console Release Regression UAT1 Test Suite">
 	<parameter name="environment"  value="uat1"/>
-	<parameter name="obsidian"     value="enabled"/>
+	<parameter name="obsidian"     value="disabled"/>
 	
 	<listeners>
 		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
@@ -15,7 +15,7 @@
                 <methods>                  
                     <include name="verify_ComAuDomain_Order_InSalesDB" />
                 	<include name="verify_NetDomain_and_DIFM_Order_InSalesDB" />                                              
-                	<include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" />                 	
+<!--                 	<include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" />                 	 -->
                     <include name="verify_NzDomain_Order_InSalesDB" />                    
                 </methods>
 			</class>

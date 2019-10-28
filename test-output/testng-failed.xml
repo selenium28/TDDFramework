@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Console Release Regression UAT2 Test Suite]">
-  <parameter name="environment" value="uat2"/>
-  <parameter name="obsidian" value="enabled"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Console Release Regression UAT1 Test Suite]">
+  <parameter name="environment" value="uat1"/>
+  <parameter name="obsidian" value="disabled"/>
   <listeners>
     <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
   </listeners>
-  <test thread-count="5" name="Console Release Regression UAT2 Test Cases(failed)">
+  <test thread-count="5" name="Console Release Regression UAT1 Test Cases(failed)">
     <classes>
+      <class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
+        <methods>
+          <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.consoleregression.testcases.CustomerPortalJourneyTest -->
       <class name="com.consoleregression.testcases.SalesDBJourneyTest">
         <methods>
           <include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" invocation-numbers="0"/>
-          <include name="verify_NetDomain_and_DIFM_Order_InSalesDB" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
     </classes>
-  </test> <!-- Console Release Regression UAT2 Test Cases(failed) -->
-</suite> <!-- Failed suite [Console Release Regression UAT2 Test Suite] -->
+  </test> <!-- Console Release Regression UAT1 Test Cases(failed) -->
+</suite> <!-- Failed suite [Console Release Regression UAT1 Test Suite] -->

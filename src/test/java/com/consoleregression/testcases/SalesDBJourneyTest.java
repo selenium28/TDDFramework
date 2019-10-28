@@ -175,7 +175,7 @@ public class SalesDBJourneyTest extends TestBase{
 		if (environment.equals("uat1")||environment.equals("uat2")) {
 			strTld = "net";
 			strRegistrationPeriod = "1 x Y";
-			strGreenCode = "NET-1222";
+			strGreenCode = "NET-1214";
 			strMajorProduct = "Done For You Website";
 			strProductPeriod = "1 x M";
 			strPaymentMethod = "Invoice";
