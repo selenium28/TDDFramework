@@ -48,7 +48,7 @@ public class TestCaptchaForExistingCustomerUsingNewCard extends TestBase{
 
 	@Parameters({"environment", "iteration"})
 	@Test
-	public void testCaptchaForExistingCustomerUsingNewCard (String environment, Integer iteration) throws InterruptedException{
+	public void testCaptchaForExistingCustomerUsingNewCard (String environment, Integer iteration) throws Exception{
 		
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;

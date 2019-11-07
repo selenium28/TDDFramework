@@ -20,7 +20,8 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     //Old Path Before Captcha Deployment
     //@FindBy(how=How.XPATH, using = "//div[@class='cart-box cc-box element-table']/div[2]/div/label")
     //New Path After Captcha Deployment
-    @FindBy(how=How.XPATH, using = "//div[@class='cart-box']/div[1]/div[2]/div/label")
+    //@FindBy(how=How.XPATH, using = "//div[@class='cart-box']/div[1]/div[2]/div/label")
+    @FindBy(how=How.CSS, using = "[for='termsAgree']")
     WebElement agreeTermsAndConditions;
     
     @FindBy(how=How.XPATH, using = "//div[@class='continue-btn-container']/button[@class='btn green']")
