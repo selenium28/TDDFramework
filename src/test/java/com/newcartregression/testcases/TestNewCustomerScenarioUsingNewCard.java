@@ -47,7 +47,7 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase{
 			
 	@Parameters({"environment", "iteration"})
 	@Test
-	public void testNewCustomerScenarioUsingNewCard (String environment, Integer iteration) throws InterruptedException{
+	public void testNewCustomerScenarioUsingNewCard (String environment, Integer iteration) throws Exception{
 		
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
@@ -68,6 +68,14 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase{
 			Date d = new Date();
 			strDomainName = "TestNewCartRegression" + df.format(d);
 			
+			if (environment.equals("dev2")) {
+				strTld = ".com";
+				strCardOwnerName = "Test New Customer New Card";
+				strCardNumber = "5555555555554444";
+			    strCardExpiryMonth = "10";
+			    strCardExpiryYear = "2026";
+			    strCardSecurityCode = "123";
+			}
 			if (environment.equals("uat1")) {
 				strTld = ".com";
 				strCardOwnerName = "Test New Customer New Card";
@@ -100,6 +108,7 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase{
 			nrgnssearchadddomainspage = new NRGNSSearchAddDomainsPage();
 			nrgnssearchadddomainspage.setDomainNameAndTld(strDomainName, strTld);
 			nrgnssearchadddomainspage.clickSearchButton();
+			nrgnssearchadddomainspage.addDomainName(strDomainName, strTld);
 			nrgnsdomainprivacypage = nrgnssearchadddomainspage.clickContinueButton();
 			
 			//Test Step 2: Process the order without any product included

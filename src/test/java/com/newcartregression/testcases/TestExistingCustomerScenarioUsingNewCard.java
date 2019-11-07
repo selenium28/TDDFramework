@@ -23,9 +23,9 @@ import com.netregistrynewwebsite.pages.NRGNSSearchFieldPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.util.TestUtil;
 
-public class TestExistingCustomerScenarioUsingNewCard extends TestBase{
-	
-	//Netregistry New Shopping Cart Pages
+public class TestExistingCustomerScenarioUsingNewCard extends TestBase {
+
+	// Netregistry New Shopping Cart Pages
 	NRGNSAboutYouPage nrgnsaboutyoupage;
 	NRGNSAddServicesToYourDomainPage nrgnsaddservicestoyourdomainpage;
 	NRGNSDomainPrivacyPage nrgnsdomainprivacypage;
@@ -36,7 +36,7 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase{
 	NRGNSSearchAddDomainsPage nrgnssearchadddomainspage;
 	NRGNSSearchFieldPage nrgnssearchfieldpage;
 	NRGNSOrderCompletePage nrgnsordercompletepage;
-	
+
 	TestUtil testUtil;
 	static Environment testenvironment;
 	public static ExtentTest logger;
@@ -44,111 +44,125 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase{
 	public TestExistingCustomerScenarioUsingNewCard() {
 		super();
 	}
-			
 
-	@Parameters({"environment", "iteration"})
+	@Parameters({ "environment", "iteration" })
 	@Test
-	public void testExistingCustomerScenarioUsingNewCard (String environment, Integer iteration) throws InterruptedException{
-		
+	public void testExistingCustomerScenarioUsingNewCard(String environment, Integer iteration) throws Exception {
+
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
 		String strTld = null;
-		
+
 		String strCardOwnerName = null;
 		String strCardNumber = null;
-	    String strCardExpiryMonth = null;
-	    String strCardExpiryYear = null;
-	    String strCardSecurityCode = null;
-	    
-	    String strCustomerAccountReference = null;
-	    String strCustomerPassword = null;
-		
-		
-	    Integer intMaxCount = iteration;
+		String strCardExpiryMonth = null;
+		String strCardExpiryYear = null;
+		String strCardSecurityCode = null;
+
+		String strCustomerAccountReference = null;
+		String strCustomerPassword = null;
+
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
-		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
-	    
-		    //Generate test domain name
+		for (intMinCount = 1; intMinCount <= intMaxCount; intMinCount++) {
+
+			// Generate test domain name
 			DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 			Date d = new Date();
 			strDomainName = "TestConsoleRegression" + df.format(d);
-			
-			if (environment.equals("uat1")) {
-				
-				strTld = ".com";			    
+
+			if (environment.equals("dev2")) {
+
+				strTld = ".com";
 				strCardOwnerName = "Test Existing Customer New Card";
 				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
-			    			    
+				strCardExpiryMonth = "10";
+				strCardExpiryYear = "2026";
+				strCardSecurityCode = "123";
+
 				strCustomerAccountReference = "TES-2168";
 				strCustomerPassword = "comein22";
-			    
+
 			}
-			else if (environment.equals("ote")) {
-				
-			    strTld = ".com";			    
+			if (environment.equals("uat1")) {
+
+				strTld = ".com";
 				strCardOwnerName = "Test Existing Customer New Card";
 				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
+				strCardExpiryMonth = "10";
+				strCardExpiryYear = "2026";
+				strCardSecurityCode = "123";
 
-			    strCustomerAccountReference = "MEL-6007";
-			    strCustomerPassword = "comein22";
-			}
-			else if (environment.equals("prod")) {
-				
-			    strTld = ".com";			    
+				strCustomerAccountReference = "TES-2168";
+				strCustomerPassword = "comein22";
+
+			} else if (environment.equals("ote")) {
+
+				strTld = ".com";
 				strCardOwnerName = "Test Existing Customer New Card";
 				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
+				strCardExpiryMonth = "10";
+				strCardExpiryYear = "2026";
+				strCardSecurityCode = "123";
 
-			    strCustomerAccountReference = "MEL-6007";
-			    strCustomerPassword = "comein22";
+				strCustomerAccountReference = "MEL-6007";
+				strCustomerPassword = "comein22";
+			} else if (environment.equals("prod")) {
+
+				strTld = ".com";
+				strCardOwnerName = "Test Existing Customer New Card";
+				strCardNumber = "5555555555554444";
+				strCardExpiryMonth = "10";
+				strCardExpiryYear = "2026";
+				strCardSecurityCode = "123";
+
+				strCustomerAccountReference = "MEL-6007";
+				strCustomerPassword = "comein22";
 			}
-			
+
 			System.out.println("Start Test: testExistingCustomerScenarioUsingNewCard");
-					
-			//Test Step 1: Navigate to domain search page of new shopping cart and place an order for a test domain
+
+			// Test Step 1: Navigate to domain search page of new shopping cart and place an
+			// order for a test domain
 			initialization(environment, "newcart_domainsearchurl_netregistry");
 			nrgnssearchadddomainspage = new NRGNSSearchAddDomainsPage();
 			nrgnssearchadddomainspage.setDomainNameAndTld(strDomainName, strTld);
 			nrgnssearchadddomainspage.clickSearchButton();
+			nrgnssearchadddomainspage.addDomainName(strDomainName, strTld);
 			nrgnsdomainprivacypage = nrgnssearchadddomainspage.clickContinueButton();
-			
-			//Test Step 2: Process the order without any product included
+
+			// Test Step 2: Process the order without any product included
 			nrgnsdomainprivacypage.clickCheckBox();
 			nrgnsemailandoffice365packagespage = nrgnsdomainprivacypage.clickContinueButton();
 			nrgnsaddservicestoyourdomainpage = nrgnsemailandoffice365packagespage.clickContinueButton();
 			nrgnsaboutyoupage = nrgnsaddservicestoyourdomainpage.clickContinueButton();
-			
-			//Test Step 3: Login as returning or existing netregistry customer 
+
+			// Test Step 3: Login as returning or existing netregistry customer
 			nrgnsaboutyoupage.setReturningCustomerContacts(strCustomerAccountReference, strCustomerPassword);
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickLoginButton();
-			
-			//Special Case: Wait for 10s and refresh page before continuing (Issue is raised to Developers to investigae why page is not loading quickly)
-			nrgnsregistrantcontactpage.refreshRegistrantPage();
-			
-			nrgnsregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
+
+			// Special Case: Wait for 10s and refresh page before continuing (Issue is
+			// raised to Developers to investigae why page is not loading quickly)
+			//nrgnsregistrantcontactpage.refreshRegistrantPage();
+
+			nrgnsregistrantcontactpage
+					.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
-			
-			//Test Step 4: Input new credit card details and complete the order
+
+			// Test Step 4: Input new credit card details and complete the order
 			nrgnsreviewandpaymentpage.selectNewCreditCardOption();
-		    nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
-		    nrgnsreviewandpaymentpage.tickTermsAndConditions();
-		    nrgnsreviewandpaymentpage.clickCompleteOrder();
-		
-			//Test Step 5: Verify if recaptcha challenge is dislayed 
-			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
-			
+			nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth,
+					strCardExpiryYear, strCardSecurityCode);
+			nrgnsreviewandpaymentpage.tickTermsAndConditions();
+			nrgnsreviewandpaymentpage.clickCompleteOrder();
+
+			// Test Step 5: Verify if recaptcha challenge is dislayed
+			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(),
+					"Recaptcha Challenge is not displayed");
+
 			driver.close();
 			System.out.println("End Test: testExistingCustomerScenarioUsingNewCard");
-		}	
+		}
 	}
-	
 
 }

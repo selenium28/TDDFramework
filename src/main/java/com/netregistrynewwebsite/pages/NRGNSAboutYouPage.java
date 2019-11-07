@@ -15,7 +15,7 @@ public class NRGNSAboutYouPage extends TestBase{
 	
     //Objects        
     @FindBy(how=How.ID, using = "organisation")
-    WebElement organisation;
+    WebElement companyName;
     
     @FindBy(how=How.ID, using = "usertype")
     WebElement industry;
@@ -72,18 +72,19 @@ public class NRGNSAboutYouPage extends TestBase{
     //Methods    
     public void setDefaultCustomerDetails() {
     	
-    	organisation.sendKeys("Netregistry");
-    	industry.sendKeys("Automotive");
+    	
     	firstName.sendKeys("QA");
     	lastName.sendKeys("Team");
+    	phoneNumber.sendKeys("0386242440");
+    	email.sendKeys("_qa-development@arq.group");
+    	emailConfirmation.sendKeys("_qa-development@arq.group");	
+    	companyName.sendKeys("Netregistry");
+    	industry.sendKeys("Automotive"); 	
     	streetAddress.sendKeys("505 Lt Collins Street");
     	city.sendKeys("Melbourne");
     	//country.sendKeys("Australia");
     	state.sendKeys("Victoria");
     	postcode.sendKeys("3000");
-    	phoneNumber.sendKeys("0386242440");
-    	email.sendKeys("_qa-development@arq.group");
-    	emailConfirmation.sendKeys("_qa-development@arq.group");
     	
     }
     

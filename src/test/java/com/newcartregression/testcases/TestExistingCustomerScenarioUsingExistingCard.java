@@ -48,7 +48,7 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase{
 
 	@Parameters({"environment", "iteration"})
 	@Test
-	public void testExistingCustomerScenarioUsingExistingCard (String environment, Integer iteration) throws InterruptedException{
+	public void testExistingCustomerScenarioUsingExistingCard (String environment, Integer iteration) throws Exception{
 		
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
@@ -70,6 +70,13 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase{
 			Date d = new Date();
 			strDomainName = "TestConsoleRegression" + df.format(d);
 			
+			if (environment.equals("dev2")) {
+				strTld = ".com";			    
+				strMaskedCardNumber = "************4444";
+				
+				strCustomerAccountReference = "TES-2168";
+				strCustomerPassword = "comein22";
+			}
 			if (environment.equals("uat1")) {
 				
 				strTld = ".com";			    
@@ -102,6 +109,7 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase{
 			nrgnssearchadddomainspage = new NRGNSSearchAddDomainsPage();
 			nrgnssearchadddomainspage.setDomainNameAndTld(strDomainName, strTld);
 			nrgnssearchadddomainspage.clickSearchButton();
+			nrgnssearchadddomainspage.addDomainName(strDomainName, strTld);
 			nrgnsdomainprivacypage = nrgnssearchadddomainspage.clickContinueButton();
 			
 			//Test Step 2: Process the order without any product included
@@ -115,7 +123,7 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase{
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickLoginButton();
 			
 			//Special Case: Wait for 10s and refresh page before continuing (Issue is raised to Developers to investigae why page is not loading quickly)
-			nrgnsregistrantcontactpage.refreshRegistrantPage();
+			//nrgnsregistrantcontactpage.refreshRegistrantPage();
 			
 			nrgnsregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
@@ -124,7 +132,7 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase{
 			nrgnsreviewandpaymentpage.selectExistingCreditCard(strMaskedCardNumber);
 		    nrgnsreviewandpaymentpage.tickTermsAndConditions();
 		    
-		    if (environment.equals("uat1")) {
+		    if (environment.equals("uat1") || environment.equals("dev2")) {
 				nrgnsordercompletepage = nrgnsreviewandpaymentpage.clickCompleteOrder();
 				
 				//Test Step 5: Verify if the order is completed, get workflow id and account reference.

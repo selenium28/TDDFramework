@@ -1,5 +1,7 @@
 package com.netregistrynewwebsite.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -56,40 +58,48 @@ public class NRGNSSearchAddDomainsPage extends TestBase{
     	
     }
     
-    public void clickDomainExtension(String strdomainextension) {
+	/*
+	 * public void clickDomainExtension(String strdomainextension) {
+	 * 
+	 * switch (strdomainextension) { case ".com" :
+	 * System.out.println("Tick .com tld");
+	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[1]")).click();
+	 * break; case ".com.au" :
+	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[2]")).click();
+	 * break; case ".melbourne" :
+	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[3]")).click();
+	 * break; case ".net" :
+	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[4]")).click();
+	 * break; case ".net.au" :
+	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[5]")).click();
+	 * break; case ".org" :
+	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[6]")).click();
+	 * break; case ".org.au" :
+	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[7]")).click();
+	 * break; case ".sdyney" :
+	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[8]")).click();
+	 * break; default : System.out.println("Invalid domain extension"); } }
+	 */
+    
+    public void clickDomainExtension(String strDomainExtension) throws Exception {
 
-    	switch (strdomainextension) {
-        case ".com" :
-        	System.out.println("Tick .com tld");
-        	driver.findElement(By.xpath("//div[@class='tld-select']/div[1]")).click();
-            break;
-        case ".com.au" :
-        	driver.findElement(By.xpath("//div[@class='tld-select']/div[2]")).click();
-        	break;
-        case ".melbourne" :
-        	driver.findElement(By.xpath("//div[@class='tld-select']/div[3]")).click();
-        	break;
-        case ".net" :
-        	driver.findElement(By.xpath("//div[@class='tld-select']/div[4]")).click();
-        	break;
-        case ".net.au" :
-        	driver.findElement(By.xpath("//div[@class='tld-select']/div[5]")).click();
-        	break;
-        case ".org" :
-        	driver.findElement(By.xpath("//div[@class='tld-select']/div[6]")).click();
-        	break;
-        case ".org.au" :
-        	driver.findElement(By.xpath("//div[@class='tld-select']/div[7]")).click();
-        	break;
-        case ".sdyney" :
-        	driver.findElement(By.xpath("//div[@class='tld-select']/div[8]")).click();
-        	break;
-        default :
-        	System.out.println("Invalid domain extension");
-      }
+    	//Get all the tlds
+    	List<WebElement> tlds = driver.findElements(By.cssSelector(".tld-select [for]"));
+    	
+    	for (WebElement tld : tlds) {
+    		
+    		if (tld.getText().contains(strDomainExtension)) {
+    			System.out.println("Clicking the tld " + tld);
+    			
+    			tld.click();
+    			return;
+    		}
+    	}
+    	throw new Exception("tld is not available");
+      
     }
     
-    public void setDomainNameAndTld(String domainname, String tldname){
+    public void setDomainNameAndTld(String domainname, String tldname) throws Exception{
     	newDomainSearchBox.clear();
     	newDomainSearchBox.sendKeys(domainname);
     	this.clickDomainExtension(tldname);
@@ -102,6 +112,27 @@ public class NRGNSSearchAddDomainsPage extends TestBase{
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.partialLinkText(domainname)));
     	WebElement domainName = driver.findElement(By.partialLinkText(domainname));
     	domainName.click();
+
+    }
+    
+    //Add the domain from search result that will match provided domain name and tld
+    public void addDomainName(String domainName, String tldName) throws Exception {
+    	
+    	//Get all the domains in search result
+    	List<WebElement> domains = driver.findElements(By.cssSelector(".search-results .result"));
+    	
+    	
+    	for(WebElement domain: domains) {
+    		
+    		String resultDomainName = domain.findElement(By.cssSelector(".domain")).getText();
+    		System.out.println("This the domain name with extension " + resultDomainName);
+    		
+    		if (resultDomainName.equalsIgnoreCase(domainName+tldName)){
+    			domain.click();
+    			return;
+    		}
+    	} 
+    	throw new Exception("Domain name is not available");
 
     }
     
