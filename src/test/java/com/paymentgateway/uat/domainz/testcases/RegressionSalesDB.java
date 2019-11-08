@@ -69,6 +69,7 @@ public class RegressionSalesDB extends TestBase{
 		public String strAccountReference = null;
 		public String strRegistrationPeriod = null;
 		public String strPaymentMethod = null;
+		public String strPhoneNumber = null;
 		public String strRegistrantDetails = null;
 		public String strRegistrantType = null;
 		public String strRegistrantNumber = null;
@@ -102,6 +103,7 @@ public class RegressionSalesDB extends TestBase{
 					strMajorProduct = "Basic Cloud Hosting";
 					strProductPeriod = "1 x M";
 					strPaymentMethod = "Invoice";
+					strPhoneNumber = "+61.299340501";
 					strRegistrantDetails = "Payment Gateway Test";	
 					strRegistrantType = "ABN";
 					strRegistrantNumber = "13080859721";
@@ -113,6 +115,7 @@ public class RegressionSalesDB extends TestBase{
 					strMajorProduct = "Basic Cloud Hosting";
 					strProductPeriod = "1 x M";
 					strPaymentMethod = "Invoice";
+					strPhoneNumber = "+61.299340501";
 					strRegistrantDetails = "Payment Gateway Test";	
 					strRegistrantType = "ABN";
 					strRegistrantNumber = "13080859721";
@@ -134,7 +137,7 @@ public class RegressionSalesDB extends TestBase{
 					// AU Eligibility code-  Added on: 13-11-2018
 					System.out.println("Method: setContactAndEligibilityDetails");
 					csaueligibilitypage = csnrcrmpage.clickUpdateDetails(strDomainName_01, "Update Details");
-					csnrcrmpage = csaueligibilitypage.setContactAndEligibilityDetails(strRegistrantDetails, strRegistrantType, 
+					csnrcrmpage = csaueligibilitypage.setContactAndEligibilityDetails(strRegistrantDetails, strPhoneNumber, strRegistrantType, 
 						strRegistrantNumber);
 				}
 		        else {
