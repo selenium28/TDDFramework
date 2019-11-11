@@ -80,6 +80,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
 		String strWorkflowId = null;
+		String strPhoneNumber = null;
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
 		String strWorkflowStatus = null;
@@ -91,8 +92,10 @@ public class SalesDBJourneyTest extends TestBase{
 		if (environment.equals("uat1")) {
 			strTld = "com.au";
 			strRegistrationPeriod = "2";
-			strGreenCode = "MEL-6038";
+			strGreenCode = "FAZ-20";
 			strPaymentMethod = "Resellers Default: Visa: 4111xxxxxxxx1111";
+			strPaymentMethod = "Visa: 4111xxxxxxxx1111 02/20";	
+			strPhoneNumber = "+61.299340501";
 			strRegistrantDetails = "TPP";
 			strRegistrantType = "ABN";
 			strRegistrantNumber = "21073716793";
@@ -120,7 +123,7 @@ public class SalesDBJourneyTest extends TestBase{
 		
 		System.out.println("Method: assign values to aueligibilitypage");
 		csaueligibilitypage = csnrcrmpage.clickUpdateDetails(strDomainName, "Update Details");
-		csnrcrmpage = csaueligibilitypage.setContactAndEligibilityDetails(strRegistrantDetails, strRegistrantType, strRegistrantNumber);
+		csnrcrmpage = csaueligibilitypage.setContactAndEligibilityDetails(strRegistrantDetails, strPhoneNumber, strRegistrantType, strRegistrantNumber);
 		csshowdomainservicespage = csnrcrmpage.clickShowDomainServices(strDomainName);
 		csworkflownotificationpage = csshowdomainservicespage.clickConfirmAllServices();
 		strWorkflowId = csworkflownotificationpage.getWorkflowID();
