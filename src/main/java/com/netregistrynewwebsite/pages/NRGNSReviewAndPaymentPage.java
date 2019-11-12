@@ -116,7 +116,8 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     public void selectNewCreditCardOption(){
     	
        	System.out.println("select new credit card option");
-       	driver.findElement(By.xpath("//div[@class='cart-box']/div[2]/div/div[2]/div[2]/div/label")).click();
+      //driver.findElement(By.xpath("//div[@class='cart-box']/div[2]/div/div[2]/div[2]/div/label")).click();
+        driver.findElement(By.cssSelector("[for='new-billing']")).click();
     }
     
     public void selectExistingCreditCard(String cardnumber) throws InterruptedException{
