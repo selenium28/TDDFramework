@@ -118,7 +118,7 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase{
 			nrgnsaboutyoupage = nrgnsaddservicestoyourdomainpage.clickContinueButton();
 			
 			//Test Step 3: Input default customer details  
-			nrgnsaboutyoupage.setDefaultCustomerDetails();
+			nrgnsaboutyoupage.setDefaultBusinessCustomerDetails();
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickContinueButton();
 			nrgnsregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
