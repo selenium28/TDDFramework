@@ -80,20 +80,22 @@ public class CSAUEligibilityPage extends TestBase {
 		Thread.sleep(2000);
 		registrantName.clear();
 		registrantName.sendKeys(strRegistrantName);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		telephoneNumber.clear();
 		telephoneNumber.sendKeys(strPhoneNumber);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
     	//driver.findElement(By.xpath("//div[@id='x-form-el-eligibility-au-number-field']/input")).sendKeys(strRegistrantNumber);
 		registrantNumber.clear();
 		registrantNumber.sendKeys(strRegistrantNumber);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		registrantTypeDropdownButton.click();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
     	driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/*[contains(text(),'"+strRegistrantType+"')]")).click();    	
-    	Thread.sleep(5000);
+    	//Thread.sleep(5000);
+    	Thread.sleep(1000);
     	updateButton.click();
-    	Thread.sleep(5000);
+    	//Thread.sleep(5000);
+    	Thread.sleep(1000);
     	
 		
 		return new CSNrCRMPage();

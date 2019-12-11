@@ -202,7 +202,8 @@ public class SalesDBJourneyTest extends TestBase{
 		Assert.assertEquals(csworkflownotificationpage.getNotificationMessage(), "Services are successfully confirmed");
 		strWorkflowId = csworkflownotificationpage.getWorkflowID();
 		csworkflownotificationpage.clickOKButton();
-		driver.close();
+		//driver.close();
+		driver.quit();
 		
 		//Test Step 2: Process the domain registration workflow in console admin
 		initialization(environment, "consoleadmin");
@@ -238,7 +239,8 @@ public class SalesDBJourneyTest extends TestBase{
 			caworkflowadminpage.getWorkflowStatus("productsetup2"));
 
 		
-		driver.close();
+		//driver.close();
+		driver.quit();
 		System.out.println("End Test: verify_NetDomain_and_DIFM_Order_InSalesDB");
 	}
 	
@@ -290,7 +292,8 @@ public class SalesDBJourneyTest extends TestBase{
 		Assert.assertEquals(csworkflownotificationpage.getNotificationMessage(), "Services are successfully confirmed");
 		strWorkflowId = csworkflownotificationpage.getWorkflowID();
 		csworkflownotificationpage.clickOKButton();
-		driver.close();
+		//driver.close();
+		driver.quit();
 		
 		//Test Step 2: Process the domain registration workflow in console admin
 		initialization(environment, "consoleadmin");
@@ -325,7 +328,8 @@ public class SalesDBJourneyTest extends TestBase{
 		Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("productSetup2"), "approved", 
 			caworkflowadminpage.getWorkflowStatus("productsetup2"));
 		
-		driver.close();
+		//driver.close();
+		driver.quit();
 		System.out.println("End Test: verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB");
 	}
 	
@@ -372,7 +376,8 @@ public class SalesDBJourneyTest extends TestBase{
 		csworkflownotificationpage = csshowdomainservicespage.clickConfirmAllServices();
 		strWorkflowId = csworkflownotificationpage.getWorkflowID();
 		csworkflownotificationpage.clickOKButton();
-		driver.close();
+		//driver.close();
+		driver.quit();
 		
 		//Test Step 2: Process the domain registration order in console admin
 		initialization(environment, "consoleadmin");
@@ -394,7 +399,8 @@ public class SalesDBJourneyTest extends TestBase{
 		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
 		Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("domain registration completed") || strWorkflowStatus.equalsIgnoreCase("update star rating"));	
 		
-		driver.close();
+		//driver.close();
+		driver.quit();
 		System.out.println("End Test: verify_NzDomain_Order_InSalesDB");
 		
 	}

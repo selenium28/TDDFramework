@@ -22,12 +22,14 @@ public class CSRegistrantDetailsPage extends TestBase{
     }
 
     //Methods
-    public CSNrCRMPage setRegistrantDetails(String strregistrantname) throws InterruptedException {
-		Thread.sleep(2000);
+    public CSNrCRMPage setRegistrantDetails(String strRegistrantName) throws InterruptedException {
+		//Thread.sleep(2000);
+		Thread.sleep(1000);
 		registrantName.clear();
-		Thread.sleep(2000);
-		registrantName.sendKeys(strregistrantname);
-		Thread.sleep(3000);
+		//Thread.sleep(2000);
+		registrantName.sendKeys(strRegistrantName);
+		//Thread.sleep(3000);
+		Thread.sleep(1000);
 		updateButton.click();
 		return new CSNrCRMPage();
     }

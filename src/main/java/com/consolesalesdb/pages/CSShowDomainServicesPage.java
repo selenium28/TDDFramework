@@ -51,7 +51,8 @@ public class CSShowDomainServicesPage extends TestBase {
     }
     
     public CSWorkflowNotificationPage clickConfirmAllServices() throws InterruptedException {
-    	Thread.sleep(10000);
+    	//Thread.sleep(10000);
+    	Thread.sleep(2000);
     	confirmAllServices.click();
     	return new CSWorkflowNotificationPage();
     }
