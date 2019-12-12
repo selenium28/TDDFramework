@@ -78,14 +78,14 @@ public class CAHeaderPage extends TestBase{
     
     public CAWorkflowAdminPage searchWorkflow(String strworkflow) throws InterruptedException{
     	
-    	Thread.sleep(3000);
+    	//Thread.sleep(3000);
     	workflowInput.sendKeys(strworkflow);
-    	Thread.sleep(2000);
+    	//Thread.sleep(2000);
     	System.out.println ("Searching for get button");
-    	Thread.sleep(5000);
+    	//Thread.sleep(5000);
     	getButton.click();
     	System.out.println ("Get button clicked");
-    	Thread.sleep(8000);
+    	//Thread.sleep(8000);
     	
     	return new CAWorkflowAdminPage();
     }	

@@ -41,83 +41,85 @@ public class CSCreateDomainWindowPage extends TestBase{
     }
     
     //Methods
-    public void setDomainDetails(String strdomainame, String strtld, String strperiod, String strpaymentMethod) throws InterruptedException {
+    public void setDomainDetails(String strDomainName, String strtld, String strPeriod, String strPaymentMethod) throws InterruptedException {
     	
-    	Thread.sleep(5000);
-    	domainName.sendKeys(strdomainame);
-    	Thread.sleep(2000);
+    	//Thread.sleep(5000);
+    	domainName.sendKeys(strDomainName);
+    	//Thread.sleep(2000);
     	tldDropdownButton.click();
-    	Thread.sleep(2000);
+    	//Thread.sleep(2000);
         driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strtld+"']")).click();
         regPeriodDropdownButton.click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strperiod+"')]")).click();
+       // Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strPeriod+"')]")).click();
         
         paymentMethodButton.click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strpaymentMethod+"')]")).click();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strPaymentMethod+"')]")).click();
+        //Thread.sleep(2000);
+        Thread.sleep(1000);
         this.clickCreateDomainButton();
     }
  
-    public void setDomainDetailswithoutRegister(String strdomainame, String strtld, String strpaymentMethod) throws InterruptedException {
+    public void setDomainDetailswithoutRegister(String strDomainName, String strTld, String strPaymentMethod) throws InterruptedException {
     	
     	Thread.sleep(5000);
-    	domainName.sendKeys(strdomainame);
+    	domainName.sendKeys(strDomainName);
     	Thread.sleep(2000);
     	tldDropdownButton.click();
     	Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strtld+"']")).click();
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strTld+"']")).click();
         paymentMethodButton.click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strpaymentMethod+"')]")).click();
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strPaymentMethod+"')]")).click();
         Thread.sleep(2000);
         this.clickCreateDomainButton();
     }
     
-    public void setDomainandMajorProductDetails(String strdomainame, String strtld, String strperiod, String strmajorproduct, String strproductperiod, String strpaymentMethod) throws InterruptedException {
+    public void setDomainandMajorProductDetails(String strDomainName, String strTld, String strPeriod, String strMajorProduct, String strProductPeriod, String strPaymentMethod) throws InterruptedException {
     	
-    	Thread.sleep(5000);
-    	domainName.sendKeys(strdomainame);
+    	//Thread.sleep(5000);
     	Thread.sleep(2000);
+    	domainName.sendKeys(strDomainName);
+    	//Thread.sleep(2000);
     	tldDropdownButton.click();
-    	Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strtld+"']")).click();
+    	//Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strTld+"']")).click();
         regPeriodDropdownButton.click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strperiod+"')]")).click();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strPeriod+"')]")).click();
+        //Thread.sleep(2000);
         majorProductButton.click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+strmajorproduct+"']")).click();      
+        //Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+strMajorProduct+"']")).click();      
         productPeriodButton.click();
-        Thread.sleep(5000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strproductperiod+"')]")).click();
+       // Thread.sleep(5000);
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strProductPeriod+"')]")).click();
         paymentMethodButton.click();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strpaymentMethod+"')]")).click();
+        //Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strPaymentMethod+"')]")).click();
         Thread.sleep(2000);
         this.clickCreateDomainButton();
     }
     
-    public void setDomainandMajorProductwithoutRegistration(String strdomainame, String strtld, String strmajorproduct, String strproductperiod, String strpaymentMethod) throws InterruptedException {
+    public void setDomainandMajorProductwithoutRegistration(String strDomainName, String strTld, String strMajorProduct, String strProductPeriod, String strPaymentMethod) throws InterruptedException {
     	
     	Thread.sleep(5000);
-    	domainName.sendKeys(strdomainame);
+    	domainName.sendKeys(strDomainName);
     	Thread.sleep(2000);
     	tldDropdownButton.click();
     	Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strtld+"']")).click();
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+"."+strTld+"']")).click();
         Thread.sleep(2000);
         majorProductButton.click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+strmajorproduct+"']")).click();      
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[text()='"+strMajorProduct+"']")).click();      
         productPeriodButton.click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strproductperiod+" AU$')]")).click();
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strProductPeriod+" AU$')]")).click();
         paymentMethodButton.click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strpaymentMethod+"')]")).click();
+        driver.findElement(By.xpath("//div[@class='x-combo-list-inner']/div[contains(text(),'"+strPaymentMethod+"')]")).click();
         Thread.sleep(2000);
         this.clickCreateDomainButton();
     }
