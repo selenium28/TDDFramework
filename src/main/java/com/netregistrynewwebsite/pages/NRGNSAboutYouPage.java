@@ -65,7 +65,7 @@ public class NRGNSAboutYouPage extends TestBase {
 	WebElement password;
 
 	@FindBy(how = How.XPATH, using = "//form[@name='loginForm']/div[1]/div[4]/button")
-	WebElement loginButton;
+	public WebElement loginButton;
 
 	// Initializing Page Objects
 	public NRGNSAboutYouPage() {

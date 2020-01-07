@@ -1,5 +1,6 @@
 package com.base;
 
+import java.lang.reflect.Method;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -12,7 +13,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import com.util.TestUtil;
 import com.util.WebEventListener;
 
@@ -23,11 +29,48 @@ public class TestBase{
 	public static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
 	static Environment testEnvironment;
+	public static ExtentReports report;
+	public static ExtentTest test;
+	@BeforeSuite
+	public void suiteSetup() {
+		report=new ExtentReports(System.getProperty("user.dir")+"/test-output/ExtentReport.html",true);
+	}
+	
+	  @BeforeMethod
+	  public void registerMethod(Method method) {
+	  test=report.startTest(method.getName()); 
+	  test.log(LogStatus.INFO, "Test"+method.getName()+" has been started"); 
+	  }
+	 
+
+	
+	@AfterMethod
+	public void afterMethod(ITestResult result) {
+		
+		  if(result.getStatus()==ITestResult.SUCCESS) { test.log(LogStatus.PASS, "Test"
+		  +result.getName()+" PASSED"); }else
+		  if(result.getStatus()==ITestResult.FAILURE) { test.log(LogStatus.FAIL, "Test"
+		  +result.getName()+" FAILED"); test.log(LogStatus.FAIL, "Test failure"
+		  +result.getThrowable()); }else if(result.getStatus()==ITestResult.SKIP) {
+		  test.log(LogStatus.SKIP, "Test" +result.getName()+" SKIPPED"); }
+		 
+		
+		test.log(LogStatus.INFO, "Test" +result.getName()+ " completed");
+		
+		report.endTest(test);
+	}
+	
+	@AfterSuite
+	public void tearDown() {
+		report.flush();
+		report.close();
+	}
 	
 	public TestBase(){
 
 	}
 	
+
 	public static void initialization(String environment, String entrypoint){
 		
 		ConfigFactory.setProperty("env", environment);

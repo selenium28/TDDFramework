@@ -14,10 +14,10 @@ public class NRGNSDomainPrivacyPage extends TestBase{
 	
 	//Objects    
     @FindBy(how=How.XPATH, using = "//div[@class='privacy-domains']/div")
-    WebElement checkBox;
+    public WebElement checkBox;
     
     @FindBy(how=How.CSS, using = "button.btn.green")
-    WebElement continueButton;
+   public  WebElement continueButton;
     
     
     //Initializing Page Objects
