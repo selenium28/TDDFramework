@@ -28,9 +28,9 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.util.TestUtil;
 
-public class TestNewCustomerScenarioUsingNewCard extends TestBase{
-	
-	//Netregistry New Shopping Cart Pages
+public class TestNewCustomerScenarioUsingNewCard extends TestBase {
+
+	// Netregistry New Shopping Cart Pages
 	NRGNSAboutYouPage nrgnsaboutyoupage;
 	NRGNSAddServicesToYourDomainPage nrgnsaddservicestoyourdomainpage;
 	NRGNSDomainPrivacyPage nrgnsdomainprivacypage;
@@ -41,85 +41,81 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase{
 	NRGNSSearchAddDomainsPage nrgnssearchadddomainspage;
 	NRGNSSearchFieldPage nrgnssearchfieldpage;
 	NRGNSOrderCompletePage nrgnsordercompletepage;
-	
+
 	TestUtil testUtil;
 	static Environment testenvironment;
 	public static ExtentTest logger;
-	
-	
-	
+
 	public TestNewCustomerScenarioUsingNewCard() {
 		super();
 	}
-			
+
 	/*
 	 * @BeforeMethod public void registerMethod(Method method) {
 	 * test=report.startTest(method.getName()); test.log(LogStatus.INFO, "Test"
 	 * +method.getName()+" has been started"); }
 	 */
-	
-	@Parameters({"environment", "iteration"})
+
+	@Parameters({ "environment", "iteration" })
 	@Test
-	public void testNewCustomerScenarioUsingNewCard (String environment, Integer iteration) throws Exception{
-	
-		
+	public void testNewCustomerScenarioUsingNewCard(String environment, Integer iteration) throws Exception {
+
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
 		String strTld = null;
-		
+
 		String strCardOwnerName = null;
 		String strCardNumber = null;
-	    String strCardExpiryMonth = null;
-	    String strCardExpiryYear = null;
-	    String strCardSecurityCode = null;
-				
-	    Integer intMaxCount = iteration;
+		String strCardExpiryMonth = null;
+		String strCardExpiryYear = null;
+		String strCardSecurityCode = null;
+
+		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
-		for(intMinCount = 1; intMinCount<=intMaxCount; intMinCount++) {
-	    
-		    //Generate test domain name
+		for (intMinCount = 1; intMinCount <= intMaxCount; intMinCount++) {
+
+			// Generate test domain name
 			DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 			Date d = new Date();
 			strDomainName = "TestNewCartRegression" + df.format(d);
-			
+
 			if (environment.equals("dev2")) {
 				strTld = ".com";
 				strCardOwnerName = "Test New Customer New Card";
 				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
+				strCardExpiryMonth = "10";
+				strCardExpiryYear = "2026";
+				strCardSecurityCode = "123";
 			}
 			if (environment.equals("uat1")) {
 				strTld = ".com";
 				strCardOwnerName = "Test New Customer New Card";
 				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
-			}
-			else if (environment.equals("ote")) {
+				strCardExpiryMonth = "10";
+				strCardExpiryYear = "2026";
+				strCardSecurityCode = "123";
+			} else if (environment.equals("ote")) {
 				strTld = ".com";
 				strCardOwnerName = "Test New Customer New Card";
 				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
-			}
-			else if (environment.equals("prod")) {
+				strCardExpiryMonth = "10";
+				strCardExpiryYear = "2026";
+				strCardSecurityCode = "123";
+			} else if (environment.equals("prod")) {
 				strTld = ".com";
 				strCardOwnerName = "Test New Customer New Card";
 				strCardNumber = "5555555555554444";
-			    strCardExpiryMonth = "10";
-			    strCardExpiryYear = "2026";
-			    strCardSecurityCode = "123";
+				strCardExpiryMonth = "10";
+				strCardExpiryYear = "2026";
+				strCardSecurityCode = "123";
 			}
-			
+
 			System.out.println("Start Test: testNewCustomerScenarioUsingNewCard");
-					
-			//Test Step 1: Navigate to domain search page of new shopping cart and place an order for a test domain
+
+			// Test Step 1: Navigate to domain search page of new shopping cart and place an
+			// order for a test domain
 			test.log(LogStatus.INFO, "Navigate to domain search page -STARTED");
-			
+
 			initialization(environment, "newcart_domainsearchurl_netregistry");
 			nrgnssearchadddomainspage = new NRGNSSearchAddDomainsPage();
 			nrgnssearchadddomainspage.setDomainNameAndTld(strDomainName, strTld);
@@ -127,61 +123,58 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase{
 			nrgnssearchadddomainspage.addDomainName(strDomainName, strTld);
 			nrgnsdomainprivacypage = nrgnssearchadddomainspage.clickContinueButton();
 			testStepResultVerification(NRGNSDomainPrivacyPage.checkBox);
-			
-			test.log(LogStatus.INFO, "Navigate to domain search page -COMPLETED");  
-			
-			//Test Step 2: Process the order without any product included
+
+			test.log(LogStatus.INFO, "Navigate to domain search page -COMPLETED");
+
+			// Test Step 2: Process the order without any product included
 			test.log(LogStatus.INFO, "Process the order page -STARTED");
-			
+
 			nrgnsdomainprivacypage.clickCheckBox();
 			nrgnsemailandoffice365packagespage = nrgnsdomainprivacypage.clickContinueButton();
 			nrgnsaddservicestoyourdomainpage = nrgnsemailandoffice365packagespage.clickContinueButton();
 			testStepResultVerification(NRGNSAddServicesToYourDomainPage.continueButton);
-			
-			test.log(LogStatus.INFO, "Process the order page -COMPLETED"); 
-			
+
+			test.log(LogStatus.INFO, "Process the order page -COMPLETED");
+
 			nrgnsaboutyoupage = nrgnsaddservicestoyourdomainpage.clickContinueButton();
-			
-			
-			
-			
-			//Test Step 3: Input default customer details 
+
+			// Test Step 3: Input default customer details
 			test.log(LogStatus.INFO, "Input default customer details -STARTED");
-			
+
 			nrgnsaboutyoupage.setDefaultBusinessCustomerDetails();
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickContinueButton();
-			nrgnsregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
+			nrgnsregistrantcontactpage
+					.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			testStepResultVerification(NRGNSRegistrantContactPage.selectButton);
-			
-			test.log(LogStatus.INFO, "Input default customer details -COMPLETED");  
-					
+
+			test.log(LogStatus.INFO, "Input default customer details -COMPLETED");
+
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
-			
-			
-			
-			//Test Step 4: Input customer credit card details and complete the order
+
+			// Test Step 4: Input customer credit card details and complete the order
 			test.log(LogStatus.INFO, "Input customer credit card details  -STARTED");
-			
-			nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+
+			nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth,
+					strCardExpiryYear, strCardSecurityCode);
 			nrgnsreviewandpaymentpage.tickTermsAndConditions();
 			testStepResultVerification(NRGNSReviewAndPaymentPage.completeOrderButton);
-			
-			test.log(LogStatus.INFO, "Input customer credit card details -COMPLETED");  
-			
+
+			test.log(LogStatus.INFO, "Input customer credit card details -COMPLETED");
+
 			nrgnsreviewandpaymentpage.clickCompleteOrder();
-			
-			//Test Step 5: Verify if recaptcha challenge is dislayed 
+
+			// Test Step 5: Verify if recaptcha challenge is dislayed
 			test.log(LogStatus.INFO, "Verify if recaptcha challenge is dislayed  -STARTED");
-								
-			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+
+			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(),
+					"Recaptcha Challenge is not displayed");
 			testStepResultVerification(NRGNSReviewAndPaymentPage.recaptchaChallenge);
-			
-			test.log(LogStatus.INFO, "Verify if recaptcha challenge is dislayed -COMPLETED");  
-			
+
+			test.log(LogStatus.INFO, "Verify if recaptcha challenge is dislayed -COMPLETED");
+
 			driver.close();
 			System.out.println("End Test: testNewCustomerScenarioUsingNewCard");
-		}	
+		}
 	}
-	
-	
+
 }

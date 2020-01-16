@@ -45,13 +45,11 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase {
 	TestUtil testUtil;
 	static Environment testenvironment;
 	public static ExtentTest logger;
-	
-		
 
 	public TestExistingCustomerScenarioUsingNewCard() {
 		super();
 	}
-	
+
 	/*
 	 * @BeforeMethod public void registerMethod(Method method) {
 	 * test=report.startTest(method.getName()); test.log(LogStatus.INFO, "Test"
@@ -137,7 +135,7 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase {
 			// Test Step 1: Navigate to domain search page of new shopping cart and place an
 			// order for a test domain
 			test.log(LogStatus.INFO, "Navigate to domain search page -STARTED");
-			
+
 			initialization(environment, "newcart_domainsearchurl_netregistry");
 			nrgnssearchadddomainspage = new NRGNSSearchAddDomainsPage();
 			nrgnssearchadddomainspage.setDomainNameAndTld(strDomainName, strTld);
@@ -145,61 +143,60 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase {
 			nrgnssearchadddomainspage.addDomainName(strDomainName, strTld);
 			nrgnsdomainprivacypage = nrgnssearchadddomainspage.clickContinueButton();
 			testStepResultVerification(NRGNSDomainPrivacyPage.checkBox);
-			
+
 			test.log(LogStatus.INFO, "Navigate to domain search page -COMPLETED");
 
 			// Test Step 2: Process the order without any product included
 			test.log(LogStatus.INFO, "Process the order page -STARTED");
-			
+
 			nrgnsdomainprivacypage.clickCheckBox();
 			nrgnsemailandoffice365packagespage = nrgnsdomainprivacypage.clickContinueButton();
 			nrgnsaddservicestoyourdomainpage = nrgnsemailandoffice365packagespage.clickContinueButton();
 			nrgnsaboutyoupage = nrgnsaddservicestoyourdomainpage.clickContinueButton();
 			testStepResultVerification(NRGNSAboutYouPage.loginButton);
-			
-			test.log(LogStatus.INFO, "Process the order page -COMPLETED");  
+
+			test.log(LogStatus.INFO, "Process the order page -COMPLETED");
 
 			// Test Step 3: Login as returning or existing netregistry customer
 			test.log(LogStatus.INFO, " Login as returning customer -STARTED");
-			
+
 			nrgnsaboutyoupage.setReturningCustomerContacts(strCustomerAccountReference, strCustomerPassword);
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickLoginButton();
 
 			// Special Case: Wait for 10s and refresh page before continuing (Issue is
 			// raised to Developers to investigae why page is not loading quickly)
-			//nrgnsregistrantcontactpage.refreshRegistrantPage();
+			// nrgnsregistrantcontactpage.refreshRegistrantPage();
 
-			nrgnsregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
+			nrgnsregistrantcontactpage
+					.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
 			testStepResultVerification(NRGNSReviewAndPaymentPage.agreeTermsAndConditions);
-			
-			test.log(LogStatus.INFO, "Login as returning customer -COMPLETED"); 
 
+			test.log(LogStatus.INFO, "Login as returning customer -COMPLETED");
 
 			// Test Step 4: Input new credit card details and complete the order
 			test.log(LogStatus.INFO, "Input new credit card details -STARTED");
-			
+
 			nrgnsreviewandpaymentpage.selectNewCreditCardOption();
 			nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth,
 					strCardExpiryYear, strCardSecurityCode);
 			nrgnsreviewandpaymentpage.tickTermsAndConditions();
 			testStepResultVerification(NRGNSReviewAndPaymentPage.completeOrderButton);
 			nrgnsreviewandpaymentpage.clickCompleteOrder();
-			
-			test.log(LogStatus.INFO, "Input new credit card details -COMPLETED"); 
 
+			test.log(LogStatus.INFO, "Input new credit card details -COMPLETED");
 
 			// Test Step 5: Verify if recaptcha challenge is dislayed
 			test.log(LogStatus.INFO, "Verify if recaptcha challenge -STARTED");
-			
+
 			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(),
-			"Recaptcha Challenge is not displayed");
+					"Recaptcha Challenge is not displayed");
 			testStepResultVerification(NRGNSReviewAndPaymentPage.recaptchaChallenge);
-			
-			test.log(LogStatus.INFO, "Verify if recaptcha challenge -COMPLETED"); 
+
+			test.log(LogStatus.INFO, "Verify if recaptcha challenge -COMPLETED");
 
 			driver.close();
-		
+
 			System.out.println("End Test: testExistingCustomerScenarioUsingNewCard");
 		}
 	}
