@@ -47,30 +47,6 @@ public class NRGNSDomainPrivacyPage extends TestBase{
     	
     }
     
-    //today
-  
-    public Boolean ischeckboxdisplayed(WebElement webElement) throws InterruptedException {
-		boolean flag=false;
-		try {
-			// b=driver.findElement(By.xpath("//div[@class='privacy-domains']/div")).isDisplayed();
-			if(webElement.equals(checkBox)) {
-			flag=NRGNSDomainPrivacyPage.checkBox.isDisplayed();
-			}else {
-				flag=NRGNSDomainPrivacyPage.continueButton.isDisplayed();
-			}
-			if(flag) {
-				test.log(LogStatus.PASS, "PASSED");
-			}else {
-				test.log(LogStatus.FAIL, "FAILED");
-			}
-		}catch(Exception e) {
-			test.log(LogStatus.FAIL, "FAILED");
-		}
-		
-		return flag;
-    	
-    	
-    	}
     }
 
 
