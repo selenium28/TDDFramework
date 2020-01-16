@@ -169,7 +169,7 @@ public class TestBase {
 			/* for any url */
 		}
 	}
-	// adde this method today
+	
 
 	public static void testStepResultVerification(WebElement webElement) throws InterruptedException {
 
