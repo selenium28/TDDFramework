@@ -10,11 +10,13 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;//added on 3/1/2020
 
 
 public class NRGNSSearchAddDomainsPage extends TestBase{
 
-	
+	public static ExtentTest logger;
 	//Objects
     @FindBy(how=How.CSS, using = "button.search-btn.green")
     WebElement searchButton;
@@ -44,8 +46,7 @@ public class NRGNSSearchAddDomainsPage extends TestBase{
 
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", searchButton);
     	searchButton.click();
-    	
-    	Thread.sleep(10000);
+       	Thread.sleep(10000);
     	
     }
     
@@ -103,7 +104,7 @@ public class NRGNSSearchAddDomainsPage extends TestBase{
     	newDomainSearchBox.clear();
     	newDomainSearchBox.sendKeys(domainname);
     	this.clickDomainExtension(tldname);
-
+    	
 		
     }
     
@@ -129,7 +130,7 @@ public class NRGNSSearchAddDomainsPage extends TestBase{
     		
     		if (resultDomainName.equalsIgnoreCase(domainName+tldName)){
     			domain.click();
-    			return;
+       			return;
     		}
     	} 
     	throw new Exception("Domain name is not available");

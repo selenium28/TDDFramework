@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Console Release Regression UAT1 Test Suite]">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [New Cart Release Regression Test Suite]" parallel="tests">
   <parameter name="environment" value="uat1"/>
-  <parameter name="obsidian" value="disabled"/>
-  <listeners>
-    <listener class-name="com.reports.extentreportslistener.ExtentReportListener"/>
-  </listeners>
-  <test thread-count="5" name="Console Release Regression UAT1 Test Cases(failed)">
+  <parameter name="iteration" value="1"/>
+  <test thread-count="1" name="New Cart Release Regression Test Cases(failed)" parallel="tests">
     <classes>
-      <class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
+      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard">
         <methods>
-          <include name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" invocation-numbers="0"/>
+          <include name="suiteSetup"/>
+          <include name="afterMethod"/>
+          <include name="registerMethod"/>
+          <include name="tearDown"/>
+          <include name="testExistingCustomerScenarioUsingExistingCard" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.consoleregression.testcases.CustomerPortalJourneyTest -->
-      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
-        <methods>
-          <include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
+      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard -->
     </classes>
-  </test> <!-- Console Release Regression UAT1 Test Cases(failed) -->
-</suite> <!-- Failed suite [Console Release Regression UAT1 Test Suite] -->
+  </test> <!-- New Cart Release Regression Test Cases(failed) -->
+</suite> <!-- Failed suite [New Cart Release Regression Test Suite] -->

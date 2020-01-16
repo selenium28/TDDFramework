@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="2" total="9" passed="5">
+<testng-results skipped="0" failed="0" ignored="4" total="7" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Console Release Regression UAT1 Test Suite" duration-ms="1575426" started-at="2019-10-28T00:57:30Z" finished-at="2019-10-28T01:23:45Z">
+  <suite name="New Cart Release Regression Test Suite" duration-ms="238522" started-at="2020-01-16T03:40:39Z" finished-at="2020-01-16T03:44:38Z">
     <groups>
     </groups>
-    <test name="Console Release Regression UAT1 Test Cases" duration-ms="1575426" started-at="2019-10-28T00:57:30Z" finished-at="2019-10-28T01:23:45Z">
-      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
-        <test-method status="PASS" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@42dafa95]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="370270" started-at="2019-10-28T00:57:30Z" finished-at="2019-10-28T01:03:40Z">
+    <test name="New Cart Release Regression Test Cases" duration-ms="238522" started-at="2020-01-16T03:40:39Z" finished-at="2020-01-16T03:44:38Z">
+      <class name="com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5]" name="suiteSetup" is-config="true" duration-ms="134" started-at="2020-01-16T03:40:39Z" finished-at="2020-01-16T03:40:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetup -->
+        <test-method status="PASS" signature="registerMethod(java.lang.reflect.Method)[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5]" name="registerMethod" is-config="true" duration-ms="5" started-at="2020-01-16T03:40:39Z" finished-at="2020-01-16T03:40:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard.testNewCustomerScenarioUsingNewCard(java.lang.String,java.lang.Integer) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerMethod -->
+        <test-method status="PASS" signature="testNewCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5]" name="testNewCustomerScenarioUsingNewCard" duration-ms="67727" started-at="2020-01-16T03:40:39Z" finished-at="2020-01-16T03:41:47Z">
           <params>
             <param index="0">
               <value>
@@ -16,14 +31,42 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[disabled]]>
+                <![CDATA[1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
-        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@42dafa95]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="627434" started-at="2019-10-28T01:03:40Z" finished-at="2019-10-28T01:14:08Z">
+        </test-method> <!-- testNewCustomerScenarioUsingNewCard -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5]" name="afterMethod" is-config="true" duration-ms="3" started-at="2020-01-16T03:41:47Z" finished-at="2020-01-16T03:41:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testNewCustomerScenarioUsingNewCard status=SUCCESS method=TestNewCustomerScenarioUsingNewCard.testNewCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5]" name="tearDown" is-config="true" duration-ms="373" started-at="2020-01-16T03:44:38Z" finished-at="2020-01-16T03:44:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard -->
+      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard">
+        <test-method status="PASS" signature="registerMethod(java.lang.reflect.Method)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard@31a5c39e]" name="registerMethod" is-config="true" duration-ms="0" started-at="2020-01-16T03:41:47Z" finished-at="2020-01-16T03:41:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard.testExistingCustomerScenarioUsingNewCard(java.lang.String,java.lang.Integer) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerMethod -->
+        <test-method status="PASS" signature="testExistingCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard@31a5c39e]" name="testExistingCustomerScenarioUsingNewCard" duration-ms="87507" started-at="2020-01-16T03:41:47Z" finished-at="2020-01-16T03:43:15Z">
           <params>
             <param index="0">
               <value>
@@ -32,14 +75,27 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[disabled]]>
+                <![CDATA[1]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
-        <test-method status="FAIL" signature="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@42dafa95]" name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" duration-ms="59046" started-at="2019-10-28T01:14:08Z" finished-at="2019-10-28T01:15:07Z">
+        </test-method> <!-- testExistingCustomerScenarioUsingNewCard -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard@31a5c39e]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-01-16T03:43:15Z" finished-at="2020-01-16T03:43:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testExistingCustomerScenarioUsingNewCard status=SUCCESS method=TestExistingCustomerScenarioUsingNewCard.testExistingCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard@31a5c39e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard -->
+      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard">
+        <test-method status="PASS" signature="testExistingCustomerScenarioUsingExistingCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard@3f49dace]" name="testExistingCustomerScenarioUsingExistingCard" duration-ms="83251" started-at="2020-01-16T03:43:15Z" finished-at="2020-01-16T03:44:38Z">
           <params>
             <param index="0">
               <value>
@@ -48,212 +104,36 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[disabled]]>
+                <![CDATA[1]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='x-combo-list-inner']/div[text()='Basic Cloud Hosting']"}
-  (Session info: chrome=77.0.3865.120)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
-System info: host: 'WC063317', ip: '192.168.216.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:49386}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 420b743192ef1ba8da4d950fbdf8a5cc
-*** Element info: {Using=xpath, value=//div[@class='x-combo-list-inner']/div[text()='Basic Cloud Hosting']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='x-combo-list-inner']/div[text()='Basic Cloud Hosting']"}
-  (Session info: chrome=77.0.3865.120)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
-System info: host: 'WC063317', ip: '192.168.216.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:49386}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 420b743192ef1ba8da4d950fbdf8a5cc
-*** Element info: {Using=xpath, value=//div[@class='x-combo-list-inner']/div[text()='Basic Cloud Hosting']}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-at com.consolesalesdb.pages.CSCreateDomainWindowPage.setDomainandMajorProductDetails(CSCreateDomainWindowPage.java:92)
-at com.consoleregression.testcases.SalesDBJourneyTest.verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB(SalesDBJourneyTest.java:281)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB -->
-        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@42dafa95]" name="verify_NzDomain_Order_InSalesDB" duration-ms="362055" started-at="2019-10-28T01:15:07Z" finished-at="2019-10-28T01:21:09Z">
+        </test-method> <!-- testExistingCustomerScenarioUsingExistingCard -->
+        <test-method status="PASS" signature="registerMethod(java.lang.reflect.Method)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard@3f49dace]" name="registerMethod" is-config="true" duration-ms="0" started-at="2020-01-16T03:43:15Z" finished-at="2020-01-16T03:43:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[disabled]]>
+                <![CDATA[public void com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard.testExistingCustomerScenarioUsingExistingCard(java.lang.String,java.lang.Integer) throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
-      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
-      <class name="com.consoleregression.testcases.CustomerPortalJourneyTest">
-        <test-method status="PASS" signature="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@6500df86]" name="verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal" duration-ms="64041" started-at="2019-10-28T01:21:09Z" finished-at="2019-10-28T01:22:13Z">
+        </test-method> <!-- registerMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard@3f49dace]" name="afterMethod" is-config="true" duration-ms="1" started-at="2020-01-16T03:44:38Z" finished-at="2020-01-16T03:44:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[uat1]]>
+                <![CDATA[[TestResult name=testExistingCustomerScenarioUsingExistingCard status=SUCCESS method=TestExistingCustomerScenarioUsingExistingCard.testExistingCustomerScenarioUsingExistingCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard@3f49dace] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDomainRegistrationOrderForNewBTCustomerUsingNewCardInCustomerPortal -->
-        <test-method status="FAIL" signature="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@6500df86]" name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal" duration-ms="27791" started-at="2019-10-28T01:22:13Z" finished-at="2019-10-28T01:22:41Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#continueCart"}
-  (Session info: chrome=77.0.3865.120)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
-System info: host: 'WC063317', ip: '192.168.216.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:49734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c69bcf543ad7959d9efe9292a4002e8c
-*** Element info: {Using=id, value=continueCart}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#continueCart"}
-  (Session info: chrome=77.0.3865.120)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.10.0', revision: '176b4a9', time: '2018-03-02T19:03:16.397Z'
-System info: host: 'WC063317', ip: '192.168.216.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.120, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:49734}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c69bcf543ad7959d9efe9292a4002e8c
-*** Element info: {Using=id, value=continueCart}
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-at org.openqa.selenium.By$ById.findElement(By.java:218)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
-at com.sun.proxy.$Proxy10.findElement(Unknown Source)
-at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-at com.netregistryoldwebsite.pages.NRGDomainSearchPage.clickContinueToCheckout(NRGDomainSearchPage.java:24)
-at com.consoleregression.testcases.CustomerPortalJourneyTest.verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal(CustomerPortalJourneyTest.java:176)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningBTCustomerUsingExistingCardInCustomerPortal -->
-        <test-method status="PASS" signature="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal(java.lang.String)[pri:0, instance:com.consoleregression.testcases.CustomerPortalJourneyTest@6500df86]" name="verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal" duration-ms="64739" started-at="2019-10-28T01:22:41Z" finished-at="2019-10-28T01:23:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDomainandMultipleProductOrderForReturningBTCustomerUsingNewCardInCustomerPortal -->
-      </class> <!-- com.consoleregression.testcases.CustomerPortalJourneyTest -->
-    </test> <!-- Console Release Regression UAT1 Test Cases -->
-  </suite> <!-- Console Release Regression UAT1 Test Suite -->
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard -->
+    </test> <!-- New Cart Release Regression Test Cases -->
+  </suite> <!-- New Cart Release Regression Test Suite -->
 </testng-results>

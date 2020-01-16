@@ -7,6 +7,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
+import com.relevantcodes.extentreports.LogStatus;
 
 
 public class NRGNSDomainPrivacyPage extends TestBase{
@@ -14,10 +15,11 @@ public class NRGNSDomainPrivacyPage extends TestBase{
 	
 	//Objects    
     @FindBy(how=How.XPATH, using = "//div[@class='privacy-domains']/div")
-    WebElement checkBox;
+	
+    public static WebElement checkBox;
     
     @FindBy(how=How.CSS, using = "button.btn.green")
-    WebElement continueButton;
+   public  static WebElement continueButton;
     
     
     //Initializing Page Objects
@@ -34,6 +36,7 @@ public class NRGNSDomainPrivacyPage extends TestBase{
     	
     }
     
+    
     public NRGNSEmailAndOffice365PackagesPage clickContinueButton() throws InterruptedException {
 
     	Thread.sleep(3000);
@@ -43,5 +46,7 @@ public class NRGNSDomainPrivacyPage extends TestBase{
     	return new NRGNSEmailAndOffice365PackagesPage();
     	
     }
+    
+    }
 
-}
+
