@@ -14,7 +14,10 @@ public class NRGNSRegistrantContactPage extends TestBase{
 	
 	//Objects        
 	@FindBy(how=How.XPATH, using = "//div[@class='contact-list cell-content']/div[1]/div[2]/div")
-    WebElement selectButton;
+    public static WebElement selectButton;
+	
+	@FindBy(how=How.XPATH, using = "//div[@class='table registrant-details']/div[1]/input")
+    public static WebElement selectdomaininformation;
    
     
     //Initializing Page Objects

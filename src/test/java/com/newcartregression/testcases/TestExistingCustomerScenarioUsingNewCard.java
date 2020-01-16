@@ -46,8 +46,7 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase {
 	static Environment testenvironment;
 	public static ExtentTest logger;
 	
-	//SoftAssert softassert;
-	
+		
 
 	public TestExistingCustomerScenarioUsingNewCard() {
 		super();
@@ -62,7 +61,6 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase {
 	@Parameters({ "environment", "iteration" })
 	@Test
 	public void testExistingCustomerScenarioUsingNewCard(String environment, Integer iteration) throws Exception {
-		//softassert=new SoftAssert();
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
 		String strTld = null;
@@ -146,20 +144,9 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase {
 			nrgnssearchadddomainspage.clickSearchButton();
 			nrgnssearchadddomainspage.addDomainName(strDomainName, strTld);
 			nrgnsdomainprivacypage = nrgnssearchadddomainspage.clickContinueButton();
+			testStepResultVerification(NRGNSDomainPrivacyPage.checkBox);
 			
-		/*	boolean b=false;
-			try {
-				 b=driver.findElement(By.xpath("//div[@class='privacy-domains']/div")).isDisplayed();
-				if(b) {
-					test.log(LogStatus.PASS, "Navigate to domain search page -PASSED");
-				}else {
-					test.log(LogStatus.FAIL, "Navigate to domain search page -FAILED");
-				}
-			}catch(Exception e) {
-				test.log(LogStatus.FAIL, "Navigate to domain search page -FAILED");
-			}
-			softassert.assertTrue(b, "Navigate to domain search page  -FAILED");
-			test.log(LogStatus.INFO, "Navigate to domain search page -COMPLETED");*/
+			test.log(LogStatus.INFO, "Navigate to domain search page -COMPLETED");
 
 			// Test Step 2: Process the order without any product included
 			test.log(LogStatus.INFO, "Process the order page -STARTED");
@@ -168,20 +155,9 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase {
 			nrgnsemailandoffice365packagespage = nrgnsdomainprivacypage.clickContinueButton();
 			nrgnsaddservicestoyourdomainpage = nrgnsemailandoffice365packagespage.clickContinueButton();
 			nrgnsaboutyoupage = nrgnsaddservicestoyourdomainpage.clickContinueButton();
+			testStepResultVerification(NRGNSAboutYouPage.loginButton);
 			
-		/*	boolean c=false;
-			try {
-				 c=driver.findElement(By.xpath("//form[@name='loginForm']/div[1]/div[4]/button")).isDisplayed();
-				if(c) {
-					test.log(LogStatus.PASS, "Process the order page -PASSED");
-				}else {
-					test.log(LogStatus.FAIL, "Process the order page -FAILED");
-				}
-			}catch(Exception e) {
-				test.log(LogStatus.FAIL, "Process the order page -FAILED");
-			}
-			softassert.assertTrue(b, "Process the order page  -FAILED");
-			test.log(LogStatus.INFO, "Process the order page -COMPLETED");  */
+			test.log(LogStatus.INFO, "Process the order page -COMPLETED");  
 
 			// Test Step 3: Login as returning or existing netregistry customer
 			test.log(LogStatus.INFO, " Login as returning customer -STARTED");
@@ -193,23 +169,11 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase {
 			// raised to Developers to investigae why page is not loading quickly)
 			//nrgnsregistrantcontactpage.refreshRegistrantPage();
 
-			nrgnsregistrantcontactpage
-					.clickDomainInformation("Have a business idea and reserving a domain for the future");
+			nrgnsregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
+			testStepResultVerification(NRGNSReviewAndPaymentPage.agreeTermsAndConditions);
 			
-		/*	boolean f=false;
-			try {
-				 f=driver.findElement(By.cssSelector("[for='new-billing']")).isDisplayed();
-				if(f) {
-					test.log(LogStatus.PASS, "Login as returning customer -PASSED");
-				}else {
-					test.log(LogStatus.FAIL, "Login as returning customer -FAILED");
-				}
-			}catch(Exception e) {
-				test.log(LogStatus.FAIL, "Login as returning customer -FAILED");
-			}
-			softassert.assertTrue(f, "Login as returning customer  -FAILED");
-			test.log(LogStatus.INFO, "Login as returning customer -COMPLETED");  */
+			test.log(LogStatus.INFO, "Login as returning customer -COMPLETED"); 
 
 
 			// Test Step 4: Input new credit card details and complete the order
@@ -219,45 +183,23 @@ public class TestExistingCustomerScenarioUsingNewCard extends TestBase {
 			nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth,
 					strCardExpiryYear, strCardSecurityCode);
 			nrgnsreviewandpaymentpage.tickTermsAndConditions();
+			testStepResultVerification(NRGNSReviewAndPaymentPage.completeOrderButton);
 			nrgnsreviewandpaymentpage.clickCompleteOrder();
 			
-		/*	boolean g=false;
-			try {
-				 g=driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")).isDisplayed();
-				if(g) {
-					test.log(LogStatus.PASS, "Input new credit card details -PASSED");
-				}else {
-					test.log(LogStatus.FAIL, "Input new credit card details -FAILED");
-				}
-			}catch(Exception e) {
-				test.log(LogStatus.FAIL, "Input new credit card details -FAILED");
-			}
-			softassert.assertTrue(g, "Input new credit card details  -FAILED");
-			test.log(LogStatus.INFO, "Input new credit card details -COMPLETED");  */
+			test.log(LogStatus.INFO, "Input new credit card details -COMPLETED"); 
 
 
 			// Test Step 5: Verify if recaptcha challenge is dislayed
 			test.log(LogStatus.INFO, "Verify if recaptcha challenge -STARTED");
 			
-		/*	boolean h=false;
-			try {
-				 h=driver.findElement(By.xpath("//iframe[@title='recaptcha challenge']")).isDisplayed();
-				if(h) {
-					test.log(LogStatus.PASS, "Input new credit card details -PASSED");
-				}else {
-					test.log(LogStatus.FAIL, "Input new credit card details -FAILED");
-				}
-			}catch(Exception e) {
-				test.log(LogStatus.FAIL, "Input new credit card details -FAILED");
-			}
-			softassert.assertTrue(h, "Input new credit card details  -FAILED");
-			test.log(LogStatus.INFO, "Input new credit card details -COMPLETED"); */
-			
 			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(),
-					"Recaptcha Challenge is not displayed");
+			"Recaptcha Challenge is not displayed");
+			testStepResultVerification(NRGNSReviewAndPaymentPage.recaptchaChallenge);
+			
+			test.log(LogStatus.INFO, "Verify if recaptcha challenge -COMPLETED"); 
 
 			driver.close();
-		//	softassert.assertAll();
+		
 			System.out.println("End Test: testExistingCustomerScenarioUsingNewCard");
 		}
 	}

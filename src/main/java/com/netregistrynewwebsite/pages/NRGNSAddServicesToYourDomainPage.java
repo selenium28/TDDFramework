@@ -13,7 +13,7 @@ public class NRGNSAddServicesToYourDomainPage extends TestBase{
 	
 	//Objects        
     @FindBy(how=How.XPATH, using = "//button[@class='btn green']")
-    WebElement continueButton;
+    public static WebElement continueButton;
 	
     
 	//Initializing Page Objects

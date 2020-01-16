@@ -15,13 +15,13 @@
 		<classes>
 		
 			<!-- Netregistry Virtualization				 -->
-			<class name="com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard"> 
+		    <class name="com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard"> 
 	        </class>
 	         <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard"> 
-	        </class> 
-	        <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard"> 
 	        </class>
- 
+	         <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard"> 
+	        </class>
+  
 		</classes>
 	</test>  
 	

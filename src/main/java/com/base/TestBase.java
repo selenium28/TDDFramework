@@ -1,11 +1,19 @@
 package com.base;
 
+import java.io.File;
 import java.lang.reflect.Method;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.aeonbits.owner.ConfigFactory;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -16,6 +24,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
+import com.netregistrynewwebsite.pages.NRGNSDomainPrivacyPage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -48,10 +57,14 @@ public class TestBase{
 	public void afterMethod(ITestResult result) {
 		
 		  if(result.getStatus()==ITestResult.SUCCESS) { test.log(LogStatus.PASS, "Test"
-		  +result.getName()+" PASSED"); }else
+		  +result.getName()+" PASSED"); }
+		  else
 		  if(result.getStatus()==ITestResult.FAILURE) { test.log(LogStatus.FAIL, "Test"
 		  +result.getName()+" FAILED"); test.log(LogStatus.FAIL, "Test failure"
-		  +result.getThrowable()); }else if(result.getStatus()==ITestResult.SKIP) {
+		  +result.getThrowable());
+		 
+		 }
+		  else if(result.getStatus()==ITestResult.SKIP) {
 		  test.log(LogStatus.SKIP, "Test" +result.getName()+" SKIPPED"); }
 		 
 		
@@ -60,11 +73,24 @@ public class TestBase{
 		report.endTest(test);
 	}
 	
+	//added below method for screen shot
+	public static String getScreenhot(WebDriver driver, String screenshotName) throws Exception {
+		 String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		 TakesScreenshot ts = (TakesScreenshot) driver;
+		 File source = ts.getScreenshotAs(OutputType.FILE);
+		                //after execution, you could see a folder "FailedTestsScreenshots" under src folder
+		 String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenshotName+dateName+".png";
+		 File finalDestination = new File(destination);
+		 FileUtils.copyFile(source, finalDestination);
+		 return destination;
+		 }
+	
 	@AfterSuite
 	public void tearDown() {
 		report.flush();
 		report.close();
 	}
+	
 	
 	public TestBase(){
 
@@ -169,4 +195,21 @@ public class TestBase{
 			/* for any url */
 		}
 	}
+	//adde this method today
+	
+	
+	  public static void testStepResultVerification(WebElement webElement) throws InterruptedException {
+		
+			try {
+				if(webElement.isDisplayed()) {
+					test.log(LogStatus.PASS, "STEP PASSED");
+				}else {
+					test.log(LogStatus.FAIL, "STEP FAILED");
+				}
+			}catch(Exception e) {
+				test.log(LogStatus.FAIL, "STEP FAILED");
+			}
+	    	
+	    	}
+	 
 }

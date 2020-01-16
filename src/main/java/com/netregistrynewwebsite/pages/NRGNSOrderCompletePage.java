@@ -32,6 +32,9 @@ public class NRGNSOrderCompletePage extends TestBase {
 
 	@FindBy(how = How.XPATH, using = "//div[@class='pg-body ng-scope']/div[2]/div[6]//div/span")
 	WebElement netregistryText;
+	
+	@FindBy(how = How.XPATH, using = "//div[@class='summary-table']/h3/b")
+	public static WebElement accountReferenceElement;
 
 	// Initializing Page Objects
 	public NRGNSOrderCompletePage() {
@@ -62,7 +65,7 @@ public class NRGNSOrderCompletePage extends TestBase {
 
 		Thread.sleep(5000);
 
-		WebElement accountReferenceElement = driver.findElement(By.xpath("//div[@class='summary-table']/h3/b"));
+		//WebElement accountReferenceElement = driver.findElement(By.xpath("//div[@class='summary-table']/h3/b"));
 		if (accountReferenceElement.isDisplayed()) {
 			accountReference = accountReferenceElement.getText();
 		}

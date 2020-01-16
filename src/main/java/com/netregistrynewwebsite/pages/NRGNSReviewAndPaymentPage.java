@@ -22,13 +22,13 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
     //New Path After Captcha Deployment
     //@FindBy(how=How.XPATH, using = "//div[@class='cart-box']/div[1]/div[2]/div/label")
     @FindBy(how=How.CSS, using = "[for='termsAgree']")
-    WebElement agreeTermsAndConditions;
+    public static WebElement agreeTermsAndConditions;
     
     @FindBy(how=How.XPATH, using = "//div[@class='continue-btn-container']/button[@class='btn green']")
-    WebElement completeOrderButton;
+   public static WebElement completeOrderButton;
     
     @FindBy(how=How.XPATH, using = "//body/input")
-    WebElement recaptchaChallenge;
+    public static WebElement recaptchaChallenge;
 	
     
     //Initializing Page Objects
