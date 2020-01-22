@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="7" passed="3">
+<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="New Cart Release Regression Test Suite" duration-ms="238522" started-at="2020-01-16T03:40:39Z" finished-at="2020-01-16T03:44:38Z">
+  <suite name="Console Release Regression UAT1 Test Suite" duration-ms="218096" started-at="2020-01-22T04:55:38Z" finished-at="2020-01-22T04:59:16Z">
     <groups>
     </groups>
-    <test name="New Cart Release Regression Test Cases" duration-ms="238522" started-at="2020-01-16T03:40:39Z" finished-at="2020-01-16T03:44:38Z">
-      <class name="com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard">
-        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5]" name="suiteSetup" is-config="true" duration-ms="134" started-at="2020-01-16T03:40:39Z" finished-at="2020-01-16T03:40:39Z">
+    <test name="Console Release Regression UAT1 Test Cases" duration-ms="218096" started-at="2020-01-22T04:55:38Z" finished-at="2020-01-22T04:59:16Z">
+      <class name="com.consoleregression.testcases.SalesDBJourneyTest">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="suiteSetup" is-config="true" duration-ms="123" started-at="2020-01-22T04:55:38Z" finished-at="2020-01-22T04:55:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetup -->
-        <test-method status="PASS" signature="registerMethod(java.lang.reflect.Method)[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5]" name="registerMethod" is-config="true" duration-ms="5" started-at="2020-01-16T03:40:39Z" finished-at="2020-01-16T03:40:39Z">
+        <test-method status="PASS" signature="registerMethod(java.lang.reflect.Method)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="registerMethod" is-config="true" duration-ms="4" started-at="2020-01-22T04:55:38Z" finished-at="2020-01-22T04:55:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard.testNewCustomerScenarioUsingNewCard(java.lang.String,java.lang.Integer) throws java.lang.Exception]]>
+                <![CDATA[public void com.consoleregression.testcases.SalesDBJourneyTest.verify_ComAuDomain_Order_InSalesDB(java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerMethod -->
-        <test-method status="PASS" signature="testNewCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5]" name="testNewCustomerScenarioUsingNewCard" duration-ms="67727" started-at="2020-01-16T03:40:39Z" finished-at="2020-01-16T03:41:47Z">
+        <test-method status="PASS" signature="verify_ComAuDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="verify_ComAuDomain_Order_InSalesDB" duration-ms="57980" started-at="2020-01-22T04:55:38Z" finished-at="2020-01-22T04:56:36Z">
           <params>
             <param index="0">
               <value>
@@ -31,109 +31,105 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[disabled]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNewCustomerScenarioUsingNewCard -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5]" name="afterMethod" is-config="true" duration-ms="3" started-at="2020-01-16T03:41:47Z" finished-at="2020-01-16T03:41:47Z">
+        </test-method> <!-- verify_ComAuDomain_Order_InSalesDB -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="afterMethod" is-config="true" duration-ms="3" started-at="2020-01-22T04:56:36Z" finished-at="2020-01-22T04:56:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testNewCustomerScenarioUsingNewCard status=SUCCESS method=TestNewCustomerScenarioUsingNewCard.testNewCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5] output={null}]]]>
+                <![CDATA[[TestResult name=verify_ComAuDomain_Order_InSalesDB status=SUCCESS method=SalesDBJourneyTest.verify_ComAuDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard@5f2108b5]" name="tearDown" is-config="true" duration-ms="373" started-at="2020-01-16T03:44:38Z" finished-at="2020-01-16T03:44:38Z">
+        <test-method status="PASS" signature="registerMethod(java.lang.reflect.Method)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="registerMethod" is-config="true" duration-ms="1" started-at="2020-01-22T04:56:36Z" finished-at="2020-01-22T04:56:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.consoleregression.testcases.SalesDBJourneyTest.verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerMethod -->
+        <test-method status="PASS" signature="verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="verify_NetDomain_and_DIFM_Order_InSalesDB" duration-ms="102167" started-at="2020-01-22T04:56:36Z" finished-at="2020-01-22T04:58:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[disabled]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_NetDomain_and_DIFM_Order_InSalesDB -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="afterMethod" is-config="true" duration-ms="1" started-at="2020-01-22T04:58:18Z" finished-at="2020-01-22T04:58:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_NetDomain_and_DIFM_Order_InSalesDB status=SUCCESS method=SalesDBJourneyTest.verify_NetDomain_and_DIFM_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="registerMethod(java.lang.reflect.Method)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="registerMethod" is-config="true" duration-ms="1" started-at="2020-01-22T04:58:18Z" finished-at="2020-01-22T04:58:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.consoleregression.testcases.SalesDBJourneyTest.verify_NzDomain_Order_InSalesDB(java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerMethod -->
+        <test-method status="PASS" signature="verify_NzDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="verify_NzDomain_Order_InSalesDB" duration-ms="57911" started-at="2020-01-22T04:58:18Z" finished-at="2020-01-22T04:59:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uat1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[disabled]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_NzDomain_Order_InSalesDB -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-01-22T04:59:16Z" finished-at="2020-01-22T04:59:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_NzDomain_Order_InSalesDB status=SUCCESS method=SalesDBJourneyTest.verify_NzDomain_Order_InSalesDB(java.lang.String, java.lang.String)[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.consoleregression.testcases.SalesDBJourneyTest@1e397ed7]" name="tearDown" is-config="true" duration-ms="277" started-at="2020-01-22T04:59:16Z" finished-at="2020-01-22T04:59:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.newcartregression.testcases.TestNewCustomerScenarioUsingNewCard -->
-      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard">
-        <test-method status="PASS" signature="registerMethod(java.lang.reflect.Method)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard@31a5c39e]" name="registerMethod" is-config="true" duration-ms="0" started-at="2020-01-16T03:41:47Z" finished-at="2020-01-16T03:41:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard.testExistingCustomerScenarioUsingNewCard(java.lang.String,java.lang.Integer) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerMethod -->
-        <test-method status="PASS" signature="testExistingCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard@31a5c39e]" name="testExistingCustomerScenarioUsingNewCard" duration-ms="87507" started-at="2020-01-16T03:41:47Z" finished-at="2020-01-16T03:43:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExistingCustomerScenarioUsingNewCard -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard@31a5c39e]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-01-16T03:43:15Z" finished-at="2020-01-16T03:43:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testExistingCustomerScenarioUsingNewCard status=SUCCESS method=TestExistingCustomerScenarioUsingNewCard.testExistingCustomerScenarioUsingNewCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard@31a5c39e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingNewCard -->
-      <class name="com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard">
-        <test-method status="PASS" signature="testExistingCustomerScenarioUsingExistingCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard@3f49dace]" name="testExistingCustomerScenarioUsingExistingCard" duration-ms="83251" started-at="2020-01-16T03:43:15Z" finished-at="2020-01-16T03:44:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[uat1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testExistingCustomerScenarioUsingExistingCard -->
-        <test-method status="PASS" signature="registerMethod(java.lang.reflect.Method)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard@3f49dace]" name="registerMethod" is-config="true" duration-ms="0" started-at="2020-01-16T03:43:15Z" finished-at="2020-01-16T03:43:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard.testExistingCustomerScenarioUsingExistingCard(java.lang.String,java.lang.Integer) throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard@3f49dace]" name="afterMethod" is-config="true" duration-ms="1" started-at="2020-01-16T03:44:38Z" finished-at="2020-01-16T03:44:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testExistingCustomerScenarioUsingExistingCard status=SUCCESS method=TestExistingCustomerScenarioUsingExistingCard.testExistingCustomerScenarioUsingExistingCard(java.lang.String, java.lang.Integer)[pri:0, instance:com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard@3f49dace] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.newcartregression.testcases.TestExistingCustomerScenarioUsingExistingCard -->
-    </test> <!-- New Cart Release Regression Test Cases -->
-  </suite> <!-- New Cart Release Regression Test Suite -->
+      </class> <!-- com.consoleregression.testcases.SalesDBJourneyTest -->
+    </test> <!-- Console Release Regression UAT1 Test Cases -->
+  </suite> <!-- Console Release Regression UAT1 Test Suite -->
 </testng-results>
