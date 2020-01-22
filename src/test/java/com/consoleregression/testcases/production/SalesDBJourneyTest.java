@@ -78,7 +78,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14926055";
+		String strWorkflowId = "15587317";
 		String strPhoneNumber = null;
 		String strRegistrantType = null;
 		String strRegistrantNumber = null;
@@ -149,7 +149,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14926050";
+		String strWorkflowId = "15587312";
 		String strWorkflowEntity = null;
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
@@ -162,7 +162,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strGreenCode = "MEL-6007";
 			strMajorProduct = "Domain Manager";
 			strProductPeriod = "1 x Y AU$15.95[ AU$0 setup]";
-			strPaymentMethod = "Visa: 471527******1053 08/2020";
+			strPaymentMethod = "Visa: 471527******8185 04/2023";
 			strRegistrantDetails = "Netregistry";
 		}
 	
@@ -219,7 +219,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14926060";
+		String strWorkflowId = "15587327";
 		String strOffice365Product = null;		
 		String strWorkflowEntity = null;
 		
@@ -233,7 +233,7 @@ public class SalesDBJourneyTest extends TestBase{
 			strTld = "com";
 			strRegistrationPeriod = "1";
 			strGreenCode = "MEL-6007";
-			strPaymentMethod = "Visa: 471527******1053 08/2020";
+			strPaymentMethod = "Visa: 471527******8185 04/2023";
 			strRegistrantDetails = "Netregistry";			
 			strOffice365Product = "O365-EESEN-QTY";
 		}
@@ -294,7 +294,7 @@ public class SalesDBJourneyTest extends TestBase{
 		String strGreenCode = null;
 		String strPaymentMethod = null;
 		String strRegistrantDetails = null;
-		String strWorkflowId = "14926065";
+		String strWorkflowId = "15587331";
 		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();

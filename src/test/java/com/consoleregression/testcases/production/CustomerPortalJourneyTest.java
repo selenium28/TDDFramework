@@ -23,10 +23,10 @@ import com.netregistryoldwebsite.pages.NRGWebHostingPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.util.TestUtil;
 
-public class CustomerPortalJourneyTest extends TestBase{
+public class CustomerPortalJourneyTest extends TestBase {
 
 	NRGOnlineOrderPage nrgonlineorderpage;
-	NRGDomainSearchPage nrgdomainsearchpage;	
+	NRGDomainSearchPage nrgdomainsearchpage;
 	NRGAddDomainPrivacyPage nrgadddomainprivacypage;
 	NRGHostingAndExtrasPage nrghostingandextraspage;
 	NRGWebHostingPage nrgwebhostingpage;
@@ -36,7 +36,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 	NRGRegistrantContactPage nrgregistrantcontactpage;
 	NRGBillingPage nrgbillingpage;
 	NRGOrderCompletePage nrgordercompletepage;
-	
+
 	TestUtil testUtil;
 	String clienttoken;
 	public static ExtentTest logger;
@@ -45,101 +45,110 @@ public class CustomerPortalJourneyTest extends TestBase{
 		super();
 	}
 
-	@Parameters({"environment"})
+	@Parameters({ "environment" })
 	@Test
-	public void verifyDomainRegistrationOrderForNewCustomerInCustomerPortal(String environment) throws InterruptedException{
-	
+	public void verifyDomainRegistrationOrderForNewCustomerInCustomerPortal(String environment)
+			throws InterruptedException {
+
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
 		String strTld = null;
 
-		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
 		strDomainName = "TestConsoleRegression" + df.format(d);
-		
-		
+
 		if (environment.equals("prod")) {
 			strTld = ".com";
 		}
-			
-		//Test Step 1: Login to customer portal and place an order for domain registration 
+
+		// Test Step 1: Login to customer portal and place an order for domain
+		// registration
 		System.out.println("Start Test: verifyDomainRegistrationOrderForNewCustomerInCustomerPortal");
 		initialization(environment, "customerportalurl_netregistry");
 		nrgonlineorderpage = new NRGOnlineOrderPage();
 		nrgonlineorderpage.clearDefaultTldSelections();
 		nrgonlineorderpage.setDomainNameAndTld(strDomainName, strTld);
 		nrgdomainsearchpage = nrgonlineorderpage.clickNewDomainSearchButton();
-		nrgadddomainprivacypage = nrgdomainsearchpage.clickContinueToCheckout();
-		nrghostingandextraspage= nrgadddomainprivacypage.clickNoThanks();
-		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
+		nrghostingandextraspage = nrgdomainsearchpage.clickContinueToCheckoutWithoutDomainPrivacy();
+		/*
+		 * nrgadddomainprivacypage = nrgdomainsearchpage.clickContinueToCheckout();
+		 * nrghostingandextraspage= nrgadddomainprivacypage.clickNoThanks();
+		 */
+		nrgaccountcontactpage = nrghostingandextraspage.clickContinueButton();
 		nrgaccountcontactpage.setCustomerDefaultInformation();
-		nrgregistrantcontactpage = nrgaccountcontactpage.clickContinueButton();	
+		nrgregistrantcontactpage = nrgaccountcontactpage.clickContinueButton();
+		nrgregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
-		
-		//Test Step 2: Input credit card details and submit the order 
-		//nrgbillingpage.setBTFormCreditCardDetails("MELBOURNE IT LTD F SHARED SERVICES", "4715276659101053", "08", "2020", "390");
-		//nrgbillingpage.tickTermsAndConditions();
-        //nrgordercompletepage = nrgbillingpage.clickContinueButton();
-        
-        //Test Step 3: Verify if recaptcha challenge is dislayed 
-      	//Assert.assertTrue(nrgbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
-        
-        // driver.close();
+
+		// Test Step 2: Input credit card details and submit the order
+		nrgbillingpage.setBTFormCreditCardDetails("Rachel Cottrell", "4715276660218185", "04", "2023", "094");
+		nrgbillingpage.tickTermsAndConditions();
+		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+
+		// Test Step 3: Verify if recaptcha challenge is dislayed
+		Assert.assertTrue(nrgbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+
+		driver.close();
 	}
-	
-	@Parameters({"environment"})
+
+	@Parameters({ "environment" })
 	@Test
-	public void verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal(String environment) throws InterruptedException{
-	
+	public void verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal(String environment)
+			throws InterruptedException {
+
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
 		String strAccountReference = null;
 		String strTld = null;
 		String strWorkflowId = null;
 
-		
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
 		strDomainName = "TestConsoleRegression" + df.format(d);
-		
-		
+
 		if (environment.equals("prod")) {
 			strTld = ".com";
 		}
-			
-		//Test Step 1: Login to customer portal and place an order for domain registration and domain privacy
+
+		// Test Step 1: Login to customer portal and place an order for domain
+		// registration and domain privacy
 		System.out.println("Start Test: verifyDomainandMultipleProductOrderForReturningCustomerInCustomerPortal");
 		initialization(environment, "customerportalurl_netregistry");
 		nrgonlineorderpage = new NRGOnlineOrderPage();
 		nrgonlineorderpage.clearDefaultTldSelections();
 		nrgonlineorderpage.setDomainNameAndTld(strDomainName, strTld);
 		nrgdomainsearchpage = nrgonlineorderpage.clickNewDomainSearchButton();
-		nrgadddomainprivacypage = nrgdomainsearchpage.clickContinueToCheckout();
-		nrghostingandextraspage= nrgadddomainprivacypage.clickAddToCart();
-		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
+		nrghostingandextraspage = nrgdomainsearchpage.clickContinueToCheckoutWithoutDomainPrivacy();
+		/*
+		 * nrgadddomainprivacypage = nrgdomainsearchpage.clickContinueToCheckout();
+		 * nrghostingandextraspage= nrgadddomainprivacypage.clickAddToCart();
+		 */
+		nrgaccountcontactpage = nrghostingandextraspage.clickContinueButton();
 		nrgaccountcontactpage.setReturningCustomerContacts("MEL-6007", "comein22");
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
+		nrgregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
-		
-		//Test Step 2: Select existing credit card details and submit the order 
-		
-		/* 
-		We will assign new credit card details once Finance Team provide a new one. 
-		nrgbillingpage.selectExistingCreditCardOption("Number: 4715********1053 Expiry: 08/2020"); 
-		*/	
-		
+
+		// Test Step 2: Select existing credit card details and submit the order
+
+		/*
+		 * We will assign new credit card details once Finance Team provide a new one.
+		 * nrgbillingpage.
+		 * selectExistingCreditCardOption("Number: 4715********8185 Expiry: 04/2023");
+		 */
+
 		nrgbillingpage.selectExistingCreditCardOption("Prepaid credit:");
-		//nrgbillingpage.tickTermsAndConditions();
-		//nrgordercompletepage = nrgbillingpage.clickContinueButton();
-		
-		//Test Step 3: Verify if order is completed
-		//Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
-		//strWorkflowId = nrgordercompletepage.getSingleReferenceID();
-		//strAccountReference = nrgordercompletepage.getAccountReferenceID();
-		//System.out.println("Account Reference:" + strAccountReference);	
-		//System.out.println("Reference ID[0]:" + strWorkflowId);	
-		//driver.close();
+		nrgbillingpage.tickTermsAndConditions();
+		nrgordercompletepage = nrgbillingpage.clickContinueButton();
+
+		// Test Step 3: Verify if order is completed
+		Assert.assertTrue(nrgordercompletepage.isOrderComplete(), "Order is not completed");
+		strWorkflowId = nrgordercompletepage.getSingleReferenceID();
+		strAccountReference = nrgordercompletepage.getAccountReferenceID();
+		System.out.println("Account Reference:" + strAccountReference);
+		System.out.println("Reference ID[0]:" + strWorkflowId);
+		driver.close();
 	}
-	
+
 }
