@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="RRP-Proxy Regression Test Suite" thread-count="1" parallel="tests" preserve-order="true">
+<suite name="RRP-Proxy Regression Test Suite" thread-count="1"
+	parallel="tests" preserve-order="true">
 
-	<parameter name="environment" 	      value="dev8" />
-	<parameter name="namespace" 	      value="com" />
-	<parameter name="accountReference" 	  value="TPP-60053" />
-	
-	<!-- <listeners>
-		<listener class-name="com.reports.extentreportslistener.ExtentReportListener" />
-	</listeners> -->
-    
-    <test name="RRP-Proxy Regression Test Cases" >
-		
-	</test>  
-	
+	<parameter name="environment" value="dev8" />
+	<parameter name="namespace" value="com" />
+	<parameter name="accountReference" value="TPP-60053" />
+
+	<!-- <listeners> <listener class-name="com.reports.extentreportslistener.ExtentReportListener" 
+		/> </listeners> -->
+
+	<test name="RRP-Proxy Regression Test Cases">
+		<classes>
+			<class name="com.rrpproxyregression.testcases.ResellerPortal">
+				<methods>
+					<include name="verifyDomainNameAvailableForRegistrationNotPremium" />
+					<include name="verifyDomainNameNotAvailableForRegistration" />
+					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 </suite>

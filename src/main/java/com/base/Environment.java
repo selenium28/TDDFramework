@@ -28,6 +28,9 @@ public interface Environment extends Config{
 	String customerportalurl_netregistry();
 	String customerportalurl_melbourneit();
 	
+	//Reseller Portal
+	String resellerportalurl_tpp();
+	
 	//Payment Gateway
 	String braintreeurl();
 	
