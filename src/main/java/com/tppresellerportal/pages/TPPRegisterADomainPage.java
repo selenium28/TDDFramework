@@ -19,7 +19,7 @@ public class TPPRegisterADomainPage extends TestBase {
 	WebElement newDomainSearchBox;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"availability\"]/div/span")
-	WebElement searchResultsTextWithoutDomainPrivacy; 
+	WebElement searchResultsTextWithoutDomainPrivacy;
 
 	@FindBy(how = How.XPATH, using = "//*[@id=\"availability\"]/div[2]/span")
 	WebElement searchResultsTextWithDomainPrivacy;
@@ -49,9 +49,9 @@ public class TPPRegisterADomainPage extends TestBase {
 
 	public String getSearchResultsMessage() throws InterruptedException {
 
+		System.out.println("Return search result message");
 		if (driver.findElements(By.className("buyWhoisPrivacy")).size() != 0) {
 
-			System.out.println("Return edit details success message");
 			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(searchResultsTextWithDomainPrivacy));
 			return searchResultsTextWithDomainPrivacy.getText();
 		}
