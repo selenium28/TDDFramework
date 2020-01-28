@@ -159,6 +159,11 @@ public class TestBase {
 		else if (entrypoint.equals("braintree")) {
 			driver.get(testEnvironment.braintreeurl());
 		}
+		
+		// TPP reseller portal
+		else if (entrypoint.equals("tppresellerloginurl")) {
+			driver.get(testEnvironment.tppresellerloginurl());
+		}
 
 		// Others
 		else if (entrypoint.equals("cart")) {
