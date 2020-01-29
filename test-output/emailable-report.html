@@ -8,13 +8,53 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Console Release Regression UAT1 Test Suite</th></tr>
-<tr><td><a href="#t0">Console Release Regression UAT1 Test Cases</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">218,096</td><td></td><td></td></tr>
+<tr><th colspan="7">RRP-Proxy Regression Test Suite</th></tr>
+<tr><td><a href="#t0">RRP-Proxy Regression Test Cases</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">87,705</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Console Release Regression UAT1 Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Console Release Regression UAT1 Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.consoleregression.testcases.SalesDBJourneyTest</td><td><a href="#m0">verify_ComAuDomain_Order_InSalesDB</a></td><td rowspan="1">1579668938145</td><td rowspan="1">57980</td></tr><tr class="passedeven"><td><a href="#m1">verify_NetDomain_and_DIFM_Order_InSalesDB</a></td><td rowspan="1">1579668996133</td><td rowspan="1">102167</td></tr><tr class="passedeven"><td><a href="#m2">verify_NzDomain_Order_InSalesDB</a></td><td rowspan="1">1579669098305</td><td rowspan="1">57911</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">RRP-Proxy Regression Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">RRP-Proxy Regression Test Cases &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain</td><td><a href="#m0">verifyDomainNameAvailableForRegistrationAndPremiumn</a></td><td rowspan="1">1580278748688</td><td rowspan="1">44939</td></tr><tr><th colspan="4">RRP-Proxy Regression Test Cases &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain</td><td><a href="#m1">verifyDomainNameAvailableForRegistrationNotPremium</a></td><td rowspan="1">1580278705950</td><td rowspan="1">17335</td></tr><tr class="passedeven"><td><a href="#m2">verifyDomainNameNotAvailableForRegistration</a></td><td rowspan="1">1580278723298</td><td rowspan="1">25385</td></tr></tbody>
 </table>
-<h2>Console Release Regression UAT1 Test Cases</h2><h3 id="m0">com.consoleregression.testcases.SalesDBJourneyTest#verify_ComAuDomain_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.consoleregression.testcases.SalesDBJourneyTest#verify_NetDomain_and_DIFM_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.consoleregression.testcases.SalesDBJourneyTest#verify_NzDomain_Order_InSalesDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>uat1</td><td>disabled</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>RRP-Proxy Regression Test Cases</h2><h3 id="m0">com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain#verifyDomainNameAvailableForRegistrationAndPremiumn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>dev8</td><td>com</td><td>TPP-60053</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[@id=&quot;availability&quot;]/div/span&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:82)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.tppresellerportal.pages.TPPRegisterADomainPage.getSearchResultsMessage(TPPRegisterADomainPage.java:59)
+	at com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain.verifyDomainNameAvailableForRegistrationAndPremiumn(ResellerPortal_CheckDomainAvailability_SingleDomain.java:131)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;availability&quot;]/div/span&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.10.0&apos;, revision: &apos;176b4a9&apos;, time: &apos;2018-03-02T19:03:16.397Z&apos;
+System info: host: &apos;WC063317&apos;, ip: &apos;192.168.216.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\ROY~1.ALC\AppData\...}, goog:chromeOptions: {debuggerAddress: localhost:64490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b215575992fcd2e9dca0e41f48d13cfa
+*** Element info: {Using=xpath, value=//*[@id=&quot;availability&quot;]/div/span}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.lambda$new$1(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy14.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:186)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 22 more
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain#verifyDomainNameAvailableForRegistrationNotPremium</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>dev8</td><td>com</td><td>TPP-60053</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain#verifyDomainNameNotAvailableForRegistration</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>dev8</td><td>com</td><td>TPP-60053</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
