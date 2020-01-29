@@ -16,7 +16,7 @@ import com.tppresellerportal.pages.TPPRegisterADomainPage;
 import com.tppresellerportal.pages.TPPTabPage;
 import com.util.TestUtil;
 
-public class ResellerPortal extends TestBase {
+public class ResellerPortal_CheckDomainAvailability_SingleDomain extends TestBase {
 
 	TPPLoginPage tppLoginPage;
 	TPPTabPage tppTabPage;
@@ -26,7 +26,7 @@ public class ResellerPortal extends TestBase {
 	String clienttoken;
 	public static ExtentTest logger;
 
-	public ResellerPortal() {
+	public ResellerPortal_CheckDomainAvailability_SingleDomain() {
 		super();
 	}
 
