@@ -154,6 +154,11 @@ public class TestBase {
 		} else if (entrypoint.equals("customerportalurl_melbourneit")) {
 			driver.get(testEnvironment.customerportalurl_melbourneit());
 		}
+		
+		// Reseller Portal
+		else if (entrypoint.equals("resellerportalurl_tpp")) {
+			driver.get(testEnvironment.resellerportalurl_tpp());
+		}
 
 		// Payment Gateway
 		else if (entrypoint.equals("braintree")) {
