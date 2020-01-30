@@ -34,9 +34,6 @@ public interface Environment extends Config{
 	//Payment Gateway
 	String braintreeurl();
 	
-	//TPP Reseller Portal
-	String tppresellerloginurl();
-	
 	//Others
 	String carturl();
 	String cartloginurl();

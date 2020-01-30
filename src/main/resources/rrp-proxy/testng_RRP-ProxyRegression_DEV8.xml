@@ -19,7 +19,13 @@
 					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />
 				</methods>
 			</class>
-			<class name="com.rrpproxyregression.testcases.ResellerPortal"/>
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_TransferDomainCheck">
+				<methods>
+					<include name="verifyIfDomainAvailableForTransfer" />
+					<include name="verifyIfDomainIsRegisteredAndAvailableForTransfer" />
+					<include name="verifyIfDomainAuthCodeIsWrong" />
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>
