@@ -1,9 +1,12 @@
 package com.tppresellerportal.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.TestBase;
 
@@ -35,7 +38,8 @@ public class TPPTabPage extends TestBase {
 	// Methods
 	public void clickDomainsTab() throws InterruptedException {
 
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
+		new WebDriverWait(driver, 10).until(ExpectedConditions.urlContains("execute/home"));
 		System.out.println("clicking domains tab");
 		if (domainsTab.isDisplayed() || domainsTab.isEnabled()) {
 			domainsTab.click();
@@ -47,7 +51,8 @@ public class TPPTabPage extends TestBase {
 	
 	public TPPRegisterADomainPage clickRegisterLink() throws InterruptedException {
 
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
+		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(".first .navContent"))));
 		System.out.println("clicking register link");
 		if (registerLink.isDisplayed() || registerLink.isEnabled()) {
 			registerLink.click();

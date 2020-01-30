@@ -28,11 +28,9 @@ public class TPPLoginPage extends TestBase {
 
 	
     //Methods
-    public void setLoginDetails(String straccountreference, String strpassword) throws InterruptedException {
+    public void setLoginDetails(String straccountreference, String strpassword)  {
     		
-    	    Thread.sleep(2000);
     		accountReference.sendKeys(straccountreference);
-	    	Thread.sleep(2000);
 	    	password.sendKeys(strpassword);
 			
     }
