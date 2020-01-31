@@ -52,6 +52,7 @@ public class TPPTransferDomainsPage extends TestBase {
 	
 	public void clickOnAddLink() throws InterruptedException{
 		clickOnAdd.click();
+		Thread.sleep(3000);
 	}
 	
 	public String getDomainStatus() throws InterruptedException{
