@@ -26,7 +26,8 @@ public class TPPTabPage extends TestBase {
 	@FindBy(how = How.XPATH, using = "//*[@id=\"menu\"]/ul/li[1]/ul/li[2]/a")
 	WebElement bulkRegisterLink;
 	
-
+	@FindBy (how = How.XPATH, using = "//*[@id='menu']/ul/li[1]/ul/li[3]")
+	WebElement domainTransferLink;
 
 	// Initializing Page Objects
 	public TPPTabPage() {
@@ -77,6 +78,17 @@ public class TPPTabPage extends TestBase {
 	
 	}
 
-
+	public TPPTransferDomainsPage clickDomainTransferLink() throws InterruptedException {
+		
+		Thread.sleep(3000);
+		System.out.println("Clicking domain transfer link");
+		if (domainTransferLink.isDisplayed() || domainTransferLink.isEnabled()) {
+			domainTransferLink.click();
+		} else {
+			System.out.println("element not found");
+		}
+		
+		return new TPPTransferDomainsPage();
+	}
 
 }
