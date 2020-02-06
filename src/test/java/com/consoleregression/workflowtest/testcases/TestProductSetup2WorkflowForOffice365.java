@@ -79,9 +79,9 @@ public class TestProductSetup2WorkflowForOffice365 extends TestBase {
 		String hostname = null;
 
 		
-		DateFormat df = new SimpleDateFormat("ddMMYYYY-hhmmss");	
+		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");	
 		Date d = new Date();
-		strDomainName = "TestConsoleRegression" + df.format(d);
+		strDomainName = "Office365" + df.format(d);
 		
 		
 		if ((environment.equals("uat1"))&&(virtualization.equals("netregistry"))) {
@@ -111,6 +111,7 @@ public class TestProductSetup2WorkflowForOffice365 extends TestBase {
 		nrgaccountcontactpage= nrghostingandextraspage.clickContinueButton();
 		nrgaccountcontactpage.setReturningCustomerContacts(strAccountReference, strPassword);
 		nrgregistrantcontactpage = nrgaccountcontactpage.clickLoginButton();
+		nrgregistrantcontactpage.clickDomainInformation("Have a business idea and reserving a domain for the future");
 		nrgbillingpage = nrgregistrantcontactpage.clickContinueButton();
 		
 		
