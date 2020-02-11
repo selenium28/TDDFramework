@@ -26,11 +26,11 @@
 					<include name="verifyIfDomainAuthCodeIsWrong" />
 				</methods>
 			</class> -->
-			<class name="com.rrpproxyregression.testcases.ResellerPortal_checkDomainAvailability_BulkDomain">
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_BulkDomain">
 				<methods>
-					<include name="VerifyDomainNameAvailableForRegistration" />
-					<include name="VerifyDomainNameNotAvailableForRegistration" />
-					<include name="VerifyDomainNameAvailableForRegistrationAndPremium" />
+					<include name="verifyDomainNameAvailableForRegistration" />
+					<include name="verifyDomainNameNotAvailableForRegistration" />
+					<include name="verifyDomainNameAvailableForRegistrationAndPremium" />
 				</methods>
 			</class>
 		</classes>

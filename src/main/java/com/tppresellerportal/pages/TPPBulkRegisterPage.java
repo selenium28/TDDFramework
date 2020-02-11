@@ -84,7 +84,7 @@ public class TPPBulkRegisterPage extends TestBase {
 		WebElement availability = driver.findElement(By.xpath(actualXpath));
 		WebElement domainName = driver.findElement(By.xpath(domainXpath));
 
-		if (availability.getText().contains("Notavailable")) {
+		if (availability.getText().contains("Not supported")) {
 			System.out.println(domainName.getText() + " - domain is Not available");
 		}
 		return availability.getText();
