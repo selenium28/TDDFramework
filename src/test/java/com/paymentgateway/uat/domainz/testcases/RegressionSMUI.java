@@ -155,31 +155,32 @@ public class RegressionSMUI extends TestBase {
 	}
 	
 
-//	@Parameters({ "environment", "paymentgateway" })
-//	@Test
-//	public void testDeleteCreditCardInSMUI(String environment, String paymentgateway) throws InterruptedException {
-//		initialization(environment, "cartlogin");
-//		dmzloginpage = new DMZLoginPage();
-//		dmzaccountpage = new DMZAccountPage();
-//		dmzbillingpage = new DMZBillingPage();
-//		dmzcreditcardsdetailspage = new DMZCreditCardsDetailsPage();
-//
-//		if ((environment.equals("uat1")) && (paymentgateway.equals("quest"))) {
-//			straccountreference = "DOM-1218";
-//			dmzloginpage.setLoginDetails(straccountreference, strpassword);
-//		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
-//			straccountreference = "DOM-1311";
-//			dmzloginpage.setLoginDetails(straccountreference, strpassword);
-//		}
-//
-//		dmzheaderpage = dmzloginpage.clickLoginButton();
-//		dmzaccountpage = dmzheaderpage.clickAccountTab();
-//		dmzcreditcardsdetailspage = dmzaccountpage.clickEditCreditCardsOnFile();
-//		dmzcreditcardsdetailspage.deleteCreditCard();
-//
-//		driver.close();
-//
-//	}
+	@Parameters({ "environment", "paymentgateway" })
+	@Test
+	public void testDeleteCreditCardInSMUI(String environment, String paymentgateway) throws InterruptedException {
+	initialization(environment, "customerportalurl_domainz");
+		dmzloginpage = new DMZLoginPage();
+		dmzaccountpage = new DMZAccountPage();
+    	dmzbillingpage = new DMZBillingPage();
+		dmzcreditcardsdetailspage = new DMZCreditCardsDetailsPage();
+
+		if ((environment.equals("uat1")) && (paymentgateway.equals("quest"))) {
+			strAccountReference = "DOM-1218";
+			strPassword = "comein22";
+			dmzloginpage.setLoginDetails(strAccountReference, strPassword);
+		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
+			strAccountReference = "DOM-1311";
+			strPassword = "comein22";
+			dmzloginpage.setLoginDetails(strAccountReference, strPassword);
+		}
+		dmzheaderpage = dmzloginpage.clickLoginButton();
+		dmzaccountpage = dmzheaderpage.clickAccountTab();
+		dmzcreditcardsdetailspage = dmzaccountpage.clickEditCreditCardsOnFile();
+		dmzcreditcardsdetailspage.deleteCreditCard();
+
+		driver.close();
+
+	}
 	
 	@Parameters({ "environment", "paymentgateway" })
 	@Test
