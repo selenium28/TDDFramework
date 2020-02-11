@@ -17,7 +17,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tppresellerportal.pages.TPPBulkRegisterPage;
 import com.util.TestUtil;
 
-public class ResellerPortal_checkDomainAvailability_BulkDomain extends TestBase{
+public class ResellerPortal_CheckDomainAvailability_BulkDomain extends TestBase{
 	
 	TPPBulkRegisterPage tppbulkregisterpage;
 	TPPLoginPage tpploginpage;
@@ -26,15 +26,15 @@ public class ResellerPortal_checkDomainAvailability_BulkDomain extends TestBase{
 	TestUtil testUtil;
 	public static ExtentTest logger;
 
-	public ResellerPortal_checkDomainAvailability_BulkDomain() {
+	public ResellerPortal_CheckDomainAvailability_BulkDomain() {
 		super();
 	}
-		@Parameters({ "environment", "namespace", "accountReference" })
+		@Parameters({ "environment", "accountReference" })
 		@Test
-		public void VerifyDomainNameAvailableForRegistration(String environment, String namespace, String accountReference)
+		public void verifyDomainNameAvailableForRegistration(String environment, String accountReference)
 				throws Exception {
 			// Initialization (Test Data Creation and Assignment)
-			String[] strDomainName = new String[] { "test11.com.au\n", "test2.sydney\n", "test4.com.au\n" };
+			String[] strDomainName = new String[] { "test1.com.au\n", "test2.com.au\n", "test4.com.au\n" };
 
 			String strAccountreference = "TPP-60053";
 			String strPassword = "comein22";
@@ -72,12 +72,12 @@ public class ResellerPortal_checkDomainAvailability_BulkDomain extends TestBase{
 			System.out.println("End Test: vVerifyDomainNameAvailableForRegistration");
 		}
 
-		@Parameters({ "environment", "namespace", "accountReference" })
+		@Parameters({ "environment","accountReference" })
 		@Test
-		public void VerifyDomainNameNotAvailableForRegistration(String environment, String namespace,
+		public void verifyDomainNameNotAvailableForRegistration(String environment,
 				String accountReference) throws Exception {
 			// Initialization (Test Data Creation and Assignment)
-			String[] strDomainName = new String[] { "test.sydney\n", "test1.com.au\n", "test2.sydney" };
+			String[] strDomainName = new String[] { "test1.com\n", "test.com.au\n", "test2.com.au" };
 
 			String strAccountreference = "TPP-60053";
 			String strPassword = "comein22";
@@ -106,19 +106,19 @@ public class ResellerPortal_checkDomainAvailability_BulkDomain extends TestBase{
 			test.log(LogStatus.INFO, "verify domain available for Registraion");
 			for (int i = 0; i < strDomainName.length; i++) {
 				Assert.assertEquals(tppbulkregisterpage.getSearchNotAvailabilityMessage(strDomainName[i], i),
-						"Notavailable", "NotAvailable");
+						"Not supported", "	Not supported");
 			}
 
 			driver.close();
 			System.out.println("End Test: VerifyDomainNameNotAvailableForRegistration");
 		}
 
-		@Parameters({ "environment", "namespace", "accountReference" })
+		@Parameters({ "environment", "accountReference" })
 		@Test
-		public void VerifyDomainNameAvailableForRegistrationAndPremium(String environment, String namespace,
+		public void verifyDomainNameAvailableForRegistrationAndPremium(String environment,
 				String accountReference) throws Exception {
 			// Initialization (Test Data Creation and Assignment)
-			String[] strDomainName = new String[] { "test.sydney\n", "test1.com.au\n", "test2.sydney" };
+			String[] strDomainName = new String[] { "lol.sydney\n", "test.sydney\n", "herb.melbourne" };
 
 			String strAccountreference = "TPP-60053";
 			String strPassword = "comein22";
