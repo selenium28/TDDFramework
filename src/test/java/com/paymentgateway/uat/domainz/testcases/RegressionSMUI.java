@@ -177,7 +177,8 @@ public class RegressionSMUI extends TestBase {
 		dmzaccountpage = dmzheaderpage.clickAccountTab();
 		dmzcreditcardsdetailspage = dmzaccountpage.clickEditCreditCardsOnFile();
 		dmzcreditcardsdetailspage.deleteCreditCard();
-
+		Assert.assertEquals(dmzcreditcardsdetailspage.getConfirmationMessage(), "Credit card has been deleted", dmzcreditcardsdetailspage.getConfirmationMessage());
+		
 		driver.close();
 
 	}

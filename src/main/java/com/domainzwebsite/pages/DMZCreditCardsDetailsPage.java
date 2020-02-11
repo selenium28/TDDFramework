@@ -151,16 +151,15 @@ public class DMZCreditCardsDetailsPage extends TestBase{
 		
 	}
 
-	public void deleteCreditCard() throws InterruptedException {
+	public DMZCreditCardsDetailsPage deleteCreditCard() throws InterruptedException {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@id='cc-table']/tbody/tr[td//text()[contains(., 'Test Master')]]/td[6]/*"))
 				.click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@name='removeOrMakeDefaultCreditCard']")).click();
 		Thread.sleep(2000);
-		String strConfirmationMessage1 = driver.findElement(By.xpath("//*[@class='success-box']")).getText();
-		//return strConfirmationMessage1;
-		//Assert.assertEquals(strConfirmationMessage1, "Credit card has been deleted");
+		return new DMZCreditCardsDetailsPage();
+		
 	}
 	  
 	  

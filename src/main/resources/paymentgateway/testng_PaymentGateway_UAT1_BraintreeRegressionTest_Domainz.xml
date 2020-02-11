@@ -30,10 +30,10 @@
             </class> -->
             <class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI">
                 <methods>
-                    <include name="testAddNewCreditCardInSMUI" />
+                 <!--    <include name="testAddNewCreditCardInSMUI" /> -->
                    <!--  <include name="testModifyExistingCreditCardInSMUI" />
                     <include name="testMakeCreditCardDefaultInSMUI" /> -->
-                   <!--  <include name="testDeleteCreditCardInSMUI" />  -->
+                    <include name="testDeleteCreditCardInSMUI" /> 
 					<!-- <include name="testRechargePrepaidUsingExistingCardInSMUI" />
 					<include name="testRechargePrepaidUsingNewCardInSMUI" /> -->
                 </methods>
