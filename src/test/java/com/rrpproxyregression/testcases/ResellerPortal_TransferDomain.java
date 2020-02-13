@@ -159,7 +159,6 @@ public class ResellerPortal_TransferDomain extends TestBase {
 		
 		rrpStrUsername = "gulliver";
 		rrpStrPassword = "MDYe#5z<W6dk9";
-//		domainPrefix = "teststage200819";
 		
 		//Test Step 1: Login to RRPProxy portal
 		test.log(LogStatus.INFO, "Login to RRPproxy portal");
