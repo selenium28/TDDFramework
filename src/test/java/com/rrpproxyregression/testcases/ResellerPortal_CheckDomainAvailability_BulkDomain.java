@@ -34,7 +34,7 @@ public class ResellerPortal_CheckDomainAvailability_BulkDomain extends TestBase{
 		public void verifyDomainNameAvailableForRegistration(String environment, String accountReference)
 				throws Exception {
 			// Initialization (Test Data Creation and Assignment)
-			String[] strDomainName = new String[] { "test1.com.au\n", "test2.com.au\n", "test4.com.au\n" };
+			String[] strDomainName = new String[] { "phkatest1.com.au\n", "phkatest2.com.au\n", "phkatest4.com.au" };
 
 			String strAccountreference = "TPP-60053";
 			String strPassword = "comein22";
@@ -77,7 +77,7 @@ public class ResellerPortal_CheckDomainAvailability_BulkDomain extends TestBase{
 		public void verifyDomainNameNotAvailableForRegistration(String environment,
 				String accountReference) throws Exception {
 			// Initialization (Test Data Creation and Assignment)
-			String[] strDomainName = new String[] { "test1.com\n", "test.com.au\n", "test2.com.au" };
+			String[] strDomainName = new String[] { "testdomainregrrp.com.au\n", "testrrpdomainreg0020.com.au\n", "testdomainreg13022020c.com" } ;
 
 			String strAccountreference = "TPP-60053";
 			String strPassword = "comein22";
@@ -106,7 +106,7 @@ public class ResellerPortal_CheckDomainAvailability_BulkDomain extends TestBase{
 			test.log(LogStatus.INFO, "verify domain available for Registraion");
 			for (int i = 0; i < strDomainName.length; i++) {
 				Assert.assertEquals(tppbulkregisterpage.getSearchNotAvailabilityMessage(strDomainName[i], i),
-						"Not supported", "	Not supported");
+						"Unavailable", "Unavailable");
 			}
 
 			driver.close();
