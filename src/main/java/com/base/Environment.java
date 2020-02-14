@@ -27,6 +27,7 @@ public interface Environment extends Config{
 	String customerportalurl_domainz();
 	String customerportalurl_netregistry();
 	String customerportalurl_melbourneit();
+	String customerportalurl_tpp();
 	
 	//Reseller Portal
 	String resellerportalurl_tpp();
