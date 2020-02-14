@@ -2,6 +2,7 @@ package com.tppresellerportal.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -67,13 +68,16 @@ public class TPPTabPage extends TestBase {
 	public TPPBulkRegisterPage clickBulkRegisterLink() throws InterruptedException {
 
 		Thread.sleep(3000);
+		Actions action = new Actions(driver);
+		action.moveToElement(driver.findElement(By.xpath("//div[@id='menu']/ul/li[1]/h3"))).build().perform();
+				
 		System.out.println("clicking bulk register link");
 		if (bulkRegisterLink.isDisplayed() || bulkRegisterLink.isEnabled()) {
 			bulkRegisterLink.click();
 		} else {
 			System.out.println("element not found");
 		}
-		
+		Thread.sleep(1000);
 		return new TPPBulkRegisterPage();
 	
 	}

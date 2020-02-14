@@ -31,6 +31,9 @@ public interface Environment extends Config{
 	//Reseller Portal
 	String resellerportalurl_tpp();
 	
+	//RRPproxy Portal
+	String rrpproxy_tpp();
+	
 	//Payment Gateway
 	String braintreeurl();
 	

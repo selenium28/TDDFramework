@@ -26,6 +26,24 @@
 					<include name="verifyIfDomainAuthCodeIsWrong" />
 				</methods>
 			</class>
+
+<!-- 			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_BulkDomain">
+				<methods>
+					<include name="verifyDomainNameAvailableForRegistration" />
+					<include name="verifyDomainNameNotAvailableForRegistration" />
+					<include name="verifyDomainNameAvailableForRegistrationAndPremium" />
+
+				</methods>
+			</class> -->
+			
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_TransferDomain">
+				<methods>
+					<include name="verifySuccessfulDomainTransferOrder" />
+					<include name="verifyDomainTransferWorkflowInConsoleAdmin" />
+					<include name="verifyDomainTransferOrderInRRPPortal" />
+					<include name="verifyUnsuccessfulDomainTransferOrder" />
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>
