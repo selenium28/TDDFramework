@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 import com.base.TestBase;
 
@@ -218,6 +217,7 @@ public class NRGHostingAndExtrasPage extends TestBase{
 		        	{
 		        		opt.get(i).click();
 		        		System.out.println(strPeriod);
+		        		return new NRGAddHostingPage();
 		        	}
 		        }			
 			}
@@ -235,6 +235,7 @@ public class NRGHostingAndExtrasPage extends TestBase{
 		        	{
 		        		opt.get(i).click();
 		        		System.out.println(strPeriod);
+		        		return new NRGAddHostingPage();
 		        	}
 		        }				
 			}
@@ -253,6 +254,7 @@ public class NRGHostingAndExtrasPage extends TestBase{
 		        	{
 		        		opt.get(i).click();
 		        		System.out.println(strPeriod);
+		        		return new NRGAddHostingPage();
 		        	}
 		        }
 			}
@@ -272,6 +274,8 @@ public class NRGHostingAndExtrasPage extends TestBase{
 		        	{
 		        		opt.get(i).click();
 		        		System.out.println(strPeriod);
+		        		return new NRGAddHostingPage();
+		        		
 		        	}
 		        }
 			}
