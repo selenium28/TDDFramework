@@ -16,7 +16,7 @@ public class TPPLoginPage extends TestBase {
     @FindBy(how=How.NAME, using = "password")
     WebElement password;
     
-    @FindBy(how=How.NAME, using = "button.login")
+    @FindBy(how=How.NAME, using = "submit")
     WebElement loginButton;
 
     
@@ -34,7 +34,7 @@ public class TPPLoginPage extends TestBase {
 			
     }
     
-    public TPPDomainSearchPage clickLoginButton() throws InterruptedException {
+    public TPPHeaderPage clickLoginButton() throws InterruptedException {
 
     	System.out.println("clicking login button");
     	if(loginButton.isDisplayed()||loginButton.isEnabled()) {
@@ -44,7 +44,7 @@ public class TPPLoginPage extends TestBase {
 			System.out.println("element not found");
 		}
 
-    	return new TPPDomainSearchPage();
+    	return new TPPHeaderPage();
     	
     }
 

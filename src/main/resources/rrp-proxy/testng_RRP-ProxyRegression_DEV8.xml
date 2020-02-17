@@ -12,7 +12,7 @@
 
 	<test name="RRP-Proxy Regression Test Cases">
 		<classes>
-			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain">
+			<!-- <class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain">
 				<methods>
 					<include name="verifyDomainNameAvailableForRegistrationNotPremium" />
 					<include name="verifyDomainNameNotAvailableForRegistration" />
@@ -24,6 +24,13 @@
 					<include name="verifyIfDomainAvailableForTransfer" />
 					<include name="verifyIfDomainIsRegisteredAndAvailableForTransfer" />
 					<include name="verifyIfDomainAuthCodeIsWrong" />
+				</methods>
+			</class> -->
+			<class name="com.rrpproxyregression.testcases.CustomerPortal_CheckDomainAvailability">
+				<methods>
+					<include name="verifyDomainNameAvailableForRegistrationNotPremium" />
+					<!-- <include name="verifyDomainNameNotAvailableForRegistration" />
+					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" /> -->
 				</methods>
 			</class>
 		</classes>

@@ -13,17 +13,17 @@ import com.base.TestBase;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.tppcustomerportal.pages.TPPLoginPage;
-import com.tppcustomerportal.pages.TPPOverviewPage;
+import com.tppcustomerportal.pages.TPPHeaderPage;
 import com.tppresellerportal.pages.TPPRegisterADomainPage;
 import com.tppresellerportal.pages.TPPTabPage;
 import com.tppcustomerportal.pages.TPPDomainSearchPage;
 import com.util.TestUtil;
 
-public class CustomerPortal_CheckDomainAvailability {
+public class CustomerPortal_CheckDomainAvailability extends TestBase{
 	
 	TPPLoginPage tppLoginPage;
 	TPPDomainSearchPage tppDomainSearchPage;
-	TPPOverviewPage tppOverviewPage;
+	TPPHeaderPage tppOverviewPage;
 
 	TestUtil testUtil;
 	String clienttoken;
@@ -41,10 +41,12 @@ public class CustomerPortal_CheckDomainAvailability {
 
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
+		String strTld = "com";
 
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
 		strDomainName = "TestConsoleRegression" + df.format(d);
+		
 
 		// Test Step 1: Login to reseller portal
 		test.log(LogStatus.INFO, "Login to Customer portal");
@@ -52,12 +54,12 @@ public class CustomerPortal_CheckDomainAvailability {
 		initialization(environment, "customerportalurl_tpp");
 		tppLoginPage = new TPPLoginPage();
 		tppLoginPage.setLoginDetails(accountReference, "comein22");
-		tppDomainSearchPage = tppLoginPage.clickLoginButton();
+		tppOverviewPage = tppLoginPage.clickLoginButton();
 
-		// Test Step 2: Navigate to Register Domain
+		// Test Step 2: Navigate to overview page to register domain
 		test.log(LogStatus.INFO, "Navigate to Domains then Register and search for a domain");
-		tppTabPage.clickDomainsTab();
-		tppRegisterADomainPage = tppTabPage.clickRegisterLink();
+		tppOverviewPage.setDomainNameAndTld(strDomainName, "." + strTld);
+		/*tppRegisterADomainPage = tppTabPage.clickRegisterLink();
 		tppRegisterADomainPage.setDomainNameAndTld(strDomainName, "." + namespace);
 
 		// Test Step 3: Verify search result message
@@ -66,7 +68,7 @@ public class CustomerPortal_CheckDomainAvailability {
 				"The domain " + strDomainName + "." + namespace + " is available for registration",
 				"Checking if domain is avilable");
 		System.out.println("End Test: verifyDomainRegistrationOrderForNewCustomerInCustomerPortal");
-		driver.quit();
+		driver.quit();*/
 
 	}
 	
