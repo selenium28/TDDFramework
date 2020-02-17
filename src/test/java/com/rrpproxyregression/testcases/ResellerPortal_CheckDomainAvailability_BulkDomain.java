@@ -31,7 +31,7 @@ public class ResellerPortal_CheckDomainAvailability_BulkDomain extends TestBase{
 	}
 		@Parameters({ "environment", "accountReference" })
 		@Test
-		public void verifyDomainNameAvailableForRegistration(String environment, String accountReference)
+		public void verifyDomainNameAvailableForRegistration(String environment, String namespace, String accountReference)
 				throws Exception {
 			// Initialization (Test Data Creation and Assignment)
 			String[] strDomainName = new String[] { "phkatest1.com.au\n", "phkatest2.com.au\n", "phkatest4.com.au" };
