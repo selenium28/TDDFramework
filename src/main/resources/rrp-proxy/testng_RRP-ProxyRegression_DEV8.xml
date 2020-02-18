@@ -12,21 +12,21 @@
 
 	<test name="RRP-Proxy Regression Test Cases">
 		<classes>
-			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain">
+<!-- 			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain">
 				<methods>
 					<include name="verifyDomainNameAvailableForRegistrationNotPremium" />
 					<include name="verifyDomainNameNotAvailableForRegistration" />
 					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />
 				</methods>
-			</class>
-			<class name="com.rrpproxyregression.testcases.ResellerPortal_TransferDomainCheck">
+			</class> -->
+<!-- 			<class name="com.rrpproxyregression.testcases.ResellerPortal_TransferDomainCheck">
 				<methods>
 					<include name="verifyIfDomainAvailableForTransfer" />
 					<include name="verifyIfDomainIsRegisteredAndAvailableForTransfer" />
 					<include name="verifyIfDomainAuthCodeIsWrong" />
 				</methods>
 			</class>
-
+ -->
 <!-- 			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_BulkDomain">
 				<methods>
 					<include name="verifyDomainNameAvailableForRegistration" />
@@ -36,14 +36,15 @@
 				</methods>
 			</class> -->
 			
-			<class name="com.rrpproxyregression.testcases.ResellerPortal_TransferDomain">
+<!-- 			<class name="com.rrpproxyregression.testcases.ResellerPortal_TransferDomain">
 				<methods>
 					<include name="verifySuccessfulDomainTransferOrder" />
 					<include name="verifyDomainTransferWorkflowInConsoleAdmin" />
 					<include name="verifyDomainTransferOrderInRRPPortal" />
 					<include name="verifyUnsuccessfulDomainTransferOrder" />
 				</methods>
-			</class>
+			</class> -->
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_RegisterDomain"/>
 		</classes>
 	</test>
 </suite>
