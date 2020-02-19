@@ -41,8 +41,8 @@ public class ResellerPortal_RegisterDomain extends TestBase {
 
 	@Parameters({ "environment", "namespace", "accountReference" })
 	@Test
-	public void verifyDomainRegistrationInResellerPortal(String environment, String namespace,
-			String accountReference) throws Exception {
+	public void verifyDomainRegistrationInResellerPortal(String environment, String namespace, String accountReference)
+			throws Exception {
 
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
@@ -72,11 +72,12 @@ public class ResellerPortal_RegisterDomain extends TestBase {
 		tppRegisterADomainPage.selectExistingCustomer();
 		tppRegisterADomainPage.selectRegistranContact("James Cooper");
 		tppRegisterADomainPage.tickNameServerOptions("Choose your nameservers");
-		tppRegisterADomainPage.inputNameServerFields("ns1.partnerconsole.net","ns2.partnerconsole.net");
+		tppRegisterADomainPage.inputNameServerFields("ns1.partnerconsole.net", "ns2.partnerconsole.net");
 		tppRegisterADomainPage.tickTermsAndConditions();
 		tppRegisterADomainPage.clickRegisterDomainButton();
-		
+
 		// Test Step 4: Get the Order Reference ID
+		test.log(LogStatus.INFO, "Verify if order is completed and get the reference ID if it is");
 		Assert.assertTrue(tppRegisterADomainPage.isOrderComplete(
 				"domain order for " + strDomainName + "." + namespace + " created."), "Order is not completed");
 		strWorkflowId = tppRegisterADomainPage.getSingleReferenceID();
@@ -84,14 +85,15 @@ public class ResellerPortal_RegisterDomain extends TestBase {
 		driver.quit();
 
 		// Test Step 5: Process the domain registration order in console admin
+		test.log(LogStatus.INFO, "Process the domain registration order in console admin");
 		initialization(environment, "consoleadmin");
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
-
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, namespace);
 
 		// Test Step 6: Verify if domain registration workflow is completed
+		test.log(LogStatus.INFO, "Verify if domain registration workflow is completed");
 		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
 		Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("domain registration completed")
