@@ -1,6 +1,5 @@
 package com.rrpproxyregression.testcases;
 
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -10,20 +9,16 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
-import com.netregistryoldwebsite.pages.NRGOnlineOrderPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import com.tppcustomerportal.pages.TPPLoginPage;
-import com.tppcustomerportal.pages.TPPHeaderPage;
-
 import com.tppcustomerportal.pages.TPPDomainSearchPage;
 import com.tppcustomerportal.pages.TPPHeaderPage;
+import com.tppcustomerportal.pages.TPPLoginPage;
 import com.tppcustomerportal.pages.TPPOrderPage;
-
 import com.util.TestUtil;
 
-public class CustomerPortal_CheckDomainAvailability extends TestBase{
-	
+public class CustomerPortal_CheckDomainAvailability extends TestBase {
+
 	TPPLoginPage tppLoginPage;
 	TPPDomainSearchPage tppDomainSearchPage;
 	TPPHeaderPage tppHeaderPage;
@@ -32,24 +27,23 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase{
 	TestUtil testUtil;
 	String clienttoken;
 	public static ExtentTest logger;
-	
+
 	public CustomerPortal_CheckDomainAvailability() {
 		super();
 	}
-	
+
 	@Parameters({ "environment", "namespace", "accountReference" })
 	@Test
-	
+
 	public void verifyDomainNameAvailableForRegistrationNotPremium(String environment, String namespace,
 			String accountReference) throws Exception {
 
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
-		
+
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
 		strDomainName = "TestConsoleRegression" + df.format(d);
-		
 
 		// Test Step 1: Login to reseller portal
 		test.log(LogStatus.INFO, "Login to Customer portal");
@@ -58,7 +52,7 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase{
 		tppLoginPage = new TPPLoginPage();
 		tppLoginPage.setLoginDetails(accountReference, "comein22");
 		tppHeaderPage = new TPPHeaderPage();
-		tppDomainSearchPage= new TPPDomainSearchPage();
+		tppDomainSearchPage = new TPPDomainSearchPage();
 		tppHeaderPage = tppLoginPage.clickLoginButton();
 		tppOrderPage = new TPPOrderPage();
 		tppDomainSearchPage = new TPPDomainSearchPage();
@@ -66,31 +60,29 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase{
 
 		// Test Step 2: Navigate to order page to register domain
 		test.log(LogStatus.INFO, "Navigate to Domains then Register and search for a domain");
-		
-		
+
 		tppOrderPage.setDomainNameAndTld(strDomainName, "." + namespace);
 		tppDomainSearchPage = tppOrderPage.clickNewDomainSearchButton();
-		
 
 		// Test Step 3: Verify search result message
 		test.log(LogStatus.INFO, "Verify search result message");
-		//Assert.assertEquals(tppDomainSearchPage.checkStatus(), "Available ","Available");
+		// Assert.assertEquals(tppDomainSearchPage.checkStatus(), "Available
+		// ","Available");
 		Assert.assertTrue(tppDomainSearchPage.checkStatus(), "Available ");
 		System.out.println("End Test: verifyDomainNameAvailableForRegistrationNotPremium");
 		driver.quit();
 
 	}
-	
+
 	@Parameters({ "environment", "namespace", "accountReference" })
 	@Test
-	
+
 	public void verifyDomainNameNotAvailableForRegistration(String environment, String namespace,
 			String accountReference) throws Exception {
 
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
 		strDomainName = "testdomainreg23213";
-		
 
 		// Test Step 1: Login to reseller portal
 		test.log(LogStatus.INFO, "Login to Customer portal");
@@ -99,7 +91,7 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase{
 		tppLoginPage = new TPPLoginPage();
 		tppLoginPage.setLoginDetails(accountReference, "comein22");
 		tppHeaderPage = new TPPHeaderPage();
-		tppDomainSearchPage= new TPPDomainSearchPage();
+		tppDomainSearchPage = new TPPDomainSearchPage();
 		tppHeaderPage = tppLoginPage.clickLoginButton();
 		tppOrderPage = new TPPOrderPage();
 		tppDomainSearchPage = new TPPDomainSearchPage();
@@ -107,11 +99,9 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase{
 
 		// Test Step 2: Navigate to order page to register domain
 		test.log(LogStatus.INFO, "Navigate to Domains then Register and search for a domain");
-		
-		
+
 		tppOrderPage.setDomainNameAndTld(strDomainName, "." + namespace);
 		tppDomainSearchPage = tppOrderPage.clickNewDomainSearchButton();
-		
 
 		// Test Step 3: Verify search result message
 		test.log(LogStatus.INFO, "Verify search result message");
@@ -120,11 +110,10 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase{
 		driver.quit();
 
 	}
-	
-	
+
 	@Parameters({ "environment", "namespace", "accountReference" })
 	@Test
-	
+
 	public void verifyDomainNameAvailableForRegistrationAndPremiumn(String environment, String namespace,
 			String accountReference) throws Exception {
 
@@ -133,7 +122,6 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase{
 		String strTld = null;
 		strDomainName = "lol";
 		strTld = "sydney";
-		
 
 		// Test Step 1: Login to reseller portal
 		test.log(LogStatus.INFO, "Login to Customer portal");
@@ -142,7 +130,7 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase{
 		tppLoginPage = new TPPLoginPage();
 		tppLoginPage.setLoginDetails(accountReference, "comein22");
 		tppHeaderPage = new TPPHeaderPage();
-		tppDomainSearchPage= new TPPDomainSearchPage();
+		tppDomainSearchPage = new TPPDomainSearchPage();
 		tppHeaderPage = tppLoginPage.clickLoginButton();
 		tppOrderPage = new TPPOrderPage();
 		tppDomainSearchPage = new TPPDomainSearchPage();
@@ -150,11 +138,9 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase{
 
 		// Test Step 2: Navigate to order page to register domain
 		test.log(LogStatus.INFO, "Navigate to Domains then Register and search for a domain");
-		
-		
+
 		tppOrderPage.setDomainNameAndTld(strDomainName, "." + strTld);
 		tppDomainSearchPage = tppOrderPage.clickNewDomainSearchButton();
-		
 
 		// Test Step 3: Verify search result message
 		test.log(LogStatus.INFO, "Verify search result message");
@@ -163,7 +149,5 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase{
 		driver.quit();
 
 	}
-	
-	
-	
+
 }
