@@ -5,7 +5,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
-import com.tppresellerportal.pages.TPPTabPage;
+import com.tppcustomerportal.pages.TPPHeaderPage;
 
 public class TPPLoginPage extends TestBase {
 

@@ -3,14 +3,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-
+import com.tppcustomerportal.pages.TPPOrderPage;
 import com.base.TestBase;
 
 public class TPPHeaderPage extends TestBase{
 	
 	//Objects
-    @FindBy(how=How.NAME, using = "domainNames")
-    WebElement registerDomain;
+	
+	 @FindBy(how=How.XPATH, using = ".//*[@id='wrap']/div[2]/div[2]/div[1]/ul/li[2]/a/span")
+	    WebElement orderTab;
 
 	//Initializing Page Objects
 		public TPPHeaderPage(){
@@ -18,13 +19,17 @@ public class TPPHeaderPage extends TestBase{
 	    }
 		
 		//Methods
-		public void setDomainNameAndTld(String domainname, String tldname) throws Exception {
-
-			registerDomain.clear();
-			registerDomain.sendKeys(domainname);
+		public TPPOrderPage clickOrderTab() throws InterruptedException {
+					    	System.out.println("clicking order tab");
+			    	if(orderTab.isDisplayed()||orderTab.isEnabled()) {
+			    		orderTab.click();
+			    	}
+				else {
+						System.out.println("element not found");
+					}
 			
-			
-				
-	    }
+			    	return new TPPOrderPage();
+			    	
+			    }
 
 }
