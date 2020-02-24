@@ -159,6 +159,11 @@ public class TestBase {
 		else if (entrypoint.equals("resellerportalurl_tpp")) {
 			driver.get(testEnvironment.resellerportalurl_tpp());
 		}
+		
+		// RRPproxy Portal
+		else if (entrypoint.equals("rrpproxy_tpp")){
+			driver.get(testEnvironment.rrpproxy_tpp());
+		}
 
 		// Payment Gateway
 		else if (entrypoint.equals("braintree")) {
