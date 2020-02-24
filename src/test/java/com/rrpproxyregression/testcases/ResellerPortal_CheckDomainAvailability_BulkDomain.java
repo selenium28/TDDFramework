@@ -1,4 +1,5 @@
 package com.rrpproxyregression.testcases;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,143 +18,141 @@ import com.relevantcodes.extentreports.LogStatus;
 import com.tppresellerportal.pages.TPPBulkRegisterPage;
 import com.util.TestUtil;
 
-public class ResellerPortal_CheckDomainAvailability_BulkDomain extends TestBase{
-	
+public class ResellerPortal_CheckDomainAvailability_BulkDomain extends TestBase {
+
 	TPPBulkRegisterPage tppbulkregisterpage;
 	TPPLoginPage tpploginpage;
 	TPPRegisterADomainPage tppregisterdomainpage;
 	TPPTabPage tpptabpage;
 	TestUtil testUtil;
+	
 	public static ExtentTest logger;
 
 	public ResellerPortal_CheckDomainAvailability_BulkDomain() {
 		super();
 	}
-		@Parameters({ "environment", "accountReference" })
-		@Test
-		public void verifyDomainNameAvailableForRegistration(String environment, String accountReference)
-				throws Exception {
-			// Initialization (Test Data Creation and Assignment)
-			String[] strDomainName = new String[] { "test1.com.au\n", "test2.com.au\n", "test4.com.au\n" };
 
-			String strAccountreference = "TPP-60053";
-			String strPassword = "comein22";
+	@Parameters({ "environment", "accountReference", "namespace" })
+	@Test
+	public void verifyDomainNameAvailableForRegistration(String environment, String accountReference, String namespace)
+			throws Exception {
+		// Initialization (Test Data Creation and Assignment)
+		
+		String[] strDomainName = new String[] { "testregression00001." + namespace + "\n",
+				"testregression00002." + namespace + "\n", "testregression00003." + namespace + "\n" };
 
-			// Test Step 1: Login to Reseller portal
-			test.log(LogStatus.INFO, "Login to Reseller portal");
-			System.out.println("Start Test: checkBulkDomainAvailability");
-			initialization(environment, "resellerportalurl_tpp");
+		
+		// Test Step 1: Login to Reseller portal
+		test.log(LogStatus.INFO, "Login to Reseller portal");
+		System.out.println("Start Test: checkBulkDomainAvailability");
+		initialization(environment, "resellerportalurl_tpp");
 
-			tppbulkregisterpage = new TPPBulkRegisterPage();
-			tpploginpage = new TPPLoginPage();
-			tppregisterdomainpage = new TPPRegisterADomainPage();
-			tpptabpage = new TPPTabPage();
+		tppbulkregisterpage = new TPPBulkRegisterPage();
+		tpploginpage = new TPPLoginPage();
+		tppregisterdomainpage = new TPPRegisterADomainPage();
+		tpptabpage = new TPPTabPage();
 
-			tpploginpage.setLoginDetails(strAccountreference, strPassword);
-			tpploginpage.clickLoginButton();
+		tpploginpage.setLoginDetails(accountReference, "comein22");
+		tpploginpage.clickLoginButton();
 
-			// Test Step 2: Navigate to Bulk Domain Register
-			test.log(LogStatus.INFO, "Navigate to Bulk Domain Register");
+		// Test Step 2: Navigate to Bulk Domain Register
+		test.log(LogStatus.INFO, "Navigate to Bulk Domain Register");
 
-			tpptabpage.clickBulkRegisterLink();
-			tppbulkregisterpage.setAllDomainNames(strDomainName);
+		tpptabpage.clickBulkRegisterLink();
+		tppbulkregisterpage.setAllDomainNames(strDomainName);
 
-			tppbulkregisterpage.clickSearchButton();
+		tppbulkregisterpage.clickSearchButton();
 
-			// Test Step 3: verify domain available for Registraion
-			test.log(LogStatus.INFO, "verify domain available for Registraion");
+		// Test Step 3: verify domain available for Registraion
+		test.log(LogStatus.INFO, "verify domain available for Registraion");
 
-			for (int i = 0; i < strDomainName.length; i++) {
-				Assert.assertEquals(tppbulkregisterpage.getSearchAvailabilityMessage(strDomainName[i], i), "Available",
-						"Available");
-			}
-
-			driver.close();
-			System.out.println("End Test: vVerifyDomainNameAvailableForRegistration");
+		for (int i = 0; i < strDomainName.length; i++) {
+			Assert.assertEquals(tppbulkregisterpage.getSearchAvailabilityMessage(strDomainName[i], i), "Available",
+					"Available");
 		}
 
-		@Parameters({ "environment","accountReference" })
-		@Test
-		public void verifyDomainNameNotAvailableForRegistration(String environment,
-				String accountReference) throws Exception {
-			// Initialization (Test Data Creation and Assignment)
-			String[] strDomainName = new String[] { "test1.com\n", "test.com.au\n", "test2.com.au" };
+		driver.close();
+		System.out.println("End Test: vVerifyDomainNameAvailableForRegistration");
+	}
 
-			String strAccountreference = "TPP-60053";
-			String strPassword = "comein22";
+	@Parameters({ "environment", "accountReference", "namespace" })
+	@Test
+	public void verifyDomainNameNotAvailableForRegistration(String environment, String accountReference,
+			String namespace) throws Exception {
+		// Initialization (Test Data Creation and Assignment)
+		
+		String[] strDomainName = new String[] { "m4dev-122-test1." + namespace + "\n","m4dev-122-test2." + namespace + "\n" };
+		
+		// Test Step 1: Login to Reseller portal
+		test.log(LogStatus.INFO, "Login to Reseller portal");
+		System.out.println("Start Test: checkBulkDomainAvailability");
+		initialization(environment, "resellerportalurl_tpp");
 
-			// Test Step 1: Login to Reseller portal
-			test.log(LogStatus.INFO, "Login to Reseller portal");
-			System.out.println("Start Test: checkBulkDomainAvailability");
-			initialization(environment, "resellerportalurl_tpp");
+		tppbulkregisterpage = new TPPBulkRegisterPage();
+		tpploginpage = new TPPLoginPage();
+		tppregisterdomainpage = new TPPRegisterADomainPage();
+		tpptabpage = new TPPTabPage();
 
-			tppbulkregisterpage = new TPPBulkRegisterPage();
-			tpploginpage = new TPPLoginPage();
-			tppregisterdomainpage = new TPPRegisterADomainPage();
-			tpptabpage = new TPPTabPage();
+		tpploginpage.setLoginDetails(accountReference, "comein22");
+		tpploginpage.clickLoginButton();
 
-			tpploginpage.setLoginDetails(strAccountreference, strPassword);
-			tpploginpage.clickLoginButton();
+		// Test Step 2: Navigate to Bulk Domain Register
+		test.log(LogStatus.INFO, "Navigate to Bulk Domain Register");
+		tpptabpage.clickBulkRegisterLink();
+		tppbulkregisterpage.setAllDomainNames(strDomainName);
 
-			// Test Step 2: Navigate to Bulk Domain Register
-			test.log(LogStatus.INFO, "Navigate to Bulk Domain Register");
-			tpptabpage.clickBulkRegisterLink();
-			tppbulkregisterpage.setAllDomainNames(strDomainName);
+		tppbulkregisterpage.clickSearchButton();
 
-			tppbulkregisterpage.clickSearchButton();
-
-			// Test Step 3: verify domain is not available for Registration
-			test.log(LogStatus.INFO, "verify domain available for Registraion");
-			for (int i = 0; i < strDomainName.length; i++) {
-				Assert.assertEquals(tppbulkregisterpage.getSearchNotAvailabilityMessage(strDomainName[i], i),
-						"Not supported", "	Not supported");
-			}
-
-			driver.close();
-			System.out.println("End Test: VerifyDomainNameNotAvailableForRegistration");
+		// Test Step 3: verify domain is not available for Registration
+		test.log(LogStatus.INFO, "verify domain available for Registraion");
+		for (int i = 0; i < strDomainName.length; i++) {
+			Assert.assertEquals(tppbulkregisterpage.getSearchNotAvailabilityMessage(strDomainName[i], i), "Unavailable",
+					"Unavailable");
 		}
 
-		@Parameters({ "environment", "accountReference" })
-		@Test
-		public void verifyDomainNameAvailableForRegistrationAndPremium(String environment,
-				String accountReference) throws Exception {
-			// Initialization (Test Data Creation and Assignment)
-			String[] strDomainName = new String[] { "lol.sydney\n", "test.sydney\n", "herb.melbourne" };
+		driver.close();
+		System.out.println("End Test: VerifyDomainNameNotAvailableForRegistration");
+	}
 
-			String strAccountreference = "TPP-60053";
-			String strPassword = "comein22";
+	@Parameters({ "environment", "accountReference" })
+	@Test
+	public void verifyDomainNameAvailableForRegistrationAndPremium(String environment, String accountReference)
+			throws Exception {
+		// Initialization (Test Data Creation and Assignment)
+		String[] strDomainName = new String[] { "lol.sydney\n", "test.sydney\n", "herb.melbourne" };
 
-			// Test Step 1: Login to Reseller portal
-			test.log(LogStatus.INFO, "Login to Reseller portal");
-			System.out.println("Start Test: checkBulkDomainAvailability");
-			initialization(environment, "resellerportalurl_tpp");
+		
+		// Test Step 1: Login to Reseller portal
+		test.log(LogStatus.INFO, "Login to Reseller portal");
+		System.out.println("Start Test: checkBulkDomainAvailability");
+		initialization(environment, "resellerportalurl_tpp");
 
-			tppbulkregisterpage = new TPPBulkRegisterPage();
-			tpploginpage = new TPPLoginPage();
-			tppregisterdomainpage = new TPPRegisterADomainPage();
-			tpptabpage = new TPPTabPage();
+		tppbulkregisterpage = new TPPBulkRegisterPage();
+		tpploginpage = new TPPLoginPage();
+		tppregisterdomainpage = new TPPRegisterADomainPage();
+		tpptabpage = new TPPTabPage();
 
-			tpploginpage.setLoginDetails(strAccountreference, strPassword);
-			tpploginpage.clickLoginButton();
+		tpploginpage.setLoginDetails(accountReference, "comein22");
+		tpploginpage.clickLoginButton();
 
-			// Test Step 2: Navigate to Bulk Domain Register
-			test.log(LogStatus.INFO, "Navigate to Bulk Domain Register");
+		// Test Step 2: Navigate to Bulk Domain Register
+		test.log(LogStatus.INFO, "Navigate to Bulk Domain Register");
 
-			tpptabpage.clickBulkRegisterLink();
-			tppbulkregisterpage.setAllDomainNames(strDomainName);
+		tpptabpage.clickBulkRegisterLink();
+		tppbulkregisterpage.setAllDomainNames(strDomainName);
 
-			tppbulkregisterpage.clickSearchButton();
+		tppbulkregisterpage.clickSearchButton();
 
-			// Test Step 3: verify domain is available for Registraion And Premium
-			test.log(LogStatus.INFO, "verify domain available for Registraion");
+		// Test Step 3: verify domain is available for Registraion And Premium
+		test.log(LogStatus.INFO, "verify domain available for Registraion");
 
-			for (int i = 0; i < strDomainName.length; i++) {
-				Assert.assertEquals(tppbulkregisterpage.getSearchPremiumMessage(strDomainName[i], i), "Premium", "Premium");
-			}
-
-			driver.close();
-			System.out.println("End Test: VerifyDomainNameAvailableForRegistrationAndPremium");
-
+		for (int i = 0; i < strDomainName.length; i++) {
+			Assert.assertEquals(tppbulkregisterpage.getSearchPremiumMessage(strDomainName[i], i), "Premium", "Premium");
 		}
+
+		driver.close();
+		System.out.println("End Test: VerifyDomainNameAvailableForRegistrationAndPremium");
 
 	}
+
+}
