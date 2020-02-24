@@ -1,4 +1,4 @@
-package com.paymentgateway.uat.domainz.testcases;
+package com.paymentgateway.uat.melbourneit.testcases;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,24 +8,24 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
-import com.domainzwebsite.pages.DMZAccountPage;
-import com.domainzwebsite.pages.DMZBillingPage;
-import com.domainzwebsite.pages.DMZCreditCardsDetailsPage;
-import com.domainzwebsite.pages.DMZHeaderPage;
-import com.domainzwebsite.pages.DMZLoginPage;
-import com.domainzwebsite.pages.DMZPrepaidAccountPage;
+import com.melbourneitwebsite.pages.MITAccountPage;
+import com.melbourneitwebsite.pages.MITBillingPage;
+import com.melbourneitwebsite.pages.MITCreditCardsDetailsPage;
+import com.melbourneitwebsite.pages.MITHeaderPage;
+import com.melbourneitwebsite.pages.MITLoginPage;
+import com.melbourneitwebsite.pages.MITPrepaidAccountPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.util.TestUtil;
 
 public class RegressionSMUI extends TestBase {
 
 	// Domainz shopping cart pages
-	DMZLoginPage dmzloginpage;
-	DMZAccountPage dmzaccountpage;
-	DMZBillingPage dmzbillingpage;
-	DMZCreditCardsDetailsPage dmzcreditcardsdetailspage;
-	DMZHeaderPage dmzheaderpage;
-	DMZPrepaidAccountPage dmzprepaidaccountpage;
+	MITLoginPage MITloginpage;
+	MITAccountPage MITaccountpage;
+	MITBillingPage MITbillingpage;
+	MITCreditCardsDetailsPage MITcreditcardsdetailspage;
+	MITHeaderPage MITheaderpage;
+	MITPrepaidAccountPage MITprepaidaccountpage;
 
 	// objects
 	@FindBy(how = How.LINK_TEXT, using = "Account")
@@ -63,7 +63,7 @@ public class RegressionSMUI extends TestBase {
 			strCardExpiryYear = "2020";
 			strCardSecurityCode = "123";		
 		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
-			strAccountReference = "DOM-1311";
+			strAccountReference = "MEL-6005";
 			strPassword = "comein22";
 			strCardOwner = "Test Mastercard";
 			strCardType = "MasterCard";
@@ -74,22 +74,22 @@ public class RegressionSMUI extends TestBase {
 		}
 		
 		//Test Step 1: Login to customer portal
-		initialization(environment, "customerportalurl_domainz");
-		dmzloginpage = new DMZLoginPage();
-		dmzloginpage.setLoginDetails(strAccountReference, strPassword);
-		dmzheaderpage = dmzloginpage.clickLoginButton();
-		dmzaccountpage = dmzheaderpage.clickAccountTab();
-		dmzcreditcardsdetailspage = dmzaccountpage.clickEditCreditCardsOnFile();
+		initialization(environment, "customerportalurl_melbourneit");
+		MITloginpage = new MITLoginPage();
+		MITloginpage.setLoginDetails(strAccountReference, strPassword);
+		MITheaderpage = MITloginpage.clickLoginButton();
+		MITaccountpage = MITheaderpage.clickAccountTab();
+		MITcreditcardsdetailspage = MITaccountpage.clickEditCreditCardsOnFile();
 		
 		//Test Step 2: Add new credit card
 		if ((environment.equals("uat1")) && (paymentgateway.equals("quest"))) {
-			//dmzcreditcardsdetailspage.setQuestFormCreditCardDetails(strCardOwner, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+			//MITcreditcardsdetailspage.setQuestFormCreditCardDetails(strCardOwner, strCardType, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
-			dmzcreditcardsdetailspage.setBTFormCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+			MITcreditcardsdetailspage.setBTFormCreditCardDetails(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
 
-		dmzbillingpage = dmzcreditcardsdetailspage.clickAddCreditCard();
-		Assert.assertTrue(dmzbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+		MITbillingpage = MITcreditcardsdetailspage.clickAddCreditCard();
+		Assert.assertTrue(MITbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
 		driver.close();
 	}
 
@@ -104,30 +104,30 @@ public class RegressionSMUI extends TestBase {
 			strCardExpiryMonth = "04";
 			strCardExpiryYear = "2021";
 		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
-			strAccountReference = "DOM-1311";
+			strAccountReference = "MEL-6005";
 			strPassword = "comein22";
 			strCardExpiryMonth = "04";
 			strCardExpiryYear = "2021";
 		}
 
 		//Test Step 1: Login to customer portal
-		initialization(environment, "customerportalurl_domainz");
-		dmzloginpage = new DMZLoginPage();
-		dmzloginpage.setLoginDetails(strAccountReference, strPassword);
-		dmzheaderpage = dmzloginpage.clickLoginButton();
-		dmzaccountpage = dmzheaderpage.clickAccountTab();
-		dmzcreditcardsdetailspage = dmzaccountpage.clickEditCreditCardsOnFile();
+		initialization(environment, "customerportalurl_melbourneit");
+		MITloginpage = new MITLoginPage();
+		MITloginpage.setLoginDetails(strAccountReference, strPassword);
+		MITheaderpage = MITloginpage.clickLoginButton();
+		MITaccountpage = MITheaderpage.clickAccountTab();
+		MITcreditcardsdetailspage = MITaccountpage.clickEditCreditCardsOnFile();
 
 		// Modify existing card details
-		dmzcreditcardsdetailspage.clickOnExistingCard();
+		MITcreditcardsdetailspage.clickOnExistingCard();
 		if ((environment.equals("uat1")) && (paymentgateway.equals("quest"))) {
-			//dmzcreditcardsdetailspage.modifyCreditCardDetails();
+			//MITcreditcardsdetailspage.modifyCreditCardDetails();
 		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {			
-			dmzcreditcardsdetailspage.modifyCreditCardDetailsBT(strCardExpiryMonth, strCardExpiryYear);
+			MITcreditcardsdetailspage.modifyCreditCardDetails(strCardExpiryMonth, strCardExpiryYear);
 		}
 		
-		Assert.assertEquals(dmzcreditcardsdetailspage.getConfirmationMessage(), "The credit card has successfully been modified", 
-			dmzcreditcardsdetailspage.getConfirmationMessage());	
+		Assert.assertEquals(MITcreditcardsdetailspage.getConfirmationMessage(), "The credit card has successfully been modified", 
+			MITcreditcardsdetailspage.getConfirmationMessage());	
 		driver.close();
 	}
 
@@ -140,17 +140,18 @@ public class RegressionSMUI extends TestBase {
 			strAccountReference = "DOM-1218";
 			strPassword = "comein22";
 		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
-			strAccountReference = "DOM-1311";
+			strAccountReference = "MEL-6005";
 			strPassword = "comein22";
+			strCardOwner = "Test Card - MasterCard";
 		}
 
-		initialization(environment, "customerportalurl_domainz");
-		dmzloginpage = new DMZLoginPage();
-		dmzloginpage.setLoginDetails(strAccountReference, strPassword);
-		dmzheaderpage = dmzloginpage.clickLoginButton();
-		dmzaccountpage = dmzheaderpage.clickAccountTab();
-		dmzcreditcardsdetailspage = dmzaccountpage.clickEditCreditCardsOnFile();
-		dmzaccountpage.makeCardDefault();
+		initialization(environment, "customerportalurl_melbourneit");
+		MITloginpage = new MITLoginPage();
+		MITloginpage.setLoginDetails(strAccountReference, strPassword);
+		MITheaderpage = MITloginpage.clickLoginButton();
+		MITaccountpage = MITheaderpage.clickAccountTab();
+		MITcreditcardsdetailspage = MITaccountpage.clickEditCreditCardsOnFile();
+		MITaccountpage.makeCardDefault(strCardOwner);
 		driver.close();
 	}
 	
@@ -159,25 +160,25 @@ public class RegressionSMUI extends TestBase {
 	@Test
 	public void testDeleteCreditCardInSMUI(String environment, String paymentgateway) throws InterruptedException {
 	initialization(environment, "customerportalurl_domainz");
-		dmzloginpage = new DMZLoginPage();
-		dmzaccountpage = new DMZAccountPage();
-    	dmzbillingpage = new DMZBillingPage();
-		dmzcreditcardsdetailspage = new DMZCreditCardsDetailsPage();
+		MITloginpage = new MITLoginPage();
+		MITaccountpage = new MITAccountPage();
+    	MITbillingpage = new MITBillingPage();
+		MITcreditcardsdetailspage = new MITCreditCardsDetailsPage();
 
 		if ((environment.equals("uat1")) && (paymentgateway.equals("quest"))) {
 			strAccountReference = "DOM-1218";
 			strPassword = "comein22";
-			dmzloginpage.setLoginDetails(strAccountReference, strPassword);
+			MITloginpage.setLoginDetails(strAccountReference, strPassword);
 		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
 			strAccountReference = "DOM-1311";
 			strPassword = "comein22";
-			dmzloginpage.setLoginDetails(strAccountReference, strPassword);
+			MITloginpage.setLoginDetails(strAccountReference, strPassword);
 		}
-		dmzheaderpage = dmzloginpage.clickLoginButton();
-		dmzaccountpage = dmzheaderpage.clickAccountTab();
-		dmzcreditcardsdetailspage = dmzaccountpage.clickEditCreditCardsOnFile();
-		dmzcreditcardsdetailspage.deleteCreditCard();
-		Assert.assertEquals(dmzcreditcardsdetailspage.getConfirmationMessage(), "Credit card has been deleted", dmzcreditcardsdetailspage.getConfirmationMessage());
+		MITheaderpage = MITloginpage.clickLoginButton();
+		MITaccountpage = MITheaderpage.clickAccountTab();
+		MITcreditcardsdetailspage = MITaccountpage.clickEditCreditCardsOnFile();
+		MITcreditcardsdetailspage.deleteCreditCard();
+		Assert.assertEquals(MITcreditcardsdetailspage.getConfirmationMessage(), "Credit card has been deleted", MITcreditcardsdetailspage.getConfirmationMessage());
 		
 		driver.close();
 
@@ -210,15 +211,15 @@ public class RegressionSMUI extends TestBase {
 			strAmount = "10";			
 		}
 		
-		initialization(environment, "customerportalurl_domainz");
-		dmzloginpage = new DMZLoginPage();
-		dmzloginpage.setLoginDetails(strAccountReference, strPassword);
-		dmzheaderpage = dmzloginpage.clickLoginButton();	
-		dmzbillingpage = dmzheaderpage.clickBillingTab();
-		dmzprepaidaccountpage = dmzbillingpage.clickEditPrepaidAccountLink();
-		dmzprepaidaccountpage.clickRechargeUsingCreditCard();
-		dmzprepaidaccountpage.enterRechargeAmount(strAmount);
-		dmzprepaidaccountpage.clickSubmitButton();
+		initialization(environment, "customerportalurl_melbourneit");
+		MITloginpage = new MITLoginPage();
+		MITloginpage.setLoginDetails(strAccountReference, strPassword);
+		MITheaderpage = MITloginpage.clickLoginButton();	
+		MITbillingpage = MITheaderpage.clickBillingTab();
+		MITprepaidaccountpage = MITbillingpage.clickEditPrepaidAccountLink();
+		MITprepaidaccountpage.clickRechargeUsingCreditCard();
+		MITprepaidaccountpage.enterRechargeAmount(strAmount);
+		MITprepaidaccountpage.clickSubmitButton();
 
 		driver.close();
 	}
@@ -251,23 +252,23 @@ public class RegressionSMUI extends TestBase {
 			strAmount = "10";			
 		}
 		
-		initialization(environment, "customerportalurl_domainz");
-		dmzloginpage = new DMZLoginPage();
-		dmzloginpage.setLoginDetails(strAccountReference, strPassword);
-		dmzheaderpage = dmzloginpage.clickLoginButton();	
-		dmzbillingpage = dmzheaderpage.clickBillingTab();
-		dmzprepaidaccountpage = dmzbillingpage.clickEditPrepaidAccountLink();
-		dmzprepaidaccountpage.clickRechargeUsingCreditCard();
+		initialization(environment, "customerportalurl_melbourneit");
+		MITloginpage = new MITLoginPage();
+		MITloginpage.setLoginDetails(strAccountReference, strPassword);
+		MITheaderpage = MITloginpage.clickLoginButton();	
+		MITbillingpage = MITheaderpage.clickBillingTab();
+		MITprepaidaccountpage = MITbillingpage.clickEditPrepaidAccountLink();
+		MITprepaidaccountpage.clickRechargeUsingCreditCard();
 
-		dmzprepaidaccountpage.clickOnNewCreditCard();
+		MITprepaidaccountpage.clickOnNewCreditCard();
 		if ((environment.equals("uat1")) && (paymentgateway.equals("quest"))) {
-		//	dmzprepaidaccountpage.setNewCreditCardDetailsQuest(cardowner, cardnumber, cardexpirymonth, cardexpiryyear,
+		//	MITprepaidaccountpage.setNewCreditCardDetailsQuest(cardowner, cardnumber, cardexpirymonth, cardexpiryyear,
 		//			cardsecuritycode);
 		} else if ((environment.equals("uat1")) && (paymentgateway.equals("braintree"))) {
-			dmzprepaidaccountpage.setNewCreditCardDetailsBT(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
+			MITprepaidaccountpage.setNewCreditCardDetailsBT(strCardOwner, strCardNumber, strCardExpiryMonth, strCardExpiryYear, strCardSecurityCode);
 		}
-		dmzprepaidaccountpage.enterRechargeAmount(strAmount);
-		dmzprepaidaccountpage.clickSubmitButton();
+		MITprepaidaccountpage.enterRechargeAmount(strAmount);
+		MITprepaidaccountpage.clickSubmitButton();
 
 		driver.close();
 
