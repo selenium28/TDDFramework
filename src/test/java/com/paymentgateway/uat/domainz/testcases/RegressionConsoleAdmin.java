@@ -96,42 +96,41 @@ public class RegressionConsoleAdmin extends TestBase {
 			driver.close();	
 		}
 	
-//		@Parameters({ "environment", "paymentgateway" })
-//		@Test(priority = 9, enabled = true)
-//		public void RechargePrepaidInConsoleAdminUsingExistingCard(String environment, String paymentgateway) throws InterruptedException, AWTException {
-//			
-//			String straccountreference = "DOM-1218";
-//			initialization(environment, "consoleadmin");
-//			caloginpage = new CALoginPage();
-//			caviewcreditcardspage = new CAViewCreditCardsPage();
-//			caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
-//			caheaderpage = new CAHeaderPage();
-//			caheaderpage.searchAccountReference(straccountreference);
-//			cainvoicespage = new CAInvoicesPage();
-//	
-//			Thread.sleep(2000);
-//			driver.findElement(By.linkText("View Invoice & Prepaid detail")).click();
-//			Thread.sleep(2000);
-//			driver.findElement(By.linkText("Prepaid Account Details")).click();
-//			Thread.sleep(2000);
-//	
-//			// cainvoicespage.setCreditCardDetails();
-//	
-//			driver.findElement(By.xpath("//*[@id=\"useExistingBilling\"]")).click();
-//			driver.findElement(By.xpath("//*[@id=\"creditCardAmount\"]")).clear();
-//			driver.findElement(By.xpath("//*[@id=\"creditCardAmount\"]")).sendKeys("20");
-//			Thread.sleep(2000);
-//			driver.findElement(By.xpath("//*[@id=\"purchaseCredit\"]")).click();
-//			Thread.sleep(2000);
-//			driver.switchTo().alert().accept();
-//			Thread.sleep(2000);
-//	
-//			String strConfirmationMessage = driver.findElement(By.xpath("//*[@id=\"msg\"]")).getText();
-//			System.out.println(strConfirmationMessage);
-//			Assert.assertEquals(strConfirmationMessage, "Credit purchased successfully");
-//	
-//			driver.close();
-//		}
+		@Parameters({ "environment", "paymentgateway" })
+		@Test(priority = 9, enabled = true)
+		public void testRechargePrepaidInConsoleAdminUsingExistingCard(String environment, String paymentgateway) throws InterruptedException, AWTException {
+			
+			String strAccountReference = "DOM-1218";
+			initialization(environment, "consoleadmin");
+			caloginpage = new CALoginPage();
+			caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+			caheaderpage.searchAccountReference(strAccountReference);
+				
+			
+			cainvoicespage = caheaderpage.clickViewInvoiceAndPrepaidDetail();
+			
+			
+			Thread.sleep(2000);
+			driver.findElement(By.linkText("Prepaid Account Details")).click();
+			Thread.sleep(2000);
+	
+			// cainvoicespage.setCreditCardDetails();
+	
+			driver.findElement(By.xpath("//*[@id=\"useExistingBilling\"]")).click();
+			driver.findElement(By.xpath("//*[@id=\"creditCardAmount\"]")).clear();
+			driver.findElement(By.xpath("//*[@id=\"creditCardAmount\"]")).sendKeys("20");
+			Thread.sleep(2000);
+			driver.findElement(By.xpath("//*[@id=\"purchaseCredit\"]")).click();
+			Thread.sleep(2000);
+			driver.switchTo().alert().accept();
+			Thread.sleep(2000);
+	
+			String strConfirmationMessage = driver.findElement(By.xpath("//*[@id=\"msg\"]")).getText();
+			System.out.println(strConfirmationMessage);
+			Assert.assertEquals(strConfirmationMessage, "Credit purchased successfully");
+	
+			driver.quit();
+		}
 
 	
 }

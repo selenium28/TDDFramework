@@ -12,7 +12,7 @@
 	<test name="Payment Gateway UAT Braintree Regression Domainz Test Cases" parallel = "none" preserve-order="true">
     
 		<classes>
-			<class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB">
+<!-- 			<class name="com.paymentgateway.uat.domainz.testcases.RegressionSalesDB">
                 <methods>
                     <include name="testCreateDomainAndMajorProductOrderInSalesDB" />
                     <include name="testDomainRegistration2WorkflowInConsoleAdmin" />
@@ -21,14 +21,15 @@
                     <include name="testRefundPaymentFromSalesDB" />
                     <include name="testPayInvoiceUsingExistingCardFromSalesDB" />
                 </methods>
-            </class>
+            </class> -->
             <class name="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin">
                 <methods>
-                    <include name="testViewBillingInConsoleAdmin" />
-                    <include name="testUpdateExpiryInConsoleAdmin" />
+                <!--     <include name="testViewBillingInConsoleAdmin" />
+                    <include name="testUpdateExpiryInConsoleAdmin" /> -->
+                     <include name="testRechargePrepaidInConsoleAdminUsingExistingCard" />
                 </methods>
             </class>
-            <class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI">
+           <!--  <class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI">
                 <methods>
                     <include name="testAddNewCreditCardInSMUI" />
                     <include name="testModifyExistingCreditCardInSMUI" />
@@ -37,7 +38,7 @@
 					<include name="testRechargePrepaidUsingExistingCardInSMUI" />
 					<include name="testRechargePrepaidUsingNewCardInSMUI" />
                 </methods>
-            </class> 
+            </class>  -->
 		</classes>
 		
 	</test>  
