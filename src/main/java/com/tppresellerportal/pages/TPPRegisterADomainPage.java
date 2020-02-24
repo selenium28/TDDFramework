@@ -368,7 +368,7 @@ public class TPPRegisterADomainPage extends TestBase {
 
 	public void selectHosting(String hostingProduct) {
 
-		System.out.println("Seelct hosting product");
+		System.out.println("Select hosting product");
 		Select hostingDropdown = new Select(hosting);
 		hostingDropdown.selectByVisibleText(hostingProduct);
 
@@ -454,5 +454,64 @@ public class TPPRegisterADomainPage extends TestBase {
 		registerDomainButton.click();
 
 	}
+
+	public void selectEligibilityID(String eligibilityIDType) {
+		
+
+		System.out.println("Select Eligibility ID Type");
+		Select eligibilityIDTypeDropdown = new Select(driver.findElement(By.name("auOwner.registrantidtype")));
+		eligibilityIDTypeDropdown.selectByVisibleText(eligibilityIDType);
+		
+	}
+
+	public void enterRegistrantIdNumber(String registrantIdNumber) {
+		
+		System.out.println("Enter Registrant ID number");
+		driver.findElement(By.name("auOwner.registrantidnumber")).sendKeys(registrantIdNumber);
+		
+	}
+
+	public void enterCompanyName(String registrantName) {
+		
+		System.out.println("Enter Registrant's name");
+		driver.findElement(By.name("auOwner.registrantname")).sendKeys(registrantName);
+	}
+
+	public void selectEligibilityType(String eligibilityType) {
+		
+		System.out.println("Select Eligibility Type");
+		Select eligibilityTypeDropdown = new Select(driver.findElement(By.name("auOwner.eligibilitytype")));
+		eligibilityTypeDropdown.selectByVisibleText(eligibilityType);
+		
+	}
+
+	public void tickICertify() {
+		
+		System.out.println("Tick that I certify");
+		driver.findElement(By.cssSelector("#auEligibility [name*=agreePolicy]")).click();
+		
+	}
+
+	public void provideEligibilityDetailsForAu(String eligibilityIDType, String registrantIdNumber, String registrantName,
+			String eligibilityType) {
+		
+		selectEligibilityID(eligibilityIDType);
+		enterRegistrantIdNumber(registrantIdNumber);
+		enterCompanyName(registrantName);
+		selectEligibilityType(eligibilityType);
+		tickICertify();
+		
+	}
+
+
+	public void provideEligibilityDetailsForIdAu(String registrantName, String eligibilityType) {
+		
+		enterCompanyName(registrantName);
+		selectEligibilityType(eligibilityType);
+		tickICertify();
+		
+	}
+
+
 
 }

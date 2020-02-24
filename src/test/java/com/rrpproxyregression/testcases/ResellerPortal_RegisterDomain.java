@@ -71,6 +71,29 @@ public class ResellerPortal_RegisterDomain extends TestBase {
 		tppRegisterADomainPage.setDomainNameAndTld(strDomainName, "." + namespace);
 		tppRegisterADomainPage.selectExistingCustomer();
 		tppRegisterADomainPage.selectRegistranContact("James Cooper");
+
+		switch (namespace) {
+		case "com.au":
+		case "net.au":
+			System.out.println("This is the namespace " + namespace + ". Eligibility details is requied.");
+			tppRegisterADomainPage.provideEligibilityDetailsForAu("ABN","54 109 565 095","ARQ GROUP WHOLESALE PTY LTD","Company");
+			break;
+		case "org.au":
+			System.out.println("This is the namespace " + namespace + ". Eligibility details is requied.");
+			tppRegisterADomainPage.provideEligibilityDetailsForAu("ABN","54 109 565 095","ARQ GROUP WHOLESALE PTY LTD","Non-profit Organisation");
+			break;
+		case "id.au":
+			System.out.println("This is the namespace " + namespace + ". Eligibility details is requied.");
+			tppRegisterADomainPage.provideEligibilityDetailsForIdAu("ARQ GROUP WHOLESALE PTY LTD","Citizen/Resident");
+			break;
+		case "asn.au":
+			System.out.println("This is the namespace " + namespace + ". Eligibility details is requied.");
+			tppRegisterADomainPage.provideEligibilityDetailsForAu("ABN","54 109 565 095","ARQ GROUP WHOLESALE PTY LTD","Incorporated Association");
+			break;
+		default:
+			System.out.println("Au eligibility is not required for this namespace");
+		}
+
 		tppRegisterADomainPage.tickNameServerOptions("Choose your nameservers");
 		tppRegisterADomainPage.inputNameServerFields("ns1.partnerconsole.net", "ns2.partnerconsole.net");
 		tppRegisterADomainPage.tickTermsAndConditions();
