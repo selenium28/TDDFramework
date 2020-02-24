@@ -66,8 +66,6 @@ public class CustomerPortal_CheckDomainAvailability extends TestBase {
 
 		// Test Step 3: Verify search result message
 		test.log(LogStatus.INFO, "Verify search result message");
-		// Assert.assertEquals(tppDomainSearchPage.checkStatus(), "Available
-		// ","Available");
 		Assert.assertTrue(tppDomainSearchPage.checkStatus(), "Available ");
 		System.out.println("End Test: verifyDomainNameAvailableForRegistrationNotPremium");
 		driver.quit();
