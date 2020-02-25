@@ -39,8 +39,8 @@ public class TPPTabPage extends TestBase {
 	// Methods
 	public void clickDomainsTab() throws InterruptedException {
 
-		//Thread.sleep(3000);
-		new WebDriverWait(driver, 10).until(ExpectedConditions.urlContains("execute/home"));
+		
+		new WebDriverWait(driver, 40).until(ExpectedConditions.urlContains("execute/home"));
 		System.out.println("clicking domains tab");
 		if (domainsTab.isDisplayed() || domainsTab.isEnabled()) {
 			domainsTab.click();
