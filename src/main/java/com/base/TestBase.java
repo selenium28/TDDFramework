@@ -155,6 +155,8 @@ public class TestBase {
 			driver.get(testEnvironment.customerportalurl_netregistry());
 		} else if (entrypoint.equals("customerportalurl_melbourneit")) {
 			driver.get(testEnvironment.customerportalurl_melbourneit());
+		}else if (entrypoint.equals("customerportalurl_tpp")) {
+			driver.get(testEnvironment.customerportalurl_tpp());
 		}
 		
 		// Reseller Portal
