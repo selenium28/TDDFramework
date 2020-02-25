@@ -17,25 +17,30 @@
 		parallel="none" preserve-order="true">
 
 		<classes>
-			<!-- <class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB"> 
-				<methods> <include name="testCreateDomainAndMajorProductOrderInSalesDB" /> 
-				<include name="testDomainRegistration2WorkflowInConsoleAdmin" /> <include 
-				name="testProductSetup2WorkflowInConsoleAdmin" /> </methods> </class> <class 
-				name="com.paymentgateway.uat.melbourneit.testcases.RegressionConsoleAdmin"> 
-				<methods> <include name="testViewBillingInConsoleAdmin" /> <include name="testUpdateExpiryInConsoleAdmin" 
-				/> </methods> </class> -->
-			<class
-				name="com.paymentgateway.uat.melbourneit.testcases.RegressionSMUI">
+<!-- 			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSalesDB">
 				<methods>
-<!-- 					<include name="testAddNewCreditCardInSMUI" />
-					<include name="testModifyExistingCreditCardInSMUI" /> -->
-					<include name="testMakeCreditCardDefaultInSMUI" />
-<!-- 					<include name="testDeleteCreditCardInSMUI" />
-					<include name="testRechargePrepaidUsingExistingCardInSMUI" />
-					<include name="testRechargePrepaidUsingNewCardInSMUI" /> -->
+					<include name="testCreateDomainAndMajorProductOrderInSalesDB" />
+					<include name="testDomainRegistration2WorkflowInConsoleAdmin" />
+					<include name="testProductSetup2WorkflowInConsoleAdmin" />
+				</methods>
+			</class> -->
+			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionConsoleAdmin">
+				<methods>
+<!-- 					<include name="testViewBillingInConsoleAdmin" />
+					<include name="testUpdateExpiryInConsoleAdmin" /> -->
+					<include name="testRechargePrepaidInConsoleAdminUsingExistingCard" />
 				</methods>
 			</class>
+<!-- 			<class name="com.paymentgateway.uat.melbourneit.testcases.RegressionSMUI">
+				<methods>
+					<include name="testAddNewCreditCardInSMUI" />
+					<include name="testModifyExistingCreditCardInSMUI" />
+					<include name="testMakeCreditCardDefaultInSMUI" />
+					<include name="testDeleteCreditCardInSMUI" />
+					<include name="testRechargePrepaidUsingExistingCardInSMUI" />
+					<include name="testRechargePrepaidUsingNewCardInSMUI" />
+				</methods>
+			</class> -->
 		</classes>
-
 	</test>
 </suite> 

@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.base.TestBase;
 
@@ -17,6 +18,21 @@ public class CAPrepaidCreidtPage extends TestBase{
 	
     @FindBy(how=How.ID, using = "purchaseCredit")
     WebElement purchaseCredit;
+    
+    @FindBy(how=How.NAME, using = "cardOwner")
+    WebElement cardOwner;
+    
+    @FindBy(how=How.NAME, using = "cardNumber")
+    WebElement cardNumber;
+    
+    @FindBy(how=How.NAME, using = "cardType")
+    WebElement cardType;
+    
+    @FindBy(how=How.NAME, using = "expiryMonth")
+    WebElement expiryMonth;
+    
+    @FindBy(how=How.NAME, using = "expiryYear")
+    WebElement expiryYear;
     
 	//Initializing Page Objects
 	public CAPrepaidCreidtPage(){
@@ -59,6 +75,18 @@ public class CAPrepaidCreidtPage extends TestBase{
 		String strConfirmationMessage = null;
 		strConfirmationMessage = driver.findElement(By.id("msg")).getText();
 		return strConfirmationMessage;
+	}
+
+	public void setCreditCardDetails(String strCardOwner, String strCardType, String strCardNumber, String strExpiryMonth, String strExpiryYear ) {
+
+		cardOwner.sendKeys(strCardOwner);
+		Select cardTypeDropDown = new Select(cardType);
+		cardTypeDropDown.selectByValue(strCardType);
+		cardNumber.sendKeys(strCardNumber);
+		expiryMonth.sendKeys(strExpiryMonth);
+		expiryYear.sendKeys(strExpiryYear);
+		
+		
 	}
 	
 

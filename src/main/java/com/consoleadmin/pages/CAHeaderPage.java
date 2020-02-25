@@ -72,8 +72,9 @@ public class CAHeaderPage extends TestBase {
 		System.out.println("Submit button clicked");
 
 		// To add a waiting time for account reference page to load
+
 		new WebDriverWait(driver, 10)
-				.until(ExpectedConditions.textToBe(By.cssSelector("#top h1"), strAccountReference));
+				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#top h1")));
 
 		return new CAAccountReferencePage();
 	}

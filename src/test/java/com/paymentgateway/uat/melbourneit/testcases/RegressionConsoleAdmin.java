@@ -3,7 +3,6 @@ package com.paymentgateway.uat.melbourneit.testcases;
 import java.awt.AWTException;
 import java.io.IOException;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -14,10 +13,10 @@ import com.consoleadmin.pages.CADomainLevelPage;
 import com.consoleadmin.pages.CAHeaderPage;
 import com.consoleadmin.pages.CAInvoicesPage;
 import com.consoleadmin.pages.CALoginPage;
+import com.consoleadmin.pages.CAPrepaidCreidtPage;
 import com.consoleadmin.pages.CAViewCreditCardsPage;
 import com.consoleadmin.pages.CAWorkflowAdminPage;
 import com.relevantcodes.extentreports.ExtentTest;
-
 import com.util.TestUtil;
 
 public class RegressionConsoleAdmin extends TestBase {
@@ -30,6 +29,7 @@ public class RegressionConsoleAdmin extends TestBase {
 		CADomainLevelPage cadomainlevelpage;
 		CAViewCreditCardsPage caviewcreditcardspage;
 		CAInvoicesPage cainvoicespage;
+		CAPrepaidCreidtPage caprepaidcreditpage;
 	
 		TestUtil testUtil;
 		public static ExtentTest logger;
@@ -96,42 +96,32 @@ public class RegressionConsoleAdmin extends TestBase {
 			driver.close();	
 		}
 	
-//		@Parameters({ "environment", "paymentgateway" })
-//		@Test(priority = 9, enabled = true)
-//		public void RechargePrepaidInConsoleAdminUsingExistingCard(String environment, String paymentgateway) throws InterruptedException, AWTException {
-//			
-//			String straccountreference = "DOM-1218";
-//			initialization(environment, "consoleadmin");
-//			caloginpage = new CALoginPage();
-//			caviewcreditcardspage = new CAViewCreditCardsPage();
-//			caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
-//			caheaderpage = new CAHeaderPage();
-//			caheaderpage.searchAccountReference(straccountreference);
-//			cainvoicespage = new CAInvoicesPage();
-//	
-//			Thread.sleep(2000);
-//			driver.findElement(By.linkText("View Invoice & Prepaid detail")).click();
-//			Thread.sleep(2000);
-//			driver.findElement(By.linkText("Prepaid Account Details")).click();
-//			Thread.sleep(2000);
-//	
-//			// cainvoicespage.setCreditCardDetails();
-//	
-//			driver.findElement(By.xpath("//*[@id=\"useExistingBilling\"]")).click();
-//			driver.findElement(By.xpath("//*[@id=\"creditCardAmount\"]")).clear();
-//			driver.findElement(By.xpath("//*[@id=\"creditCardAmount\"]")).sendKeys("20");
-//			Thread.sleep(2000);
-//			driver.findElement(By.xpath("//*[@id=\"purchaseCredit\"]")).click();
-//			Thread.sleep(2000);
-//			driver.switchTo().alert().accept();
-//			Thread.sleep(2000);
-//	
-//			String strConfirmationMessage = driver.findElement(By.xpath("//*[@id=\"msg\"]")).getText();
-//			System.out.println(strConfirmationMessage);
-//			Assert.assertEquals(strConfirmationMessage, "Credit purchased successfully");
-//	
-//			driver.close();
-//		}
+		@Parameters({ "environment", "paymentgateway" })
+		@Test(priority = 9, enabled = true)
+		public void testRechargePrepaidInConsoleAdminUsingExistingCard(String environment, String paymentgateway) throws InterruptedException, AWTException {
+			
+			String strAccountReference = "MEL-6005";
+			initialization(environment, "consoleadmin");
+			//Test Step 1: Login to Console Admin and search for Account reference
+			caloginpage = new CALoginPage();
+			caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+			caheaderpage.searchAccountReference(strAccountReference);		
+			
+			//Test Step 2: Navigate to View Invoice and Prepaid > Prepaid Account Details
+			cainvoicespage = caheaderpage.clickViewInvoiceAndPrepaidDetail();
+			caprepaidcreditpage = cainvoicespage.clickPrepaidAccountDetails();
+			
 
+			//Test Step 3: Select existing credit card and purchase a credit
+			caprepaidcreditpage.selectExistingCreditCard();
+			caprepaidcreditpage.enterAmount("20");
+			caprepaidcreditpage.clickPurchaseCredit();
+			caprepaidcreditpage.confirmPurchase();
+
+			//Test Step 3: Verify successful purchased
+			Assert.assertEquals(caprepaidcreditpage.getSuccessPurchasedMessage(),"Credit purchased successfully");
+			driver.quit();
+			
+		}
 	
 }

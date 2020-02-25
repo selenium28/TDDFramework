@@ -127,6 +127,37 @@ public class RegressionConsoleAdmin extends TestBase {
 			driver.quit();
 			
 		}
+		
+		@Parameters({ "environment", "paymentgateway" })
+		@Test(priority = 2, enabled = true)
+		public void testRechargePrepaidInConsoleAdminUsingNewCard(String environment, String paymentgateway) throws InterruptedException, AWTException {
+			String straccountreference = "DOM-1218";
+			initialization(environment, "consoleadmin");
+			caloginpage = new CALoginPage();
+			caviewcreditcardspage = new CAViewCreditCardsPage();
+			caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
+			caheaderpage = new CAHeaderPage();
+			caheaderpage.searchAccountReference(straccountreference);
+			cainvoicespage = new CAInvoicesPage();
+
+			//Test Step 2: Navigate to View Invoice and Prepaid > Prepaid Account Details
+			cainvoicespage = caheaderpage.clickViewInvoiceAndPrepaidDetail();
+			caprepaidcreditpage = cainvoicespage.clickPrepaidAccountDetails();
+			
+			//Test Step 3: Select new credit card and purchase a credit
+			caprepaidcreditpage.setCreditCardDetails("John Doe", "Visa", "4111 1111 1111 1111", "03", "23");
+			caprepaidcreditpage.enterAmount("20");
+			caprepaidcreditpage.clickPurchaseCredit();
+			caprepaidcreditpage.confirmPurchase();
+
+			//Test Step 3: Verify successful purchased
+			Assert.assertEquals(caprepaidcreditpage.getSuccessPurchasedMessage(),"Credit purchased successfully");
+			driver.quit();
+
+			driver.close();
+			
+			
+		}
 
 	
 }
