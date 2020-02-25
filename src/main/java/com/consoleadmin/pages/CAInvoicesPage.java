@@ -45,4 +45,12 @@ public class CAInvoicesPage extends TestBase {
 
 	}
 
+	public CAPrepaidCreidtPage clickPrepaidAccountDetails() {
+		
+		System.out.println("Click Prepaid Account Details link.");
+		driver.findElement(By.linkText("Prepaid Account Details")).click();
+		return new CAPrepaidCreidtPage();
+		
+	}
+
 }

@@ -24,7 +24,7 @@
             </class> -->
             <class name="com.paymentgateway.uat.domainz.testcases.RegressionConsoleAdmin">
                 <methods>
-                <!--     <include name="testViewBillingInConsoleAdmin" />
+                 <!--    <include name="testViewBillingInConsoleAdmin" />
                     <include name="testUpdateExpiryInConsoleAdmin" /> -->
                      <include name="testRechargePrepaidInConsoleAdminUsingExistingCard" />
                 </methods>
