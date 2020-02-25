@@ -21,13 +21,13 @@ public class CAWorkflowAdminPage extends TestBase {
 
 	@FindBy(how = How.XPATH, using = "//th[contains(text(),'payment.preauth.preauth')]")
 	WebElement preAuthVariableName;
-	
+
 	@FindBy(how = How.XPATH, using = "//td/table/tbody/tr/td/table[3]/tbody/tr[2]/td[1]/a")
 	WebElement clickOnWorkflowId;
-	
+
 	@FindBy(how = How.XPATH, using = "//td/table[1]/tbody/tr[8]/td")
 	WebElement workflowStatus;
-	
+
 	@FindBy(how = How.XPATH, using = "//*[contains(text(),'Cancel This Workflow')]")
 	WebElement clickOnCancelWorkflow;
 
@@ -59,7 +59,7 @@ public class CAWorkflowAdminPage extends TestBase {
 	public void processDomainRegistration2Workflow(String strworkflowid, String strtld) throws InterruptedException {
 
 		driver.findElement(By.linkText(strworkflowid)).click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 
 		if (strtld.equals("com") || strtld.equals("net")) {
 			this.processCheckASIC();
@@ -72,9 +72,14 @@ public class CAWorkflowAdminPage extends TestBase {
 			this.processDelegateDomain();
 		}
 
-		// To add a waiting time for workflow to complete processing
-		// Thread.sleep(120000);
-		new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(driver.findElement(By.id("msg"))));
+		try {
+			Thread.sleep(10000);
+			new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("msg")));
+		} catch (Exception e) {
+			System.out.println("Processing the workflow has timed out. Search the workflow instead");
+			e.printStackTrace();
+		}
+
 	}
 
 	public void processCheckASIC() throws InterruptedException {
@@ -218,14 +223,14 @@ public class CAWorkflowAdminPage extends TestBase {
 
 		System.out.println("Execute Action button clicked");
 
-		// To add a waiting time for workflow to complete processing
-		Thread.sleep(220000);
+		Thread.sleep(10000);
 		try {
 			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(driver.findElement(By.id("msg"))));
 		} catch (Exception e) {
 			System.out.println("Processing the workflow has timed out. Search the workflow instead");
 			e.printStackTrace();
 		}
+
 
 	}
 
@@ -531,23 +536,23 @@ public class CAWorkflowAdminPage extends TestBase {
 
 		}
 	}
-	
-	public void clickOnWorkflowId() throws InterruptedException{
+
+	public void clickOnWorkflowId() throws InterruptedException {
 		clickOnWorkflowId.click();
 		Thread.sleep(2000);
 	}
-	
-	public String getWorkflowStatus() throws InterruptedException{
-		//Check status of workflow from parameters
+
+	public String getWorkflowStatus() throws InterruptedException {
+		// Check status of workflow from parameters
 		Thread.sleep(2000);
 		return workflowStatus.getText();
 	}
-	
-	public void cancelWorkflow(){
+
+	public void cancelWorkflow() {
 		clickOnCancelWorkflow.click();
 	}
-	
-	public String verifyWorkflowType(){
+
+	public String verifyWorkflowType() {
 		return workflowType.getText();
 	}
 }
