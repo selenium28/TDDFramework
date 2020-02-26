@@ -137,6 +137,7 @@ public class RegressionConsoleAdmin extends TestBase {
 			throws InterruptedException, AWTException {
 		String straccountreference = "MEL-6005";
 		initialization(environment, "consoleadmin");
+		// Test Step 1: Login to Console Admin and search for Account reference
 		caloginpage = new CALoginPage();
 		caviewcreditcardspage = new CAViewCreditCardsPage();
 		caheaderpage = caloginpage.login("erwin.sukarna", "comein22");
