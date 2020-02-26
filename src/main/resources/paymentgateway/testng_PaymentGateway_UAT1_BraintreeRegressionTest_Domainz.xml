@@ -27,7 +27,7 @@
                  <!--    <include name="testViewBillingInConsoleAdmin" />
                     <include name="testUpdateExpiryInConsoleAdmin" /> -->
                     <!--  <include name="testRechargePrepaidInConsoleAdminUsingExistingCard" /> -->
-                     <include name="testRechargePrepaidInConsoleAdminUsingNewCard" />
+                     <include name="testRechargePrepaidInConsoleAdminUsingNewCard"/>
                 </methods>
             </class>
            <!--  <class name="com.paymentgateway.uat.domainz.testcases.RegressionSMUI">

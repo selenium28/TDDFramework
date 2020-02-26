@@ -104,7 +104,7 @@ public class RegressionConsoleAdmin extends TestBase {
 	}
 
 	@Parameters({ "environment", "paymentgateway" })
-	@Test(priority = 9, enabled = true)
+	@Test
 	public void testRechargePrepaidInConsoleAdminUsingExistingCard(String environment, String paymentgateway)
 			throws InterruptedException, AWTException {
 
