@@ -1,53 +1,52 @@
 package com.tppresellerportal.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.TestBase;
 
 public class TPPLoginPage extends TestBase {
 
-	
-	//Objects
-    @FindBy(how=How.NAME, using = "login")
-    WebElement accountReference;
+	// Objects
+	@FindBy(how = How.NAME, using = "login")
+	WebElement accountReference;
 
-    @FindBy(how=How.NAME, using = "password")
-    WebElement password;
-    
-    @FindBy(how=How.NAME, using = "button.login")
-    WebElement loginButton;
+	@FindBy(how = How.NAME, using = "password")
+	WebElement password;
 
-    
-	//Initializing Page Objects
-	public TPPLoginPage(){
-        PageFactory.initElements(driver, this);
-    }
+	@FindBy(how = How.NAME, using = "button.login")
+	WebElement loginButton;
 
-	
-    //Methods
-    public void setLoginDetails(String straccountreference, String strpassword)  {
-    		
-    		accountReference.sendKeys(straccountreference);
-	    	password.sendKeys(strpassword);
-			
-    }
-    
-    public TPPTabPage clickLoginButton() throws InterruptedException {
+	// Initializing Page Objects
+	public TPPLoginPage() {
+		PageFactory.initElements(driver, this);
+	}
 
-    	System.out.println("clicking login button");
-    	if(loginButton.isDisplayed()||loginButton.isEnabled()) {
-    		loginButton.click();
-    	}
-		else {
+	// Methods
+	public void setLoginDetails(String straccountreference, String strpassword) throws InterruptedException {
+
+		new WebDriverWait(driver, 80).until(ExpectedConditions.visibilityOf(driver.findElement(By.tagName("h1"))));
+		accountReference.sendKeys(straccountreference);
+		password.sendKeys(strpassword);
+
+	}
+
+	public TPPTabPage clickLoginButton() throws InterruptedException {
+
+		System.out.println("clicking login button");
+		if (loginButton.isDisplayed() || loginButton.isEnabled()) {
+			loginButton.click();
+		} else {
 			System.out.println("element not found");
 		}
 
-    	return new TPPTabPage();
-    	
-    }
+		return new TPPTabPage();
+
+	}
 
 }
-

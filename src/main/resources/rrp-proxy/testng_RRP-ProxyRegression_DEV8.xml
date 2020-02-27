@@ -10,7 +10,7 @@
 	<!-- <listeners> <listener class-name="com.reports.extentreportslistener.ExtentReportListener" 
 		/> </listeners> -->
 
-	<test name="RRP-Proxy Regression Test Cases">
+<test name="RRP-Proxy Regression Test Cases">
 		<classes>
 			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain">
 				<methods>
@@ -27,14 +27,13 @@
 				</methods>
 			</class>
 
-<!-- 			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_BulkDomain">
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_BulkDomain">
 				<methods>
 					<include name="verifyDomainNameAvailableForRegistration" />
 					<include name="verifyDomainNameNotAvailableForRegistration" />
 					<include name="verifyDomainNameAvailableForRegistrationAndPremium" />
-
 				</methods>
-			</class> -->
+			</class>
 			
 			<class name="com.rrpproxyregression.testcases.ResellerPortal_TransferDomain">
 				<methods>
@@ -42,6 +41,14 @@
 					<include name="verifyDomainTransferWorkflowInConsoleAdmin" />
 					<include name="verifyDomainTransferOrderInRRPPortal" />
 					<include name="verifyUnsuccessfulDomainTransferOrder" />
+				</methods>
+			</class>
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_RegisterDomain"/>
+			<class name="com.rrpproxyregression.testcases.CustomerPortal_CheckDomainAvailability">
+				<methods>
+					<include name="verifyDomainNameAvailableForRegistrationNotPremium" />
+					<include name="verifyDomainNameNotAvailableForRegistration" />
+					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />
 				</methods>
 			</class>
 		</classes>
