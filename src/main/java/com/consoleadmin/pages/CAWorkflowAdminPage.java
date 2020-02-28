@@ -25,13 +25,13 @@ public class CAWorkflowAdminPage extends TestBase {
 	@FindBy(how = How.XPATH, using = "//td/table/tbody/tr/td/table[3]/tbody/tr[2]/td[1]/a")
 	WebElement clickOnWorkflowId;
 
-	@FindBy(how = How.XPATH, using = "//td/table[1]/tbody/tr[8]/td")
+	@FindBy(how = How.XPATH, using = "//*[contains(text(),'Status:')]//following::td[1]")
 	WebElement workflowStatus;
 
 	@FindBy(how = How.XPATH, using = "//*[contains(text(),'Cancel This Workflow')]")
 	WebElement clickOnCancelWorkflow;
 
-	@FindBy(how = How.XPATH, using = "//*[contains(text(),'transferral2')]")
+	@FindBy(how = How.XPATH, using = "//*[contains(text(),'Workflow Type')]//following::td[1]")  
 	WebElement workflowType;
 
 	// Initializing Page Objects
@@ -544,7 +544,8 @@ public class CAWorkflowAdminPage extends TestBase {
 
 	public String getWorkflowStatus() throws InterruptedException {
 		// Check status of workflow from parameters
-		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		wait.until(ExpectedConditions.visibilityOf(workflowStatus));
 		return workflowStatus.getText();
 	}
 
@@ -554,5 +555,14 @@ public class CAWorkflowAdminPage extends TestBase {
 
 	public String verifyWorkflowType() {
 		return workflowType.getText();
+	}
+	
+	public String processRenewal2Workflow(){
+		//Click Start Auto Renewal action
+		driver.findElement(By.xpath("//table/tbody/tr/td/table[3]/tbody/tr[3]/td[3]/a")).click();
+		driver.findElement(By.xpath("//*[contains(@value,'Execute Action')]")).click();
+		WebDriverWait wait = new WebDriverWait(driver,100);
+		wait.until(ExpectedConditions.visibilityOf(workflowStatus));
+		return workflowStatus.getText();
 	}
 }

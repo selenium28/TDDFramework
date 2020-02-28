@@ -51,6 +51,15 @@
 					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />
 				</methods>
 			</class>
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_RenewDomain">
+				<methods>
+					<include name="generateARenewalWorkflowFromConsoleAdmin"></include>
+					<include name="renewADomainFromResellerPortal" />
+					<include name="executeRenewal2WorkflowFromConsoleAdmin" />
+					<include name="verifyDomainExpiryDateAfterRenewalInRrpPortal" />
+					<include name="renewADomainFromResellerPortalWhichIsAlreadyRenewed" />
+				</methods>
+			</class>
 		</classes>
 	</test>
 </suite>

@@ -29,6 +29,9 @@ public class TPPTabPage extends TestBase {
 	
 	@FindBy (how = How.XPATH, using = "//*[@id='menu']/ul/li[1]/ul/li[3]")
 	WebElement domainTransferLink;
+	
+	@FindBy (how = How.XPATH, using = "//*[@id='menu']/ul/li[1]/ul/li[5]")
+	WebElement domainRenewLink;
 
 	// Initializing Page Objects
 	public TPPTabPage() {
@@ -93,6 +96,18 @@ public class TPPTabPage extends TestBase {
 		}
 		
 		return new TPPTransferDomainsPage();
+	}
+	
+	public TPPRenewDomainsPage clickDomainRenewLink() throws InterruptedException {
+		Thread.sleep(3000);
+		System.out.println("clicking register link");
+		if (domainRenewLink.isDisplayed() || domainRenewLink.isEnabled()) {
+			domainRenewLink.click();
+		} else {
+			System.out.println("element not found");
+		}
+		
+		return new TPPRenewDomainsPage();
 	}
 
 }
