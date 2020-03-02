@@ -11,11 +11,11 @@ import java.util.concurrent.TimeUnit;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
-<<<<<<< HEAD
+
 import org.openqa.selenium.TakesScreenshot;
-=======
+
 import org.openqa.selenium.PageLoadStrategy;
->>>>>>> master
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
