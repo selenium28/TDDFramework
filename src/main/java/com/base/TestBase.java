@@ -11,7 +11,11 @@ import java.util.concurrent.TimeUnit;
 import org.aeonbits.owner.ConfigFactory;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+<<<<<<< HEAD
 import org.openqa.selenium.TakesScreenshot;
+=======
+import org.openqa.selenium.PageLoadStrategy;
+>>>>>>> master
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -94,15 +98,16 @@ public class TestBase {
 
 			System.setProperty("webdriver.chrome.driver", "seleniumwebdriver/chromedriver/chromedriver.exe");
 //
-//	        ChromeOptions options = new ChromeOptions();
+	        ChromeOptions options = new ChromeOptions();
 //	       
 //	        options.addArguments("--disable-gpu");
 //	        options.addArguments("--disable-browser-side-navigation");
+	        options.setPageLoadStrategy(PageLoadStrategy.NONE);
 //	        
 //	        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
 //	        capabilities.setCapability(CapabilityType.ForSeleniumServer.ENSURING_CLEAN_SESSION, true);
-//	        driver = new ChromeDriver(options);
-			driver = new ChromeDriver();
+	        driver = new ChromeDriver(options);
+//			driver = new ChromeDriver();
 			driver.manage().deleteAllCookies();
 		} else if (browserName.equals("firefox")) {
 
@@ -123,7 +128,7 @@ public class TestBase {
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+		//driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 
 		// Sales DB
@@ -157,6 +162,8 @@ public class TestBase {
 			driver.get(testEnvironment.customerportalurl_netregistry());
 		} else if (entrypoint.equals("customerportalurl_melbourneit")) {
 			driver.get(testEnvironment.customerportalurl_melbourneit());
+		}else if (entrypoint.equals("customerportalurl_tpp")) {
+			driver.get(testEnvironment.customerportalurl_tpp());
 		}
 		
 		// Reseller Portal

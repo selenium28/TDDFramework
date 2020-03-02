@@ -16,7 +16,7 @@ public class MITHeaderPage extends TestBase{
     @FindBy(how=How.XPATH, using = ".//*[@id='wrap']/div[2]/div[2]/div[1]/ul/li[2]/a/span")
     WebElement orderTab;
     
-    @FindBy(how=How.XPATH, using = ".//*[@id='wrap']/div[2]/div[2]/div[1]/ul/li[3]/a/span")
+    @FindBy(how=How.CSS, using = ".nav-tabs .billing ")
     WebElement billingTab;
     
     @FindBy(how=How.XPATH, using = ".//*[@id='wrap']/div[2]/div[2]/div[1]/ul/li[4]/a/span")
@@ -62,4 +62,12 @@ public class MITHeaderPage extends TestBase{
 //    	
 //    }
 	
+
+	public MITBillingPage clickBillingTab() throws InterruptedException {
+		
+		System.out.println("Clicking billing tab");
+		billingTab.click();
+
+		return new MITBillingPage();
+	}
 }

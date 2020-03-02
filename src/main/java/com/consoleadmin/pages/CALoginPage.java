@@ -33,7 +33,7 @@ public class CALoginPage extends TestBase{
     
     public CAHeaderPage setDefaultLoginDetails(String environment) throws InterruptedException {
     	
-		if(environment.equalsIgnoreCase("stagingdev-5")||environment.equalsIgnoreCase("stagingdev-8")) {
+		if(environment.equalsIgnoreCase("dev5")||environment.equalsIgnoreCase("dev8")) {
 			
 	    	userName.sendKeys("erwin.sukarna");
 	    	password.sendKeys("comein22");
