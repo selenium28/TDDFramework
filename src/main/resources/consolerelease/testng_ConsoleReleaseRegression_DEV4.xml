@@ -9,7 +9,7 @@
 	
 	<test name="Console Release Regression DEV4 Test Cases">
 		<classes>	
- 		<class name="com.consoleregression.testcases.tpp.CustomerPortalJourneyTest">
+ 			<class name="com.consoleregression.testcases.tpp.CustomerPortalJourneyTest">
 			<methods>
             	<include name="verifyDomainRegistrationWithProductOrderForNewCustomerInCustomerPortal" />                    
              	<include name="verifyDomainRegistrationWithProductOrderForExistingCustomerInCustomerPortal" />                    
