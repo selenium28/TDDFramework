@@ -1,0 +1,47 @@
+package com.tppcustomerportal.pages;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
+
+import com.base.TestBase;
+
+public class TPPHostingAndExtrasPage extends TestBase{
+
+	//Objects         
+    @FindBy(how=How.CSS, using = "#save-order-form [name=save]")
+    WebElement continueButton;
+    
+    @FindBy(how=How.NAME, using = "showAddons")
+    WebElement addExtrasButton;
+
+    
+    //Initializing Page Objects
+    public TPPHostingAndExtrasPage(){
+        PageFactory.initElements(driver, this);
+    }
+
+
+	public TPPAddExtrasPage clickAddExtras() {
+		
+		System.out.println("Clicking add Extras button.");
+		addExtrasButton.click();
+		return new TPPAddExtrasPage();
+	}
+
+
+	public TPPAccountContactPage clickContinueButton() {
+		
+		System.out.println("Clicking continue button.");
+		continueButton.click();
+		return new TPPAccountContactPage();
+	}
+
+
+    
+
+}
