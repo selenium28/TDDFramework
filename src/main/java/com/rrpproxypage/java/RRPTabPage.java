@@ -28,6 +28,9 @@ public class RRPTabPage extends TestBase {
 	@FindBy(how = How.XPATH, using = "//*[contains(text(),'gulliver')]")
 	WebElement clickOnGulliverLink;
 	
+	@FindBy(how = How.XPATH, using = "//*[@id='submenuDomains']/li[2]/a")
+	WebElement clickOnSubMenuDomainsLink;
+	
 	//Initializing Page Objects
 	public RRPTabPage(){
 		   PageFactory.initElements(driver, this);
@@ -35,7 +38,7 @@ public class RRPTabPage extends TestBase {
 	
 	//Methods
 	public RRPDomainsPage clickOnDomainsLink() throws InterruptedException{
-		WebDriverWait wait = new WebDriverWait(driver,30); 
+		WebDriverWait wait = new WebDriverWait(driver,40); 
 		wait.until(ExpectedConditions.visibilityOfAllElements(clickOnGulliverLink));
 		if(clickOnMenuLink.isDisplayed()) {
 			clickOnDomainsLink.click();
@@ -48,5 +51,11 @@ public class RRPTabPage extends TestBase {
 		}
 		
 		return new RRPDomainsPage();
+	}
+	
+	public RRPMyDomainsPage clickOnSubMenuDomainsLink() throws InterruptedException{
+		Thread.sleep(3000);
+		clickOnSubMenuDomainsLink.click();
+		return new RRPMyDomainsPage();
 	}
 }

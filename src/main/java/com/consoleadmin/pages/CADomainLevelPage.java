@@ -31,6 +31,9 @@ public class CADomainLevelPage extends TestBase {
 
 	@FindBy(how = How.LINK_TEXT, using = "Account Interface")
 	WebElement accountInterfaceLink;
+	
+	@FindBy(how = How.XPATH, using = "//*[text()='Generate renewal workflow']")
+	WebElement generateRenewalWorkflow;
 
 	// Initializing Page Objects
 	public CADomainLevelPage() {
@@ -57,6 +60,15 @@ public class CADomainLevelPage extends TestBase {
 		// Switch newly open Tab
 		driver.switchTo().window(tabs.get(1));
 		return new CSMUITabPage();
+	}
+	
+	public void clickGenerateRenewalWorkflow() throws InterruptedException {
+		if (generateRenewalWorkflow.isDisplayed() || generateRenewalWorkflow.isEnabled()) {
+			generateRenewalWorkflow.click();
+		} else {
+			System.out.println("element not found");
+		}
+		Thread.sleep(10000);
 	}
 
 }
