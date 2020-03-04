@@ -38,6 +38,11 @@ public class CALoginPage extends TestBase{
 	    	userName.sendKeys("erwin.sukarna");
 	    	password.sendKeys("comein22");
 		}
+		else if(environment.equalsIgnoreCase("dev4")) {
+			
+			userName.sendKeys("agaudron");
+	    	password.sendKeys("comein22");
+		}
 		else if(environment.equalsIgnoreCase("uat1")||environment.equalsIgnoreCase("uat2")) {
 					
 			userName.sendKeys("erwin.sukarna");

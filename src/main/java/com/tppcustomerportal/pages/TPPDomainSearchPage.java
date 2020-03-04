@@ -6,6 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
+import com.netregistryoldwebsite.pages.NRGHostingAndExtrasPage;
 
 public class TPPDomainSearchPage extends TestBase {
 
@@ -13,6 +14,9 @@ public class TPPDomainSearchPage extends TestBase {
 
 	@FindBy(how = How.XPATH, using = "//div[@class='orderBoxWrapper domainSearchTable']//table//tbody/tr[2]/td[2]")
 	WebElement domainStatus;
+	
+    @FindBy(how=How.ID, using = "continueCart")
+    WebElement continueToCheckoutButton;
 
 	// Initializing Page Objects
 	public TPPDomainSearchPage() {
@@ -33,4 +37,16 @@ public class TPPDomainSearchPage extends TestBase {
 
 		return flag;
 	}
+	
+	  
+    public TPPHostingAndExtrasPage clickContinueToCheckoutWithoutDomainPrivacy(){
+    	System.out.println("clicking continue to checkout");
+    	if(continueToCheckoutButton.isDisplayed()||continueToCheckoutButton.isEnabled()) {
+    		continueToCheckoutButton.click();
+    	}
+		else {
+			System.out.println("element not found");
+		}
+    	return new TPPHostingAndExtrasPage();
+    }
 }
