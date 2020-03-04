@@ -12,7 +12,7 @@
 
 	<test name="RRP-Proxy Regression Test Cases">
 		<classes>
-			<class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain">
+			<!-- <class name="com.rrpproxyregression.testcases.ResellerPortal_CheckDomainAvailability_SingleDomain">
 				<methods>
 					<include name="verifyDomainNameAvailableForRegistrationNotPremium" />
 					<include name="verifyDomainNameNotAvailableForRegistration" />
@@ -50,8 +50,8 @@
 					<include name="verifyDomainNameNotAvailableForRegistration" />
 					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />
 				</methods>
-			</class>
-			<class name="com.rrpproxyregression.testcases.ResellerPortal_RenewDomain">
+			</class> -->
+			<!-- <class name="com.rrpproxyregression.testcases.ResellerPortal_RenewDomain">
 				<methods>
 					<include name="generateARenewalWorkflowFromConsoleAdmin"></include>
 					<include name="renewADomainFromResellerPortal" />
@@ -59,7 +59,15 @@
 					<include name="verifyDomainExpiryDateAfterRenewalInRrpPortal" />
 					<include name="renewADomainFromResellerPortalWhichIsAlreadyRenewed" />
 				</methods>
+			</class> -->
+			
+			<class name="com.rrpproxyregression.testcases.CustomererPortal_RegisterDomain">
+			<methods>
+			<include name="verifyDomainRegistrationInCustomerPortal" />
+			</methods>
+			
 			</class>
+			
 		</classes>
 	</test>
 </suite>
