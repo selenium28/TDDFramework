@@ -15,9 +15,12 @@ import com.consoleadmin.pages.CALoginPage;
 import com.consoleadmin.pages.CAWorkflowAdminPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.tppcustomerportal.pages.TPPAccountContactPage;
+import com.tppcustomerportal.pages.TPPAddDomainPrivacyPage;
 import com.tppcustomerportal.pages.TPPAddExtrasPage;
 import com.tppcustomerportal.pages.TPPBillingPage;
 import com.tppcustomerportal.pages.TPPDomainSearchPage;
+import com.tppcustomerportal.pages.TPPHeaderPage;
+import com.tppcustomerportal.pages.TPPOrderPage;
 import com.tppcustomerportal.pages.TPPHostingAndExtrasPage;
 import com.tppcustomerportal.pages.TPPLoginPage;
 import com.tppcustomerportal.pages.TPPOnlineOrderPage;
@@ -31,9 +34,14 @@ public class CustomerPortal_RegisterDomain extends TestBase {
 	TPPOnlineOrderPage tpponlineorderpage;
 	TPPDomainSearchPage tppdomainsearchpage;	
 	TPPLoginPage tpploginpage;
-	/*TPPAddDomainPrivacyPage tppadddomainprivacypage;
-	NRGHostingAndExtrasPage nrghostingandextraspage;
-	NRGWebHostingPage nrgwebhostingpage;
+	TPPHeaderPage tppheaderpage;
+	TPPOrderPage tpporderpage;
+	TPPAddDomainPrivacyPage tppadddomainprivacypage;
+	TPPHostingAndExtrasPage tpphostingandextraspage;
+	TPPAccountContactPage tppaccountcontactpage;
+	TPPRegistrantContactPage tppregistrantcontactpage;
+	TPPBillingPage tppbillingpage;
+	/*NRGWebHostingPage nrgwebhostingpage;
 	NRGAddHostingPage nrgaddhostingpage;
 	NRGAddExtrasPage nrgaddextraspage;
 	NRGAccountContactPage nrgaccountcontactpage;
@@ -74,8 +82,15 @@ public class CustomerPortal_RegisterDomain extends TestBase {
 				initialization(environment, "customerportalurl_tpp");
 				
 				tpploginpage = new TPPLoginPage();
-				tpploginpage.setLoginDetails(accountReference, "comein22");
-				
+				tpploginpage.setLoginDetails("ARQ-69", "comein22");
+				tppheaderpage = tpploginpage.clickLoginButton();
+				tpporderpage = tppheaderpage.clickOrderTab();
+				tpporderpage.setDomainNameAndTld(strDomainName, "." + namespace);
+				tppdomainsearchpage = tpporderpage.clickNewDomainSearchButton();
+				tppadddomainprivacypage = tppdomainsearchpage.clickContinueToCheckoutWithoutDomainPrivacy();
+				tpphostingandextraspage = tppadddomainprivacypage.clickNoThanks();
+				tppregistrantcontactpage = tpphostingandextraspage.clickContinueButtonWithoutAccountContactPage();
+				tppbillingpage = tppregistrantcontactpage.clickContinueButton();
 		/*
 		 * tpponlineorderpage = new TPPOnlineOrderPage();
 		 * tpponlineorderpage.clearDefaultTldSelections();

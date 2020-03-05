@@ -43,15 +43,18 @@
 					<include name="verifyUnsuccessfulDomainTransferOrder" />
 				</methods>
 			</class>
-			<class name="com.rrpproxyregression.testcases.ResellerPortal_RegisterDomain"/>
-			<class name="com.rrpproxyregression.testcases.CustomerPortal_CheckDomainAvailability">
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_RegisterDomain"/> -->
+			
+			<class name="com.rrpproxyregression.testcases.CustomerPortal_RegisterDomain"/>
+			
+			<!-- <class name="com.rrpproxyregression.testcases.CustomerPortal_CheckDomainAvailability">
 				<methods>
 					<include name="verifyDomainNameAvailableForRegistrationNotPremium" />
 					<include name="verifyDomainNameNotAvailableForRegistration" />
 					<include name="verifyDomainNameAvailableForRegistrationAndPremiumn" />
 				</methods>
-			</class> -->
-			<!-- <class name="com.rrpproxyregression.testcases.ResellerPortal_RenewDomain">
+			</class>
+			<class name="com.rrpproxyregression.testcases.ResellerPortal_RenewDomain">
 				<methods>
 					<include name="generateARenewalWorkflowFromConsoleAdmin"></include>
 					<include name="renewADomainFromResellerPortal" />
@@ -61,12 +64,9 @@
 				</methods>
 			</class> -->
 			
-			<class name="com.rrpproxyregression.testcases.CustomererPortal_RegisterDomain">
-			<methods>
-			<include name="verifyDomainRegistrationInCustomerPortal" />
-			</methods>
 			
-			</class>
+			
+			
 			
 		</classes>
 	</test>

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
 import com.netregistryoldwebsite.pages.NRGHostingAndExtrasPage;
+import com.netregistryoldwebsite.pages.NRGHostingAndExtrasPage;
 
 public class TPPDomainSearchPage extends TestBase {
 
@@ -39,7 +40,7 @@ public class TPPDomainSearchPage extends TestBase {
 	}
 	
 	  
-    public TPPHostingAndExtrasPage clickContinueToCheckoutWithoutDomainPrivacy(){
+    public TPPAddDomainPrivacyPage clickContinueToCheckoutWithoutDomainPrivacy(){
     	System.out.println("clicking continue to checkout");
     	if(continueToCheckoutButton.isDisplayed()||continueToCheckoutButton.isEnabled()) {
     		continueToCheckoutButton.click();
@@ -47,6 +48,6 @@ public class TPPDomainSearchPage extends TestBase {
 		else {
 			System.out.println("element not found");
 		}
-    	return new TPPHostingAndExtrasPage();
+    	return new TPPAddDomainPrivacyPage();
     }
 }

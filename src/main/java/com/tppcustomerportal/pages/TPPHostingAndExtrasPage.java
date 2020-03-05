@@ -41,7 +41,12 @@ public class TPPHostingAndExtrasPage extends TestBase{
 		return new TPPAccountContactPage();
 	}
 
-
+    public TPPRegistrantContactPage clickContinueButtonWithoutAccountContactPage() {
+		
+		System.out.println("Clicking continue button.");
+		continueButton.click();
+		return new TPPRegistrantContactPage();
+	}
     
 
 }
