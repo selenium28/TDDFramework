@@ -16,7 +16,6 @@ import com.consoleadmin.pages.CAWorkflowAdminPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.tppcustomerportal.pages.TPPAccountContactPage;
 import com.tppcustomerportal.pages.TPPAddDomainPrivacyPage;
-import com.tppcustomerportal.pages.TPPAddExtrasPage;
 import com.tppcustomerportal.pages.TPPBillingPage;
 import com.tppcustomerportal.pages.TPPDomainSearchPage;
 import com.tppcustomerportal.pages.TPPHeaderPage;
@@ -42,14 +41,7 @@ public class CustomerPortal_RegisterDomain extends TestBase {
 	TPPRegistrantContactPage tppregistrantcontactpage;
 	TPPBillingPage tppbillingpage;
 	TPPOrderCompletePage tppordercompletepage;
-	/*NRGWebHostingPage nrgwebhostingpage;
-	NRGAddHostingPage nrgaddhostingpage;
-	NRGAddExtrasPage nrgaddextraspage;
-	NRGAccountContactPage nrgaccountcontactpage;
-	NRGRegistrantContactPage nrgregistrantcontactpage;
-	NRGBillingPage nrgbillingpage;
-	NRGOrderCompletePage nrgordercompletepage;*/
-	
+		
 	//Console Admin Pages
 	CALoginPage caloginpage;
 	CAHeaderPage caheaderpage;
@@ -69,9 +61,7 @@ public class CustomerPortal_RegisterDomain extends TestBase {
 		
 		// Initialization (Test Data Creation and Assignment)
 				String strDomainName = null;
-				String strTld = null;
 				String strAccountReference = null;
-				String strPassword = null;
 				String strWorkflowId = null;
 				
 				DateFormat df = new SimpleDateFormat("ddMMYYYY-hhmmss");
@@ -112,8 +102,7 @@ public class CustomerPortal_RegisterDomain extends TestBase {
 				caheaderpage = caloginpage.setDefaultLoginDetails(environment);
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 				caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, namespace);
-				//caworkflowadminpage.processFraudCheck();
-				
+								
 				//Test Step 5: Verify if domain registration workflow is completed
 				caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
 				Assert.assertEquals(caworkflowadminpage.getWorkflowStatus("domainregistration2"), "domain registration completed", caworkflowadminpage.getWorkflowStatus("domainregistration2"));
