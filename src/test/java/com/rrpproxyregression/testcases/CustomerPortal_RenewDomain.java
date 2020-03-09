@@ -1,7 +1,5 @@
 package com.rrpproxyregression.testcases;
 
-import java.awt.AWTException;
-import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,22 +18,33 @@ import com.rrpproxypage.java.RRPDomainsPage;
 import com.rrpproxypage.java.RRPMyDomainsPage;
 import com.rrpproxypage.java.RRPProxyLoginPage;
 import com.rrpproxypage.java.RRPTabPage;
-import com.tppcustomerportal.pages.TPPOnlineOrderPage;
-import com.tppresellerportal.pages.TPPLoginPage;
-import com.tppresellerportal.pages.TPPRenewDomainsCartPage;
-import com.tppresellerportal.pages.TPPRenewDomainsOrderCompletePage;
-import com.tppresellerportal.pages.TPPRenewDomainsPage;
-import com.tppresellerportal.pages.TPPTabPage;
+import com.tppcustomerportal.pages.TPPAccountContactPage;
+import com.tppcustomerportal.pages.TPPBillingPage;
+import com.tppcustomerportal.pages.TPPDomainSearchPage;
+import com.tppcustomerportal.pages.TPPHeaderPage;
+import com.tppcustomerportal.pages.TPPHostingAndExtrasPage;
+import com.tppcustomerportal.pages.TPPLoginPage;
+import com.tppcustomerportal.pages.TPPOrderCompletePage;
+import com.tppcustomerportal.pages.TPPOrderPage;
+import com.tppcustomerportal.pages.TPPRegistrantContactPage;
+import com.tppcustomerportal.pages.TPPRenewDomainPage;
+import com.tppcustomerportal.pages.TPPSummaryOfAllDomainsPage;
 
-public class CustomerPortal_RenewDomain extends TestBase{
+public class CustomerPortal_RenewDomain extends TestBase {
 
-	//Console pages
-	TPPLoginPage tpploginpage;
-	TPPOnlineOrderPage tpponlineorderpage;
-	TPPTabPage tpptabpage;
-	TPPRenewDomainsPage tpprenewdomainspage;
-	TPPRenewDomainsCartPage tpprenewdomainscartpage;
-	TPPRenewDomainsOrderCompletePage tpprenewdomainsordercompletepage;
+	// Console pages
+	TPPLoginPage tppLoginPage;
+	TPPDomainSearchPage tppDomainSearchPage;
+	TPPHeaderPage tppHeaderPage;
+	TPPSummaryOfAllDomainsPage tppSummaryOfAllDomainsPage;
+	TPPOrderPage tppOrderPage;
+	TPPHostingAndExtrasPage tpphostingandextraspage;
+	TPPRenewDomainPage tppRenewDomainPage;
+	TPPAccountContactPage tppaccountcontactpage;
+	TPPRegistrantContactPage tppregistrantcontactpage;
+	TPPBillingPage tppbillingpage;
+	TPPOrderCompletePage tppordercompletepage;
+
 	CALoginPage caloginpage;
 	CAHeaderPage caheaderpage;
 	CAWorkflowAdminPage caworkflowadminpage;
@@ -45,192 +54,138 @@ public class CustomerPortal_RenewDomain extends TestBase{
 	RRPMyDomainsPage rrpmydomainspage;
 	CADomainLevelPage cadomainlevelpage;
 
-	//Variables
-	String domainPrefix;
-	String strusername;
-	String strPassword;
+	// Variables
 	String expiryDateBeforeRenewal;
 	String existingPaymentMethod;
 	String renewedDomainName;
-	String renewedWorkflowId;
-	String workflowStatusAfterCompletionManually;
-	String workflowStatusAfterCompletionBySchedular;
 	String rrpStrUsername;
 	String rrpStrPassword;
 	String strDomainName;
+	String strWorkflowId;
+	String renewedWorkflowId;
+	String strWorkflowStatus;
+
 	boolean flag = true;
 
-	public CustomerPortal_RenewDomain(){
+	public CustomerPortal_RenewDomain() {
 		super();
 	}
-	
-	
+
 	@Parameters({ "environment", "namespace", "accountReference" })
 	@Test
-	public void renewADomainFromResellerPortal(String environment, String namespace, String accountReference) throws InterruptedException{
+	public void registerADomainInCustomerPortal(String environment, String namespace, String accountReference)
+			throws Exception {
 
-		// Initialization (Test Data Creation and Assignment)
-		String strDomainName = null;
-		String strTld = ".com";
+		String strAccountReference = null;
 
 		DateFormat df = new SimpleDateFormat("ddMMYYYYhhmmss");
 		Date d = new Date();
 		strDomainName = "TestConsoleRegression" + df.format(d);
 
-		// Test Step 1: Login to customer portal and place an order for domain
-		// registration
-		System.out.println("Start Test: verifyDomainRegistrationOrderForNewCustomerUsingNewCardInCustomerPortal");
+		// Test Step 1: Login to customer portal
+		test.log(LogStatus.INFO, "Login to Customer portal");
+		System.out.println("Start Test: registerADomainInCustomerPortal");
 		initialization(environment, "customerportalurl_tpp");
-		tpponlineorderpage = new TPPOnlineOrderPage();
-		tpponlineorderpage.clearDefaultTldSelections();
-		tpponlineorderpage.setDomainNameAndTld(strDomainName, strTld);
-		tpptabpage = tpploginpage.clickLoginButton();
+		tppLoginPage = new TPPLoginPage();
+		tppLoginPage.setLoginDetails("ARQ-46", "comein22");
+		tppHeaderPage = tppLoginPage.clickLoginButton();
+		tppOrderPage = tppHeaderPage.clickOrderTab();
 
-		// Test Step 2: Navigate to Renew Domain Page
-		test.log(LogStatus.INFO, "Navigate to Domains then Domain Renew page and select a domain for renewal");
-		tpptabpage.clickDomainsTab();
-		tpprenewdomainspage = tpptabpage.clickDomainRenewLink();
-		tpprenewdomainspage.searchDomainNameToBeRenewed(strDomainName+"."+namespace);
-		tpprenewdomainspage.clickOnSearchButton();
-		tpprenewdomainspage.selectDomainNameCheckbox();
-		String domainNameSelectedForRenewal = tpprenewdomainspage.getDomainName();
-		tpprenewdomainscartpage = tpprenewdomainspage.clickOnAddDomainsToList();
+		// Test Step 2: Navigate to order page to register domain
+		test.log(LogStatus.INFO, "Navigate to Domains then search ans register a domain");
+		tppOrderPage.setDomainNameAndTld(strDomainName, "." + namespace);
+		tppDomainSearchPage = tppOrderPage.clickNewDomainSearchButton();
+		tpphostingandextraspage = tppDomainSearchPage.clickContinueToCheckoutWithoutDomainPrivacy();
+		tppregistrantcontactpage = tpphostingandextraspage.clickContinueButtonWithoutAccountContact();
+		tppbillingpage = tppregistrantcontactpage.clickContinueButton();
 
-		//Test Step 3: Add domains to cart
-		test.log(LogStatus.INFO, "Add Domains to cart");
-		String domainNameToBeRenewed = tpprenewdomainscartpage.getDomainNameToBeRenewed();
-		Assert.assertEquals(domainNameSelectedForRenewal, domainNameToBeRenewed, "Domain name is available for renewal");
-		expiryDateBeforeRenewal = tpprenewdomainscartpage.getExpiryDateOfDomain();
-		tpprenewdomainscartpage.checkTermsAndConditions();
-		tpprenewdomainscartpage.selectPaymentMethod(existingPaymentMethod);
-		tpprenewdomainsordercompletepage = tpprenewdomainscartpage.clickOnRenewDomain();
+		// Test Step 3: Select existing credit card details and submit the order
+		tppbillingpage.selectExistingCreditCardOption("Number: 4111********1111 Expiry: 08/2021");
+		tppbillingpage.tickTermsAndConditions();
+		tppordercompletepage = tppbillingpage.clickContinueButton();
 
-		//Test Step 4: Verify the namespace of domain then Complete a renewal of domain and copy workflow ID
-		test.log(LogStatus.INFO, "Verify the namespace of domain then Complete a renewal of domain and copy workflow ID");
-		if(namespace.equalsIgnoreCase("info") || namespace.equalsIgnoreCase("org")){
-			String errorMessage = tpprenewdomainsordercompletepage.getErrorMessageFromOrderCompletePage();
-			Assert.assertEquals(errorMessage, "domain "+strDomainName+"."+namespace+" is not currently eligible for renewal. reason[domain status = null]");
-			flag = false;
-		}else{
-			renewedDomainName = tpprenewdomainsordercompletepage.getRenewedDomainName();
-			renewedWorkflowId = tpprenewdomainsordercompletepage.getWorkflowIdOfRenewedDomain();
-			Assert.assertEquals(renewedDomainName, domainNameToBeRenewed, "Domain name not renewed");
-		}
-		driver.quit();
-	}
+		// Test Step 4: Verify if order is completed and get the Order Reference ID
+		Assert.assertTrue(tppordercompletepage.isOrderComplete(), "Order is not completed");
+		strWorkflowId = tppordercompletepage.getSingleReferenceID();
+		strAccountReference = tppordercompletepage.getAccountReferenceID();
+		System.out.println("Account Reference:" + strAccountReference);
+		System.out.println("Reference ID[0]:" + strWorkflowId);
+		driver.close();
 
-	@Parameters({ "environment", "namespace", "accountReference" })
-	@Test
-	public void executeRenewal2WorkflowFromConsoleAdmin(String environment, String namespace, String accountReference) throws InterruptedException{
-		if(flag){
-			
+		// Test Step 5: Process the domain registration order in console admin
+		test.log(LogStatus.INFO, "Process the domain registration order in console admin");
 		initialization(environment, "consoleadmin");
-
-		//Test Step 1: Login to console admin
-		test.log(LogStatus.INFO, "Login to console admin");
 		caloginpage = new CALoginPage();
 		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
+		caworkflowadminpage = caheaderpage.searchWorkflow(strWorkflowId);
+		caworkflowadminpage.processDomainRegistration2Workflow(strWorkflowId, namespace);
 
-		//Test Step 2: Search a workflow ID and verify workflow status
-		test.log(LogStatus.INFO, "Search a workflow ID in console admin and verify workflow status");
-		caworkflowadminpage = caheaderpage.searchWorkflow(renewedWorkflowId);
-		caworkflowadminpage.clickOnWorkflowId();
-		String workflowType = caworkflowadminpage.verifyWorkflowType();
-		Assert.assertEquals(workflowType, "renewal2", "renewal2 workflow is not created");
+		// Test Step 6: Verify if domain registration workflow is completed
+		test.log(LogStatus.INFO, "Verify if domain registration workflow is completed");
+		caworkflowadminpage = caheaderpage.searchWorkflow(strDomainName + "." + namespace);
+		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("domainregistration2");
+		Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("domain registration completed")
+				|| strWorkflowStatus.equalsIgnoreCase("update star rating"));
 
-		//Test Step 3: Verify workflow status and perform the execution of workflow
-		test.log(LogStatus.INFO, "verify the workflow status and perform the execution of workflow");
-		switch(environment){
-		case "dev8":
-			workflowStatusAfterCompletionManually = caworkflowadminpage.processRenewal2Workflow();
-			Assert.assertEquals(workflowStatusAfterCompletionManually, "renewed", "renewal workflow not completed successfully by staff");
-
-		case "uat2":
-			workflowStatusAfterCompletionBySchedular = caworkflowadminpage.getWorkflowStatus();
-			Assert.assertEquals(workflowStatusAfterCompletionBySchedular, "renewed", "renewal workflow not completed successfully by schedular");
-
-		case "prod":
-			workflowStatusAfterCompletionBySchedular = caworkflowadminpage.getWorkflowStatus();
-			Assert.assertEquals(workflowStatusAfterCompletionBySchedular, "renewed", "renewal workflow not completed successfully by schedular");
-		}
 		driver.quit();
-		}
-	}
+		System.out.println("End Test: registerADomainInCustomerPortal");
 
-	@Parameters({ "environment", "namespace" })
-	@Test(dependsOnMethods = "executeRenewal2WorkflowFromConsoleAdmin")
-	public void verifyDomainExpiryDateAfterRenewalInRrpPortal(String environment, String namespace) throws InterruptedException, IOException, AWTException {
-		if(flag){
-			
-		initialization(environment, "rrpproxy_tpp");
-
-		rrpStrUsername = "gulliver";
-		rrpStrPassword = "MDYe#5z<W6dk9";
-
-		//Test Step 1: Login to RRPProxy portal
-		test.log(LogStatus.INFO, "Login to RRPproxy portal");
-		rrpproxyloginpage = new RRPProxyLoginPage();
-		rrpproxyloginpage.setLoginDetails(rrpStrUsername, rrpStrPassword);
-		rrptabpage = rrpproxyloginpage.clickLoginButton();
-
-		//Test Step 2: Navigate to My Domains page and search a domain which is renewed
-		test.log(LogStatus.INFO, "Navigate to domains page and search a domain");
-		rrptabpage.clickOnDomainsLink();
-		rrpmydomainspage = rrptabpage.clickOnSubMenuDomainsLink();
-		rrpmydomainspage.enterADomainInSearchField(renewedDomainName);
-		rrpmydomainspage.clickOnSearchButton();
-
-		//Test Step 3: Verify the domain name and expiry date
-		test.log(LogStatus.INFO, "Verify domain name and expiry date of domain");
-		String renewedDomainNameInRrpPortal = rrpmydomainspage.getRenewedDomainName();
-		Assert.assertEquals(renewedDomainNameInRrpPortal, renewedDomainName, "Domain name is verified successfully");
-		String updatedExpiryDateOfDomainInRrpPortal = rrpmydomainspage.getExpiryDateOfRenewedDomain();
-		Assert.assertNotEquals(updatedExpiryDateOfDomainInRrpPortal, expiryDateBeforeRenewal, "Domain expiry date has not updated successfully");
-		driver.quit();
-		}
 	}
 
 	@Parameters({ "environment", "namespace", "accountReference" })
-	@Test
-	public void renewADomainFromResellerPortalWhichIsAlreadyRenewed(String environment, String namespace, String accountReference) throws InterruptedException{
-		if(flag){
-		initialization(environment, "resellerportalurl_tpp");
+	@Test(dependsOnMethods = { "registerADomainInCustomerPortal" })
+	public void renewADomainInCustomerPortal(String environment, String namespace, String accountReference)
+			throws Exception {
 
-		strPassword = "comein22";
-		strDomainName = "m4dev-201-test4";
-		existingPaymentMethod = "Prepaid credit: Current Balance:";
+		// Test Step 1: Login to customer portal
+		test.log(LogStatus.INFO, "Login to Customer portal");
+		System.out.println("Start Test: renewADomainInCustomerPortal");
+		initialization(environment, "customerportalurl_tpp");
+		tppLoginPage = new TPPLoginPage();
+		tppLoginPage.setLoginDetails("ARQ-46", "comein22");
+		tppHeaderPage = tppLoginPage.clickLoginButton();
 
-		// Test Step 1: Login to reseller portal
-		test.log(LogStatus.INFO, "Login to Reseller portal");
-		System.out.println("Start test: renewADomainFromResellerPortal");
-		tpploginpage = new TPPLoginPage();
-		tpploginpage.setLoginDetails(accountReference, strPassword);
-		tpptabpage = tpploginpage.clickLoginButton();
+		// Test Step 2: Navigate to order page to register domain
+		test.log(LogStatus.INFO, "Navigate to all Domains then renew the domain");
+		tppSummaryOfAllDomainsPage = tppHeaderPage.clickAllDomainsLink();
+		tppSummaryOfAllDomainsPage.tickDomainNameCheckbox(strDomainName + "." + namespace);
+		tppRenewDomainPage = tppSummaryOfAllDomainsPage.clickRenewSelectedButton();
 
-		// Test Step 2: Navigate to Renew Domain Page
-		test.log(LogStatus.INFO, "Navigate to Domains then Domain Renew page and select a domain for renewal");
-		tpptabpage.clickDomainsTab();
-		tpprenewdomainspage = tpptabpage.clickDomainRenewLink();
-		tpprenewdomainspage.searchDomainNameToBeRenewed(strDomainName+"."+namespace);
-		tpprenewdomainspage.clickOnSearchButton();
-		tpprenewdomainspage.selectDomainNameCheckbox();
-		String domainNameSelectedForRenewal = tpprenewdomainspage.getDomainName();
-		tpprenewdomainscartpage = tpprenewdomainspage.clickOnAddDomainsToList();
+		// Test Step 3: Select existing credit card details and submit the order
+		test.log(LogStatus.INFO, "Select existing credit card and submit the order");
+		tppRenewDomainPage.tickExistingPaymentMethod();
+		tppRenewDomainPage
+				.selectExistingCard("Number: 4111********1111 Expiry: 08/2021");
+		tppRenewDomainPage.tickTermsAndConditions();
+		tppRenewDomainPage.clickCompleteOrder();
 
-		//Test Step 3: Add domains to cart
-		test.log(LogStatus.INFO, "Add Domains to cart");
-		String domainNameToBeRenewed = tpprenewdomainscartpage.getDomainNameToBeRenewed();
-		Assert.assertEquals(domainNameSelectedForRenewal, domainNameToBeRenewed, "Domain name is available for renewal");
-		expiryDateBeforeRenewal = tpprenewdomainscartpage.getExpiryDateOfDomain();
-		tpprenewdomainscartpage.checkTermsAndConditions();
-		tpprenewdomainscartpage.selectPaymentMethod(existingPaymentMethod);
-		tpprenewdomainsordercompletepage = tpprenewdomainscartpage.clickOnRenewDomain();
-
-		//Test Step 4: Try to renew a domain which is already renewed and verify error message
-		test.log(LogStatus.INFO, "Try to renew a domain which is already renewed and verify error message");
-		String errorMessage = tpprenewdomainsordercompletepage.getErrorMessageFromOrderCompletePage();
-		Assert.assertEquals(errorMessage, "domain "+strDomainName+"."+namespace+" is not currently eligible for renewal. reason[domain status = null]");
+		// Test Step 4: Get order ID
+		test.log(LogStatus.INFO, "Verify if order is completed and get the order ID if it is");
+		Assert.assertTrue(
+				tppRenewDomainPage.isOrderComplete("Renewal job has successsfully been lodged"),
+				"Order is not completed");
+		renewedWorkflowId = tppRenewDomainPage.getOrderID();
+		System.out.println("Reference ID:" + renewedWorkflowId);
 		driver.quit();
-		}
+
+		// Test Step 5: Process the domain renewal workflow in console admin
+		test.log(LogStatus.INFO, "Process the domain registration order in console admin");
+		initialization(environment, "consoleadmin");
+		caloginpage = new CALoginPage();
+		caheaderpage = caloginpage.setDefaultLoginDetails(environment);
+		caworkflowadminpage = caheaderpage.searchWorkflow(renewedWorkflowId);
+		caworkflowadminpage.clickOnWorkflowId();
+		caworkflowadminpage.processRenewal2Workflow();
+	
+
+		// Test Step 6: Verify if domain registration workflow is completed
+		test.log(LogStatus.INFO, "Verify if domain registration workflow is completed");
+		caworkflowadminpage = caheaderpage.searchWorkflow(renewedWorkflowId);
+		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("renewal2");
+		Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("renewed"));
+		driver.quit();
+		System.out.println("End Test: renewADomainInCustomerPortal");
+
 	}
+
 }
