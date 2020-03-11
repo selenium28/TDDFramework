@@ -19,6 +19,7 @@ import com.rrpproxypage.java.RRPMyDomainsPage;
 import com.rrpproxypage.java.RRPProxyLoginPage;
 import com.rrpproxypage.java.RRPTabPage;
 import com.tppcustomerportal.pages.TPPAccountContactPage;
+import com.tppcustomerportal.pages.TPPAddDomainPrivacyPage;
 import com.tppcustomerportal.pages.TPPBillingPage;
 import com.tppcustomerportal.pages.TPPDomainSearchPage;
 import com.tppcustomerportal.pages.TPPHeaderPage;
@@ -38,6 +39,7 @@ public class CustomerPortal_RenewDomain extends TestBase {
 	TPPHeaderPage tppHeaderPage;
 	TPPSummaryOfAllDomainsPage tppSummaryOfAllDomainsPage;
 	TPPOrderPage tppOrderPage;
+	TPPAddDomainPrivacyPage tppadddomainprivacypage;
 	TPPHostingAndExtrasPage tpphostingandextraspage;
 	TPPRenewDomainPage tppRenewDomainPage;
 	TPPAccountContactPage tppaccountcontactpage;
@@ -64,6 +66,8 @@ public class CustomerPortal_RenewDomain extends TestBase {
 	String strWorkflowId;
 	String renewedWorkflowId;
 	String strWorkflowStatus;
+	Date expirtaionDateBeforeRenewal;
+	Date renewedExpirtaionDate;
 
 	boolean flag = true;
 
@@ -87,7 +91,7 @@ public class CustomerPortal_RenewDomain extends TestBase {
 		System.out.println("Start Test: registerADomainInCustomerPortal");
 		initialization(environment, "customerportalurl_tpp");
 		tppLoginPage = new TPPLoginPage();
-		tppLoginPage.setLoginDetails("ARQ-46", "comein22");
+		tppLoginPage.setLoginDetails("ARQ-45", "comein22");
 		tppHeaderPage = tppLoginPage.clickLoginButton();
 		tppOrderPage = tppHeaderPage.clickOrderTab();
 
@@ -95,7 +99,8 @@ public class CustomerPortal_RenewDomain extends TestBase {
 		test.log(LogStatus.INFO, "Navigate to Domains then search ans register a domain");
 		tppOrderPage.setDomainNameAndTld(strDomainName, "." + namespace);
 		tppDomainSearchPage = tppOrderPage.clickNewDomainSearchButton();
-		tpphostingandextraspage = tppDomainSearchPage.clickContinueToCheckoutWithoutDomainPrivacy();
+		tppadddomainprivacypage = tppDomainSearchPage.clickContinueToCheckoutWithDomainPrivacy();
+		tpphostingandextraspage = tppadddomainprivacypage.clickNoThanks();
 		tppregistrantcontactpage = tpphostingandextraspage.clickContinueButtonWithoutAccountContact();
 		tppbillingpage = tppregistrantcontactpage.clickContinueButton();
 
@@ -142,27 +147,26 @@ public class CustomerPortal_RenewDomain extends TestBase {
 		System.out.println("Start Test: renewADomainInCustomerPortal");
 		initialization(environment, "customerportalurl_tpp");
 		tppLoginPage = new TPPLoginPage();
-		tppLoginPage.setLoginDetails("ARQ-46", "comein22");
+		tppLoginPage.setLoginDetails("ARQ-45", "comein22");
 		tppHeaderPage = tppLoginPage.clickLoginButton();
 
-		// Test Step 2: Navigate to order page to register domain
+		// Test Step 2: Navigate to all Domains then renew the domain
 		test.log(LogStatus.INFO, "Navigate to all Domains then renew the domain");
 		tppSummaryOfAllDomainsPage = tppHeaderPage.clickAllDomainsLink();
+		expirtaionDateBeforeRenewal = tppSummaryOfAllDomainsPage.getCurrentExpirationDate(strDomainName + "." + namespace);
 		tppSummaryOfAllDomainsPage.tickDomainNameCheckbox(strDomainName + "." + namespace);
 		tppRenewDomainPage = tppSummaryOfAllDomainsPage.clickRenewSelectedButton();
 
 		// Test Step 3: Select existing credit card details and submit the order
 		test.log(LogStatus.INFO, "Select existing credit card and submit the order");
 		tppRenewDomainPage.tickExistingPaymentMethod();
-		tppRenewDomainPage
-				.selectExistingCard("Number: 4111********1111 Expiry: 08/2021");
+		tppRenewDomainPage.selectExistingCard("Number: 4111********1111 Expiry: 08/2021");
 		tppRenewDomainPage.tickTermsAndConditions();
 		tppRenewDomainPage.clickCompleteOrder();
 
 		// Test Step 4: Get order ID
 		test.log(LogStatus.INFO, "Verify if order is completed and get the order ID if it is");
-		Assert.assertTrue(
-				tppRenewDomainPage.isOrderComplete("Renewal job has successsfully been lodged"),
+		Assert.assertTrue(tppRenewDomainPage.isOrderComplete("Renewal job has successsfully been lodged"),
 				"Order is not completed");
 		renewedWorkflowId = tppRenewDomainPage.getOrderID();
 		System.out.println("Reference ID:" + renewedWorkflowId);
@@ -176,15 +180,39 @@ public class CustomerPortal_RenewDomain extends TestBase {
 		caworkflowadminpage = caheaderpage.searchWorkflow(renewedWorkflowId);
 		caworkflowadminpage.clickOnWorkflowId();
 		caworkflowadminpage.processRenewal2Workflow();
-	
 
-		// Test Step 6: Verify if domain registration workflow is completed
+		// Test Step 6: Verify if domain renewal workflow is completed
 		test.log(LogStatus.INFO, "Verify if domain registration workflow is completed");
 		caworkflowadminpage = caheaderpage.searchWorkflow(renewedWorkflowId);
 		strWorkflowStatus = caworkflowadminpage.getWorkflowStatus("renewal2");
 		Assert.assertTrue(strWorkflowStatus.equalsIgnoreCase("renewed"));
 		driver.quit();
 		System.out.println("End Test: renewADomainInCustomerPortal");
+
+	}
+
+	@Parameters({ "environment", "namespace", "accountReference" })
+	@Test(dependsOnMethods = { "renewADomainInCustomerPortal" })
+	public void checkExpirationDateOfRenewedDomain(String environment, String namespace, String accountReference)
+			throws Exception {
+
+		// Test Step 1: Login to customer portal
+		test.log(LogStatus.INFO, "Login to Customer portal");
+		System.out.println("Start Test: checkExpirationDateOfRenewedDomain");
+		initialization(environment, "customerportalurl_tpp");
+		tppLoginPage = new TPPLoginPage();
+		tppLoginPage.setLoginDetails("ARQ-45", "comein22");
+		tppHeaderPage = tppLoginPage.clickLoginButton();
+
+		// Test Step 2: Navigate to all Domains then renew the domain
+		test.log(LogStatus.INFO, "Navigate to all Domains then get the domain's new expiry date");
+		tppSummaryOfAllDomainsPage = tppHeaderPage.clickAllDomainsLink();
+		renewedExpirtaionDate = tppSummaryOfAllDomainsPage.getCurrentExpirationDate(strDomainName + "." + namespace);
+		
+		// Test Step 3: Verify that domain's new expiry date is 365 days more than the previous one
+		Assert.assertEquals(tppSummaryOfAllDomainsPage.getDiffDays(renewedExpirtaionDate, expirtaionDateBeforeRenewal), 365);
+		driver.quit();
+		System.out.println("End Test: checkExpirationDateOfRenewedDomain");
 
 	}
 

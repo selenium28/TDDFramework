@@ -64,6 +64,7 @@
 				<methods>
 					<include name="registerADomainInCustomerPortal" />
 					<include name="renewADomainInCustomerPortal" />
+					<include name="checkExpirationDateOfRenewedDomain" />			
 				</methods>
 			</class>
 		</classes>

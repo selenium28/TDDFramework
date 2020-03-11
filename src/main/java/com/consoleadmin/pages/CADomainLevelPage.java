@@ -1,7 +1,11 @@
 package com.consoleadmin.pages;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -31,7 +35,7 @@ public class CADomainLevelPage extends TestBase {
 
 	@FindBy(how = How.LINK_TEXT, using = "Account Interface")
 	WebElement accountInterfaceLink;
-	
+
 	@FindBy(how = How.XPATH, using = "//*[text()='Generate renewal workflow']")
 	WebElement generateRenewalWorkflow;
 
@@ -53,7 +57,7 @@ public class CADomainLevelPage extends TestBase {
 
 		System.out.println("Clicking Login AS Client");
 		loginAsClientLink.click();
-		
+
 		// Store all currently open tabs in tabs
 		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 
@@ -61,7 +65,7 @@ public class CADomainLevelPage extends TestBase {
 		driver.switchTo().window(tabs.get(1));
 		return new CSMUITabPage();
 	}
-	
+
 	public void clickGenerateRenewalWorkflow() throws InterruptedException {
 		if (generateRenewalWorkflow.isDisplayed() || generateRenewalWorkflow.isEnabled()) {
 			generateRenewalWorkflow.click();
@@ -71,4 +75,15 @@ public class CADomainLevelPage extends TestBase {
 		Thread.sleep(10000);
 	}
 
+	public Date getExpirationDate() throws ParseException {
+
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		String strExpirationDate = driver.findElement(By.xpath("//*[@id=\"domain-level\"]/table[2]/tbody/tr/td[1]/text()[3]")).getText().substring(0, 9);
+		System.out.println("This is the expiration date after the domain has been renewed: " + strExpirationDate);
+		Date expirationDate = sdf.parse(strExpirationDate);
+		return expirationDate;
+
+	}
+
+	
 }
