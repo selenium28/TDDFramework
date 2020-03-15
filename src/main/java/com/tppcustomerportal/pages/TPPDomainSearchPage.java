@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.TestBase;
 
+
 public class TPPDomainSearchPage extends TestBase {
 
 	// Objects
@@ -40,7 +41,7 @@ public class TPPDomainSearchPage extends TestBase {
 		return flag;
 	}
 
-	public TPPHostingAndExtrasPage clickContinueToCheckoutWithoutDomainPrivacy() {
+		public TPPHostingAndExtrasPage clickContinueToCheckoutWithoutDomainPrivacy() {
 
 		new WebDriverWait(driver, 30)
 				.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("#shopping-cart .order")));
@@ -65,4 +66,5 @@ public class TPPDomainSearchPage extends TestBase {
 		}
 		return new TPPAddDomainPrivacyPage();
 	}
+
 }

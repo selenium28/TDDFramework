@@ -30,7 +30,7 @@ public class TPPBillingPage extends TestBase{
     @FindBy(how=How.XPATH, using = "//table[@class='form']/tbody/tr[4]/td[3]/input[@name='btbilling.nonce']")
     WebElement paymentMethodNonce;
     
-    @FindBy(how=How.NAME, using = "billing.id")
+    @FindBy(how=How.NAME, using = "btbilling.id")
     WebElement existingCardSelection;
 
 	@FindBy(how=How.XPATH, using = "//div[@class='next']/input[2]")
@@ -51,7 +51,7 @@ public class TPPBillingPage extends TestBase{
     public void setBTFormCreditCardDetails(String cardowner, String cardnumber, String cardexpirymonth, String cardexpiryyear, String cardsecuritycode){
     	driver.findElement(By.xpath("//table[@class='form']/tbody/tr[1]/td[2]/input[@name='btbilling.owner']")).clear();
     	driver.findElement(By.xpath("//table[@class='form']/tbody/tr[1]/td[2]/input[@name='btbilling.owner']")).sendKeys(cardowner);
-    	driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[2]/td[2]/div[@id='btbilling.number']/iframe")));
+    	driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[2]/td[2]//div[@id='btbilling.number']/iframe")));
     	
     	driver.findElement(By.xpath("//form/input")).clear();
     	driver.findElement(By.xpath("//form/input")).sendKeys(cardnumber);  
@@ -283,6 +283,7 @@ public class TPPBillingPage extends TestBase{
     }
 	
 	
+
 
     
 }

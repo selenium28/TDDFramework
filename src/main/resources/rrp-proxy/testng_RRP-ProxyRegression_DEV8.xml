@@ -44,6 +44,9 @@
 				</methods>
 			</class>
 			<class name="com.rrpproxyregression.testcases.ResellerPortal_RegisterDomain"/>
+			
+			<class name="com.rrpproxyregression.testcases.CustomerPortal_RegisterDomain"/>
+			
 			<class name="com.rrpproxyregression.testcases.CustomerPortal_CheckDomainAvailability">
 				<methods>
 					<include name="verifyDomainNameAvailableForRegistrationNotPremium" />
@@ -67,6 +70,7 @@
 					<include name="checkExpirationDateOfRenewedDomain" />			
 				</methods>
 			</class>
+			
 		</classes>
 	</test>
 </suite>
