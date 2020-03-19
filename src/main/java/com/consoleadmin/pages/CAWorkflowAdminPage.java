@@ -71,9 +71,10 @@ public class CAWorkflowAdminPage extends TestBase {
 			// this.processCheckASIC();
 			this.processDelegateDomain();
 		}
-
+		
+		Thread.sleep(10000);
 		try {
-			Thread.sleep(10000);
+
 			new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("msg")));
 		} catch (Exception e) {
 			System.out.println("Processing the workflow has timed out. Search the workflow instead");

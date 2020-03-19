@@ -93,8 +93,8 @@ public class CustomerPortalJourneyTest extends TestBase{
         
         //Test Step 3: Verify if recaptcha challenge is dislayed 
 		Assert.assertTrue(nrgbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+        driver.quit();
         
-        driver.close();
 	}
 	
 	@Parameters({"environment"})
@@ -142,8 +142,8 @@ public class CustomerPortalJourneyTest extends TestBase{
 		strAccountReference = nrgordercompletepage.getAccountReferenceID();
 		System.out.println("Account Reference:" + strAccountReference);	
 		System.out.println("Reference ID[0]:" + strWorkflowId);	
+		driver.quit();
 		
-		driver.close();
 	}
 	
 	
@@ -192,8 +192,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		strAccountReference = nrgordercompletepage.getAccountReferenceID();
 		System.out.println("Account Reference:" + strAccountReference);	
 		System.out.println("Reference ID[0]:" + strWorkflowId);	
-		
-		driver.close();
+		driver.quit();
 				
 	}
 	
@@ -256,8 +255,8 @@ public class CustomerPortalJourneyTest extends TestBase{
 		strAccountReference = nrgordercompletepage.getAccountReferenceID();
 		System.out.println("Account Reference:" + strAccountReference);	
 		System.out.println("Reference ID[0]:" + strWorkflowId);	
-
-		driver.close();
+		driver.quit();
+		
 	}
 	
 	@Parameters({"environment"})
@@ -312,7 +311,7 @@ public class CustomerPortalJourneyTest extends TestBase{
 		
 		//Test Step 3: Verify if recaptcha challenge is dislayed 
 		Assert.assertTrue(nrgbillingpage.isReCaptchaChallengeDisplayed(), "Recaptcha Challenge is not displayed");
+		driver.quit();
 		
-		driver.close();
 	}
 }

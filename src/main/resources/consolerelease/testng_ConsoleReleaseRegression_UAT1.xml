@@ -15,7 +15,7 @@
                 <methods>                  
                     <include name="verify_ComAuDomain_Order_InSalesDB" />
                 	<include name="verify_NetDomain_and_DIFM_Order_InSalesDB" />                                              
-<!--                <include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" />                 	 -->
+<!--                <include name="verify_ComDomain_and_BasicCloudHostingOrder_InSalesDB" />    -->              	
                     <include name="verify_NzDomain_Order_InSalesDB" />                    
                 </methods>
 			</class>
