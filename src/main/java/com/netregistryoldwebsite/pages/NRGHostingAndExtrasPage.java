@@ -13,7 +13,7 @@ import com.base.TestBase;
 public class NRGHostingAndExtrasPage extends TestBase{
 
 	//Objects         
-    @FindBy(how=How.XPATH, using = "//div[@class='next']/form/input[2]")
+    @FindBy(how=How.CSS, using = "#continue [value='Continue']")
     WebElement continueButton;
     
     @FindBy(how=How.XPATH, using = "//div[@class='catalogue-options']/div[1]/input")

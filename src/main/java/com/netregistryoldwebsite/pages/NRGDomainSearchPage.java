@@ -1,9 +1,13 @@
 package com.netregistryoldwebsite.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.base.TestBase;
 
 
@@ -20,6 +24,9 @@ public class NRGDomainSearchPage extends TestBase{
 
     //Methods
     public NRGAddDomainPrivacyPage clickContinueToCheckout(){
+    	
+		new WebDriverWait(driver, 30)
+		.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("#shopping-cart .order")));
     	System.out.println("clicking continue to checkout");
     	if(continueToCheckoutButton.isDisplayed()||continueToCheckoutButton.isEnabled()) {
     		continueToCheckoutButton.click();
@@ -31,6 +38,8 @@ public class NRGDomainSearchPage extends TestBase{
     }
     
     public NRGHostingAndExtrasPage clickContinueToCheckoutWithoutDomainPrivacy(){
+    	new WebDriverWait(driver, 30)
+		.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("#shopping-cart .order")));
     	System.out.println("clicking continue to checkout");
     	if(continueToCheckoutButton.isDisplayed()||continueToCheckoutButton.isEnabled()) {
     		continueToCheckoutButton.click();

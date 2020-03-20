@@ -6,8 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.base.TestBase;
-import com.domainzwebsite.pages.DMZPrepaidAccountPage;
 
 
 public class NRGBillingPage extends TestBase{
@@ -42,33 +44,65 @@ public class NRGBillingPage extends TestBase{
     @FindBy(how=How.XPATH, using = "//table[@class='prepaid']/parent::div/ul/li[1]")
     WebElement addPrepaidCreditLink;
 
+    @FindBy(how=How.CSS, using = "[value='NEW']")
+    WebElement newCreditCardOption;
+    
+    @FindBy(how=How.CSS, using = "[value='EXISTING']")
+    WebElement existingCardOption;
+    
     //Initializing Page Objects
     public NRGBillingPage(){
         PageFactory.initElements(driver, this);
     }
       
     //Methods
-    public void setBTFormCreditCardDetails(String cardowner, String cardnumber, String cardexpirymonth, String cardexpiryyear, String cardsecuritycode){
-    	driver.findElement(By.xpath("//table[@class='form']/tbody/tr[1]/td[2]/input[@name='btbilling.owner']")).clear();
-    	driver.findElement(By.xpath("//table[@class='form']/tbody/tr[1]/td[2]/input[@name='btbilling.owner']")).sendKeys(cardowner);
-    	driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[2]/td[2]/div[@id='btbilling.number']/iframe")));
+    public void setBTFormCreditCardDetails(String cardOwner, String cardNumber, String cardExpiryMonth, String cardExpiryYear, String cardSecurityCode){
     	
-    	driver.findElement(By.xpath("//form/input")).clear();
-    	driver.findElement(By.xpath("//form/input")).sendKeys(cardnumber);  
+    	
+    	//driver.findElement(By.xpath("//table[@class='form']/tbody/tr[1]/td[2]/input[@name='btbilling.owner']")).clear();
+    	//driver.findElement(By.xpath("//table[@class='form']/tbody/tr[1]/td[2]/input[@name='btbilling.owner']")).sendKeys(cardowner);
+    	//driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[2]/td[2]/div[@id='btbilling.number']/iframe")));
+    	WebElement elCardOwner = driver.findElement(By.cssSelector("[name='btbilling.owner']"));
+    	elCardOwner.clear();
+    	elCardOwner.sendKeys(cardOwner);
+    	
+    	//driver.findElement(By.xpath("//form/input")).clear();
+    	//driver.findElement(By.xpath("//form/input")).sendKeys(cardnumber);  
+    	//driver.switchTo().defaultContent();
+    	driver.switchTo().frame("braintree-hosted-field-number");
+    	WebElement elCardNumber = driver.findElement(By.id("credit-card-number"));
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(elCardNumber));
+    	elCardNumber.clear();
+    	elCardNumber.sendKeys(cardNumber);
     	driver.switchTo().defaultContent();
     	
-    	driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[3]/td[2]/div[@id='btbilling.expirationMonth']/iframe")));
-    	driver.findElement(By.xpath("//form/select")).sendKeys(cardexpirymonth);
+    	//driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[3]/td[2]/div[@id='btbilling.expirationMonth']/iframe")));
+    	//driver.findElement(By.xpath("//form/select")).sendKeys(cardexpirymonth);
+    	//driver.switchTo().defaultContent();
+    	driver.switchTo().frame("braintree-hosted-field-expirationMonth");
+    	WebElement elCardExpiryMonth = driver.findElement(By.id("expiration-month"));
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(elCardExpiryMonth));
+    	elCardExpiryMonth.sendKeys(cardExpiryMonth);
     	driver.switchTo().defaultContent();
     	
-    	driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[3]/td[2]/div[@id='btbilling.expirationYear']/iframe")));
-    	driver.findElement(By.xpath("//form/select")).sendKeys(cardexpiryyear);
+    	//driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[3]/td[2]/div[@id='btbilling.expirationYear']/iframe")));
+    	//driver.findElement(By.xpath("//form/select")).sendKeys(cardexpiryyear);
+    	//driver.switchTo().defaultContent();
+    	driver.switchTo().frame("braintree-hosted-field-expirationYear");
+    	WebElement elCardExpiryYear = driver.findElement(By.id("expiration-year"));
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(elCardExpiryYear));
+    	elCardExpiryYear.sendKeys(cardExpiryYear);
     	driver.switchTo().defaultContent();
     	
-    	driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[4]/td[2]/div[@id='btbilling.cvv']/iframe")));
-    	driver.findElement(By.xpath("//form/input")).clear();
-    	driver.findElement(By.xpath("//form/input")).sendKeys(cardsecuritycode); 
+    	//driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[4]/td[2]/div[@id='btbilling.cvv']/iframe")));
+    	//driver.findElement(By.xpath("//form/input")).clear();
+    	//driver.findElement(By.xpath("//form/input")).sendKeys(cardsecuritycode); 
+    	driver.switchTo().frame("braintree-hosted-field-cvv");
+    	WebElement elCardSecurityCode = driver.findElement(By.id("cvv"));
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(elCardSecurityCode));
+    	elCardSecurityCode.sendKeys(cardSecurityCode);
     	driver.switchTo().defaultContent();
+    	
     }
     
     public void setQuestFormCreditCardDetails(String cardowner, String cardtype, String cardnumber, String cardexpirymonth, String cardexpiryyear, String cardsecuritycode){
@@ -193,14 +227,15 @@ public class NRGBillingPage extends TestBase{
        	if(existingCardSelection.isDisplayed()||existingCardSelection.isEnabled()) {
        		existingCardSelection.sendKeys(cardnumber);
        	}
-    	else {
+    	else {	
     		System.out.println("element not found");
     	}
     }
     
     public void selectNewCreditCardOption(){
        	System.out.println("select new credit card option");
-       	driver.findElement(By.xpath("//div[@class='orderBox']/div[2]/input")).click();
+       	new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(newCreditCardOption));
+       	newCreditCardOption.click();
     }
     
     public void selectExistingCreditCardOption(String carddetails){

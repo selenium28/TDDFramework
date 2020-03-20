@@ -140,6 +140,7 @@ public class CustomerPortalJourneyTest extends TestBase {
 
 		nrgbillingpage.selectExistingCreditCardOption("Prepaid credit:");
 		nrgbillingpage.tickTermsAndConditions();
+		driver.close();
 		nrgordercompletepage = nrgbillingpage.clickContinueButton();
 
 		// Test Step 3: Verify if order is completed
