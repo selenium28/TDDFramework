@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.TestBase;
+import com.netregistryoldwebsite.pages.NRGAddDomainPrivacyPage;
 
 
 public class TPPDomainSearchPage extends TestBase {
@@ -67,4 +68,19 @@ public class TPPDomainSearchPage extends TestBase {
 		return new TPPAddDomainPrivacyPage();
 	}
 
+	
+	 public TPPAddDomainPrivacyPage clickContinueToCheckout(){
+	    	
+			new WebDriverWait(driver, 30)
+			.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("#shopping-cart .order")));
+	    	System.out.println("clicking continue to checkout");
+	    	if(continueToCheckoutButton.isDisplayed()||continueToCheckoutButton.isEnabled()) {
+	    		continueToCheckoutButton.click();
+	    	}
+			else {
+				System.out.println("element not found");
+			}
+	    	return new TPPAddDomainPrivacyPage();
+	    }
+	    
 }

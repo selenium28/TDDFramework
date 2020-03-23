@@ -78,9 +78,10 @@ public class CustomerPortal_RegisterDomain extends TestBase {
 				tpporderpage = tppheaderpage.clickOrderTab();
 				tpporderpage.setDomainNameAndTld(strDomainName, "." + namespace);
 				tppdomainsearchpage = tpporderpage.clickNewDomainSearchButton();
-				tppadddomainprivacypage = tppdomainsearchpage.clickContinueToCheckoutWithoutDomainPrivacy();
-				tpphostingandextraspage = tppadddomainprivacypage.clickNoThanks();
-				tppregistrantcontactpage = tpphostingandextraspage.clickContinueButtonWithoutAccountContactPage();
+				
+				tppadddomainprivacypage = tppdomainsearchpage.clickContinueToCheckout();
+				tpphostingandextraspage= tppadddomainprivacypage.clickNoThanks();
+				tppregistrantcontactpage = tpphostingandextraspage.clickContinueButtonWithoutAccountContact();
 				tppbillingpage = tppregistrantcontactpage.clickContinueButton();
 				
 				//Test Step 2: Select existing credit card details and submit the order 
