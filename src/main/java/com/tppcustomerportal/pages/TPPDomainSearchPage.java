@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.TestBase;
+import com.netregistryoldwebsite.pages.NRGAddDomainPrivacyPage;
 
 
 public class TPPDomainSearchPage extends TestBase {
@@ -67,4 +68,7 @@ public class TPPDomainSearchPage extends TestBase {
 		return new TPPAddDomainPrivacyPage();
 	}
 
+	
+	 
+	    
 }
