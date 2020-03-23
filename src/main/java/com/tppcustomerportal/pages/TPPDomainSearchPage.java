@@ -69,18 +69,6 @@ public class TPPDomainSearchPage extends TestBase {
 	}
 
 	
-	 public TPPAddDomainPrivacyPage clickContinueToCheckout(){
-	    	
-			new WebDriverWait(driver, 30)
-			.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("#shopping-cart .order")));
-	    	System.out.println("clicking continue to checkout");
-	    	if(continueToCheckoutButton.isDisplayed()||continueToCheckoutButton.isEnabled()) {
-	    		continueToCheckoutButton.click();
-	    	}
-			else {
-				System.out.println("element not found");
-			}
-	    	return new TPPAddDomainPrivacyPage();
-	    }
+	 
 	    
 }
