@@ -37,7 +37,8 @@ public class NRGDomainSearchPage extends TestBase{
     	return new NRGAddDomainPrivacyPage();
     }
     
-    public NRGHostingAndExtrasPage clickContinueToCheckoutWithoutDomainPrivacy(){
+    public NRGHostingAndExtrasPage clickContinueToCheckoutWithoutDomainPrivacy() throws InterruptedException{
+    	Thread.sleep(5000);
     	new WebDriverWait(driver, 30)
 		.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector("#shopping-cart .order")));
     	System.out.println("clicking continue to checkout");

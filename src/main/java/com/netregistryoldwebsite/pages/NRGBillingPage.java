@@ -56,50 +56,35 @@ public class NRGBillingPage extends TestBase{
     }
       
     //Methods
-    public void setBTFormCreditCardDetails(String cardOwner, String cardNumber, String cardExpiryMonth, String cardExpiryYear, String cardSecurityCode){
+    public void setBTFormCreditCardDetails(String cardOwner, String cardNumber, String cardExpiryMonth, String cardExpiryYear, String cardSecurityCode) throws InterruptedException{
     	
-    	
-    	//driver.findElement(By.xpath("//table[@class='form']/tbody/tr[1]/td[2]/input[@name='btbilling.owner']")).clear();
-    	//driver.findElement(By.xpath("//table[@class='form']/tbody/tr[1]/td[2]/input[@name='btbilling.owner']")).sendKeys(cardowner);
-    	//driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[2]/td[2]/div[@id='btbilling.number']/iframe")));
     	WebElement elCardOwner = driver.findElement(By.cssSelector("[name='btbilling.owner']"));
     	elCardOwner.clear();
     	elCardOwner.sendKeys(cardOwner);
     	
-    	//driver.findElement(By.xpath("//form/input")).clear();
-    	//driver.findElement(By.xpath("//form/input")).sendKeys(cardnumber);  
-    	//driver.switchTo().defaultContent();
+    	Thread.sleep(3000);
     	driver.switchTo().frame("braintree-hosted-field-number");
-    	WebElement elCardNumber = driver.findElement(By.id("credit-card-number"));
-    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(elCardNumber));
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("credit-card-number"))));
+    	WebElement elCardNumber = driver.findElement(By.id("credit-card-number"));	
     	elCardNumber.clear();
     	elCardNumber.sendKeys(cardNumber);
     	driver.switchTo().defaultContent();
     	
-    	//driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[3]/td[2]/div[@id='btbilling.expirationMonth']/iframe")));
-    	//driver.findElement(By.xpath("//form/select")).sendKeys(cardexpirymonth);
-    	//driver.switchTo().defaultContent();
     	driver.switchTo().frame("braintree-hosted-field-expirationMonth");
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("expiration-month"))));
     	WebElement elCardExpiryMonth = driver.findElement(By.id("expiration-month"));
-    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(elCardExpiryMonth));
     	elCardExpiryMonth.sendKeys(cardExpiryMonth);
     	driver.switchTo().defaultContent();
     	
-    	//driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[3]/td[2]/div[@id='btbilling.expirationYear']/iframe")));
-    	//driver.findElement(By.xpath("//form/select")).sendKeys(cardexpiryyear);
-    	//driver.switchTo().defaultContent();
     	driver.switchTo().frame("braintree-hosted-field-expirationYear");
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("expiration-year"))));
     	WebElement elCardExpiryYear = driver.findElement(By.id("expiration-year"));
-    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(elCardExpiryYear));
     	elCardExpiryYear.sendKeys(cardExpiryYear);
     	driver.switchTo().defaultContent();
     	
-    	//driver.switchTo().frame(driver.findElement(By.xpath("//table[@class='form']/tbody/tr[4]/td[2]/div[@id='btbilling.cvv']/iframe")));
-    	//driver.findElement(By.xpath("//form/input")).clear();
-    	//driver.findElement(By.xpath("//form/input")).sendKeys(cardsecuritycode); 
     	driver.switchTo().frame("braintree-hosted-field-cvv");
-    	WebElement elCardSecurityCode = driver.findElement(By.id("cvv"));
-    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(elCardSecurityCode));
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("cvv"))));
+    	WebElement elCardSecurityCode = driver.findElement(By.id("cvv"));	
     	elCardSecurityCode.sendKeys(cardSecurityCode);
     	driver.switchTo().defaultContent();
     	
