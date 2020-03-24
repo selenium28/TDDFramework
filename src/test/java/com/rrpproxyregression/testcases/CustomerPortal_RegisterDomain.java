@@ -78,8 +78,9 @@ public class CustomerPortal_RegisterDomain extends TestBase {
 				tpporderpage = tppheaderpage.clickOrderTab();
 				tpporderpage.setDomainNameAndTld(strDomainName, "." + namespace);
 				tppdomainsearchpage = tpporderpage.clickNewDomainSearchButton();
+	
 				tppadddomainprivacypage = tppdomainsearchpage.clickContinueToCheckoutWithDomainPrivacy();
-				tpphostingandextraspage = tppadddomainprivacypage.clickNoThanks();
+				tpphostingandextraspage= tppadddomainprivacypage.clickNoThanks();
 				tppregistrantcontactpage = tpphostingandextraspage.clickContinueButtonWithoutAccountContact();
 				tppbillingpage = tppregistrantcontactpage.clickContinueButton();
 				
