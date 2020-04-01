@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.TestBase;
 import com.melbourneitwebsite.pages.MITOrderCompletePage;
@@ -38,29 +40,62 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
 
     
     //Methods    
-    public void setBTFormCreditCardDetails(String cardowner, String cardnumber, String cardexpirymonth, String cardexpiryyear, String cardsecuritycode){
+    public void setBTFormCreditCardDetails(String cardOwner, String cardNumber, String cardExpiryMonth, String cardExpiryYear, String cardSecurityCode) throws InterruptedException{
     	
-    	driver.findElement(By.xpath("//div[@class='panel panel-default bootstrap-basic']/div[@class='table']/div[@class='element-group']/input[@id='name']")).clear();
-    	driver.findElement(By.xpath("//div[@class='panel panel-default bootstrap-basic']/div[@class='table']/div[@class='element-group']/input[@id='name']")).sendKeys(cardowner);
-    	driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='card-number']/iframe")));
+    	//driver.findElement(By.xpath("//div[@class='panel panel-default bootstrap-basic']/div[@class='table']/div[@class='element-group']/input[@id='name']")).clear();
+    	//driver.findElement(By.xpath("//div[@class='panel panel-default bootstrap-basic']/div[@class='table']/div[@class='element-group']/input[@id='name']")).sendKeys(cardowner);
+    	//driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='card-number']/iframe")));
     	
-    	System.out.println("switched frame");
-    	driver.findElement(By.xpath("//form/input")).clear();
-    	driver.findElement(By.xpath("//form/input")).sendKeys(cardnumber);  
+    	//System.out.println("switched frame");
+    	//driver.findElement(By.xpath("//form/input")).clear();
+    	//driver.findElement(By.xpath("//form/input")).sendKeys(cardnumber);  
+    	//driver.switchTo().defaultContent();
+    	
+    	//driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='expiration-month']/iframe[@id='braintree-hosted-field-expirationMonth']")));
+    	//driver.findElement(By.xpath("//form/select")).sendKeys(cardexpirymonth);
+    	//driver.switchTo().defaultContent();
+    	
+    	//driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='expiration-year']/iframe[@id='braintree-hosted-field-expirationYear']")));
+    	//driver.findElement(By.xpath("//form/select")).sendKeys(cardexpiryyear);
+    	//driver.switchTo().defaultContent();
+    	
+    	//driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='cvv']/iframe[@id='braintree-hosted-field-cvv']")));
+    	//driver.findElement(By.xpath("//form/input")).clear();
+    	//driver.findElement(By.xpath("//form/input")).sendKeys(cardsecuritycode); 
+    	//driver.switchTo().defaultContent(); 		
+    	
+    	
+    	WebElement elNameOnCard = driver.findElement(By.id("name"));
+    	elNameOnCard.clear();
+    	elNameOnCard.sendKeys(cardOwner);
+    	
+    	Thread.sleep(3000);
+    	driver.switchTo().frame("braintree-hosted-field-number");
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("credit-card-number"))));
+    	WebElement elCardNumber = driver.findElement(By.id("credit-card-number"));	
+    	elCardNumber.clear();
+    	elCardNumber.sendKeys(cardNumber);
     	driver.switchTo().defaultContent();
     	
-    	driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='expiration-month']/iframe[@id='braintree-hosted-field-expirationMonth']")));
-    	driver.findElement(By.xpath("//form/select")).sendKeys(cardexpirymonth);
+    	driver.switchTo().frame("braintree-hosted-field-expirationMonth");
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("expiration-month"))));
+    	WebElement elCardExpiryMonth = driver.findElement(By.id("expiration-month"));
+    	elCardExpiryMonth.sendKeys(cardExpiryMonth);
     	driver.switchTo().defaultContent();
     	
-    	driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='expiration-year']/iframe[@id='braintree-hosted-field-expirationYear']")));
-    	driver.findElement(By.xpath("//form/select")).sendKeys(cardexpiryyear);
+    	driver.switchTo().frame("braintree-hosted-field-expirationYear");
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("expiration-year"))));
+    	WebElement elCardExpiryYear = driver.findElement(By.id("expiration-year"));
+    	elCardExpiryYear.sendKeys(cardExpiryYear);
     	driver.switchTo().defaultContent();
     	
-    	driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='cvv']/iframe[@id='braintree-hosted-field-cvv']")));
-    	driver.findElement(By.xpath("//form/input")).clear();
-    	driver.findElement(By.xpath("//form/input")).sendKeys(cardsecuritycode); 
-    	driver.switchTo().defaultContent(); 		
+    	driver.switchTo().frame("braintree-hosted-field-cvv");
+    	new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(driver.findElement(By.id("cvv"))));
+    	WebElement elCardSecurityCode = driver.findElement(By.id("cvv"));	
+    	elCardSecurityCode.sendKeys(cardSecurityCode);
+    	driver.switchTo().defaultContent();
+    	
+    	
     }
     
     public void tickTermsAndConditions(){
