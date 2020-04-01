@@ -40,30 +40,7 @@ public class NRGNSReviewAndPaymentPage extends TestBase{
 
     
     //Methods    
-    public void setBTFormCreditCardDetails(String cardOwner, String cardNumber, String cardExpiryMonth, String cardExpiryYear, String cardSecurityCode) throws InterruptedException{
-    	
-    	//driver.findElement(By.xpath("//div[@class='panel panel-default bootstrap-basic']/div[@class='table']/div[@class='element-group']/input[@id='name']")).clear();
-    	//driver.findElement(By.xpath("//div[@class='panel panel-default bootstrap-basic']/div[@class='table']/div[@class='element-group']/input[@id='name']")).sendKeys(cardowner);
-    	//driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='card-number']/iframe")));
-    	
-    	//System.out.println("switched frame");
-    	//driver.findElement(By.xpath("//form/input")).clear();
-    	//driver.findElement(By.xpath("//form/input")).sendKeys(cardnumber);  
-    	//driver.switchTo().defaultContent();
-    	
-    	//driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='expiration-month']/iframe[@id='braintree-hosted-field-expirationMonth']")));
-    	//driver.findElement(By.xpath("//form/select")).sendKeys(cardexpirymonth);
-    	//driver.switchTo().defaultContent();
-    	
-    	//driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='expiration-year']/iframe[@id='braintree-hosted-field-expirationYear']")));
-    	//driver.findElement(By.xpath("//form/select")).sendKeys(cardexpiryyear);
-    	//driver.switchTo().defaultContent();
-    	
-    	//driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='cvv']/iframe[@id='braintree-hosted-field-cvv']")));
-    	//driver.findElement(By.xpath("//form/input")).clear();
-    	//driver.findElement(By.xpath("//form/input")).sendKeys(cardsecuritycode); 
-    	//driver.switchTo().defaultContent(); 		
-    	
+    public void setBTFormCreditCardDetails(String cardOwner, String cardNumber, String cardExpiryMonth, String cardExpiryYear, String cardSecurityCode) throws InterruptedException{ 	
     	
     	WebElement elNameOnCard = driver.findElement(By.id("name"));
     	elNameOnCard.clear();
