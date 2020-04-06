@@ -31,10 +31,9 @@ public class CSNrCRMPage extends TestBase {
 
 	// Methods
 	public void setGreenCode(String strGreencode) throws InterruptedException {
-		// Thread.sleep(3000);
-		Thread.sleep(1000);
+
+		Thread.sleep(5000);
 		greenCode.sendKeys(strGreencode);
-		// Thread.sleep(2000);
 		greenCode.sendKeys(Keys.ENTER);
 	}
 
