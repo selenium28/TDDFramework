@@ -7,15 +7,13 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
-import com.relevantcodes.extentreports.LogStatus;
 
 
 public class NRGNSDomainPrivacyPage extends TestBase{
 
 	
 	//Objects    
-    @FindBy(how=How.XPATH, using = "//div[@class='privacy-domains']/div")
-	
+    @FindBy(how=How.CSS, using = ".privacy-domains .privacy-toggle-row")
     public static WebElement checkBox;
     
     @FindBy(how=How.CSS, using = "button.btn.green")
@@ -29,7 +27,7 @@ public class NRGNSDomainPrivacyPage extends TestBase{
 
  
     //Methods
-    public void clickCheckBox() {
+	public void clickCheckBox() {
 
     	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", checkBox);
     	checkBox.click();
@@ -47,6 +45,6 @@ public class NRGNSDomainPrivacyPage extends TestBase{
     	
     }
     
-    }
+}
 
 

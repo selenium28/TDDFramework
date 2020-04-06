@@ -1,5 +1,8 @@
 package com.netregistrynewwebsite.pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,12 +13,7 @@ import com.base.TestBase;
 
 public class NRGNSEmailAndOffice365PackagesPage extends TestBase{
 
-	
-	//Objects    
-    @FindBy(how=How.XPATH, using = "//body/div[1]/div[2]/div/div/div/div[2]/div[1]/div[3]/div[2]")
-    WebElement businessEssentials;
-    
-    @FindBy(how=How.XPATH, using = "//div[@class='table']/div/div[@class='continue-btn-container']/button")
+	@FindBy(how=How.CSS, using = "button.btn.green")
     WebElement continueButton;
 	
     
@@ -26,12 +24,21 @@ public class NRGNSEmailAndOffice365PackagesPage extends TestBase{
 
     
     //Methods
-    public NRGNSOffice365LicenseQuantityPage clickAddBusinessEssensials() throws InterruptedException {
+    public void addOffice365Product(String office365Product) throws Exception {
 
-    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", businessEssentials);
-    	businessEssentials.click();
-
-    	return new NRGNSOffice365LicenseQuantityPage();
+    	List<WebElement> office365Products = driver.findElements(By.cssSelector(".o365office-box"));
+    	
+    	for (WebElement element : office365Products) {
+    		
+    		String productName = element.findElement(By.tagName("h4")).getText();
+    		if (productName.equalsIgnoreCase(office365Product)) {
+    			element.findElement(By.tagName("button")).click();
+    			return;
+    		}
+    		
+    	}
+    	
+    	throw new Exception("Office 365 product is not available");
     	
     }
     
