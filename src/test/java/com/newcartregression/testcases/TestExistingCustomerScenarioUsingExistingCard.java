@@ -64,19 +64,15 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase {
 
 		// Initialization (Test Data Creation and Assignment)
 		String strDomainName = null;
-		// added today
-		String strElementName = null;
-
 		String strTld = null;
 		String strWorkflowId = null;
 		String strAccountReference = null;
-
 		String strMaskedCardNumber = null;
 		String strCustomerAccountReference = null;
 		String strCustomerPassword = null;
-
 		Integer intMaxCount = iteration;
 		Integer intMinCount = null;
+
 		for (intMinCount = 1; intMinCount <= intMaxCount; intMinCount++) {
 
 			// Generate test domain name
@@ -116,73 +112,53 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase {
 			}
 
 			System.out.println("Start Test: testExistingCustomerScenarioUsingExistingCard");
-
 			// Test Step 1: Navigate to domain search page of new shopping cart and place an
 			// order for a test domain
 			test.log(LogStatus.INFO, "Navigate to domain search page -STARTED");
-
 			initialization(environment, "newcart_domainsearchurl_netregistry");
 			nrgnssearchadddomainspage = new NRGNSSearchAddDomainsPage();
 			nrgnssearchadddomainspage.setDomainNameAndTld(strDomainName, strTld);
 			nrgnssearchadddomainspage.clickSearchButton();
 			nrgnssearchadddomainspage.addDomainName(strDomainName, strTld);
 			nrgnsdomainprivacypage = nrgnssearchadddomainspage.clickContinueButton();
-
 			testStepResultVerification(NRGNSDomainPrivacyPage.checkBox);
-
 			test.log(LogStatus.INFO, "Navigate to domain search page -COMPLETED");
 
 			// Test Step 2: Process the order without any product included
 			test.log(LogStatus.INFO, "Process the order page -STARTED");
-
 			nrgnsdomainprivacypage.clickCheckBox();
 			nrgnsemailandoffice365packagespage = nrgnsdomainprivacypage.clickContinueButton();
 			nrgnsaddservicestoyourdomainpage = nrgnsemailandoffice365packagespage.clickContinueButton();
 			nrgnsaboutyoupage = nrgnsaddservicestoyourdomainpage.clickContinueButton();
-
 			testStepResultVerification(NRGNSAboutYouPage.loginButton);
-
 			test.log(LogStatus.INFO, "Process the order page  -COMPLETED");
 
 			// Test Step 3: Login as returning or existing netregistry customer
-
 			test.log(LogStatus.INFO, "Login as returning or existing netregistry customer -STARTED");
 			nrgnsaboutyoupage.setReturningCustomerContacts(strCustomerAccountReference, strCustomerPassword);
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickLoginButton();
-
-			testStepResultVerification(NRGNSRegistrantContactPage.selectdomaininformation);
-
+			testStepResultVerification(NRGNSRegistrantContactPage.selectButton);
 			test.log(LogStatus.INFO, "Login as returning or existing netregistry customer  -COMPLETED");
-
-			// Special Case: Wait for 10s and refresh page before continuing (Issue is
-			// raised to Developers to investigae why page is not loading quickly)
-			// nrgnsregistrantcontactpage.refreshRegistrantPage();
-
 			nrgnsregistrantcontactpage
 					.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
 
 			// Test Step 4: Select existing credit card and complete the order
 			test.log(LogStatus.INFO, "Select existing credit card -STARTED");
-
 			nrgnsreviewandpaymentpage.selectExistingCreditCard(strMaskedCardNumber);
 			nrgnsreviewandpaymentpage.tickTermsAndConditions();
 			testStepResultVerification(NRGNSReviewAndPaymentPage.completeOrderButton);
+			test.log(LogStatus.INFO, "Select existing credit card  -COMPLETED");
 
 			if (environment.equals("uat1") || environment.equals("dev2")) {
-				nrgnsordercompletepage = nrgnsreviewandpaymentpage.clickCompleteOrder();
-
-				test.log(LogStatus.INFO, "Select existing credit card  -COMPLETED");
+				nrgnsordercompletepage = nrgnsreviewandpaymentpage.clickCompleteOrder();			
 
 				// Test Step 5: Verify if the order is completed, get workflow id and account
 				// reference.
 				test.log(LogStatus.INFO, "Verify if the order is completed -STARTED");
-
 				Assert.assertTrue(nrgnsordercompletepage.isOrderComplete(), "Order is not completed");
 				strWorkflowId = nrgnsordercompletepage.getSingleReferenceID();
-
 				testStepResultVerification(NRGNSOrderCompletePage.accountReferenceElement);
-
 				test.log(LogStatus.INFO, "Verify if the order is completed  -COMPLETED");
 
 				strAccountReference = nrgnsordercompletepage.getAccountReferenceID();
@@ -190,8 +166,10 @@ public class TestExistingCustomerScenarioUsingExistingCard extends TestBase {
 				System.out.println("Reference ID[0]:" + strWorkflowId);
 
 			}
-			driver.close();
+			
+			driver.quit();
 			System.out.println("End Test: testExistingCustomerScenarioUsingExistingCard");
+			
 		}
 	}
 }

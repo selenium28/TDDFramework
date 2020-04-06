@@ -55,7 +55,7 @@ public class NRGNSAboutYouPage extends TestBase {
 	@FindBy(how = How.ID, using = "business")
 	WebElement business;
 
-	@FindBy(how = How.CSS, using = "button.btn.green")
+	@FindBy(how = How.CSS, using = "[name='createAccountForm'] button.btn.green")
 	WebElement continueButton;
 
 	@FindBy(how = How.ID, using = "login")
@@ -64,7 +64,7 @@ public class NRGNSAboutYouPage extends TestBase {
 	@FindBy(how = How.ID, using = "password")
 	WebElement password;
 
-	@FindBy(how = How.XPATH, using = "//form[@name='loginForm']/div[1]/div[4]/button")
+	@FindBy(how = How.CSS, using = "[name='loginForm'] button.btn.green")
 	public static WebElement loginButton;
 
 	// Initializing Page Objects

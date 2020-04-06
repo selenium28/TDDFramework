@@ -21,16 +21,10 @@ public class NRGNSSearchAddDomainsPage extends TestBase{
     @FindBy(how=How.CSS, using = "button.search-btn.green")
     WebElement searchButton;
     
-    @FindBy(how=How.XPATH, using = "//body/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/form/div[2]/div[1]")
-    WebElement domainExtension;
-    
     @FindBy(how=How.CSS, using = "button.btn.green")
     WebElement continueButton;
     
-    @FindBy(how=How.XPATH, using = "//body/div[1]/div[2]/div/div/div/div[2]/div[2]/div")
-    WebElement domainPrivacy;
-    
-    @FindBy(how=How.XPATH, using = "//form[@class='ng-pristine ng-valid']/div[1]/input")
+    @FindBy(how=How.CSS, using = ".domain-search-form .search-box")
     WebElement newDomainSearchBox;
     
 	
@@ -59,39 +53,13 @@ public class NRGNSSearchAddDomainsPage extends TestBase{
     	
     }
     
-	/*
-	 * public void clickDomainExtension(String strdomainextension) {
-	 * 
-	 * switch (strdomainextension) { case ".com" :
-	 * System.out.println("Tick .com tld");
-	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[1]")).click();
-	 * break; case ".com.au" :
-	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[2]")).click();
-	 * break; case ".melbourne" :
-	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[3]")).click();
-	 * break; case ".net" :
-	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[4]")).click();
-	 * break; case ".net.au" :
-	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[5]")).click();
-	 * break; case ".org" :
-	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[6]")).click();
-	 * break; case ".org.au" :
-	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[7]")).click();
-	 * break; case ".sdyney" :
-	 * driver.findElement(By.xpath("//div[@class='tld-select']/div[8]")).click();
-	 * break; default : System.out.println("Invalid domain extension"); } }
-	 */
-    
-    public void clickDomainExtension(String strDomainExtension) throws Exception {
+	public void clickDomainExtension(String strDomainExtension) throws Exception {
 
     	//Get all the tlds
     	List<WebElement> tlds = driver.findElements(By.cssSelector(".tld-select [for]"));
-    	
-    	for (WebElement tld : tlds) {
-    		
+    	for (WebElement tld : tlds) {  		
     		if (tld.getText().contains(strDomainExtension)) {
-    			System.out.println("Clicking the tld " + tld);
-    			
+    			System.out.println("Clicking the tld " + tld); 			
     			tld.click();
     			return;
     		}
@@ -122,10 +90,8 @@ public class NRGNSSearchAddDomainsPage extends TestBase{
     	//Get all the domains in search result
     	List<WebElement> domains = driver.findElements(By.cssSelector(".search-results .result"));
     	
-    	
-    	for(WebElement domain: domains) {
-    		
-    		String resultDomainName = domain.findElement(By.cssSelector(".domain")).getText();
+       	for(WebElement domain: domains) {
+       		String resultDomainName = domain.findElement(By.cssSelector(".domain")).getText();
     		System.out.println("This the domain name with extension " + resultDomainName);
     		
     		if (resultDomainName.equalsIgnoreCase(domainName+tldName)){
@@ -133,13 +99,9 @@ public class NRGNSSearchAddDomainsPage extends TestBase{
        			return;
     		}
     	} 
-    	throw new Exception("Domain name is not available");
+   
+       	throw new Exception("Domain name is not available");
 
     }
     
-    public void removeDomain(String domainname) {
-    	
-    	
-    }
-
 }

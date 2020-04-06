@@ -1,16 +1,12 @@
 package com.newcartregression.testcases;
 
-import java.lang.reflect.Method;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import com.base.Environment;
 import com.base.TestBase;
@@ -111,11 +107,9 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase {
 			}
 
 			System.out.println("Start Test: testNewCustomerScenarioUsingNewCard");
-
 			// Test Step 1: Navigate to domain search page of new shopping cart and place an
 			// order for a test domain
 			test.log(LogStatus.INFO, "Navigate to domain search page -STARTED");
-
 			initialization(environment, "newcart_domainsearchurl_netregistry");
 			nrgnssearchadddomainspage = new NRGNSSearchAddDomainsPage();
 			nrgnssearchadddomainspage.setDomainNameAndTld(strDomainName, strTld);
@@ -123,57 +117,46 @@ public class TestNewCustomerScenarioUsingNewCard extends TestBase {
 			nrgnssearchadddomainspage.addDomainName(strDomainName, strTld);
 			nrgnsdomainprivacypage = nrgnssearchadddomainspage.clickContinueButton();
 			testStepResultVerification(NRGNSDomainPrivacyPage.checkBox);
-
 			test.log(LogStatus.INFO, "Navigate to domain search page -COMPLETED");
 
 			// Test Step 2: Process the order without any product included
 			test.log(LogStatus.INFO, "Process the order page -STARTED");
-
 			nrgnsdomainprivacypage.clickCheckBox();
 			nrgnsemailandoffice365packagespage = nrgnsdomainprivacypage.clickContinueButton();
 			nrgnsaddservicestoyourdomainpage = nrgnsemailandoffice365packagespage.clickContinueButton();
 			testStepResultVerification(NRGNSAddServicesToYourDomainPage.continueButton);
-
-			test.log(LogStatus.INFO, "Process the order page -COMPLETED");
-
 			nrgnsaboutyoupage = nrgnsaddservicestoyourdomainpage.clickContinueButton();
+			test.log(LogStatus.INFO, "Process the order page -COMPLETED");
 
 			// Test Step 3: Input default customer details
 			test.log(LogStatus.INFO, "Input default customer details -STARTED");
-
 			nrgnsaboutyoupage.setDefaultBusinessCustomerDetails();
 			nrgnsregistrantcontactpage = nrgnsaboutyoupage.clickContinueButton();
 			nrgnsregistrantcontactpage
 					.clickDomainInformation("Have a business idea and reserving a domain for the future");
 			testStepResultVerification(NRGNSRegistrantContactPage.selectButton);
-
-			test.log(LogStatus.INFO, "Input default customer details -COMPLETED");
-
 			nrgnsreviewandpaymentpage = nrgnsregistrantcontactpage.clickSelectButton();
+			test.log(LogStatus.INFO, "Input default customer details -COMPLETED");
 
 			// Test Step 4: Input customer credit card details and complete the order
 			test.log(LogStatus.INFO, "Input customer credit card details  -STARTED");
-
 			nrgnsreviewandpaymentpage.setBTFormCreditCardDetails(strCardOwnerName, strCardNumber, strCardExpiryMonth,
 					strCardExpiryYear, strCardSecurityCode);
 			nrgnsreviewandpaymentpage.tickTermsAndConditions();
 			testStepResultVerification(NRGNSReviewAndPaymentPage.completeOrderButton);
-
 			test.log(LogStatus.INFO, "Input customer credit card details -COMPLETED");
-
-			nrgnsreviewandpaymentpage.clickCompleteOrder();
 
 			// Test Step 5: Verify if recaptcha challenge is dislayed
 			test.log(LogStatus.INFO, "Verify if recaptcha challenge is dislayed  -STARTED");
-
+			nrgnsreviewandpaymentpage.clickCompleteOrder();
 			Assert.assertTrue(nrgnsreviewandpaymentpage.isReCaptchaChallengeDisplayed(),
 					"Recaptcha Challenge is not displayed");
 			testStepResultVerification(NRGNSReviewAndPaymentPage.recaptchaChallenge);
-
 			test.log(LogStatus.INFO, "Verify if recaptcha challenge is dislayed -COMPLETED");
 
-			driver.close();
+			driver.quit();
 			System.out.println("End Test: testNewCustomerScenarioUsingNewCard");
+			
 		}
 	}
 

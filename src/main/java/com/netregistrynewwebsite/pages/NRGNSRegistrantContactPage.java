@@ -16,9 +16,9 @@ public class NRGNSRegistrantContactPage extends TestBase{
 	@FindBy(how=How.XPATH, using = "//div[@class='contact-list cell-content']/div[1]/div[2]/div")
     public static WebElement selectButton;
 	
-	@FindBy(how=How.XPATH, using = "//div[@class='table registrant-details']/div[1]/input")
-    public static WebElement selectdomaininformation;
-   
+	@FindBy(how=How.XPATH, using = "//div[@class='contact-list cell-content']/div[2]/div[2]/div")
+    public static WebElement createButton;
+	
     
     //Initializing Page Objects
     public NRGNSRegistrantContactPage() throws InterruptedException{
